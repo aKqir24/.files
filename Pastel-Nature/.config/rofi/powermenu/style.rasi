@@ -1,0 +1,107 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+@import							"./.config/rofi/fonts.rasi"
+
+/*****----- Global Properties -----*****/
+* {
+	alert:						#A54242;
+	selected:					#9FD8A6;
+	disabled:					#9EA5A3;
+	background:					#393D44;
+	foreground:					#E3ECEA;
+	background-alt:				#9EA5A3;
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    west;
+    anchor:                      north;
+    fullscreen:                  false;
+    width:                       173px;
+    height:                      50px;
+    x-offset:                    92px;
+    y-offset:                    -396px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      2px;
+    padding:                     4px;
+    border:                      2px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            @background;
+    children:                    [ "listview" ];
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       5;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      horizontal;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     4px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+    
+}
+element-text {
+    font:                        @icon-font;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+	padding:					 4px 1px 4px 6px;
+}
+element selected.normal {
+    background-color:            var(selected);
+    text-color:                  var(background);
+}

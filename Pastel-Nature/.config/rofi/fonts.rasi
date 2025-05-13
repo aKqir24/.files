@@ -1,0 +1,6 @@
+* {
+	icon-font:					  "Siji 20";
+    text-font:			 "DepartureMono 11";
+	search-text-font:	 "DepartureMono 12";
+	emoji-font:		  "noto-fonts-emoji 18";
+}

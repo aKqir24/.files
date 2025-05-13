@@ -1,0 +1,44 @@
+{
+    "logo": {
+	"type": "none",
+		"padding": {
+			"right": 3,
+			"left": 3
+		}
+    },
+    "display": {
+        "separator": "  ",
+        "color": {
+            "keys": "green"
+        },
+        "size": {
+            "ndigits": 0,
+            "maxPrefix": "MB"
+        },
+        "key": {
+            "type": "icon"
+        }
+    },
+    "modules": [
+        {
+            "type": "title",
+            "color": {
+                "user": "green",
+                "at": "yellow",
+                "host": "green"
+            }
+        },
+        "os",
+        "kernel",
+        "memory",
+        "packages",
+        "uptime",
+        {
+            "type": "colors",
+            "key": "Colors", // For printing icon
+            "block": {
+                "range": [1, 6]
+            }
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+# GIMP gimp-dodge-burn-tool options
+
+(brush "2. Block 01")
+(dynamics "Pressure Size")
+(palette "Standard")
+(brush-size 51)
+(brush-aspect-ratio -20)
+(brush-angle 180)
+(brush-spacing 0.01)
+(brush-force 1)
+(dynamics-enabled no)
+
+# end of gimp-dodge-burn-tool options
