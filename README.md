@@ -26,9 +26,9 @@ My repository with some of my rices or setups from a couple of months in searchi
 <br>
 <h3 align=center> Preview </h3>
 
-| **WINDOW VIEW**                                          | **DESKTOP VIEW**                                          |
-|----------------------------------------------------------|-----------------------------------------------------------|
-| ![p-window](resources/preview/pastel-nature-window.png)  | ![p-desktop](resources/preview/pastel-nature-desktop.png) |
+| **WINDOW VIEW**                                           | **DESKTOP VIEW**                                          |
+|-----------------------------------------------------------|-----------------------------------------------------------|
+| ![p-window](resources/previews/pastel-nature-window.png)  | ![p-desktop](resources/previews/pastel-nature-desktop.png) |
 
 <br>
 </details>
@@ -60,9 +60,9 @@ My repository with some of my rices or setups from a couple of months in searchi
 <br>
 <h3 align=center> Preview </h3>
 
-| **WINDOW VIEW**                                         | **DESKTOP VIEW**                                         |
-|---------------------------------------------------------|----------------------------------------------------------|
-| ![c-window](resources/preview/cobalt-vibes-window.png)  | ![c-desktop](resources/preview/cobalt-vibes-desktop.png) |
+| **WINDOW VIEW**                                          | **DESKTOP VIEW**                                         |
+|----------------------------------------------------------|----------------------------------------------------------|
+| ![c-window](resources/previews/cobalt-vibes-window.png)  | ![c-desktop](resources/previews/cobalt-vibes-desktop.png) |
 
 <br>
 </details>
