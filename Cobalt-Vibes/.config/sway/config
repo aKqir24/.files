@@ -3,10 +3,10 @@
 # ===================== #
 
 # Daemons
+exec_always source $HOME/.bashrc
 exec_always --no-startup-id mako
 exec --no-startup-id autotiling
 exec --no-startup-id udiskie
-
 
 # Post-Setup
 exec --no-startup-id xhost +si:localuser:root ; 

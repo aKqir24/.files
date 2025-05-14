@@ -30,7 +30,6 @@ My repository with some of my rices or setups from a couple of months in searchi
 
 <br></details>
 
-# Workspace-Rices
 <br>
 <details>  
 <summary><h2>Cobalt-Vibes</h2>
