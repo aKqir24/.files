@@ -3,7 +3,6 @@
 # ===================== #
 
 # Daemons
-exec_always source $HOME/.bashrc
 exec_always --no-startup-id mako
 exec --no-startup-id autotiling
 exec --no-startup-id udiskie
@@ -75,16 +74,17 @@ bindsym $mod+a focus parent
 # To manage the workspaces/tags							#
 # ------------------------------------------------------#
 
-set $ws1 "1: 󰎦"
-set $ws2 "2: 󰎩"
-set $ws3 "3: 󰎬"
-set $ws4 "4: 󰎮"
-set $ws5 "5: 󰎰"
-set $ws6 "6: 󰎵"
-set $ws7 "7: 󰎸"
-set $ws8 "8: 󰎻"
-set $ws9 "9: 󰎾"
-set $ws10 "10: 󰽾"
+set $ws_icon <span size='14pt'> 󰓥 </span>
+set $ws1 "1:$ws_icon"
+set $ws2 "2:$ws_icon"
+set $ws3 "3:$ws_icon"
+set $ws4 "4:$ws_icon"
+set $ws5 "5:$ws_icon"
+set $ws6 "6:$ws_icon"
+set $ws7 "7:$ws_icon"
+set $ws8 "8:$ws_icon"
+set $ws9 "9:$ws_icon"
+set $ws10 "10:$ws_icon"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -152,7 +152,7 @@ floating_modifier $mod
 # title bars
 smart_borders no_gaps
 default_border pixel 2
-font pango:EnvyCodeR Nerd Font 8
+font pango:EnvyCodeR Nerd Font Propo 20
 for_window [class=".*"] border pixel 2
 for_window [title="^(Error|Confirm|Delete confirmation)$"] border pixel 0
 for_window [floating] move position center
@@ -176,16 +176,18 @@ client.background			#0c192a
 set $refresh_i3status_rs<D-Bslash> killall -SIGUSR1 i3status_rs
 
 bar {
-	height 22
+	height 24
     position top
+	status_padding 0
 	pango_markup enabled
-	workspace_min_width 4
-	status_edge_padding 6
+	status_edge_padding 0
 	strip_workspace_numbers yes
-    status_command sleep 1 ; /sbin/i3status-rs --never-pause ~/.config/sway/status.toml
+	font EnvyCodeR Nerd Font 10 
+    status_command /sbin/i3status-rs ~/.config/sway/status/config.toml
     colors {
-        statusline #0d1d2d
-		background #0d1d2d
-        inactive_workspace #067885 #067885 #77e2ea
+        statusline #77e2ea
+		background #0b2c3b
+		focused_workspace #77e2ea #77e2ea #073747 
+        inactive_workspace #073747 #073747 #77e2ea 
     }
 }

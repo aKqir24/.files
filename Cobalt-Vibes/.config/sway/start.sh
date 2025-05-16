@@ -3,7 +3,7 @@
 # start audio session
 if [ "$1" = "audio" ]; then
 	for audio in pipewire wireplumber pipewire-pulse; do
-		pkill ${audio} ; ${audio} &
+		pgrep -x ${audio} || ${audio} &
 	done
 
 # launch the screenshot tool from call

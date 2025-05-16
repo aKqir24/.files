@@ -1,5 +1,9 @@
 # GIMP gimp-vector-tool options
 
+(foreground
+    (color "R'G'B'A u8" 4 "\7\67G\377" 0))
+(background
+    (color "R'G'B'A u8" 4 "\70\241\234\377" 0))
 (brush "2. Hardness 100")
 (dynamics "Pressure Size")
 (pattern "Starfield")

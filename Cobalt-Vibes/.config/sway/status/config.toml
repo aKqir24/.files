@@ -1,0 +1,123 @@
+icons_format = "<span font_family='EnvyCodeR Nerd' size='12pt'>{icon}</span>"
+
+[theme]
+theme = "native"
+[theme.overrides]
+idle_bg = "#0b2c3b" 
+idle_fg = "#77e2ea" 
+info_bg = "#067885"
+info_fg = "#77e2ea" 
+good_bg = "#067885" # green
+good_fg = "#77e2ea" 
+warning_bg = "#6e4d20" # yellow
+warning_fg = "#d7b454" 
+critical_bg = "#e8c76a" 
+critical_fg = "#8d6f31" 
+separator = "<span size='16pt'></span>"
+separator_bg = "auto"
+separator_fg = "auto"
+[icons]
+icons = "none"
+[icons.overrides]
+cpu = " " # network_check
+cpu_boost_on = "\ue837" # radio_button_on
+cpu_boost_off = "\ue836" # radio_button_off
+memory_mem = " " # memory
+memory_swap = "󰋊 " # swap_horiz
+volume = [ "󰕿", "󰖀", "󰕾" ]
+volume_muted = " 󰝟" # volume_off
+microphone = [
+    "\ue02a", # mic_none
+    "\ue029", # mic
+    "\ue029", # mic
+]
+microphone_muted = "\ue02b" # mic_off
+headphones = "\ue60f" # bluetooth_audio
+webcam = "\ue04b" # videocam
+net_wired = "󰱓" # cable | TODO: broken?
+net_loopback = "\ue028" # loop
+net_modem = "\uefe6" # cable | TODO: broken?
+
+[[block]]
+block = "cpu"
+interval= 1
+info_cpu = 20
+warning_cpu = 50
+critical_cpu = 90
+format = " $icon $utilization "
+[block.theme_overrides]
+idle_fg = "#0b2c3b" 
+idle_bg = "#77e2ea"
+
+[[block]]
+block = "memory"
+format = "  $icon $mem_total_used_percents.eng(w:2)  "
+format_alt = "  $icon_swap $swap_used_percents.eng(w:2)  "
+
+[[block]]
+block = "custom"
+interval=0.1
+command = "sh ~/.config/sway/status/custom_status.sh --type=bluetooth"
+[[block.click]]
+button = "left"
+cmd = "sh ~/.config/sway/status/custom_status.sh --type=bluetooth toggle"
+[[block.click]]
+button = "right"
+cmd = "sh ~/.config/rofi/scripts/bluetooth.sh"
+[block.theme_overrides]
+idle_fg = "#0b2c3b" 
+idle_bg = "#77e2ea"
+
+[[block]]
+block = "custom"
+command = "sh ~/.config/sway/status/custom_status.sh --type=wifi"
+[[block.click]]
+button = "right"
+cmd = "sh ~/.config/rofi/scripts/wifi.sh"
+
+[[block]]
+block = "net"
+device = "eth0"
+format = " {$icon  $ip|󰛵  Cheking IP...} "
+inactive_format= " 󰅛  "
+[block.theme_overrides]
+idle_fg = "#0b2c3b" 
+idle_bg = "#77e2ea"
+
+[[block]]
+block = "sound"
+driver="auto"
+format = " $icon  {$volume|}  "
+[[block.click]]
+button = "right"
+cmd = "foot -e pulsemixer"
+[[block.click]]
+button = "left"
+cmd = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+[block.theme_overrides]
+warning_bg = "#0b2c3b" 
+warning_fg = "#77e2ea"
+
+[[block]]
+block = "custom"
+cycle = [ "sh ~/.config/sway/status/custom_status.sh --type=date", 
+		  "sh ~/.config/sway/status/custom_status.sh --type=time" ]
+[[block.click]]
+button = "left"
+action = "cycle"
+[block.theme_overrides]
+idle_fg = "#0b2c3b" 
+idle_bg = "#77e2ea"
+
+[[block]]
+block = "menu"
+text = " ⏻  "
+[[block.items]]
+display = " ⏻  Sleep "
+cmd = "systemctl suspend"
+[[block.items]]
+display = " ⏻  Poweroff "
+cmd = "sudo poweroff"
+[[block.items]]
+display = " ⏻  Reboot "
+cmd = "sudo reboot"

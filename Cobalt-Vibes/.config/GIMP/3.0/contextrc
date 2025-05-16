@@ -1,8 +1,11 @@
 # GIMP user context
 
-(tool "gimp-crop-tool")
-(paint-info "gimp-paintbrush")
-(paint-mode normal-legacy)
+(tool "gimp-mypaint-brush-tool")
+(paint-info "gimp-mybrush")
+(foreground
+    (color "R'G'B'A u8" 4 "\7\67G\377" 0))
+(background
+    (color "R'G'B'A u8" 4 "\70\241\234\377" 0))
 (brush "2. Hardness 100")
 (dynamics "Pressure Size")
 (mybrush "100% Opaque")
@@ -10,6 +13,6 @@
 (gradient "Skyline")
 (palette "Standard")
 (font "Sans-serif")
-(tool-preset "Virtual core pointer")
+(tool-preset "Core Pointer")
 
 # end of user context

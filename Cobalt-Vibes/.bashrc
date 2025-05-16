@@ -41,5 +41,5 @@ source /usr/share/fzf/key-bindings.bash
 eval $(fzf --bash)
 
 # Start audio exernally
-sh ~/.config/sway/start.sh audio &> /dev/null
+# sh ~/.config/sway/start.sh audio &> /dev/null
 
