@@ -9,19 +9,20 @@ My repository with some of my rices or setups from a couple of months in searchi
 
 <br>
 
-|   __TYPE__        |                               __NAME__                               |
-|-------------------|----------------------------------------------------------------------|
-| __WM:__           | i3wm                                                                 |
-| __Compositor:__   | picom                                                                |
-| __Status:__       | polybar                                                              |
-| __Terminal:__     | kitty                                                                |
-| __Launcher:__     | rofi                                                                 |
-| __Colorscheme:__  | pywal                                                                |
-| __Theme__:        | Marwaita-X-Dark-Lime                                                 |
-| __Icon__:         | pixelitos-icon-linux-mint                                            |
-| __Wallaper:__     | [This Gif](https://danbooru.donmai.us/posts/3939992) + xgifwallpaper |
-| __Font:__         | DepartureMono, ProggyClean, siji-ttf                                 |
-| __Fetch:__        |fastfetch                                                             |
+|   __TYPE__           |                               __NAME__                               |
+|----------------------|----------------------------------------------------------------------|
+| __WM:__              | i3wm                                                                 |
+| __Compositor:__      | picom                                                                |
+| __Status:__          | polybar                                                              |
+| __Terminal:__        | kitty                                                                |
+| __Launcher:__        | rofi                                                                 |
+| __Colorscheme:__     | pywal                                                                |
+| __Theme__:           | Marwaita-X-Dark-Lime                                                 |
+| __Icon__:            | pixelitos-icon-linux-mint                                            |
+| __Wallaper:__        | [This Gif](https://danbooru.donmai.us/posts/3939992)                 |
+| __Wallpaer Setter:__ | xgifwallpaper                                                        |
+| __Font:__            | DepartureMono, ProggyClean, siji-ttf                                 |
+| __Fetch:__           |fastfetch                                                             |
 
 <br>
 <h3 align=center> Preview </h3>

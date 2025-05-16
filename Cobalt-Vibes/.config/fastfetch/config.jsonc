@@ -39,7 +39,7 @@
 		},
         {
             "type": "title",
-			"format": "  │        {user-name-colored} {at-symbol-colored} {host-name-colored}  │",
+			"format": "  │        {user-name-colored} {at-symbol-colored} {host-name-colored}         │",
             "color": {
                 "user": "green",
                 "at": "yellow",
