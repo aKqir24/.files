@@ -27,8 +27,8 @@ My repository with some of my rices or setups from a couple of months in searchi
 <br>
 <h3 align=center> Preview </h3>
 
-| **WINDOW VIEW**                                           | **DESKTOP VIEW**                                          |
-|-----------------------------------------------------------|-----------------------------------------------------------|
+| **WINDOW VIEW**                                           | **DESKTOP VIEW**                                           |
+|-----------------------------------------------------------|------------------------------------------------------------|
 | ![p-window](resources/previews/pastel-nature-window.png)  | ![p-desktop](resources/previews/pastel-nature-desktop.png) |
 
 <br>
@@ -61,8 +61,8 @@ My repository with some of my rices or setups from a couple of months in searchi
 <br>
 <h3 align=center> Preview </h3>
 
-| **WINDOW VIEW**                                          | **DESKTOP VIEW**                                         |
-|----------------------------------------------------------|----------------------------------------------------------|
+| **WINDOW VIEW**                                          | **DESKTOP VIEW**                                          |
+|----------------------------------------------------------|-----------------------------------------------------------|
 | ![c-window](resources/previews/cobalt-vibes-window.png)  | ![c-desktop](resources/previews/cobalt-vibes-desktop.png) |
 
 <br>
