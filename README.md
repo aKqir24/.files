@@ -22,7 +22,7 @@ My repository with some of my rices or setups from a couple of months in searchi
 | __Wallaper:__        | [This Gif](https://danbooru.donmai.us/posts/3939992)                 |
 | __Wallpaer Setter:__ | xgifwallpaper                                                        |
 | __Font:__            | DepartureMono, ProggyClean, siji-ttf                                 |
-| __Fetch:__           |fastfetch                                                             |
+| __Fetch:__           | fastfetch                                                            |
 
 <br>
 <h3 align=center> Preview </h3>

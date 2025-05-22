@@ -9,4 +9,7 @@ if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
 fi
 
 # Start audio exernally
-sh ~/.config/sway/start.sh audio &> /dev/null
+while ! pgrep -x wireplumber; do
+	sh ~/.config/sway/start.sh audio &> /dev/null 
+done
+clear
