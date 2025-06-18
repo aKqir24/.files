@@ -19,3 +19,4 @@ pywalfox update ; pywalfox dark &
 sh ~/.config/i3/theming/gtk/gen_gtk_2.sh
 sh ~/.config/i3/theming/gtk/gen_gtk_3.sh
 sh ~/.config/i3/theming/gtk/gen_gtk_3.20.sh
+killall -HUP xsettingsd || xsettingsd &
