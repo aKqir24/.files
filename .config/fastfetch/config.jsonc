@@ -1,0 +1,69 @@
+{
+    "logo": {
+		"width": 26,
+		"height": 10,
+		"type": "small",
+		"position": "left",
+		"color": { "1": "green", "2":"yellow" },
+		"padding": {
+			"top": 3,
+			"right": 4,
+			"left": 4
+		}
+    },
+    "display": {
+        "separator": " > ",
+        "color": {
+			"separator": "blue",
+            "keys": "green",
+			"width": 25
+        },
+        "size": {
+            "ndigits": 0,
+            "maxPrefix": "GB"
+        },
+        "key": {
+            "type": "icon",
+			"width": 6,
+			"paddingLeft": 1 
+        },
+        "percent": {
+            "type": 1
+        }
+    },
+    "modules": [
+		"break",
+        {
+            "type": "title",
+			"format": " │  {user-name-colored} {at-symbol-colored} {host-name-colored}",
+            "color": {
+                "user": "green",
+                "at": "yellow",
+                "host": "green"
+            }
+        },
+		{
+            "type": "custom", // InformationEnd
+            "format": " ╰──────────────────────────────"
+		},
+        "os",
+        "kernel",
+		"cpu",
+		"display",
+		{
+			"type": "disk",
+			"key": "{$1}",
+		},
+        "uptime",
+        "packages",
+		"terminal",
+        {
+            "type": "colors",
+			"key": "Colors",
+            "block": {
+                "range": [1, 7]
+            }
+        },
+		"break"
+    ]
+}

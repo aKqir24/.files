@@ -1,0 +1,31 @@
+[Added Associations]
+image/png=viewnior.desktop;org.xfce.ristretto.desktop;
+image/jpeg=org.xfce.ristretto.desktop;
+application/x-zstd-compressed-tar=7zFM.desktop;
+application/x-zerosize=nvim.desktop;
+application/x-font-pcf=gimp.desktop;com.github.FontManager.FontManager.desktop;com.github.FontManager.FontViewer.desktop;
+image/gif=viewnior.desktop;gimp.desktop;org.xfce.ristretto.desktop;
+image/bmp=org.xfce.ristretto.desktop;
+image/x-ilbm=gimp.desktop;viewnior.desktop;
+font/ttf=viewnior.desktop;
+x-scheme-handler/http=zen.desktop;
+x-scheme-handler/https=zen.desktop;
+x-scheme-handler/chrome=zen.desktop;
+
+[Default Applications]
+image/jpeg=viewnior.desktop
+application/x-zstd-compressed-tar=7zFM.desktop
+application/x-zerosize=nvim.desktop
+x-scheme-handler/http=zen.desktop
+x-scheme-handler/https=zen.desktop
+x-scheme-handler/chrome=zen.desktop
+text/html=zen.desktop
+application/x-extension-htm=zen.desktop
+application/x-extension-html=zen.desktop
+application/x-extension-shtml=zen.desktop
+application/xhtml+xml=zen.desktop
+application/x-extension-xhtml=zen.desktop
+application/x-extension-xht=zen.desktop
+application/x-font-pcf=com.github.FontManager.FontViewer.desktop
+image/gif=viewnior.desktop
+inode/directory=pcmanfm.desktop

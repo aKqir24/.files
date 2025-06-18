@@ -1,0 +1,18 @@
+[global]
+	monitor = 0
+	timeout = 3	
+	gap_size = 6
+	offset = (16, 50)
+	frame_width = 2
+	alignment = left
+	width = (100, 300)
+	height = (30, 300)
+	seperator_height = 4
+	font = "Lilex 8"
+	ignore_dbusclose = false
+	background = "#393D44"
+	foreground = "#E3ECEA"
+	frame_color = "#9FD8A6"
+	
+	progress_bar = false
+	enable_recursive_icon_lookup = true
