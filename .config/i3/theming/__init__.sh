@@ -13,3 +13,9 @@ sh ~/.config/i3/theming/rofi.sh
 
 # Firefox Based Browsers
 pywalfox update ; pywalfox dark &
+
+# GTK Theme colors
+[ -e ~/.themes/FlatColor ] || ln -s ~/.config/i3/theming/gtk/FlatColor ~/.themes/FlatColor
+sh ~/.config/i3/theming/gtk/gen_gtk_2.sh
+sh ~/.config/i3/theming/gtk/gen_gtk_3.sh
+sh ~/.config/i3/theming/gtk/gen_gtk_3.20.sh
