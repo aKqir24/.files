@@ -7,7 +7,7 @@ else
   die "Wal colors not found, exiting script. Have you executed Wal before?"
 fi
 
-FILE=~/.config/i3/theming/gtk/FlatColor/gtk-3.20/gtk.css
+FILE=~/.themes/FlatColor/gtk-3.20/gtk.css
 cat > $FILE <<EOF
 
 /* Default color scheme */

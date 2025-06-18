@@ -15,7 +15,6 @@ sh ~/.config/i3/theming/rofi.sh
 pywalfox update ; pywalfox dark &
 
 # GTK Theme colors
-[ -e ~/.themes/FlatColor ] || cp -r ~/.config/i3/theming/gtk/FlatColor ~/.themes/
 sh ~/.config/i3/theming/gtk/gen_gtk_2.sh
 sh ~/.config/i3/theming/gtk/gen_gtk_3.sh
 sh ~/.config/i3/theming/gtk/gen_gtk_3.20.sh

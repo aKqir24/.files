@@ -8,7 +8,7 @@ else
 fi
 
 # Write Base CSS File
-FILE=~/.config/i3/theming/gtk/FlatColor/gtk-2.0/gtkrc
+FILE=~/.themes/FlatColor/gtk-2.0/gtkrc
 cat > $FILE <<EOF
 #modded Numix gtkrc
 
