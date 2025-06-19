@@ -20,7 +20,7 @@ My repository with some of my rices or setups from a couple of months in searchi
 <br>
 <h3 align=center> Screenshot </h3>
 
-![p](resources/previews/pastel-nature-window.png)  
+![p](resources/preview.png)  
 
 <br>
 </details>
