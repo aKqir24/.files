@@ -1,9 +1,11 @@
 # GIMP gimp-eraser-tool options
 
+(foreground
+    (color "R'G'B'A u8" 4 "\377\377\377\377" 0))
 (brush "2. Block 01")
 (dynamics "Pressure Size")
 (palette "Standard")
-(brush-size 51)
+(brush-size 1)
 (brush-aspect-ratio -20)
 (brush-angle 180)
 (brush-spacing 0.01)

@@ -1,6 +1,8 @@
 # GIMP gimp-mypaint-brush-tool options
 
-(mybrush "100% Opaque")
+(foreground
+    (color "R'G'B'A u8" 4 "\377\377\377\377" 0))
+(mybrush "Standard")
 (pattern "Starfield")
 (brush-size 51)
 (brush-hardness 0.5)
