@@ -2,10 +2,6 @@
 My repository with some of my rices or setups from a couple of months in searching in the web!! These are just backups to savemy systems incase of incompatiblities when cloning these configurations to another computer:D
 
 ---
-<details>  
-<summary><h2>Pastel-Nature</h2>
-<ls align=center> - A retro styled rice with Arch linux, that has bright smooth contrasted yellow & green colors from the wallpaper.</ls>
-</summary>
 
 <br>
 
