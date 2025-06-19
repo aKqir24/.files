@@ -127,6 +127,7 @@ function connect_to_network() {
 
         # Attempt to connect to an unknown network with the provided passphrase
         local connection_output=$(iwctl station "$INTERFACE" connect "$selected_ssid" --passphrase=$(<"$TEMP_PASSWORD_FILE") 2>&1)
+		echo "$connection_output"
         if [[ -n "$connection_output" ]]; then
             notify "Connection Was Unsuccessful!!" "The password entered may be wrong or empty, please try again!!"
         else

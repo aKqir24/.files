@@ -1,0 +1,98 @@
+
+:root {
+  /* Base palette (example placeholders) */
+  --color0: #1d2419;
+  --color1: #A6AD6F;
+  --color2: #72A783;
+  --color3: #D2B59B;
+  --color4: #BAC38C;
+  --color5: #C4C88C;
+  --color6: #F0D1B2;
+  --color7: #989e94;
+  --color8: #6a7761;
+  --color9: #c4cc87;
+  --color10: #86cb9c;
+  --color11: #dec6b2;
+  --color12: #ced7a2;
+  --color13: #d4d8a4;
+  --color14: #e9dcce;
+  --color15: #c6c8c5;
+
+  /* Derived theme colors */
+  --selected-bg-color: var(--color2);
+  --bg-color: mix(var(--color0), var(--color15), 0.12);
+  --tooltip-bg-color: mix(var(--color0), var(--color15), 0.04);
+  --base-color: mix(var(--color0), var(--color15), 0);
+  --fg-color: var(--color15);
+  --text-color: var(--color15);
+  --selected-fg-color: var(--color15);
+  --tooltip-fg-color: var(--color15);
+
+  /* Theme-specific naming (GTK 4 recommends using system color names) */
+  --gtk-color-bg: var(--bg-color);
+  --gtk-color-fg: var(--fg-color);
+  --gtk-color-base: var(--base-color);
+  --gtk-color-text: var(--text-color);
+  --gtk-color-selected-bg: var(--selected-bg-color);
+  --gtk-color-selected-fg: var(--selected-fg-color);
+  --gtk-color-tooltip-bg: var(--tooltip-bg-color);
+  --gtk-color-tooltip-fg: var(--tooltip-fg-color);
+
+  /* Additional colors */
+  --light-shadow: #eeeeee;
+  --dark-shadow: #222222;
+
+  /* Informational */
+  --info-fg-color: var(--text-color);
+  --info-bg-color: var(--bg-color);
+  --warning-fg-color: var(--text-color);
+  --warning-bg-color: var(--bg-color);
+  --question-fg-color: var(--text-color);
+  --question-bg-color: var(--selected-bg-color);
+  --error-fg-color: var(--text-color);
+  --error-bg-color: #f52400;
+  --link-color: mix(var(--selected-bg-color), black, 0.15);
+  --success-color: #53a93f;
+  --warning-color: #f57900;
+  --error-color: #f52400;
+
+  /* Widgets */
+  --border-color: shade(var(--selected-bg-color), 0.2);
+  --button-normal-color: shade(var(--bg-color), 1.2);
+  --button-info-color: var(--selected-bg-color);
+  --button-default-active-color: var(--selected-bg-color);
+  --entry-border-color: shade(var(--base-color), 0.9);
+  --frame-border-bottom-color: shade(var(--bg-color), 0.8);
+  --sel-color: shade(var(--selected-bg-color), 0.857);
+  --switch-bg-color: shade(var(--bg-color), 0.8);
+  --panel-bg-color: var(--bg-color);
+  --panel-fg-color: var(--fg-color);
+  --borders: shade(var(--selected-bg-color), 0.857);
+  --scrollbar-trough: shade(var(--base-color), 0.9);
+  --scrollbar-slider-prelight: mix(var(--scrollbar-trough), var(--fg-color), 0.5);
+
+  /* OSD */
+  --osd-separator: #49525B;
+  --osd-fg: #ABB4BD;
+  --osd-bg: #434A54;
+
+  /* WM */
+  --wm-bg: var(--bg-color);
+  --wm-title-focused: var(--fg-color);
+  --wm-title-unfocused: var(--text-color);
+  --wm-border-focused: var(--border-color);
+  --wm-border-unfocused: var(--border-color);
+}
+
+/* Example of applying some of these */
+button {
+  background-color: var(--button-normal-color);
+  color: var(--fg-color);
+  border-color: var(--border-color);
+}
+
+tooltip {
+  background-color: var(--tooltip-bg-color);
+  color: var(--tooltip-fg-color);
+}
+

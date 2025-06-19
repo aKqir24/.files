@@ -121,4 +121,4 @@ cat > $FILE <<EOF
 
 EOF
 
-echo Colorsheme is Appli
+echo Colorsheme is Applied!!
