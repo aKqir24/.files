@@ -12,7 +12,7 @@
 		}
     },
     "display": {
-        "separator": " > ",
+        "separator": " ",
         "color": {
 			"separator": "blue",
             "keys": "green",
@@ -22,10 +22,9 @@
             "ndigits": 0,
             "maxPrefix": "GB"
         },
-        "key": {
-            "type": "icon",
+        "key": { 
 			"width": 6,
-			"paddingLeft": 1 
+			"paddingLeft": 2 
         },
         "percent": {
             "type": 1
@@ -35,7 +34,8 @@
 		"break",
         {
             "type": "title",
-			"format": " │  {user-name-colored} {at-symbol-colored} {host-name-colored}",
+			"key": " 󰌢 ",
+			"format": "   {user-name-colored} {at-symbol-colored} {host-name-colored}",
             "color": {
                 "user": "green",
                 "at": "yellow",
@@ -43,23 +43,44 @@
             }
         },
 		{
-            "type": "custom", // InformationEnd
-            "format": " ╰──────────────────────────────"
+            "type": "custom",
+            "format": "    └─────────────────────────────────────────>"
 		},
-        "os",
-        "kernel",
-		"cpu",
-		"display",
+		{
+			"type": "os",
+			"key": "{icon}",
+		},
+		{
+			"type": "kernel",
+			"key": "{icon}",
+		},
+		{
+			"type": "cpu",
+			"key": "{icon}",
+		},
+		{
+			"type": "display",
+			"key": "{icon}",
+		},
 		{
 			"type": "disk",
-			"key": "{$1}",
+			"key": "{icon}",
 		},
-        "uptime",
-        "packages",
-		"terminal",
+		{
+			"type": "uptime",
+			"key": "{icon}",
+		},
+		{
+			"type": "packages",
+			"key": "{icon}",
+		},
+		{
+			"type": "terminal",
+			"key": "{icon}",
+		},
         {
             "type": "colors",
-			"key": "Colors",
+			"key": "{icon}",
             "block": {
                 "range": [1, 7]
             }

@@ -1,8 +1,8 @@
 type="--type"
 case "$1" in 
 	"$type=wifi")
-	INTERFACE=wlan0
-	if [ ! -z $(which iwdctl) ]; then	
+	INTERFACE=$(ip -o link show | awk -F': ' '/wlx/ {print $2}')
+	if [ ! -z $(which iwctl) ]; then	
 		wifi_ssid="$(iwctl station $INTERFACE show | sed -n 's/.*Connected network *//p' | sed 's/^ *//;s/ *$//')"
 		wifi_check="$(iwctl station "$INTERFACE" show | grep 'State' | awk '{print $2}')"
 		wifi_speed="$(iwctl station "$INTERFACE" show | grep 'RSSI' | awk '{print $2}')"
@@ -31,19 +31,20 @@ case "$1" in
 	"$type=bluetooth")
 	if [ "$2" = "" ]; then
 		inf_style="<span size='11pt'>"
-		if [ ! -z $(which bluetoothctl) ]; then
+		if [ ! -z $(which bluetoothctl) ]; then	
 			inf_name=$(echo "$(bluetoothctl info | grep "Name" | cut -d ' ' -f2-)")
 			inf_icon=$(bluetoothctl info | grep "Icon" | awk '{print $2}')
 			
 			if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]; then
-				echo "$inf_style 󰂲 </span> "
+				echo "$inf_style 󰂲</span> "
 			else
+				
 				if [ $inf_icon = "audio-headphones" ]; then
 					echo "$inf_style󰋋 󰂯 </span><span>$inf_name </span>"
 				elif [ $inf_icon = "phone" ]; then
 					echo "$inf_style󰄜 󰂯 </span><span>$inf_name </span>"
 				else
-					echo "$inf_style 󰂯 </span>"
+					echo "$inf_style 󰂯</span>"
 				fi
 			fi
 		else

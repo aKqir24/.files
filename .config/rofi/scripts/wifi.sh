@@ -1,5 +1,5 @@
 #!/bin/sh
-INTERFACE="wlan0"
+INTERFACE=$(ip -o link show | awk -F': ' '/wlx/ {print $2}')
 
 # Directory for temporary files related to iwd_rofi_menu
 TPATH="$HOME/.cache/iwd_rofi_menu_files"

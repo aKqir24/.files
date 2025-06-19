@@ -160,9 +160,7 @@ for_window [title="^(Error|Confirm|Delete confirmation)$"] border pixel 0
 for_window [floating] move position center
 
 # Monitor/Display settings and resolution
-exec xrandr --newmode "1152x864_60.00"   81.75  1152 1216 1336 1520  864 867 871 897 -hsync +vsync ;
-exec xrandr --addmode VGA-1 "1152x864_60.00" ; xrandr --output VGA-1 --mode "1152x864_60.00" &
-exec xsetroot -cursor_name left_ptr
+exec sh ~/.config/i3/Xdisplay.sh
 #uncomment for wayland support
 #output VGA-1 mode --custom 1152x864@59.9Hz
 #output * bg ~/.config/wallpaper.jpg fill

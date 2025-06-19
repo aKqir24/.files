@@ -44,14 +44,14 @@ button = "left"
 cmd = "sh ~/.config/i3/status/custom_status.sh --type=bluetooth toggle"
 [[block.click]]
 button = "right"
-cmd = "sh ~/.config/rofi/scripts/bluetooth.sh"
+cmd = "bash ~/.config/rofi/scripts/bluetooth.sh"
 
 [[block]]
 block = "custom"
 command = "sh ~/.config/i3/status/custom_status.sh --type=wifi"
 [[block.click]]
 button = "right"
-cmd = "sh ~/.config/rofi/scripts/wifi.sh"
+cmd = "bash ~/.config/rofi/scripts/wifi.sh"
 
 [[block]]
 block = "net"
