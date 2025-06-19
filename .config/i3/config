@@ -35,7 +35,7 @@ bindsym $mod+r exec bash ~/.config/rofi/scripts/launcher.sh
 bindsym $mod+Shift+e exec bash ~/.config/rofi/scripts/powermenu.sh
 
 # Screenshoot
-bindsym Print exec --no-startup-id sh $HOME/.config/i3/start.sh screenshot $HOME/Pictures/Screenshots/
+bindsym Print exec --no-startup-id bash $HOME/.config/i3/start.sh screenshot $HOME/Pictures/Screenshots/
 
 # Programs control/s
 bindsym $mod+Shift+c reload

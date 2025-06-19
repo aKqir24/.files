@@ -14,7 +14,7 @@ elif [ "$1" = "screenshot" ]; then
 	if [ ! -z $WAYLAND_DISPLAY ]; then
 		pgrep -x slurp || 
 			grim -t png -l 9 -g "$(slurp)" -c $IMAGE_DIR
-		pgrep -x slurp && echo " " || 
+		pgrep -x slurp && echo " " 
 	else
 		import $IMAGE_DIR
 	fi
