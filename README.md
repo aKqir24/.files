@@ -1,7 +1,5 @@
 # Workspace-Rices
-My repository with some of my rices or setups from a couple of months in searching in the web!! These are just backups to savemy systems incase of incompatiblities when cloning these configurations to another computer:D
-
----
+Finally I am satisfied, the story of this rice is when I got tired of trying so many linux distros. I did enjoy ricing some of them like Arch, Artix, Ubuntu, & Linux Mint ( My First Distro ), but nowadays time is limited and I have grown tired in fixing many errors I encounter in these distros. So to ease the pain from this torture, I went searching for the most stable linux distro I could find, and it is debian where I finally where can say I am home:D
 
 <br>
 
@@ -21,8 +19,3 @@ My repository with some of my rices or setups from a couple of months in searchi
 <h3 align=center> Screenshot </h3>
 
 ![p](resources/preview.png)  
-
-<br>
-</details>
-
----
