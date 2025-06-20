@@ -83,8 +83,8 @@
     (size 562 606))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
-    (position 108 133)
-    (size 829 577))
+    (position 106 131)
+    (size 737 528))
 (session-info "toplevel"
     (factory-entry "gimp-keyboard-shortcuts-dialog")
     (position 2092 602)
@@ -98,7 +98,7 @@
     (position 91 439))
 (session-info "toplevel"
     (factory-entry "gimp-operation-tool-dialog")
-    (position 254 140))
+    (position 469 78))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
     (position 578 31)

@@ -11,6 +11,7 @@ font/ttf=viewnior.desktop;
 x-scheme-handler/http=zen.desktop;
 x-scheme-handler/https=zen.desktop;
 x-scheme-handler/chrome=zen.desktop;
+video/mp4=userapp-vlc-A0CA82.desktop;
 
 [Default Applications]
 image/jpeg=viewnior.desktop
@@ -29,3 +30,6 @@ application/x-extension-xht=zen.desktop
 application/x-font-pcf=com.github.FontManager.FontViewer.desktop
 image/gif=viewnior.desktop
 inode/directory=pcmanfm.desktop
+image/png=viewnior.desktop
+
+[Removed Associations]

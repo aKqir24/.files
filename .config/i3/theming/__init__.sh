@@ -9,7 +9,7 @@ sh ~/.config/i3/theming/alacritty.sh
 sh ~/.config/i3/theming/rofi.sh
 
 # Solid Color wallapaper
-. "${HOME}/.cache/wal/colors.sh"; xsetroot -solid "$color8"
+. "${HOME}/.cache/wal/colors.sh"; hsetroot -solid "$color8"
 
 # Firefox Based Browsers
 pywalfox update ; pywalfox dark &

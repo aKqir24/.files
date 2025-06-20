@@ -3,20 +3,15 @@
 (GimpDeviceInfo "Virtual core pointer"
     (icon-name "gimp-cursor")
     (name "Virtual core pointer")
-    (tool-options "GimpCropOptions"
-        (aspect-denominator 863)
-        (aspect-numerator 1151)
-        (tool "gimp-crop-tool")
-        (foreground
-            (color "R'G'B'A u8" 4 "\377\377\377\377" 0))
-        (pattern "Starfield"))
-    (use-fg-bg yes)
+    (tool-options "GimpMoveOptions"
+        (tool "gimp-move-tool"))
+    (use-fg-bg no)
     (use-opacity-paint-mode no)
     (use-brush no)
     (use-dynamics no)
     (use-mypaint-brush no)
     (use-gradient no)
-    (use-pattern yes)
+    (use-pattern no)
     (use-palette no)
     (use-font no)
     (mode screen)

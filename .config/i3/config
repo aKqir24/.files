@@ -2,17 +2,17 @@
 #		Autostart		#
 # ===================== #
 
-# Daemons
-exec_always --no-startup-id dunst
-exec --no-startup-id pywalfox start
-exec --no-startup-id autotiling
-exec --no-startup-id udiskie
-
 # Post-Setup
 exec_always --no-startup-id sh ~/.config/i3/theming/__init__.sh
 exec sh ~/.config/i3/start.sh audio &> /dev/null
 exec --no-startup-id xhost +si:localuser:root ;
 
+# Daemons
+exec_always --no-startup-id picom
+exec_always --no-startup-id autotiling
+exec --no-startup-id pywalfox start
+exec_always --no-startup-id dunst
+exec --no-startup-id udiskie
 
 # ================= #
 #		BINDS		#
