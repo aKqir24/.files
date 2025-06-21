@@ -1,5 +1,22 @@
 icons_format = "<span font_family='EnvyCodeR Nerd' size='12pt'>{icon}</span>"
 
+[theme.overrides]
+idle_bg = "#1d2419"
+idle_fg = "#c6c8c5"
+info_bg = "#c6c8c5"
+info_fg = "#1d2419"
+good_bg = "#72A783"
+good_fg = "#1d2419"
+warning_bg = "#D2B59B"
+warning_fg = "#1d2419"
+critical_bg = "#A6AD6F"
+critical_fg = "#1d2419"
+alternating_tint_bg = "#1d2419"
+alternating_tint_fg = "#1d2419"
+separator = "<span size='16pt'> </span>"
+separator_bg = "auto"
+separator_fg = "auto"
+
 [icons]
 icons = "none"
 [icons.overrides]
@@ -95,20 +112,3 @@ cmd = "sudo poweroff"
 [[block.items]]
 display = "  ⏻  Reboot  "
 cmd = "sudo reboot"
-
-[theme.overrides]
-idle_bg = "#1d2419"
-idle_fg = "#c6c8c5"
-info_bg = "#c6c8c5"
-info_fg = "#1d2419"
-good_bg = "#72A783"
-good_fg = "#1d2419"
-warning_bg = "#D2B59B"
-warning_fg = "#1d2419"
-critical_bg = "#A6AD6F"
-critical_fg = "#1d2419"
-alternating_tint_bg = "#1d2419"
-alternating_tint_fg = "#1d2419"
-separator = "<span size='16pt'> </span>"
-separator_bg = "auto"
-separator_fg = "auto"

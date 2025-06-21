@@ -1,15 +1,19 @@
 # i3status-rust
-python3 ~/.config/i3/theming/i3bar.py \
-	-c ~/.config/i3/status/config.toml -i ~/.cache/wal/colors.json
+bash ~/.config/i3/theming/toml_theming.sh --i3status-rs ~/.config/i3/status/config.toml
 
 # Alacritty
-sh ~/.config/i3/theming/alacritty.sh
+bash ~/.config/i3/theming/toml_theming.sh --alacritty
+
+# Dunst
+bash ~/.config/i3/theming/toml_theming.sh --dunst
+pkill dunst && dunst &
 
 # Rofi Launcher
 sh ~/.config/i3/theming/rofi.sh
 
 # Solid Color wallapaper
-. "${HOME}/.cache/wal/colors.sh"; hsetroot -solid "$color8"
+. "${HOME}/.cache/wal/colors.sh"
+hsetroot -solid "$color8"
 
 # Firefox Based Browsers
 pywalfox update ; pywalfox dark &

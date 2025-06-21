@@ -1,18 +1,24 @@
 [global]
-	monitor = 0
-	timeout = 3	
-	gap_size = 6
-	offset = (16, 50)
-	frame_width = 2
-	alignment = left
-	width = (100, 300)
-	height = (30, 300)
-	seperator_height = 4
-	font = "Lilex 8"
-	ignore_dbusclose = false
-	background = "#393D44"
-	foreground = "#E3ECEA"
-	frame_color = "#9FD8A6"
-	
-	progress_bar = false
-	enable_recursive_icon_lookup = true
+monitor = 0
+timeout = 3
+gap_size = 6
+frame_width = 2
+seperator_height = 4
+font = "Lilex 8"
+width = 230
+ignore_dbusclose = false
+background = "#1d2419"
+foreground = "#c6c8c5"
+frame_color = "#72A783"
+progress_bar = false
+enable_recursive_icon_lookup = true
+
+[urgency_low]
+background = "#1d2419"
+foreground = "#c6c8c5"
+frame_color = "#D2B59B"
+
+[urgency_critical]
+background = "#1d2419"
+foreground = "#c6c8c5"
+frame_color = "#A6AD6F"

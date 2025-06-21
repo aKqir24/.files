@@ -1,60 +1,54 @@
+[colors.primary]
+background = "#1d2419"
+foreground = "#c6c8c5"
 
-# COLORSCHEME BEGIN ###########
-							  #
-[colors.primary]			  #
-background = '#1d2419'		  #		
-foreground = '#c6c8c5'		  #
-							  #
-[colors.cursor]				  #
-text   = '#1d2419'			  #
-cursor = '#989e94'			  #
-							  #
-[colors.vi_mode_cursor]		  #
-text    = '#1d2419'			  #
-cursor  = '#c6c8c5'		  #
-							  #
-[colors.search.matches]		  #
-foreground = '#1d2419'		  #
-background = '#c6c8c5'		  #
-							  #
-[colors.search.focused_match] #
-foreground = 'CellBackground' #
-background = 'CellForeground' #
-							  #
-[colors.line_indicator]		  #
-foreground = 'None'			  #
-background = 'None'			  #
-							  #
-[colors.footer_bar]			  #
-foreground = '#c6c8c5'		  #
-background = '#989e94'	      #
-							  #
-[colors.selection]			  #
-text       = 'CellBackground' #
-background = 'CellForeground' #
-							  #
-[colors.normal]				  #
-black   = '#1d2419'			  #
-red     = '#A6AD6F'			  #
-green   = '#72A783'			  #
-yellow  = '#D2B59B'			  #
-blue    = '#BAC38C'			  #
-magenta = '#C4C88C'			  #
-cyan    = '#F0D1B2'			  #
-white   = '#989e94'			  #
-							  #
-[colors.bright]				  #
-black   = '#6a7761'			  #
-red     = '#c4cc87'			  #
-green   = '#86cb9c'		  #
-yellow  = '#dec6b2'		  #
-blue    = '#ced7a2'		  #
-magenta = '#d4d8a4'		  #
-cyan    = '#e9dcce'		  #
-white   = '#c6c8c5'		  #
-                              #
-# COLORSCHEME END #############
+[colors.cursor]
+text = "#1d2419"
+cursor = "#989e94"
 
+[colors.vi_mode_cursor]
+text = "#1d2419"
+cursor = "#c6c8c5"
+
+[colors.search.matches]
+foreground = "#1d2419"
+background = "#c6c8c5"
+
+[colors.search.focused_match]
+foreground = "CellBackground"
+background = "CellForeground"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.footer_bar]
+foreground = "#c6c8c5"
+background = "#989e94"
+
+[colors.selection]
+text = "CellBackground"
+background = "CellForeground"
+
+[colors.normal]
+black = "#1d2419"
+red = "#A6AD6F"
+green = "#72A783"
+yellow = "#D2B59B"
+blue = "#BAC38C"
+magenta = "#C4C88C"
+cyan = "#F0D1B2"
+white = "#989e94"
+
+[colors.bright]
+black = "#6a7761"
+red = "#c4cc87"
+green = "#86cb9c"
+yellow = "#dec6b2"
+blue = "#ced7a2"
+magenta = "#d4d8a4"
+cyan = "#e9dcce"
+white = "#c6c8c5"
 
 [window.padding]
 x = 12
@@ -62,5 +56,10 @@ y = 12
 
 [font]
 size = 12
-normal = { family = "EnvyCodeR Nerd Font Mono" }
-bold = { family = "EnvyCodeR Nerd Font", style="Regular" }
+
+[font.normal]
+family = "EnvyCodeR Nerd Font Mono"
+
+[font.bold]
+family = "EnvyCodeR Nerd Font"
+style = "Regular"
