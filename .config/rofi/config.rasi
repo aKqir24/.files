@@ -4,7 +4,7 @@
 * {
 
 	/* Fonts */
-	icon-font:		     "EnvyCodeR Nerd Font Bold 12";
+	icon-font:		     "EnvyCodeR Nerd Font Bold 14";
 	icon-font-2:					 "feather bold 18";
     text-font:						   		 "Lilex 8";
 	search-text-font:					    "Lilex 10";
@@ -147,7 +147,7 @@ configuration {
 	display-keys:			  "Keys";
 	display-passphrase:	   "Eye_emo";
 	display-wifi:		   	    " ";
-	display-emoji:			"Smile-";
+	display-emoji:				"󰞅 ";
 
 	wifi-display-format:    "{name}";
 	drun-display-format:    "{name}";
