@@ -1,9 +1,0 @@
-[X-GNOME-Metatheme]
-Name=Wal
-Type=X-GNOME-Metatheme
-Comment=Auto Generated pywal GTK Theme
-Encoding=UTF-8
-GtkTheme=Wal
-IconTheme=Wal
-CursorTheme=Wal
-CursorSize=24
