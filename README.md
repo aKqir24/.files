@@ -4,7 +4,7 @@ Finally I am satisfied, the story of this rice is when I got tired of trying so 
 <br>
 
 | Distro | __WM__ | __Compositor__ | __Status__            | __Terminal__ | __Launcher__ | __Theme__ |
-|-----------------|----------------|-----------------------|--------------|--------------|-----------|
+|--------|--------|----------------|-----------------------|--------------|--------------|-----------|
 | Debian | i3wm   |   picom        | i3bar + i3status-rust | alacritty    |   rofi       | pywal16   |                      
 
 <br>
