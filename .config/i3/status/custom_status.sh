@@ -40,9 +40,9 @@ case "$1" in
 			else
 				
 				if [ $inf_icon = "audio-headphones" ]; then
-					echo "$inf_style󰋋 󰂯 </span><span>$inf_name </span>"
+					echo "$inf_style 󰋋 󰂯 </span><span>$inf_name</span>"
 				elif [ $inf_icon = "phone" ]; then
-					echo "$inf_style󰄜 󰂯 </span><span>$inf_name </span>"
+					echo "$inf_style 󰄜 󰂯 </span><span>$inf_name</span>"
 				else
 					echo "$inf_style 󰂯</span>"
 				fi

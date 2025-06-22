@@ -17,18 +17,18 @@ else
   die "Wal colors not found, exiting script. Have you executed Wal before?"
 fi
 changeI3status_rustCONF () {
-	write_toml "idle_bg = \"$color0\""
-	write_toml "idle_fg = \"$color15\""
-	write_toml "info_bg = \"$color15\""
-	write_toml "info_fg = \"$color0\""
-	write_toml "good_bg = \"$color2\""
-	write_toml "good_fg = \"$color0\""
-	write_toml "warning_bg = \"$color3\""
-	write_toml "warning_fg = \"$color0\""
-	write_toml "critical_bg = \"$color1\""
-	write_toml "critical_fg = \"$color0\""
-	write_toml "alternating_tint_bg = \"$color0\""
-	write_toml "alternating_tint_fg = \"$color0\""
+	write_toml ".theme.overrides.idle_bg = \"$color0\""
+	write_toml ".theme.overrides.idle_fg = \"$color15\""
+	write_toml ".theme.overrides.info_bg = \"$color15\""
+	write_toml ".theme.overrides.info_fg = \"$color0\""
+	write_toml ".theme.overrides.good_bg = \"$color2\""
+	write_toml ".theme.overrides.good_fg = \"$color0\""
+	write_toml ".theme.overrides.warning_bg = \"$color3\""
+	write_toml ".theme.overrides.warning_fg = \"$color0\""
+	write_toml ".theme.overrides.critical_bg = \"$color1\""
+	write_toml ".theme.overrides.critical_fg = \"$color0\""
+	write_toml ".theme.overrides.alternating_tint_bg = \"$color0\""
+	write_toml ".theme.overrides.alternating_tint_fg = \"$color0\""
 }
 
 # Dunst config writer
@@ -94,7 +94,7 @@ case "$1" in
 		[ -z "$2" ] && DEFAULT_CONFIG_FILE="$HOME/.config/dunst/dunstrc" || DEFAULT_CONFIG_FILE="$2"
 		changeDunstCONF
 		;;
-	--i3status-rs0)
+	--i3status-rs)
 		[ -z "$2" ] && DEFAULT_CONFIG_FILE="$HOME/.config/i3status-rs/config.toml" || DEFAULT_CONFIG_FILE="$2"
 		changeI3status_rustCONF
 		;;

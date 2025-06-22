@@ -1,9 +1,9 @@
 #!/bin/bash
-refresh=true ; ROFI_THEME=~/.config/rofi/styles/bluetooth.rasi
-REFRESH_ICON=''; BLUETOOTH_ON='󰂯' ; BLUETOOTH_OFF='󰂲'
-while ($refresh == true) 
-do
+refresh=true 
+ROFI_THEME=~/.config/rofi/styles/bluetooth.rasi
 
+while ($refresh == true)
+do
   connected_device_list=$(bluetoothctl devices Connected | sed 's/Device //g' | sed 's/./ 󰂱  /18')
   connected_device_mac=$(echo "$connected_device_list" | sed 's/ .*//g' )
   paired_device_list=$(bluetoothctl devices Paired | sed 's/Device //g' | sed 's/./   /18')
@@ -48,21 +48,23 @@ do
   connected=$(bluetoothctl show | grep 'PowerState')
   if [[ "$connected" =~ "PowerState: on" ]]; then
 	if [[ $final_device_list == "" ]]; then
-		refresh_message="$BLUETOOTH_OFF Disable Bluetooth\n$REFRESH_ICON Refresh" 
+		refresh_message="Disable Bluetooth\nRefresh" 
 	else
-		refresh_message="$BLUETOOTH_OFF Disable Bluetooth\n$REFRESH_ICON Refresh\n$final_device_list"
+		refresh_message="Disable Bluetooth\nRefresh\n$final_device_list"
 	fi
   elif [[ "$connected" =~ "PowerState: off" ]]; then
     refresh_message="$BLUETOOTH_ON Enable Bluetooth"
   fi 
 
-  device_selected=$(echo -e "$refresh_message" | sed 's/^..:..:..:..:..:.. //g' | rofi -replace -dmenu -i -theme $ROFI_THEME -selected-row 1) 
+  device_selected=$(echo -e "$refresh_message" | sed 's/^..:..:..:..:..:.. //g' | rofi -replace -dmenu -i -theme $ROFI_THEME -selected-row 1)
+  
 
-  if [[ "$device_selected" =~ "$REFRESH_ICON Refresh" ]]; then
+  if [[ "$device_selected" =~ "Refresh" ]]; then
+	echo -e $device_selected
     refresh=true
     notify-send "Refreshing..." "Reloading the list of available bluetooth devices!!"
     bluetoothctl -t 3 scan on
-  elif [[ "$device_selected" =~ "$BLUETOOTH_ON Enable Bluetooth" ]]; then
+  elif [[ "$device_selected" =~ "Enable Bluetooth" ]]; then
     bluetoothctl power on ; notify-send "Turning On..." "Bluetooth is now enabled!!"
     sleep 2 ; refresh=true
   else
@@ -70,7 +72,7 @@ do
   fi
 done
 
-if [[ "$device_selected" =~ "$BLUETOOTH_OFF Disable Bluetooth" ]]; then
+if [[ "$device_selected" =~ "Disable Bluetooth" ]]; then
   bluetoothctl power off ; notify-send "Turning Off..." "Bluetooth is now disabled!!"
 elif [[ -n $device_selected ]]; then
   device_mac=$(echo -e "$final_device_list" | grep "$device_selected" | sed 's/ .*//g')
