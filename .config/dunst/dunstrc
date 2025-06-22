@@ -4,6 +4,14 @@ foreground = "#c6c8c5"
 frame_color = "#A6AD6F"
 
 [global]
+monitor = 0
+timeout = 3
+gap_size = 6
+frame_width = 2
+seperator_height = 4
+font = "Lilex 8"
+width = 230
+ignore_dbusclose = false
 frame_color = "#72A783"
 background = "#1d2419"
 foreground = "#c6c8c5"

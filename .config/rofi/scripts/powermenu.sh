@@ -8,10 +8,10 @@
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
 # Options
-shutdown=' '
-reboot=' '
-suspend=' '
-logout=' '
+shutdown='⏻ '
+reboot=' '
+suspend=' '
+logout=' '
 
 # Rofi CMD
 rofi_cmd() {
@@ -28,9 +28,9 @@ run_rofi() {
 run_cmd() {
 	echo $1
 	if [ $1 = '--shutdown' ]; then
-		systemctl poweroff || sudo poweroff
+		systemctl poweroff
 	elif [ $1 = '--reboot' ]; then
-		systemctl reboot || sudo reboot
+		systemctl reboot
 	elif [ $1 == '--suspend' ]; then
 		systemctl suspend
 	elif [ $1 == '--logout' ]; then
@@ -53,6 +53,5 @@ case ${chosen} in
         ;;
     $logout)
 		run_cmd --logout
-		echo 12121
         ;;
 esac

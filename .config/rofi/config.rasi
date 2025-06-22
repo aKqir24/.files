@@ -5,7 +5,7 @@
 
 	/* Fonts */
 	icon-font:		     "EnvyCodeR Nerd Font Bold 14";
-	icon-font-2:					 "feather bold 18";
+	icon-font-2:	"EnvyCodeR Nerd Font Propo 18";
     text-font:						   		 "Lilex 8";
 	search-text-font:					    "Lilex 10";
 	emoji-font:					 "noto-fonts-emoji 12";
