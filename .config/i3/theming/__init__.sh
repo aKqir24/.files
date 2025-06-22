@@ -6,6 +6,7 @@ bash ~/.config/i3/theming/toml_theming.sh --alacritty
 
 # Dunst
 bash ~/.config/i3/theming/toml_theming.sh --dunst
+pkill dunst ; dunst & 
 
 # Rofi Launcher
 sh ~/.config/i3/theming/rofi.sh
