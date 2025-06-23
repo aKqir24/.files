@@ -2,7 +2,7 @@
 
 # start audio session
 if [ "$1" = "audio" ]; then
-	for audio in pipewire wireplumber pipewire-pulse; do
+	for audio in pipewire wireplumber pipewire-pulse pipewire-jack; do
 		pgrep -x ${audio} || ${audio} &
 	done
 

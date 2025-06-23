@@ -5,22 +5,22 @@ case "$1" in
 	if [ ! -z $(which iwctl) ]; then	
 		wifi_ssid="$(iwctl station $INTERFACE show | sed -n 's/.*Connected network *//p' | sed 's/^ *//;s/ *$//')"
 		wifi_check="$(iwctl station "$INTERFACE" show | grep 'State' | awk '{print $2}')"
-		wifi_speed="$(iwctl station "$INTERFACE" show | grep 'RSSI' | awk '{print $2}')"
+		wifi_speed="$(iwctl station "$INTERFACE" show | grep 'AverageRSSI' | awk '{print $2}')"
 	fi
 	
 	if [ "$wifi_check" = "connected" ]; then
-		if [ $wifi_speed -gt -50 ]; then 
+		if [ $wifi_speed -gt -50 ]; then
 			wifi_speed_icon="󰤨" 
-		elif [ "$wifi_speed" -gt -60 ]; then
+		elif [ $wifi_speed -gt -60 ]; then
 			wifi_speed_icon="󰤥"
-		elif [ "$wifi_speed" -gt -70 ]; then
+		elif [ $wifi_speed -gt -70 ]; then
 			wifi_speed_icon="󰤢"
-		elif [ "$wifi_speed" -gt -80 ]; then
+		elif [ $wifi_speed -gt -80 ]; then
 			wifi_speed_icon="󰤟"
-		elif [ "$wifi_speed" -gt -90 ]; then 
+		elif [ $wifi_speed -gt -90 ]; then 
 			wifi_speed_icon="󰤯"
 		fi
-		[ "$wifi_ssid" = "" ] && echo  || echo " <span size='10pt'>$wifi_speed_icon </span><span> $wifi_ssid </span>"
+		[ "$wifi_ssid" = "" ] && echo  || echo "<span size='10pt'> $wifi_speed_icon </span><span> $wifi_ssid</span>"
 	elif [ "$wifi_check" = "disconnected" ]; then
 		echo "<span> 󰤭 </span>"
 	else
@@ -65,5 +65,5 @@ case "$1" in
 	"$type=time")
 		echo "<span size='10pt'> 󰃮 </span><span> $(date +'%m-%d-%Y')</span>";;
 	*)
-		echo "Error"
+		echo "Option not Identified!!"
 esac
