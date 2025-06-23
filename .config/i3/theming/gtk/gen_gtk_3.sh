@@ -7,7 +7,7 @@ else
   die "Wal colors not found, exiting script. Have you executed Wal before?"
 fi
 
-FILE=~/.themes/FlatColor/gtk-3.0/gtk.css
+FILE=~/.themes/Wal/gtk-3.0/gtk.css
 cat > $FILE <<EOF
 
 /* Default color scheme */
@@ -16,7 +16,7 @@ cat > $FILE <<EOF
 @define-color base_color $color1;
 @define-color text_color $color15;
 @define-color selected_bg_color $color2;
-@define-color selected_fg_color $color15;
+@define-color selected_fg_color $color8;
 @define-color tooltip_bg_color $color0;
 @define-color tooltip_fg_color $color15;
 
