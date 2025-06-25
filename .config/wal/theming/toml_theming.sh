@@ -10,7 +10,7 @@ process() { echo "$1 Colorsheme is Applied!!"; }
 write_toml() { tomlq -i -t "$1" "$DEFAULT_CONFIG_FILE"; }
 
 # Load pywal colors
-if . "${HOME}/.config/wal/colors.sh"; then
+if . "$PYWAL16_OUT_DIR/colors.sh"; then
   echo "Wal Colors Script Found!!, exporting..."
 else
   die "Wal colors not found, exiting script. Have you executed Wal before?"

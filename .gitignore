@@ -1,4 +1,7 @@
-.config/i3/theming/wallpapers/*.jpg
-.config/i3/theming/wallpapers/*.jpeg
-.config/i3/theming/wallpapers/*.png
-.config/i3/theming/wallpapers/*.gif
+.config/wal/theming/wallpapers/*.jpg
+.config/wal/theming/wallpapers/*.jpeg
+.config/wal/theming/wallpapers/*.png
+.config/wal/theming/wallpapers/*.gif
+
+.themes/Wal/gtk-3.0/gtk.css
+.themes/Wal/gtk-3.20/gtk.css

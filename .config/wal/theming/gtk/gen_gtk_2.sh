@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Export The Colorscheme
-if . "${HOME}/.config/wal/colors.sh"; then
+if . "${PYWAL16_OUT_DIR}/colors.sh"; then
   echo "Wal Colors Script Found!!, exporting..."
 else
   die "Wal colors not found, exiting script. Have you executed Wal before?"
@@ -9,6 +9,7 @@ fi
 
 # Write Base CSS File
 FILE=~/.themes/Wal/gtk-2.0/gtkrc
+[ -e $FILE ] || touch $FILE
 cat > $FILE <<EOF
 #modded Numix gtkrc
 

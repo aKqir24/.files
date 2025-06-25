@@ -1,13 +1,14 @@
 #!/bin/sh
 
 # Export The Colorscheme
-if . "${HOME}/.config/wal/colors.sh"; then
+if . "${PYWAL16_OUT_DIR}/colors.sh"; then
   echo "Wal Colors Script Found!!, exporting..."
 else
   die "Wal colors not found, exiting script. Have you executed Wal before?"
 fi
 
 FILE=~/.themes/Wal/gtk-3.20/gtk.css
+[ -e $FILE ] || touch $FILE ; sleep 1
 cat > $FILE <<EOF
 
 /* Default color scheme */

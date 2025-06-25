@@ -64,7 +64,6 @@ export XCURSOR_SIZE=14
 # ================================================= #
 #					  Inegration
 # ================================================= #
-source ~/.cache/wal/colors-tty.sh
 eval "$(starship init bash)"
 eval $(fzf --bash)
 
