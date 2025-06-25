@@ -3,7 +3,7 @@
 # ===================== #
 
 # Post-Setup
-exec_always --no-startup-id sh ~/.config/i3/theming/__init__.sh
+exec_always --no-startup-id sh ~/.config/wal/theming/__init__.sh
 exec sh ~/.config/i3/start.sh audio &> /dev/null
 exec --no-startup-id xhost +si:localuser:root ;
 
