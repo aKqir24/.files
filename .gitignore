@@ -2,6 +2,5 @@
 .config/wal/theming/wallpapers/*.jpeg
 .config/wal/theming/wallpapers/*.png
 .config/wal/theming/wallpapers/*.gif
-
 .themes/Wal/gtk-3.0/gtk.css
 .themes/Wal/gtk-3.20/gtk.css
