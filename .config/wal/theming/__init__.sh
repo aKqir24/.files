@@ -1,5 +1,6 @@
 # i3status-rust
-bash $PYWAL16_OUT_DIR/theming/toml_theming.sh --i3status-rs ~/.config/i3/status/config.toml
+bash $PYWAL16_OUT_DIR/theming/toml_theming.sh --i3status-rs\
+	~/.config/i3/status/config.toml
 
 # Alacritty
 bash $PYWAL16_OUT_DIR/theming/toml_theming.sh --alacritty
@@ -10,10 +11,6 @@ pkill dunst ; dunst &
 
 # Rofi Launcher
 sh $PYWAL16_OUT_DIR/theming/rofi.sh
-
-# Solid Color wallapaper
-. "${PYWAL16_OUT_DIR}/colors.sh"
-hsetroot -solid "$color8"
 
 # Firefox Based Browsers
 pywalfox update ; pywalfox dark &

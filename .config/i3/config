@@ -2,16 +2,16 @@
 #		Autostart		#
 # ===================== #
 
-# Post-Setup
-exec_always --no-startup-id sh ~/.config/wal/theming/__init__.sh
-exec sh ~/.config/i3/start.sh audio &> /dev/null
-exec --no-startup-id xhost +si:localuser:root ;
-
 # Daemons
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 exec --no-startup-id pywalfox start
 exec --no-startup-id udiskie
+
+# Post-Setup
+exec_always --no-startup-id sh ~/.config/wal/theming/__init__.sh
+exec sh ~/.config/i2/start.sh audio &> /dev/null
+exec --no-startup-id xhost +si:localuser:root ;
 
 # ================= #
 #		BINDS		#

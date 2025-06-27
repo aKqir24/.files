@@ -5,3 +5,5 @@ README.md
 LICENSE
 .git
 .gitignore
+setup.sh
+requirements.txt

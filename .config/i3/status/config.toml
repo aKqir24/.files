@@ -1,18 +1,18 @@
 icons_format = "<span font_family='EnvyCodeR Nerd' size='12pt'>{icon}</span>"
 
 [theme.overrides]
-idle_bg = "#23140f"
-idle_fg = "#c8c4c3"
-info_bg = "#c8c4c3"
-info_fg = "#23140f"
-good_bg = "#778968"
-good_fg = "#23140f"
-warning_bg = "#E18C1F"
-warning_fg = "#23140f"
-critical_bg = "#946A41"
-critical_fg = "#23140f"
-alternating_tint_bg = "#23140f"
-alternating_tint_fg = "#23140f"
+idle_bg = "#0b1919"
+idle_fg = "#c2c5c5"
+info_bg = "#c2c5c5"
+info_fg = "#0b1919"
+good_bg = "#7AA4B2"
+good_fg = "#0b1919"
+warning_bg = "#919191"
+warning_fg = "#0b1919"
+critical_bg = "#9B8477"
+critical_fg = "#0b1919"
+alternating_tint_bg = "#0b1919"
+alternating_tint_fg = "#0b1919"
 separator = "<span size='16pt'> </span>"
 separator_bg = "auto"
 separator_fg = "auto"
@@ -102,6 +102,10 @@ cycle = ["sh ~/.config/i3/status/custom_status.sh --type=date", "sh ~/.config/i3
 [[block.click]]
 button = "left"
 action = "cycle"
+
+[[block.click]]
+button = "right"
+cmd = "sh ~/.files/resources/scripts/calendar.sh"
 
 [[block]]
 block = "menu"

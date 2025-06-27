@@ -9,7 +9,7 @@ window {
     fullscreen:                  false;
     width:                       410px;
     x-offset:                    -400px;
-    y-offset:                    -396px;
+    y-offset:                    -390px;
 
     /* properties for all widgets */
     enabled:                     true;
