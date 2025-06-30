@@ -1,12 +1,12 @@
 *{
 	/* Colorscheme */
-	background-alt:					#6c7084;
-	background:						#1f2643;
-	foreground:						#c7c8d0;
-	selected:						#BEA7B1;
-	active:							#BEA7B1;
-	urgent:							#ECA3B1;
-	alert:							#6DD699;
-	disabled:						#9d9fa6;
+	background-alt:					#6d596d;
+	background:						#170917;
+	foreground:						#c5c1c5;
+	selected:						#9C6550;
+	active:							#9C6550;
+	urgent:							#EAA316;
+	alert:							#C5691D;
+	disabled:						#988d98;
 }
 
