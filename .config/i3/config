@@ -7,6 +7,7 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 exec --no-startup-id pywalfox start
 exec --no-startup-id udiskie
+exec_always redshift-qt
 
 # Post-Setup
 exec_always --no-startup-id sh ~/.config/wal/theming/__init__.sh

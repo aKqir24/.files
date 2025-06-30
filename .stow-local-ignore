@@ -7,3 +7,4 @@ LICENSE
 .gitignore
 setup.sh
 requirements.txt
+wallsetup.sh

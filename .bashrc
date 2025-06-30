@@ -56,10 +56,10 @@ alias egrep='egrep --color=auto'
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export FZF_DEFAULT_OPTS="--height 40% --reverse"
 export FZF_DEFAULT_COMMAND="find . -type f"
-export QT_QPA_PLATFORMTHEME=gtk3
+export PYWAL16_OUT_DIR="~/.config/wal"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export XCURSOR_SIZE=14
+export QT_QPA_PLATFORMTHEME=gtk3
 
 # ================================================= #
 #					  Inegration
@@ -70,3 +70,19 @@ eval $(fzf --bash)
 if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then 
 	source /usr/share/doc/fzf/examples/key-bindings.bash
 fi
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
