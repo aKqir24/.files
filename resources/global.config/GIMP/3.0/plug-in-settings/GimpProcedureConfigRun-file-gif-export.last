@@ -1,7 +1,7 @@
 # settings
 
 (interlace no)
-(loop no)
+(loop yes)
 (number-of-repeats 256)
 (default-delay 600)
 (default-dispose "unspecified")

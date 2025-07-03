@@ -1,5 +1,15 @@
 # settings
 
+(GimpGegl-gegl-dropshadow-config "2025-07-03 19:10:45"
+    (time 1751541045)
+    (x 4.8289999999999997)
+    (y 4.8289999999999997)
+    (radius 0)
+    (grow-shape circle)
+    (grow-radius 0)
+    (color
+        (color "HSV float" 12 "\0\0\0\0\37\266\23\76\63k\216\76" 0))
+    (opacity 1))
 (GimpGegl-gegl-dropshadow-config "2025-06-19 20:29:46"
     (time 1750336186)
     (x 13.425000000000001)

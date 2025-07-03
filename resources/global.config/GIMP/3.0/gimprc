@@ -8,7 +8,7 @@
 
 (language "")
 (prev-language "en_PH:en-English")
-(config-version "3.0.2")
+(config-version "3.0.4")
 (undo-levels 8)
 (undo-preview-size medium)
 (layer-preview-size extra-large)
