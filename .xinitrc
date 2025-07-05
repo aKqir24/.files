@@ -1,7 +1,8 @@
 bash $HOME/pywal16_scripts/walsetup.sh
+
 bash $HOME/pywal16_scripts/waloml.sh \
 	--alacritty --dunst \
-	--i3status-rs ~/.files/.config/i3/status/config.toml
+	--i3status-rs=~/.files/.config/i3/status/config.toml
 bash $HOME/pywal16_scripts/theming/rofi.sh ; pgrep -x dust && pkill dunst && dunst &
 source $PYWAL16_OUT_DIR/colors-tty.sh
 
