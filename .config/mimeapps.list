@@ -20,6 +20,7 @@ application/xhtml+xml=userapp-Zen-CN2J82.desktop;
 application/x-extension-xhtml=userapp-Zen-CN2J82.desktop;
 application/x-extension-xht=userapp-Zen-CN2J82.desktop;
 application/octet-stream=nvim.desktop;
+image/x-xcursor=nvim.desktop;
 
 [Default Applications]
 image/jpeg=viewnior.desktop
