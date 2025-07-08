@@ -27,7 +27,7 @@ sudo pacstall -I zen-browser
 
 # install python packages
 pipx install pywal16
-pipx install pywalfox --break-system-packages
+pipx install pywalfox --system-site-packages
 
 # setup systemd-networkd & services
 system_services=( systemd-networkd systemd-resolved iwd 
@@ -47,7 +47,8 @@ git clone https://github.com/aKqir24/pywal16_scripts.git \
 sudo apt update && sudo apt install -y \
   rustc cargo gcc libssl-dev libsensors-dev libpulse-dev \
   libnotmuch-dev libpipewire-0.3-dev clang rofi-dev \
-  autoconf automake libtool-bin libtool
+  autoconf automake libtool-bin libtool python3-gi \
+  python3-setuptools gettext
 git clone https://github.com/greshake/i3status-rust
 cd i3status-rust ; cargo install --path . --locked
 ./install.sh ; cd $HOME
@@ -56,11 +57,14 @@ unzip v3.5.0.zip ; cd rofi-emoji-3.5.0
 autoreconf -i ; mkdir build
 cd build/
 ../configure
-make ; sudo make install
+make ; sudo make install ; cd $HOME
+git clone https://github.com/thenaterhood/gscreenshot.git
+cd gscreenshot ; sudo pipx install . --system-site-packages
 
-# source cleanup
+# source & package cleanup
 sudo rm -r ~/i3status-rust
 sudo rm -r ~/rofi-emoji-3.5.0
+sudo apt au
 
 # Run theming scripts
 bash $HOME/.files/resources/scripts/pywal16_scripts/walsetup.sh
