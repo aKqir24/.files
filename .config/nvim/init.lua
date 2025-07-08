@@ -8,6 +8,7 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.termguicolors = true
 vim.o.showtabline = 2
+vim.opt.updatetime = 200
 
 -- Setup lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -50,10 +51,7 @@ require("lazy").setup({
       require("nvim-tree").setup()
       end,
     },
-	{
-	  'stevearc/conform.nvim',
-      opts = {},
-    }, 
+	{ "nvimdev/lspsaga.nvim" },
     { import = "plugins" }
   }
 })

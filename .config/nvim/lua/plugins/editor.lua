@@ -1,5 +1,9 @@
 return {
-   
+  {
+	"stevearc/conform.nvim",
+    opts = {},
+  },
+  { "RRethy/vim-illuminate" },
   {
     "petertriho/nvim-scrollbar",
     opts = {
@@ -45,12 +49,27 @@ return {
     },
     init = function() vim.g.barbar_auto_setup = false end,
     opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      -- animation = true,
-      -- insert_at_start = true,
-      -- …etc.
+      animation = true,
+      insert_at_start = true,
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  },
+  {
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+    -- configurations go here
+    },
+	config = function()
+		require("barbecue.ui").toggle(false)
+		require("barbecue.ui").toggle(true)
+		require("barbecue.ui").toggle()
+	end,
   }
 }
 
