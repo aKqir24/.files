@@ -6,8 +6,8 @@ vim.opt.tabstop = 4
 vim.opt.autoindent = true
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
-vim.opt.termguicolors = false
-
+vim.opt.termguicolors = true
+vim.o.showtabline = 2
 
 -- Setup lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -25,34 +25,35 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins to install and use
 require("lazy").setup({
-  {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function()
-      require'nvim-treesitter.configs'.setup {
-        ensure_installed = { "lua", "vim", "bash", "python" },
-        highlight = {
-          enable = true,
-        },
-      }
-    end,
-  },
-  {
-    'uZer/pywal16.nvim',
-    config = function()
-    vim.cmd.colorscheme("pywal16")
-    end,
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*", -- optional: use latest tag
-    dependencies = {
-    "nvim-tree/nvim-web-devicons", -- optional, for file icons
+  spec = {
+    {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
+	{ 'Bekaboo/deadcolumn.nvim' },
+    {
+      "nvim-treesitter/nvim-treesitter",
+      build = ":TSUpdate",
+      config = function()
+        require'nvim-treesitter.configs'.setup {
+          ensure_installed = { "lua", "vim", "bash", "python" },
+          highlight = {
+            enable = true,
+          },
+        }
+      end,
     },
-    config = function()
-    require("nvim-tree").setup()
-    end,
+    {
+      "nvim-tree/nvim-tree.lua",
+      version = "*", -- optional: use latest tag
+      dependencies = {
+      "nvim-tree/nvim-web-devicons", -- optional, for file icons
+      },
+      config = function()
+      require("nvim-tree").setup()
+      end,
+    },
+	{
+	  'stevearc/conform.nvim',
+      opts = {},
+    }, 
+    { import = "plugins" }
   }
 })
-
