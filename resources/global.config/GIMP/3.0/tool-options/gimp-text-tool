@@ -3,7 +3,7 @@
 (foreground
     (color "R'G'B'A u8" 4 "\55\24K\377" 0))
 (palette "Standard")
-(font "EnvyCodeR Nerd Font Bold")
+(font "Monospace")
 (font-size 130)
 (letter-spacing 11)
 (outline-foreground
