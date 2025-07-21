@@ -8,6 +8,7 @@ case "$1" in
 		wifi_speed="$(iwctl station "$INTERFACE" show | grep 'AverageRSSI' | awk '{print $2}')"
 	fi
 	
+	icon_pad="<span size='6.5pt'> </span>"
 	if [ "$wifi_check" = "connected" ]; then
 		if [ $wifi_speed -gt -50 ]; then
 			wifi_speed_icon="󰤨" 
@@ -20,9 +21,10 @@ case "$1" in
 		elif [ $wifi_speed -gt -90 ]; then 
 			wifi_speed_icon="󰤯"
 		fi
-		[ "$wifi_ssid" = "" ] && echo  || echo "<span size='10pt'> $wifi_speed_icon </span><span> $wifi_ssid</span>"
+		[ "$wifi_ssid" = "" ] || \
+			echo "$icon_pad<span size='10pt'> $wifi_speed_icon </span><span> $wifi_ssid</span>"
 	elif [ "$wifi_check" = "disconnected" ]; then
-		echo "<span> 󰤭 </span>"
+		echo "$icon_pad<span> 󰤭 </span>"
 	else
 		echo "<span> 󰤮 </span>"
 	fi
@@ -30,7 +32,7 @@ case "$1" in
 
 	"$type=bluetooth")
 	if [ "$2" = "" ]; then
-		inf_style="<span size='11pt'>"
+		inf_style="<span size='6.5pt'> </span><span size='11pt'>"
 		if [ ! -z $(which bluetoothctl) ]; then	
 			inf_name=$(echo "$(bluetoothctl info | grep "Name" | cut -d ' ' -f2-)")
 			inf_icon=$(bluetoothctl info | grep "Icon" | awk '{print $2}')
@@ -38,14 +40,18 @@ case "$1" in
 			if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]; then
 				echo "$inf_style 󰂲</span> "
 			else
-				
-				if [ $inf_icon = "audio-headphones" ]; then
-					echo "$inf_style 󰋋 󰂯 </span><span>$inf_name</span>"
-				elif [ $inf_icon = "phone" ]; then
-					echo "$inf_style 󰄜 󰂯 </span><span>$inf_name</span>"
-				else
-					echo "$inf_style 󰂯</span>"
-				fi
+				case "$inf_icon" in
+					# TODO: Change the NF icon in the headset
+					"audio-headphones") echo "$inf_style 󰋋 󰂯 </span><span>$inf_name</span>";;
+					"audio-headset") echo "$inf_style 󰋋 󰂯 </span><span>$inf_name</span>" ;;
+					"phone") echo "$inf_style 󰄜 󰂯 </span><span>$inf_name</span>";;
+					*)
+						if [ ! -z "$inf_icon" ]; then
+							echo "$inf_style 󰂯 </span><span>$inf_name</span>"
+						else
+							echo "$inf_style 󰂯</span>"
+						fi
+				esac
 			fi
 		else
 			echo "$inf_style 󰂲</span>"
@@ -61,9 +67,9 @@ case "$1" in
 	fi
 	;;
 	"$type=date")
-		echo "<span size='10pt'> 󰥔 </span><span> $(date +'%I:%M %p')</span>";;
+		echo "<span size='10pt'>  󰥔 </span><span> $(date +'%I:%M %p')</span>";;
 	"$type=time")
-		echo "<span size='10pt'> 󰃮 </span><span> $(date +'%m-%d-%Y')</span>";;
+		echo "<span size='10pt'>  󰃮 </span><span> $(date +'%m-%d-%Y')</span>";;
 	*)
 		echo "Option not Identified!!"
 esac

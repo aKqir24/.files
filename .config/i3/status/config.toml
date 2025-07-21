@@ -1,19 +1,19 @@
 icons_format = "<span font_family='EnvyCodeR Nerd' size='12pt'>{icon}</span>"
 
 [theme.overrides]
-idle_bg = "#200e18"
-idle_fg = "#c7c2c5"
-info_bg = "#c7c2c5"
-info_fg = "#200e18"
-good_bg = "#D99399"
-good_fg = "#200e18"
-warning_bg = "#F5AFB1"
-warning_fg = "#200e18"
-critical_bg = "#C47A84"
-critical_fg = "#200e18"
-alternating_tint_bg = "#200e18"
-alternating_tint_fg = "#200e18"
-separator = "<span size='16pt'> </span>"
+idle_bg = "#1f180d"
+idle_fg = "#c7c5c2"
+info_bg = "#c7c5c2"
+info_fg = "#1f180d"
+good_bg = "#BD411C"
+good_fg = "#1f180d"
+warning_bg = "#E34F25"
+warning_fg = "#1f180d"
+critical_bg = "#EF3A0C"
+critical_fg = "#1f180d"
+alternating_tint_bg = "#1f180d"
+alternating_tint_fg = "#1f180d"
+separator = "<span size='20pt'> </span>"
 separator_bg = "auto"
 separator_fg = "auto"
 
@@ -42,7 +42,7 @@ interval = 2
 info_cpu = 20
 warning_cpu = 50
 critical_cpu = 90
-format = " $icon $utilization "
+format = "  $icon $utilization "
 
 [[block.click]]
 button = "right"
@@ -50,8 +50,8 @@ cmd = "alacritty -e btop"
 
 [[block]]
 block = "memory"
-format = "  $icon $mem_used_percents.eng(w:1) "
-format_alt = "  $icon_swap $swap_used_percents.eng(w:2) "
+format = "   $icon $mem_used_percents.eng(w:1) "
+format_alt = "   $icon_swap$swap_used_percents.eng(w:2)  "
 
 [[block]]
 block = "custom"
@@ -79,13 +79,13 @@ cmd = "bash ~/.config/rofi/scripts/wifi.sh"
 block = "net"
 interval = 3
 device = "eno1"
-format = " {$icon  $ip|󰛵  Cheking IP...} "
-inactive_format = "  󰅛 "
+format = "  {$icon  $ip|󰛵  Cheking IP...}  "
+inactive_format = "   󰅛  "
 
 [[block]]
 block = "sound"
 driver = "auto"
-format = "  $icon  {$volume|}"
+format = "   $icon  {$volume|} "
 
 [[block.click]]
 button = "right"

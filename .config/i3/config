@@ -10,8 +10,7 @@ exec --no-startup-id udiskie
 exec_always redshift-qt
 
 # Post-Setup
-exec_always --no-startup-id sh ~/.config/wal/theming/__init__.sh
-# exec sh ~/.config/i2/start.sh audio &> /dev/null
+# exec sh ~/.config/i3/start.sh audio &> /dev/null
 exec --no-startup-id xhost +si:localuser:root ;
 
 # ================= #
@@ -170,11 +169,9 @@ set_from_resource $c1 i3wm.color1
 set_from_resource $c2 i3wm.color2 
 set_from_resource $c3 i3wm.color3 
 set_from_resource $c4 i3wm.color4 
-set_from_resource $c5 i3wm.color5
 set_from_resource $c6 i3wm.color6 
 set_from_resource $c7 i3wm.color7 
 set_from_resource $c8 i3wm.color8
-set_from_resource $c9 i3wm.color9
 set_from_resource $c15 i3wm.color15
 
 # class                 border  backgr. text indicator child_border
