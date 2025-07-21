@@ -9,6 +9,8 @@ vim.opt.softtabstop = 4
 vim.opt.termguicolors = true
 vim.o.showtabline = 2
 vim.opt.updatetime = 200
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
 
 -- Setup lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

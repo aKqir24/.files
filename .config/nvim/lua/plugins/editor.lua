@@ -72,13 +72,29 @@ return {
 	end,
   },
   {
+    "Djancyp/better-comments.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("better-comment").Setup({
+        tags = {
+          { name = "?", fg = "white", bg = "#0a7aca", bold = true },
+          { name = "!", fg = "white", bg = "#f44747", bold = true },
+          { name = "*", fg = "black", bg = "#b1c900", bold = true },
+        }
+      })
+    end,
+  },
+  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-    }
+    config = function()
+      require("todo-comments").setup({
+        keywords = {
+          FIX = { color = "error" },
+          TODO = { color = "info" },
+          HACK = { color = "warning" },
+        },
+      })
+    end,
   }
 }
-
