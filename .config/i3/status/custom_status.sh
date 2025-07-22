@@ -23,7 +23,7 @@ case "$1" in
 		elif [ $wifi_speed -gt -90 ]; then 
 			wifi_speed_icon="󰤯"
 		fi
-		[ -z "$wifi_ssid" ] || echo "$padding_left $wifi_speed_icon </span><span> $wifi_ssid</span>"
+		[ -z "$wifi_ssid" ] || echo "$padding_left $wifi_speed_icon <span> $wifi_ssid</span>"
 		;;
 		"disconnected") echo "$padding_left<span> 󰤭 </span>" ;;
 		*) echo "$padding_left<span> 󰤮 </span>"
