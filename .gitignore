@@ -1,2 +1,4 @@
 .themes
+.config/alacritty.toml
+.config/rofi/colors.rasi
 resources/scripts/pywal16_scripts
