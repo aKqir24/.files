@@ -1,4 +1,6 @@
 type="--type"
+padding_left="<span size='6.5pt'> </span>"
+inf_style="$padding_left<span size='11pt'>"
 case "$1" in 
 	"$type=wifi")
 	INTERFACE=$(ip -o link show | awk -F': ' '/wlx/ {print $2}')
@@ -8,8 +10,8 @@ case "$1" in
 		wifi_speed="$(iwctl station "$INTERFACE" show | grep 'AverageRSSI' | awk '{print $2}')"
 	fi
 	
-	icon_pad="<span size='6.5pt'> </span>"
-	if [ "$wifi_check" = "connected" ]; then
+	case "$wifi_check" in
+		"connected")
 		if [ $wifi_speed -gt -50 ]; then
 			wifi_speed_icon="󰤨" 
 		elif [ $wifi_speed -gt -60 ]; then
@@ -21,18 +23,23 @@ case "$1" in
 		elif [ $wifi_speed -gt -90 ]; then 
 			wifi_speed_icon="󰤯"
 		fi
-		[ "$wifi_ssid" = "" ] || \
-			echo "$icon_pad<span size='10pt'> $wifi_speed_icon </span><span> $wifi_ssid</span>"
-	elif [ "$wifi_check" = "disconnected" ]; then
-		echo "$icon_pad<span> 󰤭 </span>"
-	else
-		echo "<span> 󰤮 </span>"
-	fi
+		[ -z "$wifi_ssid" ] || echo "$padding_left $wifi_speed_icon </span><span> $wifi_ssid</span>"
+		;;
+		"disconnected") echo "$padding_left<span> 󰤭 </span>" ;;
+		*) echo "$padding_left<span> 󰤮 </span>"
+	esac
 	;;
-
 	"$type=bluetooth")
-	if [ "$2" = "" ]; then
-		inf_style="<span size='6.5pt'> </span><span size='11pt'>"
+	case "$2" in
+		"toggle")
+		if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]
+		then
+			bluetoothctl power on
+		else
+			bluetoothctl power off
+		fi
+		;;
+		*)	
 		if [ ! -z $(which bluetoothctl) ]; then	
 			inf_name=$(echo "$(bluetoothctl info | grep "Name" | cut -d ' ' -f2-)")
 			inf_icon=$(bluetoothctl info | grep "Icon" | awk '{print $2}')
@@ -41,9 +48,8 @@ case "$1" in
 				echo "$inf_style 󰂲</span> "
 			else
 				case "$inf_icon" in
-					# TODO: Change the NF icon in the headset
 					"audio-headphones") echo "$inf_style 󰋋 󰂯 </span><span>$inf_name</span>";;
-					"audio-headset") echo "$inf_style 󰋋 󰂯 </span><span>$inf_name</span>" ;;
+					"audio-headset") echo "$inf_style 󰋎 󰂯 </span><span>$inf_name</span>" ;;
 					"phone") echo "$inf_style 󰄜 󰂯 </span><span>$inf_name</span>";;
 					*)
 						if [ ! -z "$inf_icon" ]; then
@@ -56,20 +62,9 @@ case "$1" in
 		else
 			echo "$inf_style 󰂲</span>"
 		fi
-
-	elif [ "$2" = "toggle" ]; then
-		if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]
-		then
-			bluetoothctl power on
-		else
-			bluetoothctl power off
-		fi
-	fi
+	esac
 	;;
-	"$type=date")
-		echo "<span size='10pt'>  󰥔 </span><span> $(date +'%I:%M %p')</span>";;
-	"$type=time")
-		echo "<span size='10pt'>  󰃮 </span><span> $(date +'%m-%d-%Y')</span>";;
-	*)
-		echo "Option not Identified!!"
+	"$type=date") echo "<span size='10pt'>  󰥔 </span><span> $(date +'%I:%M %p')</span>";;
+	"$type=time") echo "<span size='10pt'>  󰃮 </span><span> $(date +'%m-%d-%Y')</span>";;
+	*) echo "Option not Identified!!"
 esac
