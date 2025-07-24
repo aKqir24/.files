@@ -31,6 +31,7 @@ require("lazy").setup({
   spec = {
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
 	{ 'Bekaboo/deadcolumn.nvim' },
+	{ "mistricky/codesnap.nvim", build = "make" },
     {
       "nvim-treesitter/nvim-treesitter",
       build = ":TSUpdate",
