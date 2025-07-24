@@ -112,27 +112,37 @@ function get_networks() {
 function connect_to_network() {
     local selected_ssid="${ssid[$1]}" ; notify "Connecting..." "Attempting to access $selected_ssid!!"
     local known=$(iwctl known-networks list | grep -w "$selected_ssid")
-    if [[ -n "$known" ]]; then
-        # Attempt to connect to a known network
-        local connection_output=$(timeout 10 iwctl station "$INTERFACE" connect "$selected_ssid" 2>&1)
-
-        if [[ -z "$connection_output" ]]; then
+	
+	# Notify function when connecting... opened networks
+	function notify_connection() {
+		if [[ -z "$connection_output" ]]; then
             notify "Connection Was Successful!!" "You are now connected to $selected_ssid!!" ; return
         else
             notify "Connection Was Unsuccessful!!" "$selected_ssid may not be available for a while, please try again!!" ; return
         fi
-    else
-        # Prompt for a password if the network is not known
-        (rofi -dmenu -password -p "  " -theme $PASS_WIN_THEME) > "$TEMP_PASSWORD_FILE"
+	}
 
-        # Attempt to connect to an unknown network with the provided passphrase
-        local connection_output=$(iwctl station "$INTERFACE" connect "$selected_ssid" --passphrase=$(<"$TEMP_PASSWORD_FILE") 2>&1)
-		echo "$connection_output"
-        if [[ -n "$connection_output" ]]; then
-            notify "Connection Was Unsuccessful!!" "The password entered may be wrong or empty, please try again!!"
-        else
-            notify "Connection Was Successful!!" "You are now connected to $selected_ssid!!"
-        fi
+    if [[ -n "$known" ]]; then
+        # Attempt to connect to a known network
+        local connection_output=$(timeout 10 iwctl station "$INTERFACE" connect "$selected_ssid" 2>&1)
+        notify_connection 
+    else
+		# Attempting to connect to a not known network
+		if iwctl station "$INTERFACE" get-networks | grep "$selected_ssid" | grep 'open'; then
+			local connection_output=$(iwctl station "$INTERFACE" connect "$selected_ssid" 2>&1)	
+			notify_connection
+		else
+			# Prompt for a password if the network is not open
+			(rofi -dmenu -password -p "  " -theme $PASS_WIN_THEME) > "$TEMP_PASSWORD_FILE"
+			local connection_output=$(iwctl station "$INTERFACE" connect "$selected_ssid" --passphrase=$(<"$TEMP_PASSWORD_FILE") 2>&1)
+			
+			# Notify using the connection_output in psk security
+			if [[ -n "$connection_output" ]]; then
+				notify "Connection Was Unsuccessful!!" "Something went wrong maybe the password, please try again!!"
+			else
+				notify "Connection Was Successful!!" "You are now connected to $selected_ssid!!"
+			fi
+		fi
     fi
 }
 
