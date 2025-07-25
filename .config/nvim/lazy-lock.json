@@ -5,6 +5,7 @@
   "codesnap.nvim": { "branch": "main", "commit": "be6d6b9a3b5e6999edbda76b16dace03d9bfcd3d" },
   "conform.nvim": { "branch": "master", "commit": "973f3cb73887d510321653044791d7937c7ec0fa" },
   "deadcolumn.nvim": { "branch": "master", "commit": "6a144a32fd847a998095d2494f152e405c6ae7cb" },
+  "fzf-lua": { "branch": "main", "commit": "f22460450543aa773638135d6aa46c60ab92da99" },
   "gitsigns.nvim": { "branch": "main", "commit": "362fe61f9f19e9bceff178792780df5cce118a7d" },
   "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
   "indentmini.nvim": { "branch": "main", "commit": "0dc4bc2b3fc763420793e748b672292bc43ee722" },
