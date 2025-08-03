@@ -12,6 +12,7 @@ apt-get install picom i3wm pipewire pipewire-pulse \
 				pcmanfm systemd-resolved neovim \
 				fonts-noto-color-emoji preload \
 				fastfetch power-profiles-daemon
+				keepassxc
 
 # setup systemd-networkd & services
 system_services=( systemd-networkd systemd-resolved iwd 
@@ -30,7 +31,7 @@ stow . --adopt ; cd $HOME
 
 # pacstall package manager and its available package
 sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
-sudo pacstall -I zen-browser
+sudo pacstall -I zen-browser scrcpy
 
 # install python packages
 pipx install pywal16 --system-site-packages
