@@ -4,8 +4,7 @@ return {
     opts = {},
   },
   { "RRethy/vim-illuminate" },
-  {
-    "petertriho/nvim-scrollbar",
+  { "petertriho/nvim-scrollbar",
     opts = {
       marks = {
         Cursor = { text = "•" },
@@ -96,5 +95,5 @@ return {
         },
       })
     end,
-  }
+	}
 }

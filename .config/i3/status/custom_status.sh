@@ -20,7 +20,7 @@ case "$1" in
 			wifi_speed_icon="󰤢"
 		elif [ $wifi_speed -gt -80 ]; then
 			wifi_speed_icon="󰤟"
-		elif [ $wifi_speed -gt -90 ]; then 
+		else 
 			wifi_speed_icon="󰤯"
 		fi
 		[ -z "$wifi_ssid" ] || echo "$padding_left $wifi_speed_icon <span> $wifi_ssid</span>"

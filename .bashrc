@@ -60,6 +60,7 @@ export PYWAL16_OUT_DIR="$HOME/.config/wal"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export QT_QPA_PLATFORMTHEME=gtk3
+export XDG_SESSION_TYPE=x11
 export GPG_TTY=$(tty)
 
 # ================================================= #

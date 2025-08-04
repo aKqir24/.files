@@ -31,7 +31,7 @@ stow . --adopt ; cd $HOME
 
 # pacstall package manager and its available package
 sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
-sudo pacstall -I zen-browser scrcpy
+sudo pacstall -I zen-browser scrcpy rustdesk-deb
 
 # install python packages
 pipx install pywal16 --system-site-packages
@@ -44,7 +44,7 @@ sudo apt update && sudo apt install -y \
   rustc cargo gcc libssl-dev libsensors-dev libpulse-dev \
   libnotmuch-dev libpipewire-0.3-dev clang rofi-dev \
   autoconf automake libtool-bin libtool python3-gi \
-  python3-setuptools gettext
+  python3-setuptools gettext libxdo3
 git clone https://github.com/greshake/i3status-rust
 cd i3status-rust ; cargo install --path . --locked
 ./install.sh ; cd $HOME
