@@ -45,9 +45,6 @@ sudo apt update && sudo apt install -y \
   libnotmuch-dev libpipewire-0.3-dev clang rofi-dev \
   autoconf automake libtool-bin libtool python3-gi \
   python3-setuptools gettext libxdo3
-git clone https://github.com/greshake/i3status-rust
-cd i3status-rust ; cargo install --path . --locked
-./install.sh ; cd $HOME
 curl -LO https://github.com/Mange/rofi-emoji/archive/refs/tags/v3.5.0.zip
 unzip v3.5.0.zip ; cd rofi-emoji-3.5.0
 autoreconf -i ; mkdir build

@@ -65,7 +65,6 @@ require("lazy").setup({
       require("nvim-tree").setup()
       end,
     },
-	{ "nvimdev/lspsaga.nvim" },
     { import = "plugins" },
     { import = "editor" },
     { import = "ui" }

@@ -95,5 +95,12 @@ return {
         },
       })
     end,
-	}
+  },
+  {
+  'neovim/nvim-lspconfig', -- LSP config
+  'hrsh7th/nvim-cmp',       -- Completion plugin
+  'hrsh7th/cmp-nvim-lsp',   -- LSP source for nvim-cmp
+  'L3MON4D3/LuaSnip',       -- Snippet engine
+  'saadparwaiz1/cmp_luasnip'-- Snippet completions
+  }
 }
