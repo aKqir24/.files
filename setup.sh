@@ -4,15 +4,19 @@ not debian based distro!" ; sleep 2
 
 # Install all base packages
 su root -c "apt update ;
-apt-get install picom i3wm pipewire pipewire-pulse \
+apt-get install picom i3-wm pipewire pipewire-pulse \
 				wireplumber rofi dunst xinit pipx \
 				sudo celluloid alacritty viewnior \
 				kdialog yq imagemagick xsettingsd \
-				nwg-look stow btop iwd startship \
+				nwg-look stow btop iwd starship \
 				pcmanfm systemd-resolved neovim \
 				fonts-noto-color-emoji preload \
-				fastfetch power-profiles-daemon
-				keepassxc
+				fastfetch power-profiles-daemon \
+				keepassxc libssl-dev libsensors-dev \
+				libpulse-dev libnotmuch-dev \
+				libpipewire-0.3-dev clang \
+				autoconf automake libtool-bin \
+				libtool python3-gi
 
 # setup systemd-networkd & services
 system_services=( systemd-networkd systemd-resolved iwd 
@@ -42,16 +46,8 @@ pipx install pywal16 --system-site-packages
 git clone https://github.com/aKqir24/pywal16_scripts.git \
 	$HOME/.files/resources/scripts/
 sudo apt update && sudo apt install -y \
-  gcc libssl-dev libsensors-dev libpulse-dev \
-  libnotmuch-dev libpipewire-0.3-dev clang rofi-dev \
-  autoconf automake libtool-bin libtool python3-gi \
+   \
   python3-setuptools gettext libxdo3
-curl -LO https://github.com/Mange/rofi-emoji/archive/refs/tags/v3.5.0.zip
-unzip v3.5.0.zip ; cd rofi-emoji-3.5.0
-autoreconf -i ; mkdir build
-cd build/
-../configure
-make ; sudo make install ; cd $HOME
 git clone https://github.com/thenaterhood/gscreenshot.git
 cd gscreenshot ; sudo pipx install . --system-site-packages
 
