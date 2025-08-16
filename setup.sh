@@ -30,18 +30,19 @@ systemctl --user enable --now pipewire-pulse.service"
 stow . --adopt ; cd $HOME
 
 # pacstall package manager and its available package
-sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
-sudo pacstall -I zen-browser scrcpy rustdesk-deb
+sudo $( bash -c "$(curl -fsSL https://pacstall.dev/q/install)" &&
+		pacstall -A https://github.com/aKqir24/pacstall-programs &&
+		pacstall -I carla zen-browser scrcpy rustdesk-deb i3status-rust \
+		lmms-git )
 
 # install python packages
 pipx install pywal16 --system-site-packages
-pipx install pywalfox --system-site-packages
 
 # build some packages or clone some scripts
 git clone https://github.com/aKqir24/pywal16_scripts.git \
 	$HOME/.files/resources/scripts/
 sudo apt update && sudo apt install -y \
-  rustc cargo gcc libssl-dev libsensors-dev libpulse-dev \
+  gcc libssl-dev libsensors-dev libpulse-dev \
   libnotmuch-dev libpipewire-0.3-dev clang rofi-dev \
   autoconf automake libtool-bin libtool python3-gi \
   python3-setuptools gettext libxdo3

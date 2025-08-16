@@ -57,6 +57,7 @@ alias egrep='egrep --color=auto'
 #				Environment Variables				#
 # ================================================= #
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export LD_LIBRARY_PATH=$PWD/bin:$LD_LIBRARY_PATH
 export FZF_DEFAULT_OPTS="--height 40% --reverse"
 export FZF_DEFAULT_COMMAND="find . -type f"
 export PYWAL16_OUT_DIR="$HOME/.config/wal"
