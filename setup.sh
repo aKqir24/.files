@@ -1,6 +1,6 @@
 echo "Please be aware that this install script
 is made on a debian mahine, so it might not work on most 
-not debian based distro!" ; sleep 2
+distros not based on debian!" ; sleep 2
 
 # Install all base packages
 su root -c "apt update ;
@@ -12,11 +12,11 @@ apt-get install picom i3-wm pipewire pipewire-pulse \
 				pcmanfm systemd-resolved neovim \
 				fonts-noto-color-emoji preload \
 				fastfetch power-profiles-daemon \
-				keepassxc libssl-dev libsensors-dev \
-				libpulse-dev libnotmuch-dev \
-				libpipewire-0.3-dev clang \
-				autoconf automake libtool-bin \
-				libtool python3-gi
+				keepassxc libssl-dev clang gettext \
+				libpulse-dev libsensors-dev git \ 
+				libpipewire-0.3-dev libtool-bin \
+				autoconf automake libnotmuch-dev \
+				libtool python3-gi python3-setuptools  
 
 # setup systemd-networkd & services
 system_services=( systemd-networkd systemd-resolved iwd 
@@ -30,30 +30,26 @@ systemctl --user enable --now pipewire.service pipewire.socket
 systemctl --user enable --now wireplumber.service
 systemctl --user enable --now pipewire-pulse.service"
 
-# setup dotfiles directory and other dir
-stow . --adopt ; cd $HOME
-
 # pacstall package manager and its available package
 sudo $( bash -c "$(curl -fsSL https://pacstall.dev/q/install)" &&
 		pacstall -A https://github.com/aKqir24/pacstall-programs &&
-		pacstall -I carla zen-browser scrcpy rustdesk-deb i3status-rust \
+		pacstall -I carla zen-browser rustdesk-deb i3status-rust \
 		lmms-git )
 
-# install python packages
-pipx install pywal16 --system-site-packages
-
-# build some packages or clone some scripts
+# setup dotfiles directory and other dir
+git clone https://github.com/aKqir24/.files.git && \
+stow . --adopt && cd $HOME
 git clone https://github.com/aKqir24/pywal16_scripts.git \
 	$HOME/.files/resources/scripts/
-sudo apt update && sudo apt install -y \
-   \
-  python3-setuptools gettext libxdo3
-git clone https://github.com/thenaterhood/gscreenshot.git
-cd gscreenshot ; sudo pipx install . --system-site-packages
 
-# source & package cleanup
-sudo rm -r ~/i3status-rust
-sudo rm -r ~/rofi-emoji-3.5.0
+# install python packages
+pipx install pywal16
+
+# build some packages or clone some scripts
+git clone https://github.com/thenaterhood/gscreenshot.git
+cd gscreenshot && sudo pipx install . rm -r greenshot
+
+# package cleanup
 sudo apt autoremove
 
 # Run theming scripts
