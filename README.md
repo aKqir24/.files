@@ -14,7 +14,5 @@ Finally I am satisfied, the story of this rice is when I got tired of trying so 
 ## Installation
 
 ```bash
-git clone https://github.com/aKqir24/.files.git
-cd ~/.files
-bash setup.sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/aKqir24/.files/refs/heads/main/setup.sh)"
 ```
