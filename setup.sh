@@ -32,13 +32,13 @@ systemctl --user enable --now pipewire-pulse.service"
 
 # pacstall package manager and its available package
 sudo $( bash -c "$(curl -fsSL https://pacstall.dev/q/install)" &&
-		pacstall -A https://github.com/aKqir24/pacstall-programs &&
-		pacstall -I carla zen-browser rustdesk-deb i3status-rust \
+		pacstall -A https://github.com/aKqir24/pacstall-programs/tree/custom-pasctall-pr &&
+		pacstall -I carla zen-browser rustdesk-deb i3status-rust rofi-emoji \
 		lmms-git )
 
 # setup dotfiles directory and other dir
-git clone https://github.com/aKqir24/.files.git && \
-stow . --adopt && cd $HOME
+git clone https://github.com/aKqir24/.files.git
+cd $HOME/.files && stow . --adopt && cd $HOME
 git clone https://github.com/aKqir24/pywal16_scripts.git \
 	$HOME/.files/resources/scripts/
 
