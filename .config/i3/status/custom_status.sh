@@ -1,7 +1,14 @@
 type="--type"
 padding_left="<span size='6.5pt'> </span>"
 inf_style="$padding_left<span size='11pt'>"
-case "$1" in 
+case "$1" in
+	"$type=monitor")
+		check() { xset q | grep -q "timeout:  0" && $1 || $2 ;}
+		case "$2" in
+			"toggle") check "xset s on" "xset s off";;
+			*) check "echo $padding_left<span> 󱎴 </span>" "echo $padding_left<span> 󰍹 </span>"
+		esac
+	;;
 	"$type=wifi")
 	INTERFACE=$(ip -o link show | awk -F': ' '/wlx/ {print $2}')
 	if [ ! -z $(which iwctl) ]; then	
