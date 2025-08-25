@@ -5,7 +5,7 @@ case "$1" in
 	"$type=monitor")
 		check() { xset q | grep -q "timeout:  0" && $1 || $2 ;}
 		case "$2" in
-			"toggle") check "xset s on" "xset s off";;
+			"toggle") check "xset s on +dpms s blank" "xset s off -dpms s noblank";;
 			*) check "echo $padding_left<span> 󱎴 </span>" "echo $padding_left<span> 󰍹 </span>"
 		esac
 	;;

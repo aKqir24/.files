@@ -26,6 +26,7 @@ set $mod Mod4
 
 # Applictions
 bindsym $mod+Return exec alacritty
+bindsym Control+Shift+Escape exec alacritty -e btop
 bindsym $mod+e exec pcmanfm
 
 # Rofi Widgets
