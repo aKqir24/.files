@@ -1,12 +1,12 @@
 type="--type"
-padding_left="<span size='6.5pt'> </span>"
+padding_left="<span size='9.1pt'> </span>"
 inf_style="$padding_left<span size='11pt'>"
 case "$1" in
 	"$type=monitor")
 		check() { xset q | grep -q "timeout:  0" && $1 || $2 ;}
 		case "$2" in
 			"toggle") check "xset s on +dpms s blank" "xset s off -dpms s noblank";;
-			*) check "echo $padding_left<span> 󱎴 </span>" "echo $padding_left<span> 󰍹 </span>"
+			*) check "echo ${padding_left}<span> 󱎴 </span>" "echo ${padding_left}<span> 󰍹 </span>"
 		esac
 	;;
 	"$type=wifi")

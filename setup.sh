@@ -38,7 +38,6 @@ systemctl --user enable --now pipewire-pulse.service"
 
 # pacstall package manager and its available package
 sudo $( bash -c "$(curl -fsSL https://pacstall.dev/q/install)" &&
-		pacstall -A https://github.com/aKqir24/pacstall-programs/tree/custom-pasctall-pr &&
 		pacstall -I carla zen-browser rustdesk-deb i3status-rust rofi-emoji \
 		lmms-git )
 
