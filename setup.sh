@@ -38,7 +38,7 @@ systemctl --user enable --now pipewire-pulse.service"
 
 # pacstall package manager and its available package
 sudo $( bash -c "$(curl -fsSL https://pacstall.dev/q/install)" &&
-		pacstall -I carla zen-browser rustdesk-deb i3status-rust rofi-emoji \
+		pacstall -I carla-git zen-browser rustdesk-deb i3status-rust rofi-emoji \
 		lmms-git )
 
 # install python packages
@@ -46,10 +46,7 @@ pipx install pywal16
 
 # build some packages or clone some scripts
 git clone https://github.com/thenaterhood/gscreenshot.git
-cd gscreenshot && sudo pipx install . rm -r greenshot
-
-# package cleanup
-sudo apt autoremove
+cd gscreenshot && sudo $( pipx install . rm -r greenshot ; apt autoremove )
 
 # Run theming scripts
 bash $HOME/.files/resources/scripts/pywal16_scripts/walsetup.sh
