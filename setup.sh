@@ -49,7 +49,7 @@ git clone https://github.com/thenaterhood/gscreenshot.git
 cd gscreenshot && sudo $( pipx install . rm -r greenshot ; apt autoremove )
 
 # Run theming scripts
-bash $HOME/.files/resources/scripts/pywal16_scripts/walsetup.sh
+bash $HOME/.files/resources/scripts/pywal16_scripts/walsetup.sh --gui --verbose
 bash $HOME/.files/resources/scripts/pywal16_scripts/waloml.sh \
 	--alacritty --dunst --i3status-rs=~/.files/.config/i3/status/config.toml
 bash $HOME/.files/resources/scripts/pywal16_scripts/theming/rofi.sh
