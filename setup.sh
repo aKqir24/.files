@@ -10,15 +10,14 @@ git clone https://github.com/aKqir24/pywal16_scripts.git \
 
 # Install all base packages
 su root -c "apt update ;
-apt-get install picom i3-wm pipewire pipewire-pulse \
-				wireplumber rofi dunst xinit pipx \
-				sudo celluloid alacritty viewnior \
+apt-get install picom i3-wm pipewire pipewire-pulse libssl-dev \
+				wireplumber rofi dunst xinit pipx clang \
+				sudo celluloid alacritty viewnior gettext \
 				kdialog yq imagemagick xsettingsd \
 				nwg-look stow btop iwd starship \
 				pcmanfm systemd-resolved neovim \
 				fonts-noto-color-emoji preload \
 				fastfetch power-profiles-daemon \
-				keepassxc libssl-dev clang gettext \
 				libpulse-dev libsensors-dev git \ 
 				libpipewire-0.3-dev libtool-bin \
 				autoconf automake libnotmuch-dev \
