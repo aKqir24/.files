@@ -11,23 +11,19 @@ git clone https://github.com/aKqir24/pywal16_scripts.git \
 # Install all base packages
 su root -c "apt update ;
 apt-get install picom i3-wm pipewire pipewire-pulse libssl-dev \
-				wireplumber rofi dunst xinit pipx clang \
-				sudo celluloid alacritty viewnior gettext \
-				kdialog yq imagemagick xsettingsd \
-				nwg-look stow btop iwd starship \
-				pcmanfm systemd-resolved neovim \
-				fonts-noto-color-emoji preload \
-				fastfetch power-profiles-daemon \
-				libpulse-dev libsensors-dev git \ 
-				libpipewire-0.3-dev libtool-bin \
-				autoconf automake libnotmuch-dev \
-				libtool python3-gi python3-setuptools  
+				wireplumber rofi dunst xinit pipx clang gettext \
+				sudo celluloid alacritty viewnior libtool kdialog \
+				imagemagick xsettingsd nwg-look stow btop starship \
+				pcmanfm systemd-resolved neovim iwd  preload git ark \
+				fastfetch power-profiles-daemon fonts-noto-color-emoji \
+				libpulse-dev libsensors-dev libpipewire-0.3-dev libtool-bin \
+				autoconf automake libnotmuch-dev yq python3-gi python3-setuptools  
 
 # setup systemd-networkd & services
-system_services=( systemd-networkd systemd-resolved iwd 
-				  preload power-profiles-daemon )
+system_services=( systemd-networkd systemd-resolved
+				  power-profiles-daemon iwd )
 for service in ${system_service[@]}; do
-	systemctl enable --now systemd-networkd
+	systemctl enable --now $service
 done
 ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 cp $HOME/.files/resources/network/* /etc/systemd/network/ 
@@ -38,7 +34,7 @@ systemctl --user enable --now pipewire-pulse.service"
 # pacstall package manager and its available package
 sudo $( bash -c "$(curl -fsSL https://pacstall.dev/q/install)" &&
 		pacstall -I carla-git zen-browser rustdesk-deb i3status-rust rofi-emoji \
-		lmms-git )
+		lmms-git dust-bin )
 
 # install python packages
 pipx install pywal16

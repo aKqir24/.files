@@ -38,25 +38,10 @@ else
 fi
 
 # ================================================= #
-#					  Aliases						#
-# ================================================= #
-alias ll='ls -l' 
-alias la='ls -A'
-alias l='ls -CF'
-alias iw='/sbin/iw'
-alias sudo='sudo -E' &
-alias ls='ls --color=auto'
-alias dotnet='wine dotnet'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto' 
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto' 
-alias egrep='egrep --color=auto'
-
-# ================================================= #
 #				Environment Variables				#
 # ================================================= #
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export SCRIPTS_FOLDER="$HOME/.files/resources/scripts"
 export LD_LIBRARY_PATH=$PWD/bin:$LD_LIBRARY_PATH
 export FZF_DEFAULT_OPTS="--height 40% --reverse"
 export FZF_DEFAULT_COMMAND="find . -type f"
@@ -67,6 +52,24 @@ export QT_QPA_PLATFORMTHEME=gtk3
 export XDG_SESSION_TYPE=x11
 export GPG_TTY=$(tty)
 export WINEDEBUG=-all
+
+# ================================================= #
+#					  Aliases						#
+# ================================================= #
+alias ll='ls -l' 
+alias la='ls -A'
+alias l='ls -CF'
+alias wget='wget2'
+alias iw='/sbin/iw'
+alias sudo='sudo -E'
+alias ls='ls --color=auto'
+alias dotnet='wine dotnet'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto' 
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto' 
+alias egrep='egrep --color=auto'
+alias pkexec="bash $SCRIPTS_FOLDER/root_dialog.sh"
 
 # ================================================= #
 #					  Inegration
