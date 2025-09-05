@@ -1,11 +1,12 @@
 # GIMP gimp-crop-tool options
 
-(aspect-denominator 864)
-(aspect-numerator 1152)
+(aspect-denominator 831)
+(aspect-numerator 918)
 (foreground
-    (color "HSVA float" 16 "\0\0\0\0\346LG\74\362\316\50\76\0\0\200\77" 0))
+    (color "R'G'B'A float" 16 "\0\0\200\77\0\0\200\77\0\0\200\77\0\0\200\77" 0))
 (background
-    (color "R'G'B'A u8" 4 "\374\64O\377" 0))
+    (color "R'G'B'A float" 16 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\200\77" 0))
 (pattern "Starfield")
+(layer-only yes)
 
 # end of gimp-crop-tool options

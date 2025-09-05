@@ -1,14 +1,15 @@
 # GIMP gimp-dodge-burn-tool options
 
 (foreground
-    (color "HSVA float" 16 "\0\0\0\0\346LG\74\362\316\50\76\0\0\200\77" 0))
+    (color "R'G'B'A float" 16 "\0\0\200\77\0\0\200\77\0\0\200\77\0\0\200\77" 0))
 (background
-    (color "R'G'B'A u8" 4 "\374\64O\377" 0))
+    (color "R'G'B'A float" 16 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\200\77" 0))
 (brush "2. Block 01")
 (dynamics "Pressure Size")
 (palette "Standard")
-(brush-size 51)
-(brush-aspect-ratio 3.1578947368421053)
+(brush-size 2)
+(brush-angle 180)
+(brush-spacing 0.01)
 (brush-hardness 0.94999998807907104)
 (brush-force 1)
 (dynamics-enabled no)

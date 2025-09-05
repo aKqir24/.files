@@ -1,11 +1,13 @@
 # GIMP gimp-text-tool options
 
 (foreground
-    (color "HSVA float" 16 "\0\0\0\0\346LG\74\362\316\50\76\0\0\200\77" 0))
+    (color "R'G'B'A float" 16 "\0\0\200\77\0\0\200\77\0\0\200\77\0\0\200\77" 0))
 (palette "Standard")
-(font "Monospace")
-(font-size 130)
-(letter-spacing 11)
+(font "URW Gothic Book")
+(font-size 287)
+(justify center)
+(indent -3)
+(letter-spacing 10)
 (outline-foreground
     (color "HSVA float" 16 "d\13N\76\335M\303\76\221\265V\77\0\0\200\77" 0))
 

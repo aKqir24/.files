@@ -12,78 +12,90 @@
 		}
     },
     "display": {
-        "separator": " ",
+        "separator": ">",
         "color": {
 			"separator": "blue",
             "keys": "green",
-			"width": 25
+			"width": 0
+        },
+		"key": {
+            "width": 9,
+			"paddingLeft": 1
         },
         "size": {
             "ndigits": 0,
             "maxPrefix": "GB"
         },
-        "key": { 
-			"width": 6,
-			"paddingLeft": 2 
+		"bar": {
+            "charElapsed": "=",
+            "charTotal": "-",
+            "width": 13
         },
         "percent": {
-            "type": 1
+            "type": 2
         }
     },
     "modules": [
 		"break",
-        {
-            "type": "title",
-			"key": " 󰌢 ",
-			"format": "   {user-name-colored} {at-symbol-colored} {host-name-colored}",
+		{
+		    "type": "title",
+			"key": "┌─󰌢  ",
+			"format": "{user-name-colored} {at-symbol-colored} {host-name-colored}",
             "color": {
                 "user": "green",
                 "at": "yellow",
                 "host": "green"
             }
         },
-		{
+        {
+
             "type": "custom",
-            "format": "    └─────────────────────────────────────────>"
+            "key": "├─────────────────────────────────────────────>"
 		},
 		{
 			"type": "os",
-			"key": "{icon}",
+			"key": "├─  "
 		},
 		{
 			"type": "kernel",
-			"key": "{icon}",
+			"key": "├─  "
 		},
 		{
 			"type": "cpu",
-			"key": "{icon}",
-		},
-		{
-			"type": "display",
-			"key": "{icon}",
+			"key": "├─  "
 		},
 		{
 			"type": "disk",
-			"key": "{icon}",
+			"key": "├─  "
+		},
+		{
+			"type": "display",
+			"key": "├─󰍹  "
 		},
 		{
 			"type": "uptime",
-			"key": "{icon}",
+			"key": "├─󰅐  "
 		},
 		{
 			"type": "packages",
-			"key": "{icon}",
+			"key": "├─󰏖  "
 		},
 		{
 			"type": "terminal",
-			"key": "{icon}",
+			"key": "├─  "
 		},
         {
+            "type": "custom",
+            "key": "├─────────────────────────────────────────────>"
+		},
+		{
             "type": "colors",
-			"key": "{icon}",
+			"key": "└────  ",
+			"paddingLeft": 2,
+			"symbol": "square",
             "block": {
-                "range": [1, 7]
-            }
+                "range": [1, 16]
+			}
         },
 		"break"
     ]

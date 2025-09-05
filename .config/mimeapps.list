@@ -21,6 +21,9 @@ application/x-extension-xhtml=userapp-Zen-CN2J82.desktop;
 application/x-extension-xht=userapp-Zen-CN2J82.desktop;
 application/octet-stream=nvim.desktop;
 image/x-xcursor=nvim.desktop;
+application/zip=xarchiver.desktop;
+application/json=nvim.desktop;
+application/vnd.efi.img=org.kde.ark.desktop;xarchiver.desktop;
 
 [Default Applications]
 image/jpeg=viewnior.desktop
@@ -42,5 +45,6 @@ inode/directory=pcmanfm.desktop
 image/png=viewnior.desktop
 x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/unknown=brave-browser.desktop
+application/vnd.efi.img=org.kde.ark.desktop
 
 [Removed Associations]
