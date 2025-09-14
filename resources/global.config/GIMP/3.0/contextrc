@@ -1,9 +1,9 @@
 # GIMP user context
 
-(tool "gimp-operation-tool")
+(tool "gimp-unified-transform-tool")
 (paint-info "gimp-paintbrush")
 (foreground
-    (color "R'G'B'A float" 16 "\0\0\200\77\0\0\200\77\0\0\200\77\0\0\200\77" 0))
+    (color "R'G'B'A u8" 4 "\377\377\377\377" 0))
 (background
     (color "R'G'B'A float" 16 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\200\77" 0))
 (brush "2. Block 01")

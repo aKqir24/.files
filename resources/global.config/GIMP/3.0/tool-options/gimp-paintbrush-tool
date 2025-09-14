@@ -1,7 +1,7 @@
 # GIMP gimp-paintbrush-tool options
 
 (foreground
-    (color "R'G'B'A float" 16 "\0\0\200\77\0\0\200\77\0\0\200\77\0\0\200\77" 0))
+    (color "R'G'B'A u8" 4 "\377\377\377\377" 0))
 (background
     (color "R'G'B'A float" 16 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\200\77" 0))
 (paint-mode normal-legacy)
@@ -11,6 +11,7 @@
 (gradient "Skyline")
 (palette "Standard")
 (brush-size 2)
+(brush-aspect-ratio 3.1578947368421053)
 (brush-angle 180)
 (brush-spacing 0.01)
 (brush-hardness 0.94999998807907104)

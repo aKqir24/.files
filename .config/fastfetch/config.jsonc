@@ -27,9 +27,9 @@
             "maxPrefix": "GB"
         },
 		"bar": {
-            "charElapsed": "=",
+            "charElapsed": "/",
             "charTotal": "-",
-            "width": 13
+            "width": 12
         },
         "percent": {
             "type": 2

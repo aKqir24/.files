@@ -6,21 +6,19 @@ volumes:
   # Located @ '/var/lib/docker/volumes/winapps_data/_data' (Docker).
   # Located @ '/var/lib/containers/storage/volumes/winapps_data/_data' or '~/.local/share/containers/storage/volumes/winapps_data/_data' (Podman).
   data:
+
 services:
   windows:
     image: ghcr.io/dockur/windows:latest
-    container_name: WinApps # Created Docker VM Name.
+    container_name: WinApps
     environment:
-      # Version of Windows to configure. For valid options, visit:
-      # https://github.com/dockur/windows?tab=readme-ov-file#how-do-i-select-the-windows-version
-      # https://github.com/dockur/windows?tab=readme-ov-file#how-do-i-install-a-custom-image
-      VERSION: "10l"
+      VERSION: "10l" # Version of Windows to configure. For valid options, visit:
       RAM_SIZE: "4G" # RAM allocated to the Windows VM.
-      CPU_CORES: "4" # CPU cores allocated to the Windows VM.
+      CPU_CORES: "3" # CPU cores allocated to the Windows VM.
       DISK_SIZE: "32G" # Size of the primary hard disk.
       # DISK2_SIZE: "32G" # Uncomment to add an additional hard disk to the Windows VM. Ensure it is mounted as a volume below.
-      USERNAME: "MyWindowsUser" # Edit here to set a custom Windows username. The default is 'MyWindowsUser'.
-      PASSWORD: "MyWindowsPassword" # Edit here to set a password for the Windows user. The default is 'MyWindowsPassword'.
+      USERNAME: "Win10Ltsc" # Edit here to set a custom Windows username. The default is 'MyWindowsUser'.
+      PASSWORD: "@Something.com" # Edit here to set a password for the Windows user. The default is 'MyWindowsPassword'.
       HOME: "${HOME}" # Set path to Linux user home folder.
     ports:
       - 8006:8006 # Map '8006' on Linux host to '8006' on Windows VM --> For VNC Web Interface @ http://127.0.0.1:8006.
@@ -47,3 +45,4 @@ services:
       # - /dev/disk/by-id/<id>:/disk2
     # group_add:      # uncomment this line and the next one for using rootless podman containers
     #   - keep-groups # to make /dev/kvm work with podman. needs "crun" installed, "runc" will not work! Add your user to the 'kvm' group or another that can access /dev/kvm.
+

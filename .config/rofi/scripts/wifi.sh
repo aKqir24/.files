@@ -21,8 +21,7 @@ clean_up() { [[ -e "$TPATH" ]] && rm -r "$TPATH"; }
 
 # Menu options for the Wi-Fi management interface
 MENU_OPTIONS=( "Refresh" "Enable Wi-Fi" "Disable Wi-Fi" "Network Info" \
-               "Scan Networks" "Connect" "Disconnect"
-)
+               "Scan Networks" "Connect" "Disconnect" )
 
 # Arrays to store Wi-Fi information
 wifi=()   # Stores formatted network info [Signal Strength, SSID, etc]
@@ -253,4 +252,4 @@ function run_cmd() {
 }
 
 # Main function to start the script and display the menu
-main() { local chosen_option=$(rofi_cmd) ; run_cmd "$chosen_option" ; clean_up; } ; main
+main() { local chosen_option=$(rofi_cmd) ; run_cmd "$chosen_option" ; } ; main
