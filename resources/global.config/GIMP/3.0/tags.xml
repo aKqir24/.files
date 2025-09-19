@@ -646,163 +646,133 @@
   <resource identifier="external:${gimp_data_dir}/gradients/Yellow_Orange.ggr//Yellow Orange" checksum="c7f332150f1c1d8cb8100add34b0ef55">
   </resource>
 
-  <resource identifier="internal:gimp-palette-color-history//Color History" checksum="6c2964513f4d092119c55b275d1cb293">
+  <resource identifier="internal:gimp-palette-color-history//Color History" checksum="05f9e442fd953f3f74c9a0b834676fec">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Bears.gpl//Bears" checksum="2bf78716668305a0f8475797e3a11e0d">
+  <resource identifier="external:${gimp_data_dir}/palettes/Bears.gpl//Bears" checksum="b52fb006aba57ac8b2b536f4e4d6143b">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Bgold.gpl//Bgold" checksum="4fd50a400948b54833fd4365f8c4f273">
+  <resource identifier="external:${gimp_data_dir}/palettes/Bgold.gpl//Bgold" checksum="59777ad648cafbaf6cfdd6197d5a109c">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Blues.gpl//Blues" checksum="3611f2d915d523e5d7cd7f5c1d7ed3ed">
+  <resource identifier="external:${gimp_data_dir}/palettes/Blues.gpl//Blues" checksum="f4adc5bca32f35daad1ae8bc51b71053">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Borders.gpl//Borders" checksum="66d4292293b3dce98821d03bda33e128">
+  <resource identifier="external:${gimp_data_dir}/palettes/Borders.gpl//Borders" checksum="35a6d9910496f258d56cad05180434af">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Browns_And_Yellows.gpl//Browns And Yellows" checksum="c827651d5fda7cb6b82857112937e467">
+  <resource identifier="external:${gimp_data_dir}/palettes/Browns_And_Yellows.gpl//Browns And Yellows" checksum="746f6fc416f347cdea1daa6555f30524">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Caramel.gpl//Caramel" checksum="0ad2c1153c8bc13197fd41b80149be70">
+  <resource identifier="external:${gimp_data_dir}/palettes/Caramel.gpl//Caramel" checksum="9646ae56b3bf1f888a2b7a9943703e25">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Cascade.gpl//Cascade" checksum="ffbd90b661e1f6d0eda6befb97777b33">
+  <resource identifier="external:${gimp_data_dir}/palettes/Cascade.gpl//Cascade" checksum="40d6a9a00f5b71a7329a0becad77e697">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/China.gpl//China" checksum="5eed848970ad3a3f5639f12881123551">
+  <resource identifier="external:${gimp_data_dir}/palettes/China.gpl//China" checksum="3d7a026f77b5f1aa4819584ba1f1e9f1">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Coldfire.gpl//Coldfire" checksum="bf645c3c82c4450f6b99bf2541b01619">
+  <resource identifier="external:${gimp_data_dir}/palettes/Coldfire.gpl//Coldfire" checksum="bfa71cc811c85aac60843edf4310ec42">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Cool_Colors.gpl//Cool Colors" checksum="a4ec6c48fb11db5eb7c023ba8a03a386">
+  <resource identifier="external:${gimp_data_dir}/palettes/Cool_Colors.gpl//Cool Colors" checksum="b8dc59551d61da2dbbc548ba79a6eaca">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Cranes.gpl//Cranes" checksum="b74e3469a55d607ee96d207bf574406b">
+  <resource identifier="external:${gimp_data_dir}/palettes/Cranes.gpl//Cranes" checksum="526c58e8bd7140f168e078dac96db7ae">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Dark_pastels.gpl//Dark pastels" checksum="fc37422e0d46265774b4bd54f94dc35b">
+  <resource identifier="external:${gimp_data_dir}/palettes/Dark_pastels.gpl//Dark pastels" checksum="a6f71491ac8ff9fe3e37290ccbe353c4">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Default.gpl//Default" checksum="00b7b3cf8bf8ee38924605680aaa2d15">
+  <resource identifier="external:${gimp_data_dir}/palettes/Default.gpl//Default" checksum="4a7d216b99392eb5740f02e653d45902">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Ega.gpl//Ega" checksum="7526391ecb953680bbffab5082f8a2e8">
+  <resource identifier="external:${gimp_data_dir}/palettes/Ega.gpl//Ega" checksum="ea855f272314f3667c66a59ac81febe3">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Firecode.gpl//Firecode" checksum="716ba2a4ab2ae2e64159cbfc557b917e">
+  <resource identifier="external:${gimp_data_dir}/palettes/Firecode.gpl//Firecode" checksum="1d22240b90e570b70884ba812206f02f">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Gold.gpl//Gold" checksum="ff69e14d4c638d5248dd9b8c55069999">
+  <resource identifier="external:${gimp_data_dir}/palettes/Gold.gpl//Gold" checksum="fe3a2ea17fb6320e576e8ad1e588ff66">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Grayblue.gpl//Grayblue" checksum="f45c109a3bbc2ad6f456a1a88c470bea">
+  <resource identifier="external:${gimp_data_dir}/palettes/Grayblue.gpl//Grayblue" checksum="f0872d8f296dbe072e0f2743c0911dc2">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Grays.gpl//Grays" checksum="a3f06cdd66632dbd7c3d49336dd2f05d">
+  <resource identifier="external:${gimp_data_dir}/palettes/Grays.gpl//Grays" checksum="c0574cbb3d19e958819c1a98e93b1fda">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/GrayViolet.gpl//GrayViolet" checksum="778a3265f3699056274dda498c0a859b">
+  <resource identifier="external:${gimp_data_dir}/palettes/GrayViolet.gpl//GrayViolet" checksum="47c89368bd5cb3d045473b0ed04c097c">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Greens.gpl//Greens" checksum="98e6be73b92a7e79ae8d569a9a4baf13">
+  <resource identifier="external:${gimp_data_dir}/palettes/Greens.gpl//Greens" checksum="ad1f4eef34f92047d4abb9f3b3eb282a">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Hilite.gpl//Hilite" checksum="44d27be9af66cd4329ac8f2c304a20de">
+  <resource identifier="external:${gimp_data_dir}/palettes/Hilite.gpl//Hilite" checksum="b089e3575b9ef90ed2a54cbcdb67cc67">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Khaki.gpl//Khaki" checksum="42d1fdea06f408dfcbf718d92154ebfd">
+  <resource identifier="external:${gimp_data_dir}/palettes/Khaki.gpl//Khaki" checksum="1a1a2285a678ebbdb8d888fe706a4347">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Lights.gpl//Lights" checksum="76d4f46fab6c3a120dcdf8d3be82378c">
+  <resource identifier="external:${gimp_data_dir}/palettes/Lights.gpl//Lights" checksum="e6ca0dd32dce86f124e261a21286a0c2">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Muted.gpl//Muted" checksum="6bd28d2f7a8d8e431edf81822f44ffc3">
+  <resource identifier="external:${gimp_data_dir}/palettes/Muted.gpl//Muted" checksum="c6e6fed5f93a0bd5cdef850825f87351">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Named_Colors.gpl//Named Colors" checksum="58ebfa5ecdd1872467c218c966861779">
+  <resource identifier="external:${gimp_data_dir}/palettes/Named_Colors.gpl//Named Colors" checksum="6721a9eb09b1aae4d4be680711f4e410">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/News3.gpl//News3" checksum="228c8d5346e318c2ad51dc5eaf0d94ba">
+  <resource identifier="external:${gimp_data_dir}/palettes/News3.gpl//News3" checksum="18c884e3e6229e92c5a05ec0323068b4">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Op2.gpl//Op2" checksum="9bd5f740c15ed6a6de7c749e323bc7a6">
+  <resource identifier="external:${gimp_data_dir}/palettes/Op2.gpl//Op2" checksum="6d785a9c4bc77d396924382497142cbd">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Paintjet.gpl//Paintjet" checksum="508e9de487ab34b2d5199d794e76e464">
+  <resource identifier="external:${gimp_data_dir}/palettes/Paintjet.gpl//Paintjet" checksum="73088a68dc08416fb8a7e9cc3df727eb">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Pastels.gpl//Pastels" checksum="c36969941a04aa368220f829e4dbf130">
+  <resource identifier="external:${gimp_data_dir}/palettes/Pastels.gpl//Pastels" checksum="30bbaf00a7a9a61a0bee4538807347af">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Plasma.gpl//Plasma" checksum="a749f9d9e5c6fb3ad3ff0cb53ac19ae7">
+  <resource identifier="external:${gimp_data_dir}/palettes/Plasma.gpl//Plasma" checksum="df0597571f13fa81498f544e3adf116f">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Reds.gpl//Reds" checksum="0e99f728efc1ad53744ed126f9c55b19">
+  <resource identifier="external:${gimp_data_dir}/palettes/Reds.gpl//Reds" checksum="e3193daf9b9e9043c4b5dc5bd4824e92">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Reds_And_Purples.gpl//Reds And Purples" checksum="3a3fcdc1aefa763eb651f26873adf3ab">
+  <resource identifier="external:${gimp_data_dir}/palettes/Reds_And_Purples.gpl//Reds And Purples" checksum="d2f45b7cc4193b7ad1ee29cacc0eec21">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Royal.gpl//Royal" checksum="aad0b70b2167c20a14de386f0cd68342">
+  <resource identifier="external:${gimp_data_dir}/palettes/Royal.gpl//Royal" checksum="648d6d146a18cd8302db4466ca0607f5">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Tango.gpl//Tango Icon Theme" checksum="5bf0ed3eb367a149b43fe13184f8b158">
+  <resource identifier="external:${gimp_data_dir}/palettes/Tango.gpl//Tango Icon Theme" checksum="af2669e4edc9f5a4ecd9f0d07a217674">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Topographic.gpl//Topographic" checksum="338d5e51e92191e057cb1d7f8442748b">
+  <resource identifier="external:${gimp_data_dir}/palettes/Topographic.gpl//Topographic" checksum="afd34a2dc71eee3ee6ee514b827d7527">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Visibone.gpl//Visibone" checksum="f3b23c5223c3b8d0a53e358832fe79fc">
+  <resource identifier="external:${gimp_data_dir}/palettes/Visibone.gpl//Visibone" checksum="b30421ecddb68283aa12092c02a57366">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Visibone_2.gpl//Visibone 2" checksum="75c470ac8c8a6d165320cff6549623a0">
+  <resource identifier="external:${gimp_data_dir}/palettes/Visibone_2.gpl//Visibone 2" checksum="184e8c58ad30daf07720afd255d227b4">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Volcano.gpl//Volcano" checksum="ac4658676c5e532c134160d4cdabd205">
+  <resource identifier="external:${gimp_data_dir}/palettes/Volcano.gpl//Volcano" checksum="562af119e5d4dd1f86d9ce23b23b104e">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Warm_Colors.gpl//Warm Colors" checksum="8eb6fc4f7621179c85794e85be2138cb">
+  <resource identifier="external:${gimp_data_dir}/palettes/Warm_Colors.gpl//Warm Colors" checksum="a7d3d96d7169190f28256cdfa3bd95e8">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Web.gpl//Web" checksum="f9cbd324e9830afd0be2efc09cc6196d">
+  <resource identifier="external:${gimp_data_dir}/palettes/Web.gpl//Web" checksum="facc9517a0d7e2a6739602cea442ea68">
   </resource>
 
-  <resource identifier="internal:gimp-font-standard-alias: Monospace//Monospace" checksum="(null)">
+  <resource identifier="external:/home/akqir24/.fonts/absender1.ttf//absender regular" checksum="(null)">
   </resource>
 
-  <resource identifier="internal:gimp-font-standard-alias: Monospace Bold//Monospace Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Monospace Bold Italic//Monospace Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Monospace Italic//Monospace Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Sans-serif//Sans-serif" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Sans-serif Bold//Sans-serif Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Sans-serif Bold Italic//Sans-serif Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Sans-serif Italic//Sans-serif Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Serif//Serif" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Serif Bold//Serif Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Serif Bold Italic//Serif Bold Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="internal:gimp-font-standard-alias: Serif Italic//Serif Italic" checksum="(null)">
+  <resource identifier="external:/home/akqir24/.fonts/Agraham.otf//Agraham Personal Use" checksum="(null)">
   </resource>
 
   <resource identifier="external:/home/akqir24/.fonts/APT.ttf//apricotJapanesefontT Regular" checksum="(null)">
@@ -820,13 +790,52 @@
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/C059-Roman.otf//C059 Roman" checksum="(null)">
   </resource>
 
+  <resource identifier="external:/home/akqir24/.fonts/casser.otf//Casser Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/CaviarDreams_Bold.ttf//Caviar Dreams Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/CaviarDreams_BoldItalic.ttf//Caviar Dreams Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/CaviarDreams_Italic.ttf//Caviar Dreams Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/CaviarDreams.ttf//Caviar Dreams Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/cubic.ttf//Cubic Regular" checksum="(null)">
+  </resource>
+
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/D050000L.otf//D050000L Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuMathTeXGyre.ttf//DejaVu Math TeX Gyre Regular" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf//DejaVu Sans Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSans-BoldOblique.ttf//DejaVu Sans Bold Oblique" checksum="(null)">
+  </resource>
+
   <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf//DejaVu Sans Book" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed.ttf//DejaVu Sans Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf//DejaVu Sans Condensed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-BoldOblique.ttf//DejaVu Sans Condensed Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Oblique.ttf//DejaVu Sans Condensed Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf//DejaVu Sans ExtraLight" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf//DejaVu Sans Mono Bold" checksum="(null)">
@@ -841,10 +850,31 @@
   <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf//DejaVu Sans Mono Oblique" checksum="(null)">
   </resource>
 
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf//DejaVu Sans Oblique" checksum="(null)">
+  </resource>
+
   <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf//DejaVu Serif Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerif-BoldItalic.ttf//DejaVu Serif Bold Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf//DejaVu Serif Book" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed.ttf//DejaVu Serif Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-Bold.ttf//DejaVu Serif Condensed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-BoldItalic.ttf//DejaVu Serif Condensed Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-Italic.ttf//DejaVu Serif Condensed Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf//DejaVu Serif Italic" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf//Droid Sans Fallback Regular" checksum="(null)">
@@ -917,6 +947,300 @@
   </resource>
 
   <resource identifier="external:/usr/share/fonts/truetype/freefont/FreeSerif.ttf//FreeSerif Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/garamond_[allfont.ru].ttf//Garamond Normal" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/gristela.otf//Gristela Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Heavitas.ttf//Heavitas Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Black Condensed.otf//Helvetica Black Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Black Condensed Oblique.otf//Helvetica Black Condensed Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Black Oblique.otf//Helvetica .Black Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/helvetica black.otf//Helvetica Black Original Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica-Bold.ttf//Helvetica Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Bold Condensed.otf//Helvetica Bold Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Bold Narrow Oblique.otf//Helvetica Bold Narrow Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica-Bold Oblique.ttf//Helvetica Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/helvetica-compressed.otf//Helvetica Compressed Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Condensed Bold Oblique.otf//Helvetica Condensed Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Condensed Oblique.otf//Helvetica Condensed Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Condensed Regular.ttf//Helvetica Condensed Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/helvetica_condensed.ttf//Helvetica Condensed Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Extra Compressed Regular.otf//Helvetica Extra Compressed Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Inserat Roman.otf//Helvetica Inserat Roman" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Light Condensed.otf//Helvetica Light Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica-LightOblique.ttf//Helvetica Light Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/helvetica-light.ttf//Helvetica Light Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica-Narrow Bold.ttf//Helvetica-Narrow Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica-Narrow-Oblique.ttf//Helvetica Narrow Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica-Narrow Roman.ttf//Helvetica-Narrow Roman" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica-Oblique.ttf//Helvetica Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica.ttf//Helvetica Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Roman.ttf//Helvetica Roman" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Rounded Black.otf//Helvetica Rounded Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Rounded Bold.otf//Helvetica Rounded Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/helvetica-rounded-bold.otf//Helvetica Rounded Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Rounded Bold Oblique.otf//Helvetica Rounded Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Rounded Condensed Bold.otf//Helvetica Rounded Condensed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Rounded LT Std Bold Condensed Oblique.otf//Helvetica Rounded LT Std Bold Condensed Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/helvetica/Helvetica Ultra Compressed.otf//Helvetica Ultra Compressed" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-Black-BF648692eadb087.otf//HvDTrial Pluto Sans Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-BlackItalic-BF648692eaa73d1.otf//HvDTrial Pluto Sans Black Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-Bold-BF648692eadc34c.otf//HvDTrial Pluto Sans Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-BoldItalic-BF648692ead0394.otf//HvDTrial Pluto Sans Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondBlack-BF648692eab8025.otf//HvDTrial Pluto Sans Cond Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondBlackItalic-BF648692eaba681.otf//HvDTrial Pluto Sans Cond Black Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondBold-BF648692eab4120.otf//HvDTrial Pluto Sans Cond Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondBoldItalic-BF648692ead0969.otf//HvDTrial Pluto Sans Cond Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondExLight-BF648692ead470f.otf//HvDTrial Pluto Sans Cond ExLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondExLightItalic-BF648692ead1e09.otf//HvDTrial Pluto Sans Cond ExLight Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondHeavy-BF648692ead7453.otf//HvDTrial Pluto Sans Cond Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondHeavyItalic-BF648692ead50d7.otf//HvDTrial Pluto Sans Cond Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondLight-BF648692eacb74e.otf//HvDTrial Pluto Sans Cond Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondLightItalic-BF648692eac83ae.otf//HvDTrial Pluto Sans Cond Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondMedium-BF648692eaac104.otf//HvDTrial Pluto Sans Cond Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondMediumItalic-BF648692eab255e.otf//HvDTrial Pluto Sans Cond Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondRegular-BF648692eab5581.otf//HvDTrial Pluto Sans Cond Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondRegularItalic-BF648692eac8257.otf//HvDTrial Pluto Sans Cond Regular Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondThin-BF648692eaac7be.otf//HvDTrial Pluto Sans Cond Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-CondThinItalic-BF648692eabfa54.otf//HvDTrial Pluto Sans Cond Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-ExtraLight-BF648692eacd4e2.otf//HvDTrial Pluto Sans ExtraLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-ExtraLightItalic-BF648692e9a4d6d.otf//HvDTrial Pluto Sans ExtraLight Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-Heavy-BF648692e9b568e.otf//HvDTrial Pluto Sans Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-HeavyItalic-BF648692ea4a7ba.otf//HvDTrial Pluto Sans Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-Light-BF648692ea282f8.otf//HvDTrial Pluto Sans Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-LightItalic-BF648692ea4a61e.otf//HvDTrial Pluto Sans Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-Medium-BF648692ea8ad86.otf//HvDTrial Pluto Sans Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-MediumItalic-BF648692ea2566f.otf//HvDTrial Pluto Sans Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-Regular-BF648692ea6228c.otf//HvDTrial Pluto Sans Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-RegularItalic-BF648692eaa9a46.otf//HvDTrial Pluto Sans Regular Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-Thin-BF648692ea85b87.otf//HvDTrial Pluto Sans Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/HvDTrial_PlutoSans-ThinItalic-BF648692e98f0ce.otf//HvDTrial Pluto Sans Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-Bold.ttf//IntoneMono Nerd Font Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-BoldItalic.ttf//IntoneMono Nerd Font Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-Italic.ttf//IntoneMono Nerd Font Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-Light.ttf//IntoneMono Nerd Font Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-LightItalic.ttf//IntoneMono Nerd Font Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-Medium.ttf//IntoneMono Nerd Font Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-MediumItalic.ttf//IntoneMono Nerd Font Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-Bold.ttf//IntoneMono Nerd Font Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-BoldItalic.ttf//IntoneMono Nerd Font Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-Italic.ttf//IntoneMono Nerd Font Mono Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-Light.ttf//IntoneMono Nerd Font Mono Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-LightItalic.ttf//IntoneMono Nerd Font Mono Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-Medium.ttf//IntoneMono Nerd Font Mono Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-MediumItalic.ttf//IntoneMono Nerd Font Mono Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontMono-Regular.ttf//IntoneMono Nerd Font Mono Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-Bold.ttf//IntoneMono Nerd Font Propo Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-BoldItalic.ttf//IntoneMono Nerd Font Propo Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-Italic.ttf//IntoneMono Nerd Font Propo Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-Light.ttf//IntoneMono Nerd Font Propo Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-LightItalic.ttf//IntoneMono Nerd Font Propo Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-Medium.ttf//IntoneMono Nerd Font Propo Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-MediumItalic.ttf//IntoneMono Nerd Font Propo Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFontPropo-Regular.ttf//IntoneMono Nerd Font Propo Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/IntoneMonoNerdFont-Regular.ttf//IntoneMono Nerd Font Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-Bold.otf//LEMON MILK Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-BoldItalic.otf//LEMON MILK Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-Light.otf//LEMON MILK Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-LightItalic.otf//LEMON MILK Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-Medium.otf//LEMON MILK Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-MediumItalic.otf//LEMON MILK Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-Regular.otf//LEMON MILK Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/LEMONMILK-RegularItalic.otf//LEMON MILK Regular Italic" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf//Liberation Mono Bold" checksum="(null)">
@@ -1039,7 +1363,145 @@
   <resource identifier="external:/home/akqir24/.fonts/Lilex/variable/Lilex-Italic[wght].ttf//Lilex Thin Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Black_PERSONAL USE.otf//MADE TOMMY Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Bold_PERSONAL USE.otf//MADE TOMMY Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY ExtraBold_PERSONAL USE.otf//MADE TOMMY ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Light_PERSONAL USE.otf//MADE TOMMY Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Medium_PERSONAL USE.otf//MADE TOMMY Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Black Outline_PERSONAL USE.otf//MADE TOMMY Outline Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Bold Outline_PERSONAL USE.otf//MADE TOMMY Outline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY ExtraBold Outline_PERSONAL USE.otf//MADE TOMMY Outline ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Light Outline_PERSONAL USE.otf//MADE TOMMY Outline Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Medium Outline_PERSONAL USE.otf//MADE TOMMY Outline Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Regular Outline_PERSONAL USE.otf//MADE TOMMY Outline Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Thin Outline_PERSONAL USE.otf//MADE TOMMY Outline Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Regular_PERSONAL USE.otf//MADE TOMMY Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MADE TOMMY Thin_PERSONAL USE.otf//MADE TOMMY Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFont-Bold.ttf//MartianMono Nerd Font Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFont-CondensedBold.ttf//MartianMono Nerd Font Condensed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFont-CondensedMedium.ttf//MartianMono Nerd Font Condensed Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFont-CondensedRegular.ttf//MartianMono Nerd Font Condensed Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFont-Medium.ttf//MartianMono Nerd Font Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontMono-Bold.ttf//MartianMono Nerd Font Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontMono-CondensedBold.ttf//MartianMono Nerd Font Mono Condensed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontMono-CondensedMedium.ttf//MartianMono Nerd Font Mono Condensed Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontMono-CondensedRegular.ttf//MartianMono Nerd Font Mono Condensed Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontMono-Medium.ttf//MartianMono Nerd Font Mono Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontMono-Regular.ttf//MartianMono Nerd Font Mono Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontPropo-Bold.ttf//MartianMono Nerd Font Propo Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontPropo-CondensedBold.ttf//MartianMono Nerd Font Propo Condensed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontPropo-CondensedMedium.ttf//MartianMono Nerd Font Propo Condensed Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontPropo-CondensedRegular.ttf//MartianMono Nerd Font Propo Condensed Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontPropo-Medium.ttf//MartianMono Nerd Font Propo Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFontPropo-Regular.ttf//MartianMono Nerd Font Propo Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MartianMonoNerdFont-Regular.ttf//MartianMono Nerd Font Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Material-Design-Iconic-Font.ttf//Material-Design-Iconic-Font Design-Iconic-Font" checksum="(null)">
+  </resource>
+
   <resource identifier="external:/usr/share/fonts/truetype/material-design-icons-iconfont/MaterialIcons-Regular.ttf//Material Icons Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MODERNA_.TTF//moderna Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFont-Bold.ttf//Mononoki Nerd Font Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFont-BoldItalic.ttf//Mononoki Nerd Font Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFont-Italic.ttf//Mononoki Nerd Font Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontMono-Bold.ttf//Mononoki Nerd Font Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontMono-BoldItalic.ttf//Mononoki Nerd Font Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontMono-Italic.ttf//Mononoki Nerd Font Mono Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontMono-Regular.ttf//Mononoki Nerd Font Mono Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontPropo-Bold.ttf//Mononoki Nerd Font Propo Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontPropo-BoldItalic.ttf//Mononoki Nerd Font Propo Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontPropo-Italic.ttf//Mononoki Nerd Font Propo Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFontPropo-Regular.ttf//Mononoki Nerd Font Propo Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/MononokiNerdFont-Regular.ttf//Mononoki Nerd Font Regular" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/NimbusMonoPS-Bold.otf//Nimbus Mono PS Bold" checksum="(null)">
@@ -1906,6 +2368,102 @@
   <resource identifier="external:/usr/share/fonts/truetype/noto/NotoTraditionalNushu-Regular.ttf//Noto Traditional Nushu Regular" checksum="(null)">
   </resource>
 
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-Black.ttf//Nunito Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito Black Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-BlackItalic.ttf//Nunito Black Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-Bold.ttf//Nunito Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-BoldItalic.ttf//Nunito Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-ExtraBold.ttf//Nunito ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito ExtraBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-ExtraBoldItalic.ttf//Nunito ExtraBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-ExtraLight.ttf//Nunito ExtraLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito ExtraLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito ExtraLight Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-ExtraLightItalic.ttf//Nunito ExtraLight Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-Italic.ttf//Nunito Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-Light.ttf//Nunito Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-LightItalic.ttf//Nunito Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-Medium.ttf//Nunito Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-MediumItalic.ttf//Nunito Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-Regular.ttf//Nunito Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-VariableFont_wght.ttf//Nunito SemiBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-SemiBold.ttf//Nunito SemiBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/static/Nunito-SemiBoldItalic.ttf//Nunito SemiBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito SemiBold Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/P052-Bold.otf//P052 Bold" checksum="(null)">
   </resource>
 
@@ -1916,6 +2474,72 @@
   </resource>
 
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/P052-Roman.otf//P052 Roman" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Rockabilly.ttf//Rockabilly Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova-Bold.ttf//Rockwell Nova Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova-BoldItalic.ttf//Rockwell Nova Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNovaCond.ttf//Rockwell Nova Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNovaCond-Bold.ttf//Rockwell Nova Condensed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNovaCond-BoldItalic.ttf//Rockwell Nova Condensed Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNovaCond-Italic.ttf//Rockwell Nova Condensed Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNovaCond-Light.ttf//Rockwell Nova Condensed Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNovaCond-LightItalic.ttf//Rockwell Nova Condensed Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova-ExtraBold.ttf//Rockwell Nova Extra Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova-ExtraBoldItalic.ttf//Rockwell Nova Extra Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova-Italic.ttf//Rockwell Nova Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova-Light.ttf//Rockwell Nova Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova-LightItalic.ttf//Rockwell Nova Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/RockwellNova.ttf//Rockwell Nova Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Rockybilly.ttf//Rockybilly Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/rosca.otf//Rosca Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/rosca-slant.otf//Rosca Slant Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Scream_alout.ttf//Scream alternative outlined Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Scream_al.ttf//Scream alternative Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/SCREAMOU.TTF//Scream outlined Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/SCREAM__.TTF//Scream Regular" checksum="(null)">
   </resource>
 
   <resource identifier="external:/home/akqir24/.fonts/Segoe UI Bold.ttf//Segoe UI Bold" checksum="(null)">
@@ -1931,18 +2555,6 @@
   </resource>
 
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/StandardSymbolsPS.otf//Standard Symbols PS Regular" checksum="(null)">
-  </resource>
-
-  <resource identifier="external:/usr/share/fonts/truetype/tuffy/tuffy_bold.ttf//Tuffy Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="external:/usr/share/fonts/truetype/tuffy/tuffy_bold_italic.ttf//Tuffy Bold-Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="external:/usr/share/fonts/truetype/tuffy/tuffy_italic.ttf//Tuffy Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="external:/usr/share/fonts/truetype/tuffy/tuffy_regular.ttf//Tuffy Regular" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/URWBookman-Demi.otf//URW Bookman Demi" checksum="(null)">

@@ -1,10 +1,13 @@
 return {
-  {
-	"stevearc/conform.nvim",
-    opts = {},
-  },
+  { "stevearc/conform.nvim" },
   { "RRethy/vim-illuminate" },
-  { "petertriho/nvim-scrollbar",
+  { "nvimdev/indentmini.nvim" }, 
+  { "akinsho/toggleterm.nvim",
+	version = "*",
+	config = true
+  },
+  {
+	"petertriho/nvim-scrollbar",
     opts = {
       marks = {
         Cursor = { text = "•" },
@@ -28,12 +31,8 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {},
+    main = "ibl"
   },
-  { "nvimdev/indentmini.nvim" },
   {
     "kevinhwang91/nvim-hlslens",
     event = "VeryLazy",

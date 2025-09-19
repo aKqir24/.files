@@ -2,18 +2,17 @@ return {
   {
     "uZer/pywal16.nvim",
     config = function()
-    vim.cmd.colorscheme("pywal16")
+		vim.cmd.colorscheme("pywal16")
     end,
   },
   {
-	"startup-nvim/startup.nvim",
-	dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim" },
-	config = function()
-		require "startup".setup()
-	end
+	"goolord/alpha-nvim",
+    dependencies = { 'nvim-tree/nvim-web-devicons', 'nvim-lua/plenary.nvim' },
+    config = function()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
   },
-  
-{
+  {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
@@ -37,27 +36,8 @@ return {
         lualine_z = { "location" },
       },
     })
+    end,
+  },
 
-    -- Hide statusline when startup.nvim is opened
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = "startup",
-      callback = function()
-        vim.opt.laststatus = 0 -- hide statusline completely
-      end,
-    })
-
-    -- Restore statusline when leaving startup.nvim
-    vim.api.nvim_create_autocmd("BufUnload", {
-      pattern = "*",
-      callback = function()
-        if vim.bo.filetype == "startup" then
-          vim.schedule(function()
-            vim.opt.laststatus = 3 -- restore global statusline
-          end)
-        end
-      end,
-    })
-  end,
-  }
 }
 

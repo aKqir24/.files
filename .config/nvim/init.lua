@@ -49,20 +49,16 @@ require("lazy").setup({
       config = function()
         require'nvim-treesitter.configs'.setup {
           ensure_installed = { "lua", "vim", "bash", "python" },
-          highlight = {
-            enable = true,
-          },
+          highlight = { enable = true }
         }
       end,
     },
     {
       "nvim-tree/nvim-tree.lua",
-      version = "*", -- optional: use latest tag
-      dependencies = {
-      "nvim-tree/nvim-web-devicons", -- optional, for file icons
-      },
+      version = "*",
+	  dependencies = { "nvim-tree/nvim-web-devicons" },
       config = function()
-      require("nvim-tree").setup()
+		require("nvim-tree").setup()
       end,
     },
     { import = "plugins" },
@@ -72,14 +68,9 @@ require("lazy").setup({
 })
 
 -- Keymappings
-vim.keymap.set('n', '<C-S-e>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-1>', ':BufferGoto 1<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-2>', ':BufferGoto 2<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-3>', ':BufferGoto 3<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-4>', ':BufferGoto 4<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-5>', ':BufferGoto 5<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-6>', ':BufferGoto 6<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-7>', ':BufferGoto 7<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-8>', ':BufferGoto 8<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-9>', ':BufferGoto 9<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-S-0>', ':BufferGoto 10<CR>', { noremap = true, silent = true })
+vim.keymap.set('', '<F12>', ':ToggleTerm<CR>', { noremap = true, silent = true })
+vim.keymap.set('', '<C-S-e>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set("", "<C-S-0>", ":BufferGoto 10<CR>", { noremap = true, silent = true })
+for i = 1, 9 do
+  vim.keymap.set("", string.format("<C-S-%d>", i), string.format(":BufferGoto %d<CR>", i), { noremap = true, silent = true })
+end

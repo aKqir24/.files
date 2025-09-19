@@ -19,7 +19,8 @@ apt-get install picom i3-wm pipewire pipewire-pulse libssl-dev \
 				systemd-resolved neovim iwd  preload git ark gettext \
 				fastfetch power-profiles-daemon fonts-noto-color-emoji \
 				libpulse-dev libsensors-dev libpipewire-0.3-dev libtool-bin \
-				autoconf libnotmuch-dev yq python3-gi python3-setuptools 
+				autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
+				obexpushd
 
 # setup systemd-networkd & services
 echo "setup: Configuring system"
@@ -29,7 +30,8 @@ for service in ${system_service[@]}; do
 	systemctl enable --now $service
 done
 ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-cp $HOME/.files/resources/network/* /etc/systemd/network/ 
+cp $HOME/.files/resources/network/* /etc/systemd/network/
+systemctl --user enable --now obex
 systemctl --user enable --now pipewire.service pipewire.socket
 systemctl --user enable --now wireplumber.service
 systemctl --user enable --now pipewire-pulse.service"
