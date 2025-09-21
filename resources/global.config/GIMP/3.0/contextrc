@@ -12,7 +12,7 @@
 (pattern "Starfield")
 (gradient "Skyline")
 (palette "Standard")
-(font "")
+(font "Monospace")
 (tool-preset "Virtual core pointer")
 
 # end of user context

@@ -5,6 +5,7 @@ type="--type"
 terminal='alacritty'
 system_monitor='btop'
 bt_manager='bluetuith'
+audio_mixer='pulsemixer'
 
 # styling in status
 padding_left="<span size='9.1pt'> </span>"
@@ -12,7 +13,7 @@ inf_style="$padding_left<span size='11pt'>"
 
 tui_launch() {
 	pkill $1 ;
-	bash -c "$terminal --title ${1} -e ${1} & sleep 0.16;
+	bash -c "$terminal --title ${1} -e ${1} & sleep 0.2;
 	i3-msg \"[title=\\\"${1}\\\"] floating enable\""
 }
 
@@ -20,6 +21,7 @@ case "$1" in
 	"$type=monitor")
 		check() { xset q | grep -q "timeout:  0" && $1 || $2 ;}
 		case "$2" in
+			"audio") tui_launch $audio_mixer ;;
 			"system") tui_launch $system_monitor ;;
 			"screen") check "xset s on +dpms s blank" "xset s off -dpms s noblank";;
 			*) check "echo ${padding_left}<span> 󱎴 </span>" "echo ${padding_left}<span> 󰍹 </span>"
