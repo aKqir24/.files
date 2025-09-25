@@ -6,13 +6,14 @@
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 exec --no-startup-id dunst 
-#exec --no-startup-id pywalfox start
+# exec --no-startup-id pywalfox start
 exec --no-startup-id udiskie
-#exec_always redshift-qt
+# exec_always redshift-qt
 
 # Post-Setup
 # exec sh ~/.config/i3/start.sh audio &> /dev/null
 exec --no-startup-id xhost +si:localuser:root ;
+set $ROFI_SCRP_PATH ~/.config/rofi/scripts/
 
 # ================= #
 #		BINDS		#
@@ -26,14 +27,16 @@ set $mod Mod4
 
 # Applictions
 bindsym $mod+Return exec alacritty
-bindsym Control+Shift+Escape exec alacritty -e btop
+bindsym Control+Shift+Escape exec sh ~/.config/i3/status/custom_status.sh --type=monitor system
 bindsym $mod+e exec pcmanfm
 
 # Rofi Widgets
 #bindsym $mod+tab exec rofi -show window
-bindsym $mod+period exec sh ~/.config/rofi/scripts/emoji.sh
-bindsym $mod+r exec bash ~/.config/rofi/scripts/launcher.sh
-bindsym $mod+Shift+e exec bash ~/.config/rofi/scripts/powermenu.sh
+bindsym Control+Shift+i exec bash $ROFI_SCRP_PATHwifi.sh
+bindsym Control+Shift+b exec bash $ROFI_SCRP_PATHbluetooth.sh
+bindsym $mod+period exec sh $ROFI_SCRP_PATHemoji.sh
+bindsym $mod+r exec bash $ROFI_SCRP_PATHlauncher.sh
+bindsym $mod+Shift+e exec bash $ROFI_SCRP_PATHpowermenu.sh
 
 # Screenshoot
 bindsym Print exec --no-startup-id bash $HOME/.config/i3/start.sh screenshot $HOME/Pictures/Screenshots/
@@ -41,8 +44,8 @@ bindsym Print exec --no-startup-id bash $HOME/.config/i3/start.sh screenshot $HO
 # Programs control/s
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -199,7 +202,7 @@ bar {
 	workspace_min_width 50
 	padding 2px 6px 2px 1px
 	strip_workspace_numbers yes
-    status_command sleep 1 ; i3status-rs ~/.config/i3/status/config.toml
+    status_command sleep 0.89 ; i3status-rs ~/.config/i3/status/config.toml
     colors {
         separator $c2
         background $c0

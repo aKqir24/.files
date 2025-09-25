@@ -13,7 +13,7 @@ inf_style="$padding_left<span size='11pt'>"
 
 tui_launch() {
 	pkill $1 ;
-	bash -c "$terminal --title ${1} -e ${1} & sleep 0.2;
+	bash -c "$terminal --title ${1} -e ${1} & sleep 0.18 &&
 	i3-msg \"[title=\\\"${1}\\\"] floating enable\""
 }
 
