@@ -1,0 +1,3 @@
+[submodule "resources/scripts/pywal16_scripts"]
+	path = resources/scripts/pywal16_scripts
+	url = https://github.com/aKqir24/pywal16_scripts.git
