@@ -6,8 +6,6 @@ distros that are not based on debian!" ; sleep 2
 echo "setup: Preparing & applying dotfiles"
 git clone https://github.com/aKqir24/.files.git
 cd $HOME/.files && stow . --adopt && cd $HOME
-git clone https://github.com/aKqir24/pywal16_scripts.git \
-	$HOME/.files/resources/scripts/
 
 # Install all base packages
 echo "setup: installing system packages"
