@@ -1,0 +1,65 @@
+[colors.normal]
+red = "#b32b09"
+cyan = "#938771"
+green = "#8d3015"
+white = "#9b9790"
+black = "#1f180d"
+blue = "#7b6b57"
+magenta = "#847b66"
+yellow = "#aa3b1b"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[colors.footer_bar]
+foreground = "#c7c5c2"
+background = "#9b9790"
+
+[colors.bright]
+black = "#71685c"
+red = "#EF3A0C"
+green = "#BD411C"
+blue = "#A58F74"
+cyan = "#C5B497"
+magenta = "#B1A489"
+white = "#c7c5c2"
+yellow = "#E34F25"
+
+[colors.primary]
+background = "#1f180d"
+foreground = "#c7c5c2"
+
+[colors.cursor]
+text = "#1f180d"
+cursor = "#9b9790"
+
+[colors.vi_mode_cursor]
+text = "#1f180d"
+cursor = "#c7c5c2"
+
+[colors.search.matches]
+foreground = "#1f180d"
+background = "#c7c5c2"
+
+[colors.search.focused_match]
+foreground = "CellBackground"
+background = "CellForeground"
+
+[window.padding]
+x = 12
+y = 12
+
+[font]
+size = 12
+
+[font.normal]
+family = "EnvyCodeR Nerd Font Mono"
+
+[font.bold]
+family = "EnvyCodeR Nerd Font"
+style = "Regular"

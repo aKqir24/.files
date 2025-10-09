@@ -1,0 +1,102 @@
+{
+    "logo": {
+		"width": 26,
+		"height": 10,
+		"type": "small",
+		"position": "left",
+		"color": { "1": "green", "2":"yellow" },
+		"padding": {
+			"top": 3,
+			"right": 4,
+			"left": 4
+		}
+    },
+    "display": {
+        "separator": ">",
+        "color": {
+			"separator": "blue",
+            "keys": "green",
+			"width": 0
+        },
+		"key": {
+            "width": 9,
+			"paddingLeft": 1
+        },
+        "size": {
+            "ndigits": 0,
+            "maxPrefix": "GB"
+        },
+		"bar": {
+            "charElapsed": "/",
+            "charTotal": "-",
+            "width": 12
+        },
+        "percent": {
+            "type": 2
+        }
+    },
+    "modules": [
+		"break",
+		{
+		    "type": "title",
+			"key": "┌────󰌢  ",	
+			"format": "  {user-name-colored} {at-symbol-colored} {host-name-colored}",
+            "color": {
+                "user": "green",
+                "at": "yellow",
+                "host": "green"
+            }
+        },
+        {
+
+            "type": "custom",
+            "key": "├─────────────────────────────────────────────>"
+		},
+		{
+			"type": "os",
+			"key": "├─  "
+		},
+		{
+			"type": "kernel",
+			"key": "├─  "
+		},
+		{
+			"type": "cpu",
+			"key": "├─  "
+		},
+		{
+			"type": "disk",
+			"key": "├─  "
+		},
+		{
+			"type": "display",
+			"key": "├─󰍹  "
+		},
+		{
+			"type": "uptime",
+			"key": "├─󰅐  "
+		},
+		{
+			"type": "packages",
+			"key": "├─󰏖  "
+		},
+		{
+			"type": "terminal",
+			"key": "├─  "
+		},
+        {
+            "type": "custom",
+            "key": "├─────────────────────────────────────────────>"
+		},
+		{
+            "type": "colors",
+			"key": "└────  ",
+			"paddingLeft": 2,
+			"symbol": "square",
+            "block": {
+                "range": [1, 16]
+			}
+        },
+		"break"
+    ]
+}

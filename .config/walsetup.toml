@@ -1,0 +1,16 @@
+[wallpaper]
+cycle = "iterative"
+type = "image"
+path = "/home/akqir24/Pictures/Wallpapers"
+mode = "fill"
+
+[theming]
+gtk = true
+icons = true
+mode = "dark"
+accent = "color2"
+
+[pywal16]
+backend = "wal"
+light = "true"
+colorscheme = "darken"

@@ -1,0 +1,19 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh pool-edit Windows_ISO
+or other application using the libvirt API.
+-->
+
+<pool type='dir'>
+  <name>Windows_ISO</name>
+  <uuid>e3fee427-504f-4bd1-b561-0719260c97c2</uuid>
+  <capacity unit='bytes'>0</capacity>
+  <allocation unit='bytes'>0</allocation>
+  <available unit='bytes'>0</available>
+  <source>
+  </source>
+  <target>
+    <path>/home/Akqir/Desktop/Windows ISO</path>
+  </target>
+</pool>

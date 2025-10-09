@@ -1,0 +1,21 @@
+[urgency_critical]
+background = "#1f180d"
+foreground = "#c7c5c2"
+frame_color = "#b32b09"
+
+[global]
+monitor = 0
+timeout = 3
+gap_size = 6
+frame_width = 2
+seperator_height = 4
+font = "Lilex 8"
+ignore_dbusclose = false
+frame_color = "#8d3015"
+background = "#1f180d"
+foreground = "#c7c5c2"
+
+[urgency_low]
+background = "#1f180d"
+foreground = "#c7c5c2"
+frame_color = "#aa3b1b"

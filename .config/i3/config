@@ -1,0 +1,215 @@
+# ===================== #
+#		Autostart		#
+# ===================== #
+
+# Daemons
+exec_always --no-startup-id autotiling
+exec_always --no-startup-id picom
+exec --no-startup-id dunst 
+# exec --no-startup-id pywalfox start
+exec --no-startup-id udiskie
+# exec_always redshift-qt
+
+# Post-Setup
+# exec sh ~/.config/i3/start.sh audio &> /dev/null
+exec --no-startup-id xhost +si:localuser:root ;
+set $ROFI_SCRP_PATH ~/.config/rofi/scripts/
+
+# ================= #
+#		BINDS		#
+# ================= #
+
+set $mod Mod4
+
+# ------------------------------------------------------#
+# To start some specific programs						#
+# ------------------------------------------------------#
+
+# Applictions
+bindsym $mod+Return exec alacritty
+bindsym Control+Shift+Escape exec sh ~/.config/i3/status/custom_status.sh --type=monitor system
+bindsym $mod+e exec pcmanfm
+
+# Rofi Widgets
+#bindsym $mod+tab exec rofi -show window
+bindsym Control+Shift+i exec bash $ROFI_SCRP_PATHwifi.sh
+bindsym Control+Shift+b exec bash $ROFI_SCRP_PATHbluetooth.sh
+bindsym $mod+period exec sh $ROFI_SCRP_PATHemoji.sh
+bindsym $mod+r exec bash $ROFI_SCRP_PATHlauncher.sh
+bindsym $mod+Shift+e exec bash $ROFI_SCRP_PATHpowermenu.sh
+
+# Screenshoot
+bindsym Print exec --no-startup-id bash $HOME/.config/i3/start.sh screenshot $HOME/Pictures/Screenshots/
+
+# Programs control/s
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# ------------------------------------------------------#
+# To manage the window									#
+# ------------------------------------------------------#
+
+# kill focused window
+bindsym Mod1+F4 kill
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+q layout toggle split
+
+# toggle tiling / floating / fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+f fullscreen toggle
+bindsym $mod+a focus parent
+
+# ------------------------------------------------------#
+# To manage the workspaces/tags							#
+# ------------------------------------------------------#
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:" 
+set $ws8 "8:"
+set $ws9 "9:" 
+set $ws10 "10:"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Resize Window 
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+z mode "default"
+}
+
+bindsym $mod+z mode "resize"
+
+# =====================	#
+#		SETTINGS		#
+# ===================== #
+
+# ------------------------------#
+#	Window/Wm Properties		#
+# ------------------------------#
+
+# window gaps
+gaps inner 4
+gaps outer 0
+smart_gaps off
+
+# other settings
+tiling_drag titlebar
+floating_modifier $mod
+
+# title bars
+#smart_borders no_gaps
+default_border pixel 2
+font pango:EnvyCodeR Nerd Font Propo 10
+for_window [class=".*"] border pixel 2
+for_window [title="^(Error|Confirm|Delete confirmation)$"] border pixel 0
+for_window [floating] move position center
+
+# Monitor/Display settings and resolution
+exec sh ~/.config/i3/Xdisplay.sh
+#uncomment for wayland support
+#output VGA-1 mode --custom 1152x864@59.9Hz
+#output * bg ~/.config/wallpaper.jpg fill
+
+set_from_resource $c0 i3wm.color0
+set_from_resource $c1 i3wm.color1 
+set_from_resource $c2 i3wm.color2 
+set_from_resource $c3 i3wm.color3 
+set_from_resource $c4 i3wm.color4 
+set_from_resource $c5 i3wm.color5 
+set_from_resource $c6 i3wm.color6 
+set_from_resource $c7 i3wm.color7 
+set_from_resource $c8 i3wm.color8
+set_from_resource $c15 i3wm.color15
+
+# class                 border  backgr. text indicator child_border
+client.focused          $c2     $c0     $c15  $c2       $c2
+client.focused_inactive $c3     $c0     $c15  $c3       $c3
+client.unfocused        $c7     $c0     $c15  $c8       $c7
+client.urgent           $c1     $c0     $c15  $c1       $c1
+client.placeholder      $c6     $c0     $c4   $c6       $c6
+
+client.background       $c7
+
+# ----------------------------------#
+#	Status Bar + blocks				#
+# ----------------------------------#
+
+set $refresh_i3status_rs<D-Bslash> killall -SIGUSR1 i3status_rs
+
+bar {
+	font pango:EnvyCodeR Nerd Font 10
+	height 24
+    position top
+	workspace_min_width 50
+	padding 2px 6px 2px 1px
+	strip_workspace_numbers yes
+    status_command sleep 0.89 ; i3status-rs ~/.config/i3/status/config.toml
+    colors {
+        separator $c2
+        background $c0
+        statusline $c7
+        focused_workspace $c0 $c2 $c2
+        active_workspace $c0 $c5 $c5
+        inactive_workspace $c0 $c8 $c8
+        urgent_workspace $c0 $c1 $c1
+	}
+}

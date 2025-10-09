@@ -1,0 +1,4 @@
+.themes
+.config/dunst/dunstrc
+.config/alacritty.toml
+.config/rofi/colors.rasi

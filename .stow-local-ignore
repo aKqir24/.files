@@ -1,0 +1,9 @@
+resources/scripts/pywal16_scripts
+Pictures/preview.png
+resources
+README.md
+LICENSE
+.git
+.gitignore
+.gitmodules
+setup.sh

@@ -1,0 +1,10 @@
+{
+  bluetuith.generate: false
+  receive-dir: /home/akqir24/Documents/Bluetooth
+  keybindings: {
+    Quit: q
+	FilebrowserSelect: Space
+	PlayerTogglePlay: Space
+  }
+
+}
