@@ -1,18 +1,18 @@
 icons_format = "<span font_family='EnvyCodeR Nerd' size='12pt'>{icon}</span>"
 
 [theme.overrides]
-idle_bg = "#372223"
-idle_fg = "#cdc7c8"
-info_bg = "#cdc7c8"
-info_fg = "#372223"
-good_bg = "#a0866a"
-good_fg = "#372223"
-warning_bg = "#ba8569"
-warning_fg = "#372223"
-critical_bg = "#8e8266"
-critical_fg = "#372223"
-alternating_tint_bg = "#372223"
-alternating_tint_fg = "#372223"
+idle_bg = "#121316"
+idle_fg = "#c3c4c4"
+info_bg = "#c3c4c4"
+info_fg = "#121316"
+good_bg = "#714c36"
+good_fg = "#121316"
+warning_bg = "#53694b"
+warning_fg = "#121316"
+critical_bg = "#6e412d"
+critical_fg = "#121316"
+alternating_tint_bg = "#121316"
+alternating_tint_fg = "#121316"
 separator = "<span size='20pt'> </span>"
 separator_bg = "auto"
 separator_fg = "auto"
@@ -65,6 +65,10 @@ cmd = "sh ~/.config/i3/status/custom_status.sh --type=bluetooth toggle"
 [[block.click]]
 button = "right"
 cmd = "bash ~/.config/rofi/scripts/bluetooth.sh"
+
+[[block.click]]
+button = "middle"
+cmd = "bash ~/.config/i3/status/custom_status.sh --type=monitor bluetooth"
 
 [[block]]
 block = "custom"
@@ -122,12 +126,12 @@ text = "  ⏻  "
 
 [[block.items]]
 display = "  ⏻  Performance  "
-cmd = "powerprofilesctl set performance"
+cmd = "powerprofilesctl set performance && notify-send 'Power Profile' 'Setting to performance...'"
 
 [[block.items]]
 display = "  ⏻  Balanced  "
-cmd = "powerprofilesctl set balanced"
+cmd = "powerprofilesctl set balanced && notify-send 'Power Profile' 'Setting to balanced...'"
 
 [[block.items]]
 display = "  ⏻  Minimal  "
-cmd = "powerprofilesctl set power-saver"
+cmd = "powerprofilesctl set power-saver && notify-send 'Power Profile' 'Setting to power-saver...'"

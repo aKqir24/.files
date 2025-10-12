@@ -22,6 +22,7 @@ case "$1" in
 		case "$2" in
 			"audio") tui_launch $audio_mixer ;;
 			"system") tui_launch $system_monitor ;;
+			"bluetooth") tui_launch $bt_manager ;;
 			"screen") check "xset s on +dpms s blank" "xset s off -dpms s noblank";;
 			*) check "echo ${padding_left}<span> 󱎴 </span>" "echo ${padding_left}<span> 󰍹 </span>"
 		esac
