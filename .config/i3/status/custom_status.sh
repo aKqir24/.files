@@ -12,7 +12,7 @@ padding_left="<span size='9.1pt'> </span>"
 inf_style="$padding_left<span size='11pt'>"
 
 tui_launch() {
-    pkill -x "$1" 2>/dev/null ; $terminal --title "$1" -e "$1" & sleep 0.28
+    pkill -x "$1" 2>/dev/null ; $terminal --title "$1" -e "$1" & sleep 0.2
     i3-msg "[title=\"^${1}\$\"] floating enable" >/dev/null
 }
 

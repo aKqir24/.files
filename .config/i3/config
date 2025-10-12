@@ -6,9 +6,7 @@
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 exec --no-startup-id dunst 
-# exec --no-startup-id pywalfox start
 exec --no-startup-id udiskie
-# exec_always redshift-qt
 
 # Post-Setup
 # exec sh ~/.config/i3/start.sh audio &> /dev/null

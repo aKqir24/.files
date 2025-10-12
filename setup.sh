@@ -20,7 +20,7 @@ apt-get install picom i3-wm pipewire pipewire-pulse libssl-dev \
 				wireplumber rofi dunst xinit pipx mpv automake \
 				sudo alacritty viewnior libtool kdialog imagemagick \
 				xsettingsd nwg-look stow btop starship pcmanfm clang \
-				systemd-resolved neovim iwd  preload git ark gettext \
+				systemd-resolved iwd  preload git ark gettext \
 				fastfetch power-profiles-daemon fonts-noto-color-emoji \
 				libpulse-dev libsensors-dev libpipewire-0.3-dev libtool-bin \
 				autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
@@ -43,8 +43,8 @@ systemctl --user enable --now pipewire-pulse.service"
 # pacstall package manager and its available package
 echo "setup: Installing pacstall & pacstall packages..."
 sudo $( bash -c "$(curl -fsSL https://pacstall.dev/q/install)" &&
-		pacstall -I carla-git zen-browser rustdesk-deb i3status-rust rofi-emoji \
-		lmms-git dust-bin )
+		pacstall -I carla-git zen-browser i3status-rust rofi-emoji \
+		lmms-git dust-bin neovim-git )
 
 echo "setup: Installing base packages"
 
@@ -58,9 +58,12 @@ cd gscreenshot && pipx install . && rm -rf greenshot ; sudo apt autoremove
 echo "setup: theme & icons are loading..."
 # Run theming scripts
 bash $HOME/.files/resources/scripts/pywal16_scripts/walsetup.sh --gui --verbose
-bash $HOME/.files/resources/scripts/pywal16_scripts/waloml.sh \
-	--alacritty --dunst --i3status-rs=~/.files/.config/i3/status/config.toml
+bash $HOME/.files/resources/scripts/pywal16_scripts/waloml.sh --alacritty \
+	--dunst --i3status-rs=~/.files/.config/i3/status/config.toml
 bash $HOME/.files/resources/scripts/pywal16_scripts/theming/rofi.sh
 source $HOME/.cache/wal/colors-tty.sh
+
+# Turn on BFQ I/O
+echo "bfq" | sudo tee /sys/block/sda/queue/scheduler
 
 echo 'setup: Finished!!'

@@ -68,9 +68,11 @@ require("lazy").setup({
 })
 
 -- Keymappings
-vim.keymap.set('', '<F12>', ':ToggleTerm<CR>', { noremap = true, silent = true })
-vim.keymap.set('', '<C-S-e>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.keymap.set("", "<C-S-0>", ":BufferGoto 10<CR>", { noremap = true, silent = true })
+vim.keymap.set("", '<C-S-e>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set("", '<F12>', ':ToggleTerm<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Tab>', '<C-w>p', { noremap = true, silent = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {noremap=true, silent=true})
+
 for i = 1, 9 do
   vim.keymap.set("", string.format("<C-S-%d>", i), string.format(":BufferGoto %d<CR>", i), { noremap = true, silent = true })
 end

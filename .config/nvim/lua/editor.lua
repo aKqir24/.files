@@ -2,9 +2,15 @@ return {
   { "stevearc/conform.nvim" },
   { "RRethy/vim-illuminate" },
   { "nvimdev/indentmini.nvim" }, 
-  { "akinsho/toggleterm.nvim",
+  {
+    "akinsho/toggleterm.nvim",
 	version = "*",
-	config = true
+	config = function()
+		require('toggleterm').setup{
+			direction = 'float',
+			open_mapping = [[<c-\>]], -- or { [[<c-\>]], [[<c-¥>]] }
+		}
+	end
   },
   {
 	"petertriho/nvim-scrollbar",
