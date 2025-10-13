@@ -1,21 +1,21 @@
-[urgency_critical]
-background = "#372223"
-foreground = "#cdc7c8"
-frame_color = "#8e8266"
-
 [global]
 monitor = 0
 timeout = 3
-gap_size = 6
+gap_size = 16
 frame_width = 2
-seperator_height = 4
 font = "Lilex 8"
+offset = (18, 48)
 ignore_dbusclose = false
-frame_color = "#a0866a"
-background = "#372223"
-foreground = "#cdc7c8"
+frame_color = "#557d62"
+background = "#1d2419"
+foreground = "#c6c8c5"
 
 [urgency_low]
-background = "#372223"
-foreground = "#cdc7c8"
-frame_color = "#ba8569"
+background = "#1d2419"
+foreground = "#c6c8c5"
+frame_color = "#9d8774"
+
+[urgency_critical]
+background = "#1d2419"
+foreground = "#c6c8c5"
+frame_color = "#7c8153"
