@@ -5,7 +5,8 @@ distros that are not based on debian!" ; sleep 2
 # setup dotfiles directory and other dir
 echo "setup: Preparing & applying dotfiles"
 git clone --recurse-submodules https://github.com/aKqir24/.files.git
-cd $HOME/.files && stow . --adopt && cd $HOME
+cd $HOME/.files && stow . --adopt 
+stow -d resources/global.config/ -t ~ --adopt vscodium && cd $HOME
 
 # Setup thumbfast for mpv
 wget -P $HOME/.config/mpv/scripts/ \

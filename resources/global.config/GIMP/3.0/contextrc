@@ -4,7 +4,7 @@
 (paint-info "gimp-paintbrush")
 (brush "2. Hardness 050")
 (dynamics "Pressure Size")
-(mybrush "100% Opaque")
+(mybrush "Standard")
 (pattern "Starfield")
 (gradient "Skyline")
 (palette "Standard")

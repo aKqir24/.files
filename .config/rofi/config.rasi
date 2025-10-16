@@ -79,7 +79,7 @@ entry {
 
 /* --------------- General setting ----------------*/
 configuration {
-	modi:	"drun,run,combi,filebrowser,emoji";
+	modi:	"drun,run,combi,filebrowser";
 	font:		 "EnvyCodeR Nerd Font Bold 12";
 	case-sensitive:				   false;
 	cycle:							true;

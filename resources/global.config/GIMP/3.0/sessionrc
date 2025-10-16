@@ -11,9 +11,8 @@
     (size 640 480))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 16 16)
-    (size 1888 1011)
-    (monitor 1)
+    (position 578 31)
+    (size 566 825)
     (open-on-exit)
     (aux-info
         (left-docks-width "66")
@@ -47,7 +46,7 @@
                 (aux-info
                     (show-button-bar "true"))))
         (book
-            (position 741)
+            (position 626)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style icon)
@@ -96,8 +95,7 @@
     (size 1688 1197))
 (session-info "toplevel"
     (factory-entry "gimp-brightness-contrast-tool-dialog")
-    (position 91 439)
-    (monitor 1))
+    (position 91 439))
 
 (hide-docks no)
 (single-window-mode yes)
