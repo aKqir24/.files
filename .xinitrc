@@ -14,7 +14,7 @@ xsetroot -cursor_name left_ptr &
 
 # Preload default browser
 if ! pgrep -x zen-bin; then
-	zen-browser --headless --new-instace --safe-mode &>/dev/null && sleep 2
+	zen-browser --headless &>/dev/null && sleep 2
 	while pgrep -x zen-bin; do
 		pkill zen-bin &>/dev/null
 	done

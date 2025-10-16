@@ -4,18 +4,18 @@ timeout = 3
 gap_size = 16
 frame_width = 2
 font = "Lilex 8"
-offset = (18, 48)
+offset = "(18, 48)"
 ignore_dbusclose = false
-frame_color = "#557d62"
-background = "#1d2419"
-foreground = "#c6c8c5"
+frame_color = "#8d3015"
+background = "#1f180d"
+foreground = "#c7c5c2"
 
 [urgency_low]
-background = "#1d2419"
-foreground = "#c6c8c5"
-frame_color = "#9d8774"
+background = "#1f180d"
+foreground = "#c7c5c2"
+frame_color = "#aa3b1b"
 
 [urgency_critical]
-background = "#1d2419"
-foreground = "#c6c8c5"
-frame_color = "#7c8153"
+background = "#1f180d"
+foreground = "#c7c5c2"
+frame_color = "#b32b09"
