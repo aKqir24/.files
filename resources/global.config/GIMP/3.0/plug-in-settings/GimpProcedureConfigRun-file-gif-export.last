@@ -1,0 +1,14 @@
+# settings
+
+(interlace no)
+(loop yes)
+(number-of-repeats 0)
+(default-delay 500)
+(default-dispose "unspecified")
+(as-animation yes)
+(force-delay yes)
+(force-dispose no)
+(include-comment yes)
+(gimp-comment "Created with GIMP")
+
+# end of settings
