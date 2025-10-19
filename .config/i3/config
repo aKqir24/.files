@@ -9,7 +9,7 @@ exec --no-startup-id dunst
 exec --no-startup-id udiskie
 
 # Post-Setup
-# exec sh ~/.config/i3/start.sh audio &> /dev/null
+exec sh ~/.config/i3/start.sh xdg-portal &> /dev/null
 exec --no-startup-id xhost +si:localuser:root ;
 set $ROFI_SCRP_PATH ~/.config/rofi/scripts/
 
@@ -205,9 +205,9 @@ bar {
         separator $c2
         background $c0
         statusline $c7
-        focused_workspace $c0 $c2 $c2
+        focused_workspace $c0 $c2 $c7
         active_workspace $c0 $c5 $c5
-        inactive_workspace $c0 $c8 $c8
+        inactive_workspace $c0 $c8 $c15
         urgent_workspace $c0 $c1 $c1
 	}
 }

@@ -25,7 +25,8 @@ apt-get install picom i3-wm pipewire pipewire-pulse libssl-dev \
 				fastfetch power-profiles-daemon fonts-noto-color-emoji \
 				libpulse-dev libsensors-dev libpipewire-0.3-dev libtool-bin \
 				autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
-				obexpushd
+				obexpushd default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
+                gstreamer1.0-plugins-bad gstreamer1.0-libav
 
 # setup systemd-networkd & services
 echo "setup: Configuring system"

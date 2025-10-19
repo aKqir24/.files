@@ -16,7 +16,7 @@
 (include-thumbnail no)
 (include-comment no)
 (use-original-quality yes)
-(original-quality 100)
+(original-quality -1)
 (original-sub-sampling 2)
 (original-num-quant-tables 0)
 (show-preview no)
