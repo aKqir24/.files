@@ -12,12 +12,12 @@ METADATA_FILE="$TPATH/iwd_rofi_menu_metadata_structured.txt"        # Stores for
 TEMP_PASSWORD_FILE="$TPATH/iwd_rofi_menu_temp_ssid_password.txt"    # Stores temporary password for networks
 
 # Rofi theme/settings files
-THEME_FILE="~/.config/rofi/styles/wifi.rasi"
-PASS_WIN_THEME="~/.config/rofi/styles/wifi_password.rasi"
+THEME_FILE="$HOME/.config/rofi/styles/wifi.rasi"
+PASS_WIN_THEME="$HOME/.config/rofi/styles/wifi_password.rasi"
 ROFI_DEFAULT_MODE="rofi -dmenu -mouse -i -theme $THEME_FILE"
 
 # Function to clean up temporary files and directories
-clean_up() { [[ -e "$TPATH" ]] && rm -r "$TPATH"; }
+clean_up() { [ -e "$TPATH" ] && rm -r "$TPATH"; }
 
 # Menu options for the Wi-Fi management interface
 MENU_OPTIONS=( "Refresh" "Enable Wi-Fi" "Disable Wi-Fi" "Network Info" \
@@ -60,7 +60,7 @@ function helper_get_networks() {
     iwctl station "$INTERFACE" get-networks > "$RAW_NETWORK_FILE"
     {
         # Add header for formatted file
-        echo "SSID,SECURITY,SIGNAL"
+		echo "SSID,SECURITY,SIGNAL"
         # Read the raw network file, remove non-printable characters, and process each line
         local i=1 ; sed $'s/[^[:print:]\t]//g' "$RAW_NETWORK_FILE" | while read -r line; do
             # Skip the first 4 lines (header info)
@@ -81,12 +81,13 @@ function helper_get_networks() {
             [[ -z "$line" ]] && continue ; echo "$line" | sed 's/  \+/,/g'
         done
     } > "$NETWORK_FILE"
-
-    # Format signal strength and replace it with a visual representation of stars
-    sed -e 's/\*\*\*\*\[1;90m\[0m/[####] /g' -e 's/\*\*\*\[1;90m\*\[0m/[###-] /g' \
-        -e 's/\*\*\[1;90m\*\*\[0m/[##--] /g' -e 's/\*\[1;90m\*\*\*\[0m/[#---] /g' \
-        -e 's/\[1;90m\*\*\*\*\[0m/[----] /g' -e 's/\*\*\*\*/[####] /g' \
-        "$NETWORK_FILE" > "${NETWORK_FILE}.tmp" && mv "${NETWORK_FILE}.tmp" "$NETWORK_FILE"
+	
+		
+	# Format signal strength and replace it with a visual representation of stars
+	sed -e 's/\*\*\*\*\[1;90m\[0m/[####] /g' -e 's/\*\*\*\[1;90m\*\[0m/[###-] /g' \
+		-e 's/\*\*\[1;90m\*\*\[0m/[##--] /g' -e 's/\*\[1;90m\*\*\*\[0m/[#---] /g' \
+		-e 's/\[1;90m\*\*\*\*\[0m/[----] /g' -e 's/\*\*\*\*/[####] /g' \
+		"$NETWORK_FILE" > "${NETWORK_FILE}.tmp" && mv "${NETWORK_FILE}.tmp" "$NETWORK_FILE"
 }
 
 # Function to retrieve and store the formatted list of available networks
@@ -104,6 +105,8 @@ function get_networks() {
     for ((i = 0; i < ${#ssid[@]}; i++)); do
         wifi+=("${signal[$i]} ${ssid[$i]} (${security[$i]})")
     done
+	echo "${wifi[2]}" >> $HOME/t.txt
+	[[ "${wifi[2]}" == ' works available ()' ]] && wifi[2]=' No networks available!!'
 }
 
 # Function to connect to a selected Wi-Fi network
@@ -252,4 +255,4 @@ function run_cmd() {
 }
 
 # Main function to start the script and display the menu
-main() { local chosen_option=$(rofi_cmd) ; run_cmd "$chosen_option" ; } ; main
+main() { local chosen_option=$(rofi_cmd) ; run_cmd "$chosen_option" ; } ; main ; clean_up

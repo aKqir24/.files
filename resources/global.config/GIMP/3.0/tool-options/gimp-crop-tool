@@ -1,7 +1,9 @@
 # GIMP gimp-crop-tool options
 
-(aspect-denominator 864)
-(aspect-numerator 1152)
+(aspect-denominator 1272)
+(aspect-numerator 1674)
+(foreground
+    (color "R'G'B'A u8" 4 "\2g\70\377" 0))
 (pattern "Starfield")
 
 # end of gimp-crop-tool options

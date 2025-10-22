@@ -50,7 +50,7 @@
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style icon)
-                (preview-size 48)
+                (preview-size 16)
                 (aux-info
                     (show-button-bar "true")))
             (dockable "gimp-channel-list"
@@ -65,7 +65,7 @@
                     (show-button-bar "true"))))))
 (session-info "toplevel"
     (factory-entry "gimp-image-new-dialog")
-    (position 1257 725))
+    (position 352 149))
 (session-info "toplevel"
     (factory-entry "gimp-toolbox-color-dialog")
     (position 2559 856))
@@ -83,23 +83,26 @@
     (size 562 606))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
-    (position 225 0)
-    (size 733 733))
+    (position 190 0)
+    (size 733 533))
 (session-info "toplevel"
     (factory-entry "gimp-keyboard-shortcuts-dialog")
     (position 2092 602)
     (size 1417 1416))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 578 31)
-    (size 566 825))
+    (position 377 13)
+    (size 759 513))
 (session-info "toplevel"
     (factory-entry "gimp-brightness-contrast-tool-dialog")
     (position 91 439))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
-    (position 208 152)
+    (position 204 148)
     (size 733 583))
+(session-info "toplevel"
+    (factory-entry "gimp-operation-tool-dialog")
+    (position 341 298))
 
 (hide-docks no)
 (single-window-mode yes)
