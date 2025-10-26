@@ -1,18 +1,18 @@
-icons_format = "<span font_family='EnvyCodeR Nerd' size='12pt'>{icon}</span>"
+icons_format = "<span font_family='EnvyCodeR Nerd Font Propo' size='12pt'>{icon}</span>"
 
 [theme.overrides]
-idle_bg = "#0d2015"
-idle_fg = "#c2c7c4"
-info_bg = "#c2c7c4"
-info_fg = "#0d2015"
-good_bg = "#4c8456"
-good_fg = "#0d2015"
-warning_bg = "#6b7e53"
-warning_fg = "#0d2015"
-critical_bg = "#4e774e"
-critical_fg = "#0d2015"
-alternating_tint_bg = "#0d2015"
-alternating_tint_fg = "#0d2015"
+idle_bg = "#3a231d"
+idle_fg = "#cdc8c6"
+info_bg = "#cdc8c6"
+info_fg = "#3a231d"
+good_bg = "#879647"
+good_fg = "#3a231d"
+warning_bg = "#a6a451"
+warning_fg = "#3a231d"
+critical_bg = "#a97b4e"
+critical_fg = "#3a231d"
+alternating_tint_bg = "#3a231d"
+alternating_tint_fg = "#3a231d"
 separator = "<span size='20pt'> </span>"
 separator_bg = "auto"
 separator_fg = "auto"
@@ -24,7 +24,7 @@ icons = "none"
 cpu = "  "
 cpu_boost_on = ""
 cpu_boost_off = ""
-memory_mem = "  "
+memory_mem = "  "
 memory_swap = " 󰋊 "
 volume = ["󰕿", "󰖀", "󰕾"]
 volume_muted = " 󰝟"
@@ -50,7 +50,7 @@ cmd = "sh ~/.config/i3/status/custom_status.sh --type=monitor system"
 
 [[block]]
 block = "memory"
-format = "   $icon $mem_used_percents.eng(w:1) "
+format = "  $icon $mem_used_percents.eng(w:1) "
 format_alt = "   $icon_swap$swap_used_percents.eng(w:2)  "
 
 [[block]]
@@ -83,13 +83,13 @@ cmd = "bash ~/.config/rofi/scripts/wifi.sh"
 block = "net"
 interval = 3
 device = "eno1"
-format = "  {$icon  $ip|󰛵  Cheking IP...}  "
+format = "  {<span size='5pt'> </span>$icon  <span rise='1000'>$ip</span>|󰛵  Cheking IP...}  "
 inactive_format = "   󰅛  "
 
 [[block]]
 block = "sound"
 driver = "auto"
-format = "   $icon  {$volume|} "
+format = "   $icon  {<span rise='-100'>$volume</span>|} "
 
 [[block.click]]
 button = "right"

@@ -8,8 +8,10 @@ bt_manager='bluetuith'
 audio_mixer='pulsemixer'
 
 # styling in status
-padding_left="<span size='9.1pt'> </span>"
-inf_style="$padding_left<span size='11pt'>"
+icon_separator="<span size='4pt'> </span>"
+padding_right="<span size='6pt'> </span>" 
+padding_left="<span size='11pt'> </span>"
+inf_style="$padding_left<span size='11pt' rise='1000'>"
 
 tui_launch() {
     pkill -x "$1" 2>/dev/null ; $terminal --title "$1" -e "$1" & sleep 0.2
@@ -48,10 +50,10 @@ case "$1" in
 		else 
 			wifi_speed_icon="󰤯"
 		fi
-		[ -z "$wifi_ssid" ] || echo "$padding_left $wifi_speed_icon <span> $wifi_ssid</span>"
+		[ -z "$wifi_ssid" ] || echo "<span rise='2900'>$padding_left $wifi_speed_icon <span rise='3000'>$icon_separator $wifi_ssid$padding_right</span></span>"
 		;;
-		"disconnected") echo "$padding_left<span> 󰤭 </span>" ;;
-		*) echo "$padding_left<span> 󰤮 </span>"
+		"disconnected") echo "$padding_left<span> 󰤭 </span>$padding_right" ;;
+		*) echo "$padding_left<span> 󰤮 </span>$padding_right"
 	esac
 	;;
 	"$type=bluetooth")
@@ -67,21 +69,21 @@ case "$1" in
 		;;
 		*)	
 		if [ ! -z $(which bluetoothctl) ]; then	
-			inf_name=$(echo "$(bluetoothctl info | grep "Name" | cut -d ' ' -f2-)")
+			inf_name=$(echo "<span rise='1000'>$(bluetoothctl info | grep "Name" | cut -d ' ' -f2-)</span>")
 			inf_icon=$(bluetoothctl info | grep "Icon" | awk '{print $2}')
 			
 			if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]; then
 				echo "$inf_style 󰂲</span> "
 			else
 				case "$inf_icon" in
-					"audio-headphones") echo "$inf_style 󰋋 󰂯 </span><span>$inf_name</span>";;
-					"audio-headset") echo "$inf_style 󰋎 󰂯 </span><span>$inf_name</span>" ;;
-					"phone") echo "$inf_style 󰄜 󰂯 </span><span>$inf_name</span>";;
+					"audio-headphones") echo "$inf_style 󰋋 󰂯 $icon_separator</span>$inf_name";;
+					"audio-headset") echo "$inf_style 󰋎 󰂯 $icon_separator</span>$inf_name" ;;
+					"phone") echo "$inf_style 󰄜 󰂯 $icon_separator</span>$inf_name";;
 					*)
 						if [ ! -z "$inf_icon" ]; then
-							echo "$inf_style 󰂯 </span><span>$inf_name</span>"
+							echo "$inf_style 󰂯 $icon_separator</span>$inf_name$padding_right"
 						else
-							echo "$inf_style 󰂯</span>"
+							echo "$inf_style 󰂯</span>$padding_right"
 						fi
 				esac
 			fi
@@ -90,7 +92,7 @@ case "$1" in
 		fi
 	esac
 	;;
-	"$type=date") echo "<span size='10pt'>  󰥔 </span><span> $(date +'%I:%M %p')</span>";;
-	"$type=time") echo "<span size='10pt'>  󰃮 </span><span> $(date +'%m-%d-%Y')</span>";;
+	"$type=date") echo "<span size='5pt'> </span><span size='10pt'>  󰥔 </span><span> $(date +'%I:%M %p')</span><span size='5pt'> </span>";;
+	"$type=time") echo "<span size='6pt'> </span><span size='10pt'>  󰃮 </span><span> $(date +'%m-%d-%Y')</span><span size='6pt'> </span>";;
 	*) echo "Option not Identified!!"
 esac
