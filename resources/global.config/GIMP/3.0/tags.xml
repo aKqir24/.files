@@ -646,127 +646,127 @@
   <resource identifier="external:${gimp_data_dir}/gradients/Yellow_Orange.ggr//Yellow Orange" checksum="c7f332150f1c1d8cb8100add34b0ef55">
   </resource>
 
-  <resource identifier="internal:gimp-palette-color-history//Color History" checksum="acc127c5717c26da6a197adaf6313a74">
+  <resource identifier="internal:gimp-palette-color-history//Color History" checksum="85666585afd76c62d9cb7b155a14e3b2">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Bears.gpl//Bears" checksum="98ac92a53b61a7566d8f3a0086a9d1a8">
+  <resource identifier="external:${gimp_data_dir}/palettes/Bears.gpl//Bears" checksum="72b93a38c4e0e151e7416b0dae2b2c6f">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Bgold.gpl//Bgold" checksum="d2d1b3d5351621444939e15989eebcdd">
+  <resource identifier="external:${gimp_data_dir}/palettes/Bgold.gpl//Bgold" checksum="ad6e1eee93f56bef50f3aa9cc1c2a45d">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Blues.gpl//Blues" checksum="b23d48a7d9a6874ea57390cb197dffa9">
+  <resource identifier="external:${gimp_data_dir}/palettes/Blues.gpl//Blues" checksum="da24bebd65cf96ae2281961ac6ac12d8">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Borders.gpl//Borders" checksum="c3d93e76b1f8630a14a498055c580317">
+  <resource identifier="external:${gimp_data_dir}/palettes/Borders.gpl//Borders" checksum="eee2ab2d77d88c5435c5bdb020a0affe">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Browns_And_Yellows.gpl//Browns And Yellows" checksum="3edb81fd3d66cf34f15eb3fde5545b87">
+  <resource identifier="external:${gimp_data_dir}/palettes/Browns_And_Yellows.gpl//Browns And Yellows" checksum="af775a80d2c6d26c0d295e98ccb9faa3">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Caramel.gpl//Caramel" checksum="f28ed8ed3e4ac96c4f39fdf428916678">
+  <resource identifier="external:${gimp_data_dir}/palettes/Caramel.gpl//Caramel" checksum="524fb19706dd6fc4f5ecaa7ef384304e">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Cascade.gpl//Cascade" checksum="39ebf57c08ce2dd07bb2069fe079b9c5">
+  <resource identifier="external:${gimp_data_dir}/palettes/Cascade.gpl//Cascade" checksum="1caccf7add9f76a7e6980db4974e55c0">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/China.gpl//China" checksum="0a363dccba132c024f2fc44e476c882f">
+  <resource identifier="external:${gimp_data_dir}/palettes/China.gpl//China" checksum="40686970a6976f26c5d2374b01c3057e">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Coldfire.gpl//Coldfire" checksum="1c73a7cd382f951c6c7af7e43a31f471">
+  <resource identifier="external:${gimp_data_dir}/palettes/Coldfire.gpl//Coldfire" checksum="5c3d3a6908a1a277100633d5be813b3e">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Cool_Colors.gpl//Cool Colors" checksum="3b3ccaff1c01de3e293949409e6bd5ea">
+  <resource identifier="external:${gimp_data_dir}/palettes/Cool_Colors.gpl//Cool Colors" checksum="e47747b1e0ee2fad7c76c94b6df79c60">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Cranes.gpl//Cranes" checksum="cf54011300ff5095ef0d9177d99403fd">
+  <resource identifier="external:${gimp_data_dir}/palettes/Cranes.gpl//Cranes" checksum="7123296c12b7c8ec9b73483eeb877555">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Dark_pastels.gpl//Dark pastels" checksum="ba31801a8b7fe68b321f4d8ecbb746e2">
+  <resource identifier="external:${gimp_data_dir}/palettes/Dark_pastels.gpl//Dark pastels" checksum="f97c0766b8148fcebafe3a183b2efa0a">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Default.gpl//Default" checksum="799e12c853278f55bdb4bead3fb92cb4">
+  <resource identifier="external:${gimp_data_dir}/palettes/Default.gpl//Default" checksum="8945dfdeb28189ceaf36c309a878eaee">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Ega.gpl//Ega" checksum="c7b776130f419dd3a6c952b4db600824">
+  <resource identifier="external:${gimp_data_dir}/palettes/Ega.gpl//Ega" checksum="a989cc8fafdb3d56aa6cc504e7c04f21">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Firecode.gpl//Firecode" checksum="2b51d6586f7e2fe07427799feb1c2ddd">
+  <resource identifier="external:${gimp_data_dir}/palettes/Firecode.gpl//Firecode" checksum="05e1d3f38a5169f4200029fd7335f8dc">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Gold.gpl//Gold" checksum="c69b3d14881c4c20a67973e33c1c8da1">
+  <resource identifier="external:${gimp_data_dir}/palettes/Gold.gpl//Gold" checksum="fe238aa8e209e544f12443d1cfb0818b">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Grayblue.gpl//Grayblue" checksum="f5c546dbd4afa69528beaaf74ab297c6">
+  <resource identifier="external:${gimp_data_dir}/palettes/Grayblue.gpl//Grayblue" checksum="4dc209a1a15b26e3dc7a079fbfc8e5e8">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Grays.gpl//Grays" checksum="9a6b59ba7615c4c6298a61e30e532a1e">
+  <resource identifier="external:${gimp_data_dir}/palettes/Grays.gpl//Grays" checksum="04d6e109da5199cda8de99a88f30a3c7">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/GrayViolet.gpl//GrayViolet" checksum="f7eaa25f53c792e55ae49055ae13f5bf">
+  <resource identifier="external:${gimp_data_dir}/palettes/GrayViolet.gpl//GrayViolet" checksum="01bdc9f096ea29378d3a0ac2cc185cf1">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Greens.gpl//Greens" checksum="9ef217146ffcde77a4e097dd7cd55ada">
+  <resource identifier="external:${gimp_data_dir}/palettes/Greens.gpl//Greens" checksum="5889483b5c33f2a4c442c9c30313abe0">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Hilite.gpl//Hilite" checksum="90bd7b7deb3ac591ac866ee2d959d267">
+  <resource identifier="external:${gimp_data_dir}/palettes/Hilite.gpl//Hilite" checksum="ce916ff989e8f75b0f20fa995e1c9e82">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Khaki.gpl//Khaki" checksum="0d4cd8af28c24087d23ef7efd76aee44">
+  <resource identifier="external:${gimp_data_dir}/palettes/Khaki.gpl//Khaki" checksum="f85568e9cf25b99e3b4852ced0162980">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Lights.gpl//Lights" checksum="1b9e1b77aa4b83173ab3728f9445124c">
+  <resource identifier="external:${gimp_data_dir}/palettes/Lights.gpl//Lights" checksum="942b806415ed267be6897451d06a201f">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Muted.gpl//Muted" checksum="5ebfeed88e12281dccf1662a65d0661a">
+  <resource identifier="external:${gimp_data_dir}/palettes/Muted.gpl//Muted" checksum="5d8abc2591b5180dc6d7b0bdd1758585">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Named_Colors.gpl//Named Colors" checksum="3140dd27fd401675a84707e851207347">
+  <resource identifier="external:${gimp_data_dir}/palettes/Named_Colors.gpl//Named Colors" checksum="5578a12c443ae9911f61b505657e16d6">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/News3.gpl//News3" checksum="4057baa684f0ed893ac398fc7fe1bce0">
+  <resource identifier="external:${gimp_data_dir}/palettes/News3.gpl//News3" checksum="8f6c05e86b454cb35e7f6be86d4c7d44">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Op2.gpl//Op2" checksum="5dc1f24cc824a1582edfdf1b1d075a67">
+  <resource identifier="external:${gimp_data_dir}/palettes/Op2.gpl//Op2" checksum="d5a9bc67572b308a14c59cad5fe3feb1">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Paintjet.gpl//Paintjet" checksum="703789e9d5d236e6c9cb7d7519f48b66">
+  <resource identifier="external:${gimp_data_dir}/palettes/Paintjet.gpl//Paintjet" checksum="5821c5207cd6e3245d10e9af933ade87">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Pastels.gpl//Pastels" checksum="c4d336e8e2a1b2b7e2805ca0eb4f7622">
+  <resource identifier="external:${gimp_data_dir}/palettes/Pastels.gpl//Pastels" checksum="8eba6db0bbbe7c74949b498ffbe80fe7">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Plasma.gpl//Plasma" checksum="f0c1331d87dc0bfd9c23c0bd11199af8">
+  <resource identifier="external:${gimp_data_dir}/palettes/Plasma.gpl//Plasma" checksum="6e0ba3e16314b5c5d93261b7f4a48a36">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Reds.gpl//Reds" checksum="77e20b76083744f4424a43d03acd9539">
+  <resource identifier="external:${gimp_data_dir}/palettes/Reds.gpl//Reds" checksum="f5bf3d35bd16764858183de121f6a098">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Reds_And_Purples.gpl//Reds And Purples" checksum="329f3728d6cd53a559e4f542d71f4882">
+  <resource identifier="external:${gimp_data_dir}/palettes/Reds_And_Purples.gpl//Reds And Purples" checksum="a5f17d9ae2f7fa5127dcbe402f9dd61c">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Royal.gpl//Royal" checksum="8babd92a611f73ac8fcd0af46a3b1260">
+  <resource identifier="external:${gimp_data_dir}/palettes/Royal.gpl//Royal" checksum="b29a80c30f1290af00f0cb5bf6ac7624">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Tango.gpl//Tango Icon Theme" checksum="42fd9f3bdf25876431c93d9d6916fdc4">
+  <resource identifier="external:${gimp_data_dir}/palettes/Tango.gpl//Tango Icon Theme" checksum="24131475af28f54fa897910097e31296">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Topographic.gpl//Topographic" checksum="3ada6c4423207dafbab6be7fb58145f7">
+  <resource identifier="external:${gimp_data_dir}/palettes/Topographic.gpl//Topographic" checksum="375f0ae36802c14ffaabef28510ecef9">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Visibone.gpl//Visibone" checksum="aa5ef3a41fcc9d666332e2b84f915bb5">
+  <resource identifier="external:${gimp_data_dir}/palettes/Visibone.gpl//Visibone" checksum="8696a10d8c2ce26f44a6481370a0ebcf">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Visibone_2.gpl//Visibone 2" checksum="263174f5c562e888cc151c8b76be9ee8">
+  <resource identifier="external:${gimp_data_dir}/palettes/Visibone_2.gpl//Visibone 2" checksum="d7aefbe4af7cd1d68b845b32e3a7887c">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Volcano.gpl//Volcano" checksum="172e986d25c5ce426c965d01e0f29bf2">
+  <resource identifier="external:${gimp_data_dir}/palettes/Volcano.gpl//Volcano" checksum="918234f81768a6c0ba662964a00a4246">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Warm_Colors.gpl//Warm Colors" checksum="7736f7b782c973e78ddba65373e9e51b">
+  <resource identifier="external:${gimp_data_dir}/palettes/Warm_Colors.gpl//Warm Colors" checksum="b7b66a5f4e18725479d2e2308efb8ac0">
   </resource>
 
-  <resource identifier="external:${gimp_data_dir}/palettes/Web.gpl//Web" checksum="f4d78b7dcdcb279e60f6e55476761883">
+  <resource identifier="external:${gimp_data_dir}/palettes/Web.gpl//Web" checksum="750d563129c87c00a13c08a822958c98">
   </resource>
 
   <resource identifier="internal:gimp-font-standard-alias: Monospace//Monospace" checksum="(null)">
@@ -812,6 +812,114 @@
   </resource>
 
   <resource identifier="external:/home/akqir24/.fonts/APT.ttf//apricotJapanesefontT Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-Black.ttf//Bitter Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter Black Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-BlackItalic.ttf//Bitter Black Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-Bold.ttf//Bitter Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-BoldItalic.ttf//Bitter Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-ExtraBold.ttf//Bitter ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter ExtraBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-ExtraBoldItalic.ttf//Bitter ExtraBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-ExtraLight.ttf//Bitter ExtraLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter ExtraLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter ExtraLight Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-ExtraLightItalic.ttf//Bitter ExtraLight Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-Italic.ttf//Bitter Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-Light.ttf//Bitter Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-LightItalic.ttf//Bitter Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-Medium.ttf//Bitter Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-MediumItalic.ttf//Bitter Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-Regular.ttf//Bitter Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter SemiBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-SemiBold.ttf//Bitter SemiBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-SemiBoldItalic.ttf//Bitter SemiBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter SemiBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-VariableFont_wght.ttf//Bitter Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-Thin.ttf//Bitter Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/static/Bitter-ThinItalic.ttf//Bitter Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf//Bitter Thin Italic" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/C059-Bold.otf//C059 Bold" checksum="(null)">
@@ -2498,6 +2606,60 @@
   </resource>
 
   <resource identifier="external:/home/akqir24/.fonts/Nunito-Italic-VariableFont_wght.ttf//Nunito SemiBold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-Black.ttf//Outfit Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit Black" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-Bold.ttf//Outfit Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-ExtraBold.ttf//Outfit ExtraBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit ExtraLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-ExtraLight.ttf//Outfit ExtraLight" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-Light.ttf//Outfit Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-Medium.ttf//Outfit Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-Regular.ttf//Outfit Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit Regular" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit SemiBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-SemiBold.ttf//Outfit SemiBold" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/static/Outfit-Thin.ttf//Outfit Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="external:/home/akqir24/.fonts/Outfit/Outfit-VariableFont_wght.ttf//Outfit Thin" checksum="(null)">
   </resource>
 
   <resource identifier="external:/usr/share/fonts/opentype/urw-base35/P052-Bold.otf//P052 Bold" checksum="(null)">

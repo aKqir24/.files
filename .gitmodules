@@ -7,3 +7,6 @@
 [submodule "resources/global.config/vscodium"]
 	path = resources/global.config/vscodium
 	url = https://github.com/aKqir24/vscodium-config.git
+[submodule ".config/rofi"]
+	path = .config/rofi
+	url = https://github.com/aKqir24/rofi-setup.git

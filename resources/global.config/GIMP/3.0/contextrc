@@ -1,9 +1,11 @@
 # GIMP user context
 
-(tool "gimp-crop-tool")
+(tool "gimp-color-picker-tool")
 (paint-info "gimp-paintbrush")
 (foreground
-    (color "R'G'B'A u8" 4 "\2g\70\377" 0))
+    (color "R'G'B'A u8" 4 "\57\63\71\377" 0))
+(background
+    (color "R'G'B'A u8" 4 "\34\35\37\377" 0))
 (brush "2. Hardness 050")
 (dynamics "Pressure Size")
 (mybrush "Standard")

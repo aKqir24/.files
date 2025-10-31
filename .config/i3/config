@@ -11,7 +11,7 @@ exec --no-startup-id udiskie
 # Post-Setup
 exec sh ~/.config/i3/start.sh xdg-portal &> /dev/null
 exec --no-startup-id xhost +si:localuser:root ;
-set $ROFI_SCRP_PATH ~/.config/rofi/scripts/
+set $ROFI_SHOW_SCRP ~/.config/rofi/show.sh
 
 # ================= #
 #		BINDS		#
@@ -30,11 +30,11 @@ bindsym $mod+e exec pcmanfm
 
 # Rofi Widgets
 #bindsym $mod+tab exec rofi -show window
-bindsym Control+Shift+i exec bash $ROFI_SCRP_PATHwifi.sh
-bindsym Control+Shift+b exec bash $ROFI_SCRP_PATHbluetooth.sh
-bindsym $mod+period exec sh $ROFI_SCRP_PATHemoji.sh
-bindsym $mod+r exec bash $ROFI_SCRP_PATHlauncher.sh
-bindsym $mod+Shift+e exec bash $ROFI_SCRP_PATHpowermenu.sh
+bindsym Control+Shift+i exec sh $ROFI_SHOW_SCRP wifi
+bindsym Control+Shift+b exec sh $ROFI_SHOW_SCRP bluetooth
+bindsym $mod+period exec sh $ROFI_SHOW_SCRP emoji
+bindsym $mod+r exec sh $ROFI_SHOW_SCRP launcher
+bindsym $mod+Shift+e exec sh $ROFI_SHOW_SCRP powermenu
 
 # Screenshoot
 bindsym Print exec --no-startup-id bash $HOME/.config/i3/start.sh screenshot $HOME/Pictures/Screenshots/

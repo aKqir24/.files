@@ -3,7 +3,9 @@
 (aspect-denominator 1272)
 (aspect-numerator 1674)
 (foreground
-    (color "R'G'B'A u8" 4 "\2g\70\377" 0))
+    (color "R'G'B'A u8" 4 "\57\63\71\377" 0))
+(background
+    (color "R'G'B'A u8" 4 "\34\35\37\377" 0))
 (pattern "Starfield")
 
 # end of gimp-crop-tool options

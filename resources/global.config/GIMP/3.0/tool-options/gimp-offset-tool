@@ -1,4 +1,6 @@
 # GIMP gimp-offset-tool options
 
+(background
+    (color "R'G'B'A u8" 4 "\34\35\37\377" 0))
 
 # end of gimp-offset-tool options

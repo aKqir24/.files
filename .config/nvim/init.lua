@@ -34,16 +34,6 @@ require("lazy").setup({
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
     { 'Bekaboo/deadcolumn.nvim' },
     {
-      "mistricky/codesnap.nvim",
-      build = "make build_generator",
-      opts = {
-		save_path = "~/Pictures/Screenshots",
-		watermark = "",
-		has_breadcrumbs = true,
-		bg_theme = "dusk",
-      }
-    },
-    {
       "nvim-treesitter/nvim-treesitter",
       build = ":TSUpdate",
       config = function()
