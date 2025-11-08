@@ -73,7 +73,7 @@ case "$1" in
 			inf_icon=$(bluetoothctl info | grep "Icon" | awk '{print $2}')
 			
 			if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]; then
-				echo "$inf_style 󰂲</span> "
+				echo "$padding_left$inf_style󰂲</span>$padding_right"
 			else
 				case "$inf_icon" in
 					"audio-headphones") echo "$inf_style 󰋋 󰂯 $icon_separator</span>$inf_name";;
@@ -83,7 +83,7 @@ case "$1" in
 						if [ ! -z "$inf_icon" ]; then
 							echo "$inf_style 󰂯 $icon_separator</span>$inf_name$padding_right"
 						else
-							echo "$inf_style 󰂯</span>$padding_right"
+							echo "$padding_left$inf_style󰂯</span>$padding_right"
 						fi
 				esac
 			fi

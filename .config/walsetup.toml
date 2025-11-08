@@ -3,6 +3,7 @@ cycle = "iterative"
 type = "image"
 path = "/home/akqir24/Pictures/Wallpapers"
 mode = "fill"
+animated = true
 
 [theming]
 gtk = true
