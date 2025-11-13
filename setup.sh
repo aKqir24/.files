@@ -19,13 +19,12 @@ wget -P "$HOME/.config/mpv/script-opts/" \
 echo "setup: installing system packages"
 su root -c "apt update ;\
 apt-get install picom i3-wm pipewire pipewire-pulse libssl-dev \
-				wireplumber rofi dunst xinit pipx mpv automake \
-				sudo alacritty viewnior libtool kdialog imagemagick \
-				xsettingsd nwg-look stow btop starship pcmanfm clang \
-				systemd-resolved iwd  preload git ark gettext \
-				fastfetch power-profiles-daemon fonts-noto-color-emoji \
-				libpulse-dev libsensors-dev libpipewire-0.3-dev libtool-bin \
-				autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
+				wireplumber dunst xinit pipx mpv automake sudo \
+				alacritty viewnior libtool kdialog imagemagick xsettingsd 
+				nwg-look stow btop starship pcmanfm clang systemd-resolved \
+				iwd  preload git ark gettext fastfetch power-profiles-daemon \
+				fonts-noto-color-emoji libpulse-dev libsensors-dev libpipewire-0.3-dev \
+				libtool-bin autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
 				obexpushd default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
                 gstreamer1.0-plugins-bad gstreamer1.0-libav
 
@@ -47,13 +46,24 @@ systemctl --user enable --now pipewire-pulse.service"
 echo "setup: Installing pacstall & pacstall packages..."
 sudo $( bash -c "$(curl -fsSL https://raw.githubusercontent.com/aKqir24/pacstall/refs/heads/master/install.sh)" &&
 		pacstall -I gearlever-git zen-browser i3status-rust rofi-emoji bluetuith-bin lmms-git dust-bin neovim-git \
-		vscodium-bin winetricks-git mcpelauncher-ui-git )
+		winetricks-git mcpelauncher-ui-git gscreenshot-git carla-git yabridge rofi )
 
 # installing other packages
 echo "setup: Installing base packages"
 pipx install pywal16
-git clone https://github.com/thenaterhood/gscreenshot.git
-cd gscreenshot && pipx install . && rm -rf gscreenshot ; sudo apt autoremove
+read -p "Do you want to setup wine?[Y/n]" wine_setup
+if [ ${wine_setup^^} = "Y" ] || [ -z $wine_setup ]; then
+	version=9.21 variant=staging
+	codename=$(shopt -s nullglob; awk '/^deb https:\/\/dl\.winehq\.org/ { print $3; exit 0 } END { exit 1 }' \
+		/etc/apt/sources.list /etc/apt/sources.list.d/*.list || awk '/^Suites:/ { print $2; exit }' \
+		/etc/apt/sources.list /etc/apt/sources.list.d/wine*.sources)
+	suffix=$(dpkg --compare-versions "$version" ge 6.1 && ((dpkg --compare-versions "$version" eq 6.17 && echo "-2") || echo "-1"))
+	sudo apt install --install-recommends {"winehq-$variant","wine-$variant","wine-$variant-amd64","wine-$variant-i386"}="$version~$codename$suffix"
+fi
+
+# Seup locale
+echo "setup: Setting up launguage"
+sudo $(dpkg-reconfigure locales)
 
 # Run theming/icon scripts
 echo "setup: theme & icons are loading..."

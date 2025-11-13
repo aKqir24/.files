@@ -1,5 +1,9 @@
 export WINEFSYNC=1
 export EDITOR=nvim
+export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANGUAGE=en_US:en
 export XCURSOR_SIZE=14
 export COLORTERM=truecolor
 export TERM=xterm-256-color
