@@ -53,7 +53,7 @@ sudo $( bash -c "$(curl -fsSL https://raw.githubusercontent.com/aKqir24/pacstall
 echo "setup: Installing base packages"
 pipx install pywal16
 git clone https://github.com/thenaterhood/gscreenshot.git
-cd gscreenshot && pipx install . && rm -rf greenshot ; sudo apt autoremove
+cd gscreenshot && pipx install . && rm -rf gscreenshot ; sudo apt autoremove
 
 # Run theming/icon scripts
 echo "setup: theme & icons are loading..."

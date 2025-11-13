@@ -1,15 +1,18 @@
 # GIMP gimp-paintbrush-tool options
 
 (foreground
-    (color "R'G'B'A u8" 4 "\57\63\71\377" 0))
-(background
     (color "R'G'B'A u8" 4 "\34\35\37\377" 0))
-(brush "2. Hardness 050")
+(background
+    (color "HSVA float" 16 "\0\0\0\0\0\0\0\0\0\0\200\77\0\0\200\77" 0))
+(brush "2. Block 01")
 (dynamics "Pressure Size")
 (pattern "Starfield")
 (gradient "Skyline")
 (palette "Standard")
-(brush-size 1)
-(brush-hardness 0.5)
+(brush-size 5)
+(brush-aspect-ratio 3.1578947368421053)
+(brush-angle 107)
+(brush-spacing 0.01)
+(brush-hardness 0.94999998807907104)
 
 # end of gimp-paintbrush-tool options

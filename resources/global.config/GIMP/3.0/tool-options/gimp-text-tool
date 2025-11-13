@@ -1,8 +1,10 @@
 # GIMP gimp-text-tool options
 
 (foreground
-    (color "R'G'B'A u8" 4 "\57\63\71\377" 0))
+    (color "R'G'B'A u8" 4 "\34\35\37\377" 0))
 (palette "Standard")
-(font "Sans-serif")
+(font "Helvetica-Narrow Bold")
+(font-size 1.5)
+(font-size-unit centimeters)
 
 # end of gimp-text-tool options

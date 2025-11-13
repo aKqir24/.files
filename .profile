@@ -1,3 +1,4 @@
+export WINEFSYNC=1
 export EDITOR=nvim
 export XCURSOR_SIZE=14
 export COLORTERM=truecolor

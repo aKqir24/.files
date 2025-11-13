@@ -7,15 +7,13 @@ case "$1" in
 		done
     ;;
 	"screenshot") # launch the screenshot tool from call
-		FILENAME=$(date +"%Y-%m-%d_%H-%M-%S").png
-		IMAGE_DIR=$2$FILENAME	
- 
-		function notifySRC() {
-			dunstctl close-all ;
+		FILENAME="$(date +"%Y-%m-%d_%H-%M-%S").png"
+		IMAGE_DIR="$2$FILENAME"	 
+		notifySRC() {
+			dunstctl close-all &&
 			notify-send "Screenshot taken..." \
 			"( $FILENAME ) has been saved!!"
 		}
-
 		gscreenshot -f $IMAGE_DIR --gui
 	;;
 	"xdg-portal")
@@ -24,5 +22,6 @@ case "$1" in
 	;;
 	*)
 		echo "Usage: sh start.sh"
-		echo "Program: audio, screenshot"
+		echo "Program: audio, screenshot" 
+	;;
 esac

@@ -1,4 +1,6 @@
 # GIMP gimp-by-color-select-tool options
 
+(threshold 33.299999999999997)
+(select-criterion alpha)
 
 # end of gimp-by-color-select-tool options

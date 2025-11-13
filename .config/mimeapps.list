@@ -21,10 +21,13 @@ application/x-extension-xhtml=userapp-Zen-CN2J82.desktop;
 application/x-extension-xht=userapp-Zen-CN2J82.desktop;
 application/octet-stream=nvim.desktop;
 image/x-xcursor=nvim.desktop;
-application/zip=xarchiver.desktop;
+application/zip=mcpelauncher-ui-qt.desktop;xarchiver.desktop;org.kde.ark.desktop;
 application/json=nvim.desktop;
 application/vnd.efi.img=org.kde.ark.desktop;xarchiver.desktop;
 video/x-matroska=mpv.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=org.kde.ark.desktop;libreoffice.desktop;
+application/vnd.oasis.opendocument.text=libreoffice.desktop;
+audio/x-mod=nvim.desktop;
 
 [Default Applications]
 image/jpeg=viewnior.desktop
@@ -49,5 +52,7 @@ x-scheme-handler/unknown=brave-browser.desktop
 application/vnd.efi.img=org.kde.ark.desktop
 video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
+application/zip=mcpelauncher-ui-qt.desktop
+audio/x-mod=nvim.desktop
 
 [Removed Associations]

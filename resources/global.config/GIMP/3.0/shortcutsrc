@@ -339,8 +339,9 @@
 # (action "gimp-help-concepts-usage")
 # (action "image-softproof-intent-saturation")
 # (action "context-background-hue-set")
-# (action "context-foreground-hue-increase")
+# (action "view-move-to-screen--0")
 # (action "context-foreground-blue-decrease")
+# (action "context-foreground-hue-increase")
 # (action "tools-force-increase-skip")
 # (action "channels-selection-intersect")
 # (action "tools-scale" "<Shift>s")
@@ -812,8 +813,8 @@
 # (action "filters-distance-map")
 # (action "gimp-online-bugs-features")
 # (action "paths-lock-position")
-# (action "channels-select-bottom")
 # (action "dialogs-histogram")
+# (action "channels-select-bottom")
 # (action "filters-mantiuk-2006")
 # (action "filters-gegl-color-assimilation-grid")
 # (action "tools-force-minimum")
@@ -1111,7 +1112,6 @@
 # (action "filters-spiral")
 # (action "layers-lock-alpha")
 # (action "edit-paste-as-new-image" "<Primary><Shift>v" "<Shift>Paste")
-# (action "view-move-to-screen--0.0")
 # (action "script-fu-font-map")
 
 # end of shortcutsrc
