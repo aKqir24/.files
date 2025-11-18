@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE lmms-config-file>
-<lmms configversion="3" version="1.3.0-alpha">
+<lmms version="1.3.0-alpha.1.899+db4523a" configversion="3">
   <MidiAlsaRaw device="default"/>
   <MidiJack device="lmms"/>
   <MidiSndio device=""/>
   <Midialsaseq device="default"/>
-  <app configured="1" disablebackup="0" language="en" loopmarkermode="dual" nanhandler="1" nommpz="0" openlastproject="0" sololegacybehavior="0"/>
-  <audioalsa channels="2" device="null"/>
-  <audioengine audiodev="SDL (Simple DirectMedia Layer)" framesperaudiobuffer="256" mididev="ALSA-Sequencer (Advanced Linux Sound Architecture)" samplerate="44100"/>
-  <audiojack clientname="lmms" input1="" input2="" output1="" output2=""/>
-  <audiooss channels="2" device="/dev/dsp"/>
-  <audiopa channels="2" device="default"/>
-  <audioportaudio backend="" device=""/>
+  <app configured="1" language="en" disablebackup="0" openlastproject="0" loopmarkermode="dual" nommpz="0" sololegacybehavior="0" nanhandler="1"/>
+  <audioalsa device="null" channels="2"/>
+  <audioengine samplerate="44100" mididev="ALSA-Sequencer (Advanced Linux Sound Architecture)" framesperaudiobuffer="256" audiodev="SDL (Simple DirectMedia Layer)"/>
+  <audiojack input2="" input1="" output1="" clientname="lmms" output2=""/>
+  <audiooss device="/dev/dsp" channels="2"/>
+  <audiopa device="default" channels="2"/>
+  <audioportaudio device="" backend=""/>
   <audiosdl device="" inputdevice=""/>
-  <audiosndio channels="2" device=""/>
+  <audiosndio device="" channels="2"/>
   <midi autoquantize="0" midiautoassign="none"/>
   <midioss device="/dev/midi"/>
-  <paths backgroundtheme="" defaultsf2="/home/akqir24/Documents/lmms/samples/soundfonts/Arachno_SoundFont_Version_1.0.sf2" gigdir="/home/akqir24/Documents/lmms/samples/gig/" ladspadir="/home/akqir24/Documents/lmms/plugins/ladspa/" sf2dir="/home/akqir24/Documents/lmms/samples/soundfonts/" stkdir="/usr/bin/../share/stk/rawwaves/" theme="data:/themes/default/" vstdir="/home/akqir24/Documents/lmms/plugins/VST/" workingdir="/home/akqir24/Documents/lmms/"/>
+  <paths theme="data:/themes/default/" gigdir="/home/akqir24/Documents/lmms/samples/gig/" workingdir="/home/akqir24/Documents/lmms/" backgroundtheme="" vstdir="/home/akqir24/Documents/lmms/plugins/VST/" stkdir="/usr/bin/../share/stk/rawwaves/" sf2dir="/home/akqir24/Documents/lmms/samples/soundfonts/" defaultsf2="/home/akqir24/Documents/lmms/samples/soundfonts/Arachno_SoundFont_Version_1.0.sf2" ladspadir="/home/akqir24/Documents/lmms/plugins/ladspa/"/>
   <tooltips disabled="0"/>
-  <ui animateafp="1" compacttrackbuttons="0" disableautoquit="1" displaywaveform="0" enableautosave="1" enablerunningautosave="0" letpreviewsfinish="0" mixerchanneldeletionwarning="1" oneinstrumenttrackwindow="0" printnotelabels="1" saveinterval="2" showfaderticks="0" sidebaronright="0" smoothscroll="0" trackdeletionwarning="1" vstalwaysontop="1" vstembedmethod="none"/>
+  <ui oneinstrumenttrackwindow="0" mixerchanneldeletionwarning="1" sidebaronright="0" vstembedmethod="none" printnotelabels="1" vstalwaysontop="1" compacttrackbuttons="0" enableautosave="1" smoothscroll="0" trackdeletionwarning="1" letpreviewsfinish="0" disableautoquit="1" saveinterval="2" animateafp="1" displaywaveform="0" showfaderticks="0" enablerunningautosave="0"/>
   <recentfiles>
     <file path="/home/akqir24/Documents/lmms/templates/default.mpt"/>
     <file path="userprojects:yad lofi.mmpz"/>

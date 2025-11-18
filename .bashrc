@@ -45,7 +45,7 @@ export SCRIPTS_FOLDER="$HOME/.files/resources/scripts"
 export LD_LIBRARY_PATH=$PWD/bin:$LD_LIBRARY_PATH
 export FZF_DEFAULT_OPTS="--height 40% --reverse"
 export FZF_DEFAULT_COMMAND="find . -type f"
-export PYWAL16_OUT_DIR=$HOME/.config/wal
+export PYWAL_CACHE_DIR="$HOME/.config/wal"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export ZED_ALLOW_EMULATED_GPU=1
@@ -82,4 +82,4 @@ eval $(fzf --bash)
 if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then 
 	source /usr/share/doc/fzf/examples/key-bindings.bash
 fi
-export PYWAL16_OUT_DIR=/home/akqir24/.cache/wal
+export PYWAL16_OUT_DIR=/home/akqir24/.config/wal

@@ -19,7 +19,7 @@ wget -P "$HOME/.config/mpv/script-opts/" \
 echo "setup: installing system packages"
 su root -c "apt update ;\
 apt-get install picom i3-wm pipewire pipewire-pulse libssl-dev \
-				wireplumber dunst xinit pipx mpv automake sudo \
+				wireplumber dunst xinit pipx celluloid automake sudo \
 				alacritty viewnior libtool kdialog imagemagick xsettingsd 
 				nwg-look stow btop starship pcmanfm clang systemd-resolved \
 				iwd  preload git ark gettext fastfetch power-profiles-daemon \

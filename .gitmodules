@@ -1,6 +1,6 @@
 [submodule "resources/scripts/pywal16_scripts"]
-	path = resources/scripts/pywal16_scripts
-	url = https://github.com/aKqir24/pywal16_scripts.git
+	path = resources/scripts/walset
+	url = https://github.com/aKqir24/walset.git
 [submodule ".config/mpv"]
 	path = .config/mpv
 	url = https://github.com/aKqir24/pywal-mpv-modernx.git
