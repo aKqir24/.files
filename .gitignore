@@ -1,3 +1,4 @@
-.themes
+*.svg
 *.toml
+.local
 .config/dunst/dunstrc
