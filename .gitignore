@@ -1,4 +1,3 @@
-*.svg
 *.toml
-.local
+.icons
 .config/dunst/dunstrc
