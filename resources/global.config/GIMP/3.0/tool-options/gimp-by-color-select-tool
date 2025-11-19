@@ -1,6 +1,6 @@
 # GIMP gimp-by-color-select-tool options
 
-(threshold 33.299999999999997)
-(select-criterion alpha)
+(threshold 153.59999999999999)
+(select-criterion hsv-saturation)
 
 # end of gimp-by-color-select-tool options

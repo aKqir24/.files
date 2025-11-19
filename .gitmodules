@@ -1,12 +1,9 @@
-[submodule "resources/scripts/pywal16_scripts"]
+[submodule "resources/scripts/walset"]
 	path = resources/scripts/walset
 	url = https://github.com/aKqir24/walset.git
-[submodule ".config/mpv"]
-	path = .config/mpv
-	url = https://github.com/aKqir24/pywal-mpv-modernx.git
 [submodule "resources/global.config/vscodium"]
 	path = resources/global.config/vscodium
 	url = https://github.com/aKqir24/vscodium-config.git
-[submodule ".config/rofi"]
-	path = .config/rofi
-	url = https://github.com/aKqir24/rofi-setup.git
+[submodule ".config/rofi/scripts"]
+	path = .config/rofi/scripts
+	url = https://github.com/aKqir24/rofi-scripts

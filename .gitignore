@@ -1,3 +1,3 @@
-.themes
-*.toml
+.icons/pywal
+.config/rofi/colors.rasi
 .config/dunst/dunstrc
