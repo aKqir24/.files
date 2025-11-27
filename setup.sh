@@ -46,11 +46,11 @@ systemctl --user enable --now pipewire-pulse.service"
 echo "setup: Installing pacstall & pacstall packages..."
 sudo $( bash -c "$(curl -fsSL https://raw.githubusercontent.com/aKqir24/pacstall/refs/heads/master/install.sh)" &&
 		pacstall -I gearlever-git zen-browser i3status-rust rofi-emoji bluetuith-bin lmms-git dust-bin neovim-git \
-		winetricks-git mcpelauncher-ui-git gscreenshot-git carla-git yabridge rofi )
+		winetricks-git mcpelauncher-ui-git gscreenshot-git carla-git yabridge rofi colorz-git )
 
 # installing other packages
 echo "setup: Installing base packages"
-pipx install pywal16
+pipx install pywal16 --system-site-packages
 read -p "Do you want to setup wine?[Y/n]" wine_setup
 if [ ${wine_setup^^} = "Y" ] || [ -z $wine_setup ]; then
 	version=9.21 variant=staging
