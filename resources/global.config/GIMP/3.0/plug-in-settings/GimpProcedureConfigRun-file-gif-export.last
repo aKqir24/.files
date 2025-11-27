@@ -1,8 +1,8 @@
 # settings
 
 (interlace no)
-(loop no)
-(number-of-repeats 257)
+(loop yes)
+(number-of-repeats 0)
 (default-delay 200)
 (default-dispose "unspecified")
 (as-animation yes)

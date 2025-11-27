@@ -1,7 +1,7 @@
 # GIMP gimp-eraser-tool options
 
 (foreground
-    (color "R'G'B'A u8" 4 "R\57\55\377" 0))
+    (color "R'G'B'A u8" 4 "\34\35\37\377" 0))
 (background
     (color "HSVA float" 16 "\0\0\0\0\0\0\0\0\0\0\200\77\0\0\200\77" 0))
 (brush "2. Block 01")

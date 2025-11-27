@@ -1,40 +1,5 @@
 # settings
 
-(GimpGegl-gegl-gaussian-blur-config "2025-11-20 15:30:59"
-    (time 1763623859)
-    (std-dev-x 2.5)
-    (std-dev-y 2.5)
-    (filter auto)
-    (abyss-policy clamp)
-    (clip-extent yes))
-(GimpGegl-gegl-gaussian-blur-config "2025-11-20 15:30:44"
-    (time 1763623844)
-    (std-dev-x 1.5)
-    (std-dev-y 1.5)
-    (filter auto)
-    (abyss-policy clamp)
-    (clip-extent yes))
-(GimpGegl-gegl-gaussian-blur-config "2025-11-20 15:29:15"
-    (time 1763623755)
-    (std-dev-x 14.539999999999999)
-    (std-dev-y 14.539999999999999)
-    (filter auto)
-    (abyss-policy clamp)
-    (clip-extent yes))
-(GimpGegl-gegl-gaussian-blur-config "2025-11-20 15:28:00"
-    (time 1763623680)
-    (std-dev-x 9.3800000000000008)
-    (std-dev-y 9.3800000000000008)
-    (filter auto)
-    (abyss-policy clamp)
-    (clip-extent yes))
-(GimpGegl-gegl-gaussian-blur-config "2025-11-20 15:20:57"
-    (time 1763623257)
-    (std-dev-x 2.3799999999999999)
-    (std-dev-y 2.3799999999999999)
-    (filter auto)
-    (abyss-policy clamp)
-    (clip-extent yes))
 (GimpGegl-gegl-gaussian-blur-config "2025-10-21 07:16:18"
     (time 1761002178)
     (std-dev-x 9.0899999999999999)
@@ -65,6 +30,41 @@
     (clip-extent yes))
 (GimpGegl-gegl-gaussian-blur-config "2025-10-21 07:09:33"
     (time 1761001773)
+    (std-dev-x 1.5)
+    (std-dev-y 1.5)
+    (filter auto)
+    (abyss-policy clamp)
+    (clip-extent yes))
+(GimpGegl-gegl-gaussian-blur-config "2025-10-21 07:08:41"
+    (time 1761001721)
+    (std-dev-x 0.5)
+    (std-dev-y 0.5)
+    (filter auto)
+    (abyss-policy clamp)
+    (clip-extent yes))
+(GimpGegl-gegl-gaussian-blur-config "2025-10-21 07:08:32"
+    (time 1761001712)
+    (std-dev-x 0.5)
+    (std-dev-y 0.5)
+    (filter auto)
+    (abyss-policy clamp)
+    (clip-extent yes))
+(GimpGegl-gegl-gaussian-blur-config "2025-10-21 07:07:51"
+    (time 1761001671)
+    (std-dev-x 1.5)
+    (std-dev-y 1.5)
+    (filter auto)
+    (abyss-policy clamp)
+    (clip-extent yes))
+(GimpGegl-gegl-gaussian-blur-config "2025-10-21 07:07:43"
+    (time 1761001663)
+    (std-dev-x 1.5)
+    (std-dev-y 1.5)
+    (filter auto)
+    (abyss-policy clamp)
+    (clip-extent yes))
+(GimpGegl-gegl-gaussian-blur-config "2025-10-21 06:53:08"
+    (time 1761000788)
     (std-dev-x 1.5)
     (std-dev-y 1.5)
     (filter auto)

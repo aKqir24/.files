@@ -1,9 +1,9 @@
 # GIMP user context
 
-(tool "gimp-color-picker-tool")
+(tool "gimp-move-tool")
 (paint-info "gimp-paintbrush")
 (foreground
-    (color "R'G'B'A u8" 4 "R\57\55\377" 0))
+    (color "R'G'B'A u8" 4 "\34\35\37\377" 0))
 (background
     (color "HSVA float" 16 "\0\0\0\0\0\0\0\0\0\0\200\77\0\0\200\77" 0))
 (brush "2. Block 01")
@@ -12,7 +12,7 @@
 (pattern "Starfield")
 (gradient "Skyline")
 (palette "Standard")
-(font "Monospace")
+(font "Helvetica-Narrow Bold")
 (tool-preset "Virtual core pointer")
 
 # end of user context

@@ -1,2 +1,3 @@
-.icons/pywal
+*.toml
+.local/share/icons/pywal
 .config/dunst/dunstrc

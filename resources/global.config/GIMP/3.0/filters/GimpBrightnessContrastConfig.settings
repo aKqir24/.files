@@ -1,13 +1,5 @@
 # settings
 
-(GimpBrightnessContrastConfig "2025-11-20 15:37:24"
-    (time 1763624244)
-    (brightness -1)
-    (contrast 0))
-(GimpBrightnessContrastConfig "2025-11-20 15:22:07"
-    (time 1763623327)
-    (brightness -0.55905511811023623)
-    (contrast -0.007874015748031496))
 (GimpBrightnessContrastConfig "2025-10-17 15:51:01"
     (time 1760687461)
     (brightness -1)

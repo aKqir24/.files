@@ -11,7 +11,7 @@ font/ttf=viewnior.desktop;
 x-scheme-handler/http=userapp-Zen-CN2J82.desktop;zen.desktop;
 x-scheme-handler/https=userapp-Zen-CN2J82.desktop;zen.desktop;
 x-scheme-handler/chrome=userapp-Zen-CN2J82.desktop;zen.desktop;
-video/mp4=io.github.celluloid_player.Celluloid.desktop;userapp-vlc-A0CA82.desktop;mpv.desktop;
+video/mp4=userapp-vlc-A0CA82.desktop;mpv.desktop;
 text/html=userapp-Zen-CN2J82.desktop;
 application/x-extension-htm=userapp-Zen-CN2J82.desktop;
 application/x-extension-html=userapp-Zen-CN2J82.desktop;
@@ -28,8 +28,6 @@ video/x-matroska=mpv.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=org.kde.ark.desktop;libreoffice.desktop;
 application/vnd.oasis.opendocument.text=libreoffice.desktop;
 audio/x-mod=nvim.desktop;
-image/webp=viewnior.desktop;
-inode/symlink=nvim.desktop;
 
 [Default Applications]
 image/jpeg=viewnior.desktop
@@ -52,7 +50,7 @@ image/png=viewnior.desktop
 x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/unknown=brave-browser.desktop
 application/vnd.efi.img=org.kde.ark.desktop
-video/mp4=io.github.celluloid_player.Celluloid.desktop
+video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop
 application/zip=mcpelauncher-ui-qt.desktop
 audio/x-mod=nvim.desktop

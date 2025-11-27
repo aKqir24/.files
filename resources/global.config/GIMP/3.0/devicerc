@@ -3,13 +3,9 @@
 (GimpDeviceInfo "Virtual core pointer"
     (icon-name "gimp-cursor")
     (name "Virtual core pointer")
-    (tool-options "GimpColorPickerOptions"
-        (tool "gimp-color-picker-tool")
-        (foreground
-            (color "R'G'B'A u8" 4 "R\57\55\377" 0))
-        (background
-            (color "HSVA float" 16 "\0\0\0\0\0\0\0\0\0\0\200\77\0\0\200\77" 0)))
-    (use-fg-bg yes)
+    (tool-options "GimpMoveOptions"
+        (tool "gimp-move-tool"))
+    (use-fg-bg no)
     (use-opacity-paint-mode no)
     (use-brush no)
     (use-dynamics no)
