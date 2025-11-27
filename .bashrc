@@ -82,4 +82,3 @@ eval $(fzf --bash)
 if [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then 
 	source /usr/share/doc/fzf/examples/key-bindings.bash
 fi
-export PYWAL16_OUT_DIR=/home/akqir24/.config/wal
