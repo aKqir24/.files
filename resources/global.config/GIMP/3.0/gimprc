@@ -7,7 +7,7 @@
 # Preferences dialog.
 
 (language "")
-(prev-language "en_PH:en-English")
+(prev-language "en_US:en-American English")
 (config-version "3.0.4")
 (undo-levels 8)
 (undo-preview-size medium)
