@@ -20,5 +20,5 @@ dunst = "/home/akqir24/.config/dunst/dunstrc"
 [pywal16]
 light = true
 reload = true
-backend = "colorz"
-colorscheme = "darken"
+backend = "wal"
+colorscheme = "lighten"
