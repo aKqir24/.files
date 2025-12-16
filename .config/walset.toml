@@ -10,11 +10,12 @@ gtk = true
 icons = true
 mode = "dark"
 accent = "color2"
+
 [theming.programs]
-i3status_rust="/home/akqir24/.files/.config/i3/status/config.toml" 
-alacritty="/home/akqir24/.config/alacritty.toml"
-rofi="/home/akqir24/.config/rofi/config.rasi"
-dunst="/home/akqir24/.config/dunst/dunstrc"
+i3status_rust = "/home/akqir24/.files/.config/i3/status/config.toml"
+alacritty = "/home/akqir24/.config/alacritty.toml"
+rofi = "/home/akqir24/.config/rofi/config.rasi"
+dunst = "/home/akqir24/.config/dunst/dunstrc"
 
 [pywal16]
 light = true

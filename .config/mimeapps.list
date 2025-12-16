@@ -24,7 +24,7 @@ image/x-xcursor=nvim.desktop;
 application/zip=mcpelauncher-ui-qt.desktop;xarchiver.desktop;org.kde.ark.desktop;
 application/json=nvim.desktop;
 application/vnd.efi.img=org.kde.ark.desktop;xarchiver.desktop;
-video/x-matroska=mpv.desktop;
+video/x-matroska=mpv.desktop;io.github.celluloid_player.Celluloid.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=org.kde.ark.desktop;libreoffice.desktop;
 application/vnd.oasis.opendocument.text=libreoffice.desktop;
 audio/x-mod=nvim.desktop;
@@ -53,7 +53,7 @@ x-scheme-handler/about=brave-browser.desktop
 x-scheme-handler/unknown=brave-browser.desktop
 application/vnd.efi.img=org.kde.ark.desktop
 video/mp4=io.github.celluloid_player.Celluloid.desktop
-video/x-matroska=mpv.desktop
+video/x-matroska=io.github.celluloid_player.Celluloid.desktop
 application/zip=mcpelauncher-ui-qt.desktop
 audio/x-mod=nvim.desktop
 
