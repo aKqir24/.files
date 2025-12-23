@@ -15,6 +15,22 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 shopt -s checkwinsize
+# ================================================= #
+#				Environment Variables				#
+# ================================================= #
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export FZF_DEFAULT_OPTS="--height 40% --reverse"
+export FZF_DEFAULT_COMMAND="find . -type f"
+export PYWAL_CACHE_DIR="$HOME/.config/wal"
+export ZED_ALLOW_EMULATED_GPU=1
+export QT_QPA_PLATFORMTHEME=gtk3
+export SQUASHFS_COMPRESSION=zstd
+export QT_QPA_PLATFORM=wayland
+export WINIT_UNIX_BACKEND=wayland
+export WLR_LIBSEAT_BACKEND=logind
+export GPG_TTY=$(tty)
+export WINEDEBUG=-all
+
 
 # ================================================== #
 #						Features					 #
@@ -34,27 +50,8 @@ fi
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	color_prompt=yes
 else
-	color_prompt=
+	unset color_prompt
 fi
-
-# ================================================= #
-#				Environment Variables				#
-# ================================================= #
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-export SCRIPTS_FOLDER="$HOME/.files/resources/scripts"
-export LD_LIBRARY_PATH=$PWD/bin:$LD_LIBRARY_PATH
-export FZF_DEFAULT_OPTS="--height 40% --reverse"
-export FZF_DEFAULT_COMMAND="find . -type f"
-export PYWAL_CACHE_DIR="$HOME/.config/wal"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export ZED_ALLOW_EMULATED_GPU=1
-export QT_QPA_PLATFORMTHEME=gtk3
-export SQUASHFS_COMPRESSION=zstd
-export XDG_CURRENT_DESKTOP=GNOME
-export XDG_SESSION_TYPE=x11
-export GPG_TTY=$(tty)
-export WINEDEBUG=-all
 
 # ================================================= #
 #					  Aliases						#

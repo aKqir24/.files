@@ -1,23 +1,33 @@
 # ===================== #
-#		Autostart		#
+#	Global Variables	#
 # ===================== #
 
-# Daemons
-exec_always --no-startup-id autotiling
-exec_always --no-startup-id picom
-exec --no-startup-id dunst 
-exec --no-startup-id udiskie
+# imports the pywal colors
+include "~/.cache/wal/colors-sway"
 
-# Post-Setup
-exec sh ~/.config/i3/start.sh xdg-portal &> /dev/null
-exec --no-startup-id xhost +si:localuser:root ;
+# Paths
+set $SWAY_HOME ~/.config/sway
 set $ROFI_SHOW_SCRP ~/.config/rofi/show.sh
+
+# Keys
+set $mod Mod4
+set $refresh_i3status_rs<D-Bslash> killall -SIGUSR1 i3status-rs
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7" 
+set $ws8 "8"
+set $ws9 "9" 
+set $ws10 "10"
 
 # ================= #
 #		BINDS		#
 # ================= #
-
-set $mod Mod4
 
 # ------------------------------------------------------#
 # To start some specific programs						#
@@ -25,7 +35,7 @@ set $mod Mod4
 
 # Applictions
 bindsym $mod+Return exec alacritty
-bindsym Control+Shift+Escape exec sh ~/.config/i3/status/custom_status.sh --type=monitor system
+bindsym Control+Shift+Escape exec sh $SWAY_HOME/status/custom_status.sh --type=monitor system
 bindsym $mod+e exec pcmanfm
 
 # Rofi Widgets
@@ -37,7 +47,7 @@ bindsym $mod+r exec sh $ROFI_SHOW_SCRP launcher
 bindsym $mod+Shift+e exec sh $ROFI_SHOW_SCRP powermenu
 
 # Screenshoot
-bindsym Print exec --no-startup-id bash $HOME/.config/i3/start.sh screenshot $HOME/Pictures/Screenshots/
+bindsym Print exec --no-startup-id bash $SWAY_HOME/start.sh screenshot $HOME/Pictures/Screenshots/
 
 # Programs control/s
 bindsym $mod+Shift+c reload
@@ -80,16 +90,6 @@ bindsym $mod+a focus parent
 # ------------------------------------------------------#
 # To manage the workspaces/tags							#
 # ------------------------------------------------------#
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:" 
-set $ws8 "8:"
-set $ws9 "9:" 
-set $ws10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -154,60 +154,63 @@ tiling_drag titlebar
 floating_modifier $mod
 
 # title bars
-#smart_borders no_gaps
+smart_borders no_gaps
 default_border pixel 2
 font pango:EnvyCodeR Nerd Font Propo 10
 for_window [class=".*"] border pixel 2
 for_window [title="^(Error|Confirm|Delete confirmation)$"] border pixel 0
 for_window [floating] move position center
 
+# class                 border		backgr.		text	  indicator		child_border
+client.focused          $color2     $color0     $color15  $color2       $color2
+client.focused_inactive $color3     $color0     $color15  $color3       $color3
+client.unfocused        $color7     $color0     $color15  $color8       $color7
+client.urgent           $color1     $color0     $color15  $color1       $color1
+client.placeholder      $color6     $color0     $color4   $color6       $color6
+
+client.background       $color7
+
 # Monitor/Display settings and resolution
-exec sh ~/.config/i3/Xdisplay.sh
-#uncomment for wayland support
-#output VGA-1 mode --custom 1152x864@59.9Hz
-#output * bg ~/.config/wallpaper.jpg fill
-
-set_from_resource $c0 i3wm.color0
-set_from_resource $c1 i3wm.color1 
-set_from_resource $c2 i3wm.color2 
-set_from_resource $c3 i3wm.color3 
-set_from_resource $c4 i3wm.color4 
-set_from_resource $c5 i3wm.color5 
-set_from_resource $c6 i3wm.color6 
-set_from_resource $c7 i3wm.color7 
-set_from_resource $c8 i3wm.color8
-set_from_resource $c15 i3wm.color15
-
-# class                 border  backgr. text indicator child_border
-client.focused          $c2     $c0     $c15  $c2       $c2
-client.focused_inactive $c3     $c0     $c15  $c3       $c3
-client.unfocused        $c7     $c0     $c15  $c8       $c7
-client.urgent           $c1     $c0     $c15  $c1       $c1
-client.placeholder      $c6     $c0     $c4   $c6       $c6
-
-client.background       $c7
+output VGA-1 mode --custom 1152x864@59.9Hz
 
 # ----------------------------------#
 #	Status Bar + blocks				#
 # ----------------------------------#
 
-set $refresh_i3status_rs<D-Bslash> killall -SIGUSR1 i3status_rs
-
 bar {
 	font pango:EnvyCodeR Nerd Font 10
     position top
+	height 28
 	binding_mode_indicator yes
-	workspace_min_width 50
-	padding 2px 6px 2px 1px
-	strip_workspace_numbers yes
-    status_command sleep 0.89 ; i3status-rs ~/.config/i3/status/config.toml
+	workspace_min_width 60
+	status_edge_padding 8
+	status_padding 1
+	strip_workspace_numbers no
+    status_command sleep 0.89 ; i3status-rs $SWAY_HOME/status/config.toml
     colors {
-        separator $c2
-        background $c0
-        statusline $c7
-        focused_workspace $c0 $c2 $c7
-        active_workspace $c0 $c5 $c5
-        inactive_workspace $c0 $c8 $c15
-        urgent_workspace $c0 $c1 $c1
+        separator $color2
+        background $color0
+        statusline $color7
+        focused_workspace $color0 $color2 $color7
+        active_workspace $color0 $color5 $color5
+        inactive_workspace $color0 $color8 $color15
+        urgent_workspace $color0 $color1 $color1
 	}
 }
+
+# ===================== #
+#		Autostart		#
+# ===================== #
+
+# Post-Setup
+exec --no-startup-id /bin/bash $SWAY_HOME/start.sh theming
+exec --no-startup-id sh $SWAY_HOME/start.sh xdg-portal &> /dev/null
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY
+exec --no-startup-id xhost +si:localuser:root
+
+# Daemons
+exec_always --no-startup-id autotiling
+exec --no-startup-id dunst 
+exec --no-startup-id udiskie
+
+

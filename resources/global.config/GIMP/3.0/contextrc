@@ -1,9 +1,9 @@
 # GIMP user context
 
-(tool "gimp-color-picker-tool")
-(paint-info "gimp-paintbrush")
+(tool "gimp-pencil-tool")
+(paint-info "gimp-pencil")
 (foreground
-    (color "R'G'B'A u8" 4 "\354\243\261\377" 0))
+    (color "R'G'B'A u8" 4 "j\225\32\377" 0))
 (background
     (color "HSVA float" 16 "\0\0\0\0\0\0\0\0\0\0\200\77\0\0\200\77" 0))
 (brush "2. Block 01")

@@ -46,7 +46,7 @@ format = "  $icon $utilization "
 
 [[block.click]]
 button = "right"
-cmd = "sh ~/.config/i3/status/custom_status.sh --type=monitor system"
+cmd = "sh ~/.config/sway/status/custom_status.sh --type=monitor system"
 
 [[block]]
 block = "memory"
@@ -56,11 +56,11 @@ format_alt = "   $icon_swap$swap_used_percents.eng(w:2)  "
 [[block]]
 block = "custom"
 interval = 0.5
-command = "sh ~/.config/i3/status/custom_status.sh --type=bluetooth"
+command = "sh ~/.config/sway/status/custom_status.sh --type=bluetooth"
 
 [[block.click]]
 button = "left"
-cmd = "sh ~/.config/i3/status/custom_status.sh --type=bluetooth toggle"
+cmd = "sh ~/.config/sway/status/custom_status.sh --type=bluetooth toggle"
 
 [[block.click]]
 button = "right"
@@ -68,12 +68,12 @@ cmd = "bash ~/.config/rofi/scripts/bluetooth.sh"
 
 [[block.click]]
 button = "middle"
-cmd = "bash ~/.config/i3/status/custom_status.sh --type=monitor bluetooth"
+cmd = "bash ~/.config/sway/status/custom_status.sh --type=monitor bluetooth"
 
 [[block]]
 block = "custom"
 interval = 2
-command = "sh ~/.config/i3/status/custom_status.sh --type=wifi"
+command = "sh ~/.config/sway/status/custom_status.sh --type=wifi"
 
 [[block.click]]
 button = "right"
@@ -93,7 +93,7 @@ format = "   $icon  {<span rise='-100'>$volume</span>|} "
 
 [[block.click]]
 button = "right"
-cmd = "sh ~/.config/i3/status/custom_status.sh --type=monitor audio"
+cmd = "sh ~/.config/sway/status/custom_status.sh --type=monitor audio"
 
 [[block.click]]
 button = "left"
@@ -101,7 +101,7 @@ cmd = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
 [[block]]
 block = "custom"
-cycle = ["sh ~/.config/i3/status/custom_status.sh --type=date", "sh ~/.config/i3/status/custom_status.sh --type=time"]
+cycle = ["sh ~/.config/sway/status/custom_status.sh --type=date", "sh ~/.config/i3/status/custom_status.sh --type=time"]
 
 [[block.click]]
 button = "left"
@@ -114,11 +114,11 @@ cmd = "sh ~/.files/resources/scripts/calendar.sh"
 [[block]]
 block = "custom"
 interval = 2
-command = "sh ~/.config/i3/status/custom_status.sh --type=monitor"
+command = "sh ~/.config/sway/status/custom_status.sh --type=monitor"
 
 [[block.click]]
 button = "left"
-cmd = "bash ~/.config/i3/status/custom_status.sh --type=monitor screen"
+cmd = "bash ~/.config/sway/status/custom_status.sh --type=monitor screen"
 
 [[block]]
 block = "menu"
