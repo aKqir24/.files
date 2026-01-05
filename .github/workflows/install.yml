@@ -1,0 +1,40 @@
+name: test
+
+on:
+  push:
+    branches: [ "i3", "sway", "swayfx", "main" ]
+  pull_request:
+    branches: [ "i3", "sway", "swayfx" ]
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    container:
+      image: debian:trixie  # or bullseye, sid, etc.
+      options: --privileged
+      env:
+        TERM: xterm
+        shell: bash
+        USER: a_person
+        LOGNAME: a_person
+        DEBIAN_FRONTEND: noninteractive
+    steps:
+    - name: Setup architecture and packages
+      run: |
+        dpkg --add-architecture i386 && apt-get update
+        apt-get -y install python3 wget git stow sudo curl
+    - name: Setup Test User
+      run: |
+        useradd -rm -d /home/$USER -s /bin/bash -g root -G sudo -u 1001 $USER
+        sudo sed -i "s/%sudo\tALL=(ALL:ALL) ALL/%sudo\tALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers
+        chown -R $USER /tmp
+        chmod -R 777 /tmp
+    - name: Run setup script
+      run: |
+        export SUDO_USER=$USER
+        export DEBIAN_FRONTEND=noninteractive
+        export GITHUB_ACTIONS=true
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/aKqir24/.files/refs/heads/main/setup.sh)"

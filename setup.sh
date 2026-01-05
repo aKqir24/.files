@@ -1,61 +1,128 @@
-clear ; echo "setup: Please be aware that this install script
-is made on a debian mahine, so it might not work on most 
-distros that are not based on debian!" ; sleep 2
+#!/bin/bash
 
-# setup dotfiles directory and other dir
-echo "setup: Preparing & applying dotfiles"
+# ===========================
+# 🎨 Debian Dotfiles Installer
+# ===========================
+
+# Colors
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+YELLOW="\033[1;33m"
+CYAN="\033[1;36m"
+RESET="\033[0m"
+BOLD="\033[1m"
+
+# Helper function for headers
+header() {
+    echo -e "\n${CYAN}=========================================${RESET}"
+    echo -e "	${BOLD}${CYAN}$1${RESET}"
+    echo -e "${CYAN}=========================================${RESET}\n"
+}
+
+# Warning message 
+header "            ⚠️  Warning"
+echo -e "${YELLOW}Setup: Please be aware that this install script"
+echo -e "is made for Debian-based machines and may not work on other distros!${RESET}"
+sleep 2
+
+# ===========================
+# 1️⃣ Setup dotfiles
+# ===========================
+header "         🗂  Dotfiles Setup"
+echo -e "${GREEN}Cloning dotfiles repository...${RESET}"
+cd "$HOME"
 git clone --recurse-submodules https://github.com/aKqir24/.files.git
-cd "$HOME/.files" && stow . --adopt 
-stow -d resources/global.config/ -t ~ --adopt vscodium && cd "$HOME"
+echo -e "${GREEN}Applying dotfiles with stow...${RESET}"
+cd "$HOME/.files" && stow . --adopt
+stow -d resources/global.config/ -t ~ --adopt vscodium
+cd "$HOME"
 
-# Setup thumbfast for mpv
+# ===========================
+# 2️⃣ Setup MPV thumbfast
+# ===========================
+header "        🎬 MPV Thumbfast Setup"
+mkdir -p "$HOME/.config/mpv/scripts" "$HOME/.config/mpv/script-opts"
 wget -P "$HOME/.config/mpv/scripts/" \
-	https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua
+    https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua
 wget -P "$HOME/.config/mpv/script-opts/" \
-	https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.conf
+    https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.conf
 
-# Install all base packages
-su root -c "apt update ;\
-apt-get install pipewire pipewire-pulse libssl-dev wireplumber \
-				dunst xinit pipx celluloid automake sudo alacritty \
-				viewnior libtool kdialog imagemagick xsettingsd \ 
-				nwg-look stow btop starship pcmanfm clang systemd-resolved \
-				iwd  preload git ark gettext fastfetch power-profiles-daemon \
-				fonts-noto-color-emoji libpulse-dev libsensors-dev libpipewire-0.3-dev \
-				libtool-bin autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
-				obexpushd default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
-                gstreamer1.0-plugins-bad gstreamer1.0-libav v4l2loopback-dkms obs-studio \
-				xdg-desktop-portal-wlr xdg-desktop-portal
+# ===========================
+# 3️⃣ Install Base Packages
+# ===========================
+header "     📦 Installing Base Packages"
+echo -e "${GREEN}Updating apt and installing core packages...${RESET}"
+sudo apt update
+sudo apt install -y \
+pipewire pipewire-pulse libssl-dev wireplumber \
+dunst xinit pipx celluloid automake sudo alacritty \
+viewnior libtool kdialog imagemagick xsettingsd \
+nwg-look stow btop starship pcmanfm clang systemd-resolved \
+iwd preload git ark gettext fastfetch power-profiles-daemon \
+fonts-noto-color-emoji libpulse-dev libsensors-dev libpipewire-0.3-dev \
+libtool-bin autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
+obexpushd default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
+gstreamer1.0-plugins-bad gstreamer1.0-libav v4l2loopback-dkms obs-studio \
+xdg-desktop-portal-wlr xdg-desktop-portal
 
-# setup systemd-networkd & services
-system_services=( systemd-networkd systemd-resolved
-				  power-profiles-daemon iwd )
-for service in ${system_service[@]}; do
-	systemctl enable --now $service
+# ===========================
+# 4️⃣ Enable System Services
+# ===========================
+header "   ⚙️  Configuring Systemd Services"
+system_services=(systemd-networkd systemd-resolved power-profiles-daemon iwd)
+for service in "${system_services[@]}"; do
+    echo -e "${GREEN}Enabling & starting $service...${RESET}"
+    sudo systemctl enable --now "$service"
 done
-ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-cp $HOME/.files/resources/network/* /etc/systemd/network/
+
+echo -e "${GREEN}Configuring DNS resolver...${RESET}"
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+sudo cp $HOME/.files/resources/network/* /etc/systemd/network/
+
+echo -e "${GREEN}Enabling user services...${RESET}"
 systemctl --user enable --now obex
 systemctl --user enable --now pipewire.service pipewire.socket
 systemctl --user enable --now wireplumber.service
-systemctl --user enable --now pipewire-pulse.service"
+systemctl --user enable --now pipewire-pulse.service
 
-# pacstall package manager and its available package
-sudo $( bash -c "$(curl -fsSL https://raw.githubusercontent.com/aKqir24/pacstall/refs/heads/master/install.sh)" &&
-		pacstall -I gearlever-git zen-browser i3status-rust rofi-emoji bluetuith-bin lmms-git dust-bin neovim-git \
-		winetricks-git mcpelauncher-ui-git gscreenshot-git carla-git yabridge rofi colorz-git ly-git )
+# ===========================
+# 5️⃣ Pacstall Packages
+# ===========================
+header "  🛠  Installing Pacstall Packages"
+sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
+pacstall -I gearlever-git zen-browser-bin i3status-rust rofi-emoji bluetuith-bin \
+lmms-git dust-bin neovim-git winetricks-git mcpelauncher-ui-git \
+gscreenshot-git carla-git yabridge rofi colorz-git ly-git
 
-# installing other packages
+# ===========================
+# 6️⃣ Python Packages
+# ===========================
+header "    🐍 Installing Python Packages"
 pipx install pywal16 --system-site-packages
 
-# Post setup
-sudo dpkg-reconfigure locales ; \
-	systemctl disable getty@tty2.services
-	systemctl enable ly@tty2.service
+# ===========================
+# 7️⃣ Post Setup
+# ===========================
+header "		  🖥  Post Setup"
+sudo dpkg-reconfigure locales
+sudo systemctl disable getty@tty2.service
+sudo systemctl enable ly@tty2.service
 
-# Run theming/icon scripts
+# ===========================
+# 8️⃣ Apply Theming
+# ===========================
+header		 "🎨 Applying Themes & Icons"
 bash $HOME/.files/resources/scripts/walset/walset.sh --load --verbose
 source $HOME/.cache/wal/colors-tty.sh
 
-# Finilaize by Turning on BFQ I/O
+# ===========================
+# 9️⃣ Optimize I/O
+# ===========================
+header "	 ⚡ Enabling BFQ I/O Scheduler"
 echo "bfq" | sudo tee /sys/block/sda/queue/scheduler
+
+# ===========================
+# 🎉 Setup Complete
+# ===========================
+echo -e "${CYAN}${BOLD}✅ Installation complete! Enjoy your setup.${RESET}"
+
