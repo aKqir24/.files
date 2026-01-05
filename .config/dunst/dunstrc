@@ -6,16 +6,16 @@ frame_width = 2
 font = "Lilex 8"
 offset = "(18, 48)"
 ignore_dbusclose = false
-frame_color = "#976648"
-background = "#121316"
-foreground = "#c3c4c4"
+frame_color = "#66B073"
+background = "#0d2015"
+foreground = "#c2c7c4"
 
 [urgency_low]
-background = "#121316"
-foreground = "#c3c4c4"
-frame_color = "#6F8D64"
+background = "#0d2015"
+foreground = "#c2c7c4"
+frame_color = "#8FA86F"
 
 [urgency_critical]
-background = "#121316"
-foreground = "#c3c4c4"
-frame_color = "#93573C"
+background = "#0d2015"
+foreground = "#c2c7c4"
+frame_color = "#689F68"

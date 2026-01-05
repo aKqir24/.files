@@ -8,8 +8,8 @@ window {
     anchor:                      north;
     fullscreen:                  false;
     width:                       410px;	
-    x-offset:                    -445px;
-    y-offset:                    -390px;
+    x-offset:                    -155px;
+    y-offset:                    -21px;
 
     /* properties for all widgets */
     enabled:                     true;

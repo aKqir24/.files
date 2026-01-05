@@ -209,7 +209,7 @@ exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLA
 exec --no-startup-id xhost +si:localuser:root
 
 # Daemons
-exec_always --no-startup-id autotiling
+exec --no-startup-id autotiling
 exec --no-startup-id dunst 
 exec --no-startup-id udiskie
 
