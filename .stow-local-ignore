@@ -1,8 +1,8 @@
-resources/scripts/pywal16_scripts
 Pictures/preview.png
 resources
 README.md
 LICENSE
+.github
 .git
 .gitignore
 .gitmodules

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# ===========================
-# 🎨 Debian Dotfiles Installer
-# ===========================
+# ================================
+#	🎨 Debian Dotfiles Installer
+# ================================
 
 # Colors
 RED="\033[1;31m"
@@ -20,17 +20,17 @@ header() {
 }
 
 # Warning message 
-header "            ⚠️  Warning"
+header "             ⚠️  Warning"
 echo -e "${YELLOW}Setup: Please be aware that this install script"
 echo -e "is made for Debian-based machines and may not work on other distros!${RESET}"
 sleep 2
 
 # ===========================
-# 1️⃣ Setup dotfiles
+#	1️⃣ Setup dotfiles
 # ===========================
-header "         🗂  Dotfiles Setup"
-echo -e "${GREEN}Cloning dotfiles repository...${RESET}"
-cd "$HOME"
+header "		  🗂  Dotfiles Setup"
+echo -e "${GREEN}Cloning dotfiles repository...${RESET}" && cd "$HOME"
+>>>>>>> f10bd1f0 (fix: merge conflict & .stow_ignore)
 git clone --recurse-submodules https://github.com/aKqir24/.files.git
 echo -e "${GREEN}Applying dotfiles with stow...${RESET}"
 cd "$HOME/.files" && stow . --adopt
@@ -50,7 +50,7 @@ wget -P "$HOME/.config/mpv/script-opts/" \
 # ===========================
 # 3️⃣ Install Base Packages
 # ===========================
-header "     📦 Installing Base Packages"
+header "      📦 Installing Base Packages"
 echo -e "${GREEN}Updating apt and installing core packages...${RESET}"
 sudo apt update
 sudo apt install -y \
