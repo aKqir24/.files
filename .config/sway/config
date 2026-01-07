@@ -39,12 +39,13 @@ bindsym Control+Shift+Escape exec sh $SWAY_HOME/status/custom_status.sh --type=m
 bindsym $mod+e exec pcmanfm
 
 # Rofi Widgets
-#bindsym $mod+tab exec rofi -show window
+# bindsym $mod+tab exec rofi -show window
 bindsym Control+Shift+i exec sh $ROFI_SHOW_SCRP wifi
 bindsym Control+Shift+b exec sh $ROFI_SHOW_SCRP bluetooth
+bindsym $mod+Shift+period exec sh $ROFI_SHOW_SCRP clipboard
+bindsym $mod+Shift+e exec sh $ROFI_SHOW_SCRP powermenu
 bindsym $mod+period exec sh $ROFI_SHOW_SCRP emoji
 bindsym $mod+r exec sh $ROFI_SHOW_SCRP launcher
-bindsym $mod+Shift+e exec sh $ROFI_SHOW_SCRP powermenu
 
 # Screenshoot
 bindsym Print exec --no-startup-id bash $SWAY_HOME/start.sh screenshot $HOME/Pictures/Screenshots/
@@ -209,8 +210,7 @@ exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLA
 exec --no-startup-id xhost +si:localuser:root
 
 # Daemons
+exec $(wl-paste --watch cliphist store)
 exec --no-startup-id autotiling
-exec --no-startup-id dunst 
 exec --no-startup-id udiskie
-
-
+exec --no-startup-id dunst

@@ -23,7 +23,6 @@ export FZF_DEFAULT_OPTS="--height 40% --reverse"
 export FZF_DEFAULT_COMMAND="find . -type f"
 export PYWAL_CACHE_DIR="$HOME/.config/wal"
 export ZED_ALLOW_EMULATED_GPU=1
-export QT_QPA_PLATFORMTHEME=gtk3
 export SQUASHFS_COMPRESSION=zstd
 export QT_QPA_PLATFORM=wayland
 export WINIT_UNIX_BACKEND=wayland

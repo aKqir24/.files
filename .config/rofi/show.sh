@@ -1,13 +1,22 @@
 #!/bin/sh
 
-SCRIPT_PATH="$(dirname "$0")/scripts"
+# Small dialog scripts using rofi
+# Made by Akqir(aKqir24)
+# https://github.com/aKqir24
+
+clipboard() {
+	cliphist list \
+		| rofi -dmenu -i -p "󰅇 " -theme "$STYLE_FILE" \
+		| cliphist decode \
+		| wl-copy  | cliphist delete # change this part if you are using x11
+}
 
 emoji() {
 	## Run
 	rofi -modi emoji \
 		 -emoji-format '{emoji}' \
 		 -show emoji --emoji-mode copy \
-	     -theme ~/.config/rofi/styles/emoji.rasi
+	     -theme	$STYLE_FILE 
 	
 	## Paste The Emoji
 	PREV_WIN=$(xdotool getwindowfocus)
@@ -19,7 +28,7 @@ emoji() {
 launcher() {
 	## Run
 	rofi -show drun --normal-window \
-		-theme $HOME/.config/rofi/styles/launcher.rasi
+		-theme $STYLE_FILE
 } 
 
 powermenu() {
@@ -27,7 +36,7 @@ powermenu() {
 	shutdown='⏻ ' reboot=' ' suspend=' ' logout=' '
 	
 	# Rofi CMD
-	rofi_cmd() { rofi -dmenu -theme ~/.config/rofi/styles/powermenu.rasi;}
+	rofi_cmd() { rofi -dmenu -theme $STYLE_FILE; }
 	
 	# Pass variables to rofi dmenu
 	run_rofi() { echo "$logout\n$suspend\n$reboot\n$shutdown" | rofi_cmd ;}
@@ -41,6 +50,7 @@ powermenu() {
 	esac	
 }
 
-($1) || "$SCRIPT_PATH/$1.sh">/dev/null || \
-	echo "$0: '$1' is not included in the scripts";
-	echo "The availble one is: wifi, bluetooth, emoji, launcher, powermenu"
+STYLE_FILE="$(dirname "$0")/styles/$1.rasi"
+($1) || "$(dirname "$0")/scripts/$1.sh">/dev/null || \
+	( echo "$0: '$1' is not included in the scripts";
+	  echo "The availble one is: wifi, bluetooth, emoji, launcher, powermenu")
