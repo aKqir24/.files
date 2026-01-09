@@ -55,7 +55,7 @@ echo -e "${GREEN}Updating apt and installing core packages...${RESET}"
 sudo apt update
 sudo apt install -y \
 pipewire pipewire-pulse libssl-dev wireplumber \
-dunst xinit pipx celluloid automake sudo alacritty \
+dunst xinit pipx mpv automake sudo alacritty \
 viewnior libtool kdialog imagemagick xsettingsd \
 nwg-look stow btop starship pcmanfm clang systemd-resolved \
 iwd preload git ark gettext fastfetch power-profiles-daemon \
@@ -90,9 +90,8 @@ systemctl --user enable --now pipewire-pulse.service
 # ===========================
 header "  🛠  Installing Pacstall Packages"
 sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
-pacstall -I gearlever-git zen-browser-bin i3status-rust rofi-emoji bluetuith-bin \
-lmms-git dust-bin neovim-git winetricks-git mcpelauncher-ui-git \
-gscreenshot-git carla-git yabridge rofi colorz-git ly-git
+pacstall -I gearlever-git i3status-rust rofi-emoji-git bluetuith-bin lmms-git \
+	dust-bin neovim-git winetricks-git mcpelauncher-ui-git gscreenshot-git rofi-wayland colorz-git ly-git
 
 # ===========================
 # 6️⃣ Python Packages

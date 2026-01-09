@@ -1,18 +1,18 @@
 icons_format = "<span font_family='EnvyCodeR Nerd Font Propo' size='12pt'>{icon}</span>"
 
 [theme.overrides]
-idle_bg = "#1c0d1f"
-idle_fg = "#c6c2c7"
-info_bg = "#c6c2c7"
-info_fg = "#1c0d1f"
-good_bg = "#C56650"
-good_fg = "#1c0d1f"
-warning_bg = "#39847D"
-warning_fg = "#1c0d1f"
-critical_bg = "#A7633A"
-critical_fg = "#1c0d1f"
-alternating_tint_bg = "#1c0d1f"
-alternating_tint_fg = "#1c0d1f"
+idle_bg = "#1f180d"
+idle_fg = "#c7c5c2"
+info_bg = "#c7c5c2"
+info_fg = "#1f180d"
+good_bg = "#BD411C"
+good_fg = "#1f180d"
+warning_bg = "#E34F25"
+warning_fg = "#1f180d"
+critical_bg = "#EF3A0C"
+critical_fg = "#1f180d"
+alternating_tint_bg = "#1f180d"
+alternating_tint_fg = "#1f180d"
 separator = "<span size='20pt'> </span>"
 separator_bg = "auto"
 separator_fg = "auto"
@@ -101,7 +101,7 @@ cmd = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
 [[block]]
 block = "custom"
-cycle = ["sh ~/.config/sway/status/custom_status.sh --type=date", "sh ~/.config/i3/status/custom_status.sh --type=time"]
+cycle = ["sh ~/.config/sway/status/custom_status.sh --type=date", "sh ~/.config/sway/status/custom_status.sh --type=time"]
 
 [[block.click]]
 button = "left"
