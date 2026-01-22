@@ -1,5 +1,6 @@
 export WINEFSYNC=1
 export EDITOR=nvim
+export WINEARCH=wow64
 export LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -8,3 +9,9 @@ export XCURSOR_SIZE=14
 export COLORTERM=truecolor
 export TERM=xterm-256-color
 export LIBSEAT_BACKEND=seatd
+export QT_QPA_PLATFORMTHEME=gtk3
+export XDG_SESSION_DESKTOP=i3
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export SCRIPTS_FOLDER="$HOME/.files/resources/scripts"
+export LD_LIBRARY_PATH=$PWD/bin:$LD_LIBRARY_PATH

@@ -1,35 +1,58 @@
 # ===================== #
+#	Global Variables	#
+# ===================== #
+
+# Paths
+set $I3_HOME $HOME/.config/i3
+set $ROFI_SHOW_SCRP ~/.config/rofi/show.sh
+
+# Keys
+set $mod Mod4
+set $refresh_i3status_rs<D-Bslash> killall -SIGUSR1 i3status-rs
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7" 
+set $ws8 "8"
+set $ws9 "9" 
+set $ws10 "10"
+
+
+# ===================== #
 #		Autostart		#
 # ===================== #
 
 # Daemons
-exec_always --no-startup-id autotiling
-exec_always --no-startup-id picom
+exec --no-startup-id picom
 exec --no-startup-id dunst 
 exec --no-startup-id udiskie
+exec --no-startup-id autotiling
 
 # Post-Setup
-exec sh ~/.config/i3/start.sh xdg-portal &> /dev/null
-exec --no-startup-id xhost +si:localuser:root ;
-set $ROFI_SHOW_SCRP ~/.config/rofi/show.sh
+exec_always sh $I3_HOME/start.sh theming &>/dev/null
+exec --no-startup-id sh $I3_HOME/start.sh display &>/dev/null
+exec --no-startup-id sh $I3_HOME/start.sh xdg-portal &>/dev/null
+exec --no-startup-id xhost +si:localuser:root
 
 # ================= #
 #		BINDS		#
 # ================= #
-
-set $mod Mod4
 
 # ------------------------------------------------------#
 # To start some specific programs						#
 # ------------------------------------------------------#
 
 # Applictions
+bindsym Control+Shift+Escape exec sh $I3_HOME/status/custom_status.sh --type=monitor system
 bindsym $mod+Return exec alacritty
-bindsym Control+Shift+Escape exec sh ~/.config/i3/status/custom_status.sh --type=monitor system
 bindsym $mod+e exec pcmanfm
 
 # Rofi Widgets
-#bindsym $mod+tab exec rofi -show window
 bindsym Control+Shift+i exec sh $ROFI_SHOW_SCRP wifi
 bindsym Control+Shift+b exec sh $ROFI_SHOW_SCRP bluetooth
 bindsym $mod+period exec sh $ROFI_SHOW_SCRP emoji
@@ -37,7 +60,7 @@ bindsym $mod+r exec sh $ROFI_SHOW_SCRP launcher
 bindsym $mod+Shift+e exec sh $ROFI_SHOW_SCRP powermenu
 
 # Screenshoot
-bindsym Print exec --no-startup-id bash $HOME/.config/i3/start.sh screenshot $HOME/Pictures/Screenshots/
+bindsym Print exec --no-startup-id bash $I3_HOME/start.sh screenshot $HOME/Pictures/Screenshots/
 
 # Programs control/s
 bindsym $mod+Shift+c reload
@@ -80,16 +103,6 @@ bindsym $mod+a focus parent
 # ------------------------------------------------------#
 # To manage the workspaces/tags							#
 # ------------------------------------------------------#
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:" 
-set $ws8 "8:"
-set $ws9 "9:" 
-set $ws10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -161,12 +174,6 @@ for_window [class=".*"] border pixel 2
 for_window [title="^(Error|Confirm|Delete confirmation)$"] border pixel 0
 for_window [floating] move position center
 
-# Monitor/Display settings and resolution
-exec sh ~/.config/i3/Xdisplay.sh
-#uncomment for wayland support
-#output VGA-1 mode --custom 1152x864@59.9Hz
-#output * bg ~/.config/wallpaper.jpg fill
-
 set_from_resource $c0 i3wm.color0
 set_from_resource $c1 i3wm.color1 
 set_from_resource $c2 i3wm.color2 
@@ -184,14 +191,11 @@ client.focused_inactive $c3     $c0     $c15  $c3       $c3
 client.unfocused        $c7     $c0     $c15  $c8       $c7
 client.urgent           $c1     $c0     $c15  $c1       $c1
 client.placeholder      $c6     $c0     $c4   $c6       $c6
-
 client.background       $c7
 
 # ----------------------------------#
 #	Status Bar + blocks				#
 # ----------------------------------#
-
-set $refresh_i3status_rs<D-Bslash> killall -SIGUSR1 i3status_rs
 
 bar {
 	font pango:EnvyCodeR Nerd Font 10
