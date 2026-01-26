@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE lmms-config-file>
-<lmms version="1.3.0-alpha.1.899+db4523a" configversion="3">
+<lmms version="1.3.0-alpha.1.937+13ea2ee" configversion="3">
   <MidiAlsaRaw device="default"/>
   <MidiJack device="lmms"/>
   <MidiSndio device=""/>
   <Midialsaseq device="default"/>
-  <app sololegacybehavior="0" openlastproject="0" configured="1" language="en" nanhandler="1" nommpz="0" disablebackup="0" loopmarkermode="dual"/>
+  <app nommpz="0" openlastproject="0" disablebackup="0" language="en" sololegacybehavior="0" configured="1" loopmarkermode="dual" nanhandler="1"/>
   <audioalsa channels="2" device="null"/>
-  <audioengine audiodev="SDL (Simple DirectMedia Layer)" samplerate="44100" framesperaudiobuffer="256" mididev="ALSA-Sequencer (Advanced Linux Sound Architecture)"/>
-  <audiojack output1="" clientname="lmms" input1="" input2="" output2=""/>
+  <audioengine samplerate="44100" mididev="ALSA-Sequencer (Advanced Linux Sound Architecture)" audiodev="SDL (Simple DirectMedia Layer)" framesperaudiobuffer="256"/>
+  <audiojack clientname="lmms" output2="" input2="" output1="" input1=""/>
   <audiooss channels="2" device="/dev/dsp"/>
   <audiopa channels="2" device="default"/>
-  <audioportaudio backend="" device=""/>
-  <audiosdl device="" inputdevice=""/>
+  <audioportaudio device="" backend=""/>
+  <audiosdl inputdevice="" device=""/>
   <audiosndio channels="2" device=""/>
   <midi midiautoassign="none" autoquantize="0"/>
   <midioss device="/dev/midi"/>
-  <paths sf2dir="/home/akqir24/Documents/lmms/samples/soundfonts/" gigdir="/home/akqir24/Documents/lmms/samples/gig/" workingdir="/home/akqir24/Documents/lmms/" defaultsf2="/home/akqir24/Documents/lmms/samples/soundfonts/Arachno_SoundFont_Version_1.0.sf2" vstdir="/home/akqir24/Documents/lmms/plugins/VST/" ladspadir="/home/akqir24/Documents/lmms/plugins/ladspa/" stkdir="/usr/bin/../share/stk/rawwaves/" theme="data:/themes/default/" backgroundtheme=""/>
+  <paths defaultsf2="/home/akqir24/Documents/lmms/samples/soundfonts/Arachno_SoundFont_Version_1.0.sf2" sf2dir="/home/akqir24/Documents/lmms/samples/soundfonts/" vstdir="/home/akqir24/Documents/lmms/plugins/VST/" ladspadir="/home/akqir24/Documents/lmms/plugins/ladspa/" gigdir="/home/akqir24/Documents/lmms/samples/gig/" backgroundtheme="" theme="data:/themes/default/" workingdir="/home/akqir24/Documents/lmms/" stkdir="/usr/bin/../share/stk/rawwaves/"/>
   <tooltips disabled="0"/>
-  <ui letpreviewsfinish="0" showfaderticks="0" sidebaronright="0" mixerchanneldeletionwarning="1" oneinstrumenttrackwindow="0" saveinterval="2" enablerunningautosave="0" disableautoquit="1" smoothscroll="0" compacttrackbuttons="0" vstalwaysontop="1" enableautosave="1" vstembedmethod="none" displaywaveform="0" printnotelabels="1" animateafp="1" trackdeletionwarning="1"/>
+  <ui enablerunningautosave="0" disableautoquit="1" printnotelabels="1" displaywaveform="0" oneinstrumenttrackwindow="0" mixerchanneldeletionwarning="1" vstembedmethod="none" animateafp="1" smoothscroll="0" sidebaronright="0" compacttrackbuttons="0" showfaderticks="0" vstalwaysontop="1" trackdeletionwarning="1" letpreviewsfinish="0" enableautosave="1" saveinterval="2"/>
   <recentfiles>
     <file path="/home/akqir24/Documents/lmms/templates/default.mpt"/>
     <file path="/home/akqir24/Documents/lmms/recover.mmp"/>
