@@ -5,8 +5,8 @@
  * gimp.css file instead (/home/akqir24/.config/GIMP/3.0/gimp.css).
  */
 
-@import url("file:///usr/share/gimp/3.0/themes/Default/gimp-dark.css");
-@import url("file:///etc/gimp/3.0/gimp.css");
+@import url("file:///tmp/.mount_gnu_imhbageh/usr/share/gimp/3.0/themes/Default/gimp-dark.css");
+@import url("file:///tmp/.mount_gnu_imhbageh/usr/etc/gimp/3.0/gimp.css");
 
 * { -gtk-icon-style: symbolic; }
 

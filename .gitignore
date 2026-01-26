@@ -1,3 +1,6 @@
 .icons/pywal
-.config/rofi/colors.rasi
+.themes/pywal
 .config/dunst/dunstrc
+.config/rofi/colors.rasi
+.config/alacritty.toml
+.config/i3/status/config.toml
