@@ -64,7 +64,8 @@ fonts-noto-color-emoji libpulse-dev libsensors-dev libpipewire-0.3-dev \
 libtool-bin autoconf libnotmuch-dev yq python3-gi python3-setuptools obexftp \
 obexpushd default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
 gstreamer1.0-plugins-bad gstreamer1.0-libav v4l2loopback-dkms obs-studio \
-xdg-desktop-portal-wlr xdg-desktop-portal
+xdg-desktop-portal-wlr xdg-desktop-portal i965-va-driver vainfo libxapp-gtk3-module
+sudo apt purge intel-media-va-driver 
 
 # ===========================
 # 4️⃣ Enable System Services
@@ -91,9 +92,8 @@ systemctl --user enable --now pipewire-pulse.service
 # ===========================
 header "  🛠  Installing Pacstall Packages"
 sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
-pacstall -I gearlever-git zen-browser-bin i3status-rust rofi-emoji bluetuith-bin \
-lmms-git dust-bin neovim-git winetricks-git mcpelauncher-ui-git \
-gscreenshot-git carla-git yabridge rofi colorz-git ly-git
+pacstall -I gearlever-git i3status-rust rofi-emoji bluetuith-bin \
+dust-bin neovim-git winetricks-git mcpelauncher-ui-git gscreenshot-git rofi ly-git
 
 # ===========================
 # 6️⃣ Python Packages
