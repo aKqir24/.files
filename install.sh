@@ -33,16 +33,14 @@ header "     📦 Installing Base Packages"
 echo -e "${GREEN}Updating apt and installing core packages...${RESET}"
 sudo apt update
 sudo apt install -y \
-pipewire pipewire-pulse libssl-dev wireplumber \
-dunst xinit pipx celluloid automake sudo alacritty \
-viewnior libtool kdialog imagemagick xsettingsd \
-nwg-look stow btop starship pcmanfm clang systemd-resolved \
+pipewire pipewire-pulse libssl-dev wireplumber mpv automake sudo alacritty \
+viewnior libtoo imagemagick xsettingsd nwg-look stow btop starship pcmanfm clang\
 preload git ark gettext power-profiles-daemon fonts-noto-color-emoji \
 libpulse-dev libsensors-dev libpipewire-0.3-dev libtool-bin autoconf \
 libnotmuch-dev yq python3-gi python3-setuptools obexftp obexpushd \
 default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
-gstreamer1.0-plugins-bad gstreamer1.0-libav v4l2loopback-dkms obs-studio \
-xdg-desktop-portal i965-va-driver vainfo libxapp-gtk3-module
+gstreamer1.0-plugins-bad gstreamer1.0-libav v4l2loopback-dkms \
+xdg-desktop-portal vainfo libxapp-gtk3-module
 sudo apt purge intel-media-va-driver
 
 # ===========================
@@ -58,11 +56,15 @@ stow -d configs/split/ -t "${HOME}" --adopt vscodium
 echo -e "${GREEN}Linking wm configs...${RESET}"
 echo -e "${GREEN}Please choose a WM!\n  [1] awesomewm  \n[2] sway  \n[3] i3\n\n${RESET}"
 read -p "-> " USER_WM_CH
+WMS=("awesome" "sway" "i3")
 case "${USER_WM_CH}" in
 	1) USER_WM="awesome" 
 	2) USER_WM="sway" 
 	3) USER_WM="i3" 
 esac
+for wm  in "${WMS[@]}"; do 
+	rm  -rf "${HOME}/.config/${wm}"
+done
 ln -sf "${HOME}/.files/configs/${USER_WM}" "${HOME}/.config/"
 cd "$HOME"
 
@@ -104,8 +106,7 @@ fi
 # ===========================
 header "  🛠  Installing Pacstall Packages"
 sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
-pacstall -I gearlever-git i3status-rust rofi-emoji bluetuith-bin \
-dust-bin neovim-git winetricks-git mcpelauncher-ui-git gscreenshot-git rofi ly-git
+pacstall -I gearlever-git dust-bin neovim-git winetricks-git mcpelauncher-ui-git gscreenshot-git rofi ly-git
 
 # ===========================
 # 6️⃣ Python Packages

@@ -1,102 +1,111 @@
 {
-    "logo": {
-		"width": 26,
+	"logo": {
+		"width": 50,
 		"height": 10,
-		"type": "small",
+		"source": "~/.config/fastfetch/logo.txt",
+		"type": "file",
 		"position": "left",
-		"color": { "1": "green", "2":"yellow" },
+		"color": {"1": "green", "2": "yellow"},
 		"padding": {
-			"top": 3,
-			"right": 4,
-			"left": 4
+			"top": 2,
+			"right": 2,
+			"left": 2
 		}
     },
     "display": {
-        "separator": ">",
+        "separator": " ",
         "color": {
 			"separator": "blue",
             "keys": "green",
 			"width": 0
         },
 		"key": {
-            "width": 9,
+            "width": 18,
 			"paddingLeft": 1
         },
         "size": {
             "ndigits": 0,
             "maxPrefix": "GB"
         },
-		"bar": {
-            "charElapsed": "/",
-            "charTotal": "-",
-            "width": 12
-        },
         "percent": {
-            "type": 2
+            "type": 1
         }
     },
     "modules": [
 		"break",
 		{
-		    "type": "title",
-			"key": "┌────󰌢  ",	
-			"format": "  {user-name-colored} {at-symbol-colored} {host-name-colored}",
-            "color": {
-                "user": "green",
-                "at": "yellow",
-                "host": "green"
-            }
+            "key": "╭─{#32}{#42}{#30} {#}{#7}{#92} USER  {#}{#40}{#92}{#90}  {#}{#keys} ",
+            "type": "title",
+            "format": "{#7}  {user-name}  {#}"
+		},
+		{
+			"key": "├─────────────╮",
+			"type": "custom"
+		},
+		{
+		    "key": "│ {#32}󰇅  {#92}HNAME    {#keys}│",
+            "type": "title",
+            "format": "{host-name}"
         },
         {
-
-            "type": "custom",
-            "key": "├─────────────────────────────────────────────>"
-		},
+			"type": "kernel",
+			"key": "│ {#32}  {#92}KERNEL   {#keys}│"
+        },
 		{
 			"type": "os",
-			"key": "├─  "
-		},
-		{
-			"type": "kernel",
-			"key": "├─  "
+			"key": "│ {#32}  {#92}DISTRO   {#keys}│"
 		},
 		{
 			"type": "cpu",
-			"key": "├─  "
+			"showPeCoreCount": true,
+			"key": "│ {#32}  {#92}CPU      {#keys}│"
 		},
 		{
 			"type": "disk",
-			"key": "├─  "
+			"key": "│ {#32}  {#92}DISK     {#keys}│"
 		},
 		{
 			"type": "display",
-			"key": "├─󰍹  "
+			"key": "│ {#32}  {#92}DISPLAY  {#keys}│"
 		},
 		{
 			"type": "uptime",
-			"key": "├─󰅐  "
+			"key": "│ {#32}  {#92}UPTIME   {#keys}│"
 		},
 		{
 			"type": "packages",
-			"key": "├─󰏖  "
+			"key": "│ {#32}  {#92}PACKS    {#keys}│"
 		},
 		{
 			"type": "terminal",
-			"key": "├─  "
-		},
-        {
-            "type": "custom",
-            "key": "├─────────────────────────────────────────────>"
+			"key": "│ {#32}  {#92}TERM     {#keys}│"
 		},
 		{
-            "type": "colors",
-			"key": "└────  ",
-			"paddingLeft": 2,
-			"symbol": "square",
-            "block": {
-                "range": [1, 16]
-			}
+            "key": "╰─────────────╯",
+            "type": "custom"
         },
-		"break"
+		{
+			"key": "             ╭───{#32}{#42}{#30} {#}{#7}{#92} COLORS {#}{#40}{#92}{#}{#keys}",
+			"type": "custom"
+		},
+		{
+			"key": "             ├──────────────────╮",
+			"type": "custom"
+		},
+		{
+            "type": "custom",
+			"key": "             │                  │",
+			"format": "{#red} {#green} {#yellow} {#blue} {#magenta} {#cyan} {#white} "
+		},
+		{
+            "type": "custom",
+			"key": "             │                  │",	
+			"format": "{#92} {#92} {#93} {#94} {#95} {#96} {#97}   {#32}│"
+        },
+		{
+			"type": "custom",
+			"key": " ",
+			"format": "              {#32}╰──────────────────╯{#keys}"
+		},
     ]
 }

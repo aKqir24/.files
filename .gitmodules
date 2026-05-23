@@ -1,6 +1,9 @@
-[submodule "resources/global.config/vscodium"]
+[submodule "configs/split/vscodium"]
 	path = configs/split/vscodium
 	url = https://github.com/aKqir24/vscodium-config.git
-[submodule ".config/rofi/scripts"]
-	path = configs/others/rofi
-	url = https://github.com/aKqir24/rofi-scripts
+[submodule "resources/matugen-themes"]
+	path = resources/matugen-themes
+	url = https://github.com/aKqir24/matugen-themes.git
+[submodule "configs/awesome/bling"]
+	path = configs/awesome/bling
+	url = https://github.com/aKqir24/bling.git
