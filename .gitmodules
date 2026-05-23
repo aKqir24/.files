@@ -1,0 +1,6 @@
+[submodule "resources/global.config/vscodium"]
+	path = configs/split/vscodium
+	url = https://github.com/aKqir24/vscodium-config.git
+[submodule ".config/rofi/scripts"]
+	path = configs/others/rofi
+	url = https://github.com/aKqir24/rofi-scripts

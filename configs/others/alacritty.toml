@@ -1,0 +1,65 @@
+[colors.normal]
+red = "#689F68"
+cyan = "#71B689"
+green = "#66B073"
+white = "#909b94"
+black = "#0d2015"
+blue = "#9CC478"
+magenta = "#617B86"
+yellow = "#8FA86F"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[colors.footer_bar]
+foreground = "#c2c7c4"
+background = "#909b94"
+
+[colors.bright]
+black = "#5d7165"
+red = "#7cc77c"
+green = "#84ca91"
+blue = "#b3d298"
+cyan = "#8dcea4"
+magenta = "#6ca8c0"
+white = "#c2c7c4"
+yellow = "#acca85"
+
+[colors.primary]
+background = "#0d2015"
+foreground = "#c2c7c4"
+
+[colors.cursor]
+text = "#0d2015"
+cursor = "#909b94"
+
+[colors.vi_mode_cursor]
+text = "#0d2015"
+cursor = "#c2c7c4"
+
+[colors.search.matches]
+foreground = "#0d2015"
+background = "#c2c7c4"
+
+[colors.search.focused_match]
+foreground = "CellBackground"
+background = "CellForeground"
+
+[window.padding]
+x = 12
+y = 12
+
+[font]
+size = 12
+
+[font.normal]
+family = "EnvyCodeR Nerd Font Mono"
+
+[font.bold]
+family = "EnvyCodeR Nerd Font"
+style = "Regular"

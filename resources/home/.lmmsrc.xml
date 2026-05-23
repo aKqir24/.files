@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE lmms-config-file>
+<lmms configversion="3" version="1.3.0-alpha.1.968+6f50f90">
+  <MidiAlsaRaw device="default"/>
+  <MidiJack device="lmms"/>
+  <MidiSndio device=""/>
+  <Midialsaseq device="default"/>
+  <app openlastproject="0" language="en" loopmarkermode="dual" nommpz="0" disablebackup="0" sololegacybehavior="0" configured="1" nanhandler="1"/>
+  <audioalsa channels="2" device="null"/>
+  <audioengine mididev="ALSA-Sequencer (Advanced Linux Sound Architecture)" samplerate="44100" audiodev="SDL (Simple DirectMedia Layer)" framesperaudiobuffer="256"/>
+  <audiojack input2="" clientname="lmms" output2="" output1="" input1=""/>
+  <audiooss channels="2" device="/dev/dsp"/>
+  <audiopa channels="2" device="default"/>
+  <audioportaudio device="" backend=""/>
+  <audiosdl inputdevice="" device=""/>
+  <audiosndio channels="2" device=""/>
+  <midi midiautoassign="none" autoquantize="0"/>
+  <midioss device="/dev/midi"/>
+  <paths ladspadir="/home/akqir24/Documents/lmms/plugins/ladspa/" defaultsf2="/home/akqir24/Documents/lmms/samples/soundfonts/Arachno_SoundFont_Version_1.0.sf2" theme="data:/themes/default/" backgroundtheme="" vstdir="/home/akqir24/Documents/lmms/plugins/VST/" workingdir="/home/akqir24/Documents/lmms/" gigdir="/home/akqir24/Documents/lmms/samples/gig/" stkdir="/usr/bin/../share/stk/rawwaves/" sf2dir="/home/akqir24/Documents/lmms/samples/soundfonts/"/>
+  <tooltips disabled="0"/>
+  <ui letpreviewsfinish="0" enableautosave="1" oneinstrumenttrackwindow="0" saveinterval="2" showfaderticks="0" sidebaronright="0" compacttrackbuttons="0" trackdeletionwarning="1" vstalwaysontop="1" displaywaveform="0" printnotelabels="1" vstembedmethod="none" disableautoquit="1" animateafp="1" enablerunningautosave="0" smoothscroll="0" mixerchanneldeletionwarning="1"/>
+  <recentfiles>
+    <file path="/home/akqir24/Documents/lmms/templates/default.mpt"/>
+    <file path="userprojects:Ambient 01.mmp"/>
+    <file path="factoryprojects:tutorials/editing_note_volumes.mmp"/>
+    <file path="/home/akqir24/Documents/lmms/recover.mmp"/>
+    <file path="userprojects:yad lofi.mmpz"/>
+    <file path="userprojects:what I should.mmp"/>
+    <file path="userprojects:Lofi_1.mmp"/>
+  </recentfiles>
+  <favoriteitems/>
+</lmms>
