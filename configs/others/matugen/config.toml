@@ -17,9 +17,9 @@ input_path = '~/.files/resources/matugen-themes/templates/vscode-colors.json'
 output_path = '~/.cache/matugen/vscode-colors.json'
 
 [templates.wine]
-input_path = "~/.files/resources/matugen-themes/templates/wine.reg"
-output_path = "~/.cache/matugen/wine.reg"
-post_hook = "wine regedit ~/.cache/matugen/wine.reg"
+input_path = '~/.files/resources/matugen-themes/templates/wine.reg'
+output_path = '~/.cache/matugen/wine.reg'
+post_hook = 'wine regedit ~/.cache/matugen/wine.reg'
 
 [templates.gtk3]
 input_path = '~/.files/resources/matugen-themes/templates/gtk-colors.css'
