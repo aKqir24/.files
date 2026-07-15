@@ -1,0 +1,37 @@
+[config]
+[templates.alacritty]
+input_path = '~/.files/resources/matugen-themes/templates/alacritty.toml'
+output_path = '~/.cache/matugen/alacritty-colors.toml'
+
+[templates.nvim]
+input_path = '~/.files/resources/matugen-themes/templates/neovim/template.lua'
+output_path = '~/.cache/matugen/nvim-colors.lua'
+post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.xmonad-colors]
+input_path = '~/.files/resources/matugen-themes/templates/Colors.hs'
+output_path = '~/.cache/matugen/Colors.hs'
+post_hook= 'xmonad --recompile && xmonad --restart'
+
+[templates.vscode-raw]
+input_path = '~/.files/resources/matugen-themes/templates/vscode-colors'
+output_path = '~/.cache/matugen/vscode-colors'
+
+[templates.vscode-json]
+input_path = '~/.files/resources/matugen-themes/templates/vscode-colors.json'
+output_path = '~/.cache/matugen/vscode-colors.json'
+
+[templates.wine]
+input_path = '~/.files/resources/matugen-themes/templates/wine.reg'
+output_path = '~/.cache/matugen/wine.reg'
+post_hook = 'wine regedit ~/.cache/matugen/wine.reg'
+
+[templates.gtk3]
+input_path = '~/.files/resources/matugen-themes/templates/gtk-colors.css'
+output_path = '~/.cache/matugen/gtk-3.0-colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.files/resources/matugen-themes/templates/gtk-colors.css'
+output_path = '~/.cache/matugen/gtk-4.0-colors.css'
+post_hook = '~/.files/resources/matugen-themes/post-hook-scripts/gtk-themes-reload.sh'

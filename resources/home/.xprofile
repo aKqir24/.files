@@ -1,0 +1,51 @@
+# ================================================= #
+#				 Autostart Programs 				#
+# ================================================= #
+
+programs=(
+	# Audio and Mic
+	"/usr/bin/pipewire"
+	"/usr/bin/wireplumber"
+	"/usr/bin/pipewire-pulse"
+
+	# Transfer Devices And Partitions
+	"/usr/libexec/gvfsd" 
+	"/usr/libexec/gvfs-mtp-volume-monitor" 
+	"/usr/libexec/gvfs-udisks2-volume-monitor"
+
+	# Dialog portals
+	#"/usr/libexec/xdg-desktop-portal" 
+	#"/usr/libexec/xdg-desktop-portal-gtk"
+	
+	# Applications
+	'dbus-run-session pcmanfm --daemon-mode'
+	'alacritty --daemon'
+	'starship init "bash"'
+	'picom --daemon'
+) 
+
+for app in "${programs[@]}"; do
+	# Extract just the binary name for the pidof check
+	app_name=$(echo "$app" | awk '{print $1}' | xargs basename)
+	if [ "$app_name" = "dbus-run-session" ]; then
+		app_name=$(echo "$app" | awk '{print $2}' | xargs basename)
+	fi
+
+	# If the process is NOT running, launch it completely in the background
+	if ! pidof "$app_name" >/dev/null 2>&1; then 
+		nohup $app >/dev/null 2>&1 &
+	fi
+done
+
+# ================================================= #
+#				 Display Resolution 				#
+# ================================================= #
+
+RESOLUTION_REFRESH="1152x864_60.00"
+CURRENT_DISPLAY="$(xrandr --query | grep "connected primary" | cut -d " " -f1)"
+(
+	xrandr --newmode "${RESOLUTION_REFRESH}"   81.75  1152 1216 1336 1520  864 867 871 897 -hsync +vsync ; \
+	xrandr --addmode ${CURRENT_DISPLAY} "${RESOLUTION_REFRESH}" ; \
+	xrandr --output ${CURRENT_DISPLAY} --mode "${RESOLUTION_REFRESH}" ; \
+	xsetroot -cursor_name left_ptr
+) &

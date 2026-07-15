@@ -1,0 +1,26 @@
+
+[window]
+dynamic_padding = true
+padding = { x = 10, y = 10 }
+
+[font]
+size = 10
+normal = { 
+	family = "Hurmit Nerd Font",
+	style = "normal"
+}
+bold = { 
+	family = "Hurmit Nerd Font",
+	style = "bold"
+}
+italic = {
+	family = "Hurmit Nerd Font", 
+	style = "italic"
+}
+bold_italic = {
+	family = "Hurmit Nerd Font", 
+	style = "bold italic"
+}
+
+[general]
+import = ["~/.cache/matugen/alacritty-colors.toml"]

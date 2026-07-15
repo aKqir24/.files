@@ -1,0 +1,15 @@
+[submodule "resources/scripts/walset"]
+	path = resources/scripts/walset
+	url = https://github.com/aKqir24/walset.git
+[submodule "resources/global.config/vscodium"]
+	path = resources/global.config/vscodium
+	url = https://github.com/aKqir24/vscodium-config.git
+[submodule ".config/rofi/scripts/bluetooth"]
+	path = .config/rofi/scripts/bluetooth
+	url = https://gist.github.com/4257a521fd0b4a6ee7d19f5d320dccfc.git
+[submodule ".config/rofi/scripts/wifi"]
+	path = .config/rofi/scripts/wifi
+	url = https://gist.github.com/cb4a6deed853931cab78b57bd622176b.git
+[submodule "resources/global.config/GIMP"]
+	path = resources/global.config/GIMP
+	url = https://github.com/Diolinux/PhotoGIMP.git
