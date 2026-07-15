@@ -23,7 +23,23 @@ main = xmonad $ def
 	, focusedBorderColor = Colors.accent
 	, borderWidth        = 2
 	, layoutHook         = theLayouts
-	, manageHook = progHook <+> manageHook def
+	, manageHook         = progHook <+> manageHook def
+	{- , ppCurrent         = xmobarColor "#ad8ee6" "" . wrap "[" "]" -- Active workspace color
+    , ppVisible         = xmobarColor "#7aa2f7" ""                -- Visible but unfocused workspace
+    , ppHidden          = xmobarColor "#a9b1d6" ""                -- Hidden workspaces with windows
+    , ppHiddenNoWindows = xmobarColor "#444b6a" ""                -- Empty workspaces
+    , ppTitle           = xmobarColor "#9ece6a" "" . shorten 60   -- Focused window title color
+    , ppUrgent          = xmobarColor "#f7768e" "" 
+	, activeColor         = "#ad8ee6"  -- Active tab background
+    , activeBorderColor   = "#ad8ee6"  -- Active tab border
+    , activeTextColor     = "#ffffff"  -- Active tab text color
+    , inactiveColor       = "#1a1b26"  -- Inactive tab background
+    , inactiveBorderColor = "#16161e"  -- Inactive tab border
+    , inactiveTextColor   = "#a9b1d6"  -- Inactive tab text color
+    , urgentColor         = "#f7768e"  -- Urgent tab background
+    , urgentTextColor     = "#ffffff"  -- Urgent tab text color
+    , fontName            = "xft:JetBrainsMono Nerd Font:size=10"
+    , decoHeight          = 24 -}
 	} 
 	`additionalKeysP` keyBinds
 
@@ -31,9 +47,9 @@ main = xmonad $ def
 unGrab :: X ()
 progHook :: ManageHook
 keyBinds :: [(String, X ())]
+unGrab = withDisplay $ \d -> io $ allowEvents d 1 currentTime
 theLayouts =  theGaps 3 $ toggleLayouts (Full) (Tall 1 (3/100) (1/2))
 theGaps i = spacingRaw False (Border i i i i) True (Border i i i i) True
-unGrab = withDisplay $ \d -> io $ allowEvents d 1 currentTime
 
 -- Keybindings
 keyBinds =
