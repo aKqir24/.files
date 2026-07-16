@@ -1,0 +1,322 @@
+;; -- Bar Widget --
+
+(defwidget bar []
+  (centerbox :class "bar" :orientation "h"
+    (left)
+    (center)
+    (right)))
+
+(defwidget left []
+  (box :class "container workspaces" :orientation "h" :space-evenly false :spacing 4
+    (ws-button :num 1)
+    (ws-button :num 2)
+    (ws-button :num 3)
+    (ws-button :num 4)
+    (ws-button :num 5)
+    (ws-button :num 6)))
+
+(defwidget ws-button [num]
+  (button :class "ws {current_ws == num ? 'active' : occupied_ws.contains(concat(' ', to_string(num), ' ')) ? 'occupied' : ''}"
+          :onclick "xdotool key super+${num}"
+    "${num}"))
+
+(defwidget center []
+  (box :class "container music" :orientation "h" :halign "center"
+    {music != "" ? "   ${music}" : ""}))
+
+(defwidget right []
+  (box :class "container tray" :orientation "h" :space-evenly false :spacing 8 :halign "end"
+    (volume-pill)
+    (cpu-pill)
+    (ram-pill)
+    (clock-pill)))
+
+(defwidget volume-pill []
+  (box :class "pill" :orientation "h" :space-evenly false :spacing 6
+    (button :class "icon-btn" :onclick "scripts/setvol mute"
+      {volume == 0 ? "󰝟" : "󰕾"})
+    (progress :value "volume" :max 100)))
+
+(defwidget cpu-pill []
+  (box :class "pill" :orientation "h" :space-evenly false :spacing 6
+    (label :class "icon" :text "󰍛")
+    (progress :value "cpu" :max 100)))
+
+(defwidget ram-pill []
+  (box :class "pill" :orientation "h" :space-evenly false :spacing 6
+    (label :class "icon" :text "󰈖")
+    (progress :value "EWW_RAM.used_mem_perc" :max 100)))
+
+(defwidget clock-pill []
+  (eventbox :onclick "scripts/toggle-calendar"
+    (box :class "pill clock-pill" :orientation "h" :space-evenly false :spacing 4
+      (label :class "icon" :text "󰥔")
+      (label :class "time-label" :text time)
+      (label :class "date-label" :text {show_date ? date : ""}))))
+
+;; -- Calendar Widget --
+
+(defwidget calendar-content []
+  (box :class "calendar-overlay" :orientation "v" :halign "end" :valign "begin"
+    :space-evenly false
+    (eventbox :onclick "scripts/toggle-calendar"
+      (box :class "calendar-backdrop" :orientation "v"))
+    (box :class "calendar-card" :orientation "v" :space-evenly false :spacing 8
+      (box :class "calendar-header" :orientation "h" :space-evenly false :halign "fill"
+        (button :class "calendar-nav" :onclick "scripts/calendar-nav prev ${cal_month_num} ${cal_year}"
+          (label :text "󰅁"))
+        (label :class "calendar-title" :halign "center" :hexpand true
+          :text "${cal_month_name} ${cal_year}")
+        (button :class "calendar-nav" :onclick "scripts/calendar-nav next ${cal_month_num} ${cal_year}"
+          (label :text "󰅂"))
+        (button :class "calendar-close" :onclick "scripts/toggle-calendar"
+          (label :text "󰅖")))
+      (box :class "calendar-weekdays" :orientation "h" :space-evenly true :halign "fill"
+        (label :halign "center" :hexpand true :text "Mo")
+        (label :halign "center" :hexpand true :text "Tu")
+        (label :halign "center" :hexpand true :text "We")
+        (label :halign "center" :hexpand true :text "Th")
+        (label :halign "center" :hexpand true :text "Fr")
+        (label :halign "center" :hexpand true :text "Sa")
+        (label :halign "center" :hexpand true :text "Su"))
+      (box :class "calendar-days" :orientation "v" :space-evenly true :halign "fill"
+        (box :orientation "h" :space-evenly true :halign "fill"
+          (label :class "${cal_d0_cls}" :halign "center" :hexpand true :text "${cal_d0}")
+          (label :class "${cal_d1_cls}" :halign "center" :hexpand true :text "${cal_d1}")
+          (label :class "${cal_d2_cls}" :halign "center" :hexpand true :text "${cal_d2}")
+          (label :class "${cal_d3_cls}" :halign "center" :hexpand true :text "${cal_d3}")
+          (label :class "${cal_d4_cls}" :halign "center" :hexpand true :text "${cal_d4}")
+          (label :class "${cal_d5_cls}" :halign "center" :hexpand true :text "${cal_d5}")
+          (label :class "${cal_d6_cls}" :halign "center" :hexpand true :text "${cal_d6}"))
+        (box :orientation "h" :space-evenly true :halign "fill"
+          (label :class "${cal_d7_cls}" :halign "center" :hexpand true :text "${cal_d7}")
+          (label :class "${cal_d8_cls}" :halign "center" :hexpand true :text "${cal_d8}")
+          (label :class "${cal_d9_cls}" :halign "center" :hexpand true :text "${cal_d9}")
+          (label :class "${cal_d10_cls}" :halign "center" :hexpand true :text "${cal_d10}")
+          (label :class "${cal_d11_cls}" :halign "center" :hexpand true :text "${cal_d11}")
+          (label :class "${cal_d12_cls}" :halign "center" :hexpand true :text "${cal_d12}")
+          (label :class "${cal_d13_cls}" :halign "center" :hexpand true :text "${cal_d13}"))
+        (box :orientation "h" :space-evenly true :halign "fill"
+          (label :class "${cal_d14_cls}" :halign "center" :hexpand true :text "${cal_d14}")
+          (label :class "${cal_d15_cls}" :halign "center" :hexpand true :text "${cal_d15}")
+          (label :class "${cal_d16_cls}" :halign "center" :hexpand true :text "${cal_d16}")
+          (label :class "${cal_d17_cls}" :halign "center" :hexpand true :text "${cal_d17}")
+          (label :class "${cal_d18_cls}" :halign "center" :hexpand true :text "${cal_d18}")
+          (label :class "${cal_d19_cls}" :halign "center" :hexpand true :text "${cal_d19}")
+          (label :class "${cal_d20_cls}" :halign "center" :hexpand true :text "${cal_d20}"))
+        (box :orientation "h" :space-evenly true :halign "fill"
+          (label :class "${cal_d21_cls}" :halign "center" :hexpand true :text "${cal_d21}")
+          (label :class "${cal_d22_cls}" :halign "center" :hexpand true :text "${cal_d22}")
+          (label :class "${cal_d23_cls}" :halign "center" :hexpand true :text "${cal_d23}")
+          (label :class "${cal_d24_cls}" :halign "center" :hexpand true :text "${cal_d24}")
+          (label :class "${cal_d25_cls}" :halign "center" :hexpand true :text "${cal_d25}")
+          (label :class "${cal_d26_cls}" :halign "center" :hexpand true :text "${cal_d26}")
+          (label :class "${cal_d27_cls}" :halign "center" :hexpand true :text "${cal_d27}"))
+        (box :orientation "h" :space-evenly true :halign "fill"
+          (label :class "${cal_d28_cls}" :halign "center" :hexpand true :text "${cal_d28}")
+          (label :class "${cal_d29_cls}" :halign "center" :hexpand true :text "${cal_d29}")
+          (label :class "${cal_d30_cls}" :halign "center" :hexpand true :text "${cal_d30}")
+          (label :class "${cal_d31_cls}" :halign "center" :hexpand true :text "${cal_d31}")
+          (label :class "${cal_d32_cls}" :halign "center" :hexpand true :text "${cal_d32}")
+          (label :class "${cal_d33_cls}" :halign "center" :hexpand true :text "${cal_d33}")
+          (label :class "${cal_d34_cls}" :halign "center" :hexpand true :text "${cal_d34}"))
+        (box :orientation "h" :space-evenly true :halign "fill"
+          (label :class "${cal_d35_cls}" :halign "center" :hexpand true :text "${cal_d35}")
+          (label :class "${cal_d36_cls}" :halign "center" :hexpand true :text "${cal_d36}")
+          (label :class "${cal_d37_cls}" :halign "center" :hexpand true :text "${cal_d37}")
+          (label :class "${cal_d38_cls}" :halign "center" :hexpand true :text "${cal_d38}")
+          (label :class "${cal_d39_cls}" :halign "center" :hexpand true :text "${cal_d39}")
+          (label :class "${cal_d40_cls}" :halign "center" :hexpand true :text "${cal_d40}")
+          (label :class "${cal_d41_cls}" :halign "center" :hexpand true :text "${cal_d41}"))))))
+
+;; -- Emoji Picker (rofi-emoji style with literal) --
+
+(defwidget emoji-content []
+  (box :class "emoji-overlay" :orientation "v" :halign "center" :valign "center"
+    (eventbox :onclick "eww close emoji"
+      (box :class "emoji-backdrop"))
+    (box :class "emoji-card" :orientation "v" :space-evenly false
+      (box :class "emoji-search" :orientation "h" :space-evenly false :spacing 8
+        (label :class "emoji-search-icon" :text "")
+        (label :class "emoji-search-text" :halign "start" :hexpand true
+          :text {emoji_query == "" ? "Search emoji..." : emoji_query}))
+      (box :class "emoji-separator")
+      (literal :class "emoji-list" :content emoji_listen))))
+
+;; -- App Launcher (rofi drun, gross-style with literal) --
+
+(defwidget launcher-content []
+  (box :class "launcher-overlay" :orientation "v" :halign "center" :valign "center"
+    (eventbox :onclick "scripts/toggle-launcher"
+      (box :class "launcher-backdrop"))
+    (box :class "launcher-card" :orientation "v" :space-evenly false
+      (box :class "launcher-search" :orientation "h" :space-evenly false :spacing 8
+        (label :class "launcher-search-icon" :text "󰍉")
+        (label :class "launcher-search-text" :halign "start" :hexpand true
+          :text {search_query == "" ? "Type to search..." : search_query}))
+      (box :class "launcher-separator")
+      (literal :class "launcher-list" :content search_listen))))
+
+;; -- Power Menu Widget --
+
+(defwidget powermenu-content []
+  (box :class "powermenu-overlay" :orientation "v" :halign "center" :valign "center"
+    :space-evenly false
+    (eventbox :onclick "scripts/toggle-powermenu"
+      (box :class "powermenu-backdrop" :orientation "v"))
+    (box :class "powermenu-card" :orientation "v" :space-evenly false :spacing 24 :halign "center"
+      (label :class "powermenu-title" :text "Power Menu")
+      (box :class "powermenu-actions" :orientation "h" :space-evenly false :spacing 16 :halign "center"
+        (powermenu-button :icon "󰤄" :label "Sleep" :action "systemctl suspend")
+        (powermenu-button :icon "󰍃" :label "Logout" :action "scripts/logout-session")
+        (powermenu-button :icon "󰜉" :label "Reboot" :action "systemctl reboot")
+        (powermenu-button :icon "⏻" :label "Power" :action "systemctl poweroff"))
+      (button :class "powermenu-cancel" :onclick "scripts/toggle-powermenu"
+        (label :text "Cancel")))))
+
+(defwidget powermenu-button [icon label action]
+  (button :class "powermenu-btn" :onclick "${action} && scripts/toggle-powermenu"
+    (box :class "powermenu-btn-inner" :orientation "v" :space-evenly false :spacing 8 :halign "center"
+      (label :class "powermenu-btn-icon" :text "${icon}")
+      (label :class "powermenu-btn-label" :text "${label}"))))
+
+;; ==========================================
+;;  Eww Configuration - Main
+;;  Variables, Polls, and Window Definitions
+;; ==========================================
+
+;; -- Variables --
+(deflisten current_ws :initial "1"
+  "scripts/getcurrentws")
+(defvar show_date false)
+(defvar powermenu_open false)
+(defvar launcher_offset 0)
+(defvar search_query "")
+(defvar emoji_query "")
+(defvar app_count 0)
+
+;; Calendar
+(defvar cal_month_name "July")
+(defvar cal_year "2026")
+(defvar cal_today "0")
+(defvar cal_month_num "7")
+(defvar cal_d0 "") (defvar cal_d1 "") (defvar cal_d2 "") (defvar cal_d3 "")
+(defvar cal_d4 "") (defvar cal_d5 "") (defvar cal_d6 "") (defvar cal_d7 "")
+(defvar cal_d8 "") (defvar cal_d9 "") (defvar cal_d10 "") (defvar cal_d11 "")
+(defvar cal_d12 "") (defvar cal_d13 "") (defvar cal_d14 "") (defvar cal_d15 "")
+(defvar cal_d16 "") (defvar cal_d17 "") (defvar cal_d18 "") (defvar cal_d19 "")
+(defvar cal_d20 "") (defvar cal_d21 "") (defvar cal_d22 "") (defvar cal_d23 "")
+(defvar cal_d24 "") (defvar cal_d25 "") (defvar cal_d26 "") (defvar cal_d27 "")
+(defvar cal_d28 "") (defvar cal_d29 "") (defvar cal_d30 "") (defvar cal_d31 "")
+(defvar cal_d32 "") (defvar cal_d33 "") (defvar cal_d34 "") (defvar cal_d35 "")
+(defvar cal_d36 "") (defvar cal_d37 "") (defvar cal_d38 "") (defvar cal_d39 "")
+(defvar cal_d40 "") (defvar cal_d41 "")
+(defvar cal_d0_cls "calendar-day") (defvar cal_d1_cls "calendar-day") (defvar cal_d2_cls "calendar-day") (defvar cal_d3_cls "calendar-day")
+(defvar cal_d4_cls "calendar-day") (defvar cal_d5_cls "calendar-day") (defvar cal_d6_cls "calendar-day") (defvar cal_d7_cls "calendar-day")
+(defvar cal_d8_cls "calendar-day") (defvar cal_d9_cls "calendar-day") (defvar cal_d10_cls "calendar-day") (defvar cal_d11_cls "calendar-day")
+(defvar cal_d12_cls "calendar-day") (defvar cal_d13_cls "calendar-day") (defvar cal_d14_cls "calendar-day") (defvar cal_d15_cls "calendar-day")
+(defvar cal_d16_cls "calendar-day") (defvar cal_d17_cls "calendar-day") (defvar cal_d18_cls "calendar-day") (defvar cal_d19_cls "calendar-day")
+(defvar cal_d20_cls "calendar-day") (defvar cal_d21_cls "calendar-day") (defvar cal_d22_cls "calendar-day") (defvar cal_d23_cls "calendar-day")
+(defvar cal_d24_cls "calendar-day") (defvar cal_d25_cls "calendar-day") (defvar cal_d26_cls "calendar-day") (defvar cal_d27_cls "calendar-day")
+(defvar cal_d28_cls "calendar-day") (defvar cal_d29_cls "calendar-day") (defvar cal_d30_cls "calendar-day") (defvar cal_d31_cls "calendar-day")
+(defvar cal_d32_cls "calendar-day") (defvar cal_d33_cls "calendar-day") (defvar cal_d34_cls "calendar-day") (defvar cal_d35_cls "calendar-day")
+(defvar cal_d36_cls "calendar-day") (defvar cal_d37_cls "calendar-day") (defvar cal_d38_cls "calendar-day") (defvar cal_d39_cls "calendar-day")
+(defvar cal_d40_cls "calendar-day") (defvar cal_d41_cls "calendar-day")
+
+;; App launcher
+(defpoll search_listen :interval "1s"
+  "cat ~/.config/eww/scripts/search_items.txt 2>/dev/null || echo '(box)'" )
+
+;; Emoji picker
+(defpoll emoji_listen :interval "1s"
+  "cat ~/.config/eww/scripts/emoji_items.txt 2>/dev/null || echo '(box)'" )
+
+;; -- Polls --
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' 2>/dev/null || echo ''")
+
+(defpoll volume :interval "1s"
+  "scripts/getvol")
+
+(defpoll cpu :interval "2s"
+  "scripts/getcpu")
+
+(defpoll occupied_ws :interval "3s"
+  "scripts/getoccupied")
+
+(defpoll time :interval "1s"
+  "date '+%I:%M %p'")
+
+(defpoll date :interval "1s"
+  "LC_ALL=C date '+%b %-d, %Y'")
+
+(defpoll cal_init :interval "86400s" "scripts/calendar && echo ok")
+(defpoll app_cache_init :interval "86400s" "scripts/cache-apps && echo ok")
+
+;; -- Windows --
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore false
+  :geometry (geometry :x "0%"
+                      :y "4px"
+                      :width "100%"
+                      :height "26px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "36px")
+  (bar))
+
+(defwindow powermenu
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (powermenu-content))
+
+(defwindow calendar
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (calendar-content))
+
+(defwindow launcher
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :focusable true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (launcher-content))
+
+(defwindow emoji
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (emoji-content))
+

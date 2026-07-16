@@ -1,0 +1,16 @@
+#!/bin/bash
+# Outputs space-separated list of app names from .desktop files
+apps=""
+for dir in /usr/share/applications /usr/local/share/applications "$HOME/.local/share/applications"; do
+    [ -d "$dir" ] || continue
+    for f in "$dir"/*.desktop; do
+        [ -f "$f" ] || continue
+        name=$(grep -m1 '^Name=' "$f" | cut -d= -f2-)
+        exec_line=$(grep -m1 '^Exec=' "$f" | cut -d= -f2- | awk '{print $1}')
+        [ -n "$name" ] && [ -n "$exec_line" ] && [ "$exec_line" != "false" ] && {
+            skip=$(grep -m1 '^NoDisplay=' "$f" | cut -d= -f2)
+            [ "$skip" = "true" ] && continue
+            echo "$exec_line|$name"
+        }
+    done
+done | sort -t'|' -k2 -f | head -16 | cut -d'|' -f1

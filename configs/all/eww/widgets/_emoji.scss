@@ -1,0 +1,67 @@
+/* ── Emoji Picker (MD3) ── */
+
+.emoji-overlay {
+}
+
+.emoji-backdrop {
+}
+
+.emoji-card {
+  background-color: $eww-surface-container-high;
+  border-radius: 28px;
+  padding: 4px 0;
+  margin: 80px 16px 0 16px;
+  min-width: 380px;
+}
+
+.emoji-search {
+  background-color: $eww-surface-container-highest;
+  border-radius: 28px;
+  padding: 12px 20px;
+  min-height: 44px;
+  margin: 8px 8px 4px 8px;
+}
+
+.emoji-search-icon {
+  color: $eww-on-surface-variant;
+  font-size: 20px;
+  font-family: "Noto Color Emoji", "fonts-noto-color-emoji";
+}
+
+.emoji-search-text {
+  color: $eww-on-surface;
+  font-size: 15px;
+}
+
+.emoji-separator {
+  min-height: 1px;
+  background-color: $eww-outline-variant;
+  margin: 4px 16px;
+}
+
+.emoji-list {
+  padding: 4px 8px 8px 8px;
+}
+
+.emoji-grid {
+  padding: 0;
+}
+
+.emoji-item {
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 0;
+  min-width: 44px;
+  min-height: 44px;
+  transition: background-color 120ms ease;
+}
+
+.emoji-item:hover {
+  background-color: $eww-surface-container-highest;
+}
+
+.emoji-char {
+  color: $eww-on-surface;
+  font-size: 24px;
+  font-family: "Noto Color Emoji", "fonts-noto-color-emoji";
+}

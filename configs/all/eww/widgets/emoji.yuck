@@ -1,0 +1,13 @@
+;; ── Emoji Picker (rofi-emoji style with literal) ──
+
+(defwidget emoji-content []
+  (box :class "emoji-overlay" :orientation "v" :halign "center" :valign "center"
+    (eventbox :onclick "eww close emoji"
+      (box :class "emoji-backdrop"))
+    (box :class "emoji-card" :orientation "v" :space-evenly false
+      (box :class "emoji-search" :orientation "h" :space-evenly false :spacing 8
+        (label :class "emoji-search-icon" :text "")
+        (label :class "emoji-search-text" :halign "start" :hexpand true
+          :text {emoji_query == "" ? "Search emoji..." : emoji_query}))
+      (box :class "emoji-separator")
+      (literal :class "emoji-list" :content emoji_listen))))

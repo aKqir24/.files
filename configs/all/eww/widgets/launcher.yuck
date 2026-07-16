@@ -1,0 +1,13 @@
+;; ── App Launcher (rofi drun, gross-style with literal) ──
+
+(defwidget launcher-content []
+  (box :class "launcher-overlay" :orientation "v" :halign "center" :valign "center"
+    (eventbox :onclick "scripts/toggle-launcher"
+      (box :class "launcher-backdrop"))
+    (box :class "launcher-card" :orientation "v" :space-evenly false
+      (box :class "launcher-search" :orientation "h" :space-evenly false :spacing 8
+        (label :class "launcher-search-icon" :text "󰍉")
+        (label :class "launcher-search-text" :halign "start" :hexpand true
+          :text {search_query == "" ? "Type to search..." : search_query}))
+      (box :class "launcher-separator")
+      (literal :class "launcher-list" :content search_listen))))

@@ -1,0 +1,34 @@
+#!/bin/bash
+# Captures keyboard input for eww launcher search via xev
+eww update search_query=""
+QUERY=""
+
+for i in 1 2 3 4 5; do
+  WIN=$(xdotool search --name "launcher" 2>/dev/null | head -1)
+  [ -n "$WIN" ] && break
+  sleep 0.3
+done
+[ -z "$WIN" ] && exit 1
+
+cleanup() { pkill -f "xev -id $WIN" 2>/dev/null; }
+trap cleanup EXIT
+
+xev -id "$WIN" -event keyboard 2>/dev/null | \
+while IFS= read -r line; do
+    eww active-windows 2>/dev/null | grep -q launcher || break
+    if echo "$line" | grep -q "KeyPress"; then
+        IFS= read -r detail
+        hex=$(echo "$detail" | grep -oP 'keysym 0x\K[0-9a-fA-F]+')
+        [ -z "$hex" ] && continue
+        ks=$((16#$hex))
+        case $ks in
+            0xff1b) eww close launcher; break;;
+            0xff08) QUERY="${QUERY%?}";;
+            0xff0d) eww close launcher; break;;
+            0x0020) QUERY="$QUERY ";;
+            *) [ $ks -ge 0x21 ] && [ $ks -le 0x7e ] && QUERY="$QUERY$(printf "\\$(printf '%03o' $ks)")";;
+        esac
+        eww update search_query="$QUERY"
+        ~/.config/eww/scripts/search-apps.sh "$QUERY"
+    fi
+done

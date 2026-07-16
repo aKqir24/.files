@@ -1,0 +1,32 @@
+#!/bin/bash
+# Usage: calendar [month] [year]
+# Updates eww calendar variables for display
+MONTH="${1:-$(date +%-m)}"
+YEAR="${2:-$(date +%Y)}"
+MONTH_NAME=$(date -d "$YEAR-$MONTH-01" '+%B')
+NUM_DAYS=$(date -d "$YEAR-$MONTH-01 +1 month -1 day" '+%d')
+FIRST_DOW=$(date -d "$YEAR-$MONTH-01" '+%u')
+FIRST_DOW=$((FIRST_DOW - 1))
+
+TODAY=0
+if [ "$MONTH" -eq "$(date +%-m)" ] && [ "$YEAR" -eq "$(date +%Y)" ]; then
+    TODAY=$(date +%-d)
+fi
+
+CMD="eww update cal_month_name=\"$MONTH_NAME\" cal_year=\"$YEAR\" cal_month_num=\"$MONTH\" cal_today=\"$TODAY\""
+for i in $(seq 0 41); do
+    DAY_NUM=$((i - FIRST_DOW + 1))
+    if [ "$DAY_NUM" -ge 1 ] && [ "$DAY_NUM" -le "$NUM_DAYS" ]; then
+        CMD="$CMD cal_d${i}=\"$DAY_NUM\""
+        if [ "$DAY_NUM" -eq "$TODAY" ]; then
+            CMD="$CMD cal_d${i}_cls=\"calendar-day today\""
+        else
+            CMD="$CMD cal_d${i}_cls=\"calendar-day\""
+        fi
+    else
+        CMD="$CMD cal_d${i}=\" \""
+        CMD="$CMD cal_d${i}_cls=\"calendar-day\""
+    fi
+done
+
+eval "$CMD"

@@ -1,0 +1,141 @@
+/* ── Global Reset ── */
+
+* {
+  all: unset;
+  font-family: "Hurmit Nerd Font", monospace;
+  font-size: 14px;
+}
+
+/* ── Bar ── */
+
+.bar {
+  background-color: $eww-surface-container-low;
+  padding: 1px 20px 0px 20px;
+  border-radius: 14px;
+  margin: 0 12px;
+}
+
+/* ── Containers ── */
+
+.container {
+  padding: 0;
+}
+
+/* ── Workspaces ── */
+
+.workspaces {
+  padding: 0 2px;
+}
+
+/* ── MD3 Nav Bar Indicator States ── */
+
+/* Empty -- no windows, no indicator */
+button.ws {
+  min-width: 28px;
+  min-height: 22px;
+  border-radius: 10px;
+  color: $eww-outline;
+  padding: 0;
+  font-size: 13px;
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Occupied -- has windows, subtle surface tint */
+button.ws.occupied {
+  color: $eww-on-surface-variant;
+}
+
+button.ws.occupied:hover {
+  color: $eww-on-surface;
+  background-color: $eww-surface-container-high;
+}
+
+/* Active -- focused, filled indicator pill */
+button.ws.active {
+  color: $eww-on-primary-container;
+  background-color: $eww-primary-container;
+  font-weight: bold;
+}
+
+button.ws.active:hover {
+  background-color: $eww-inverse-primary;
+  color: $eww-inverse-surface;
+}
+
+/* ── Music ── */
+
+.music {
+  color: $eww-on-primary-container;
+  font-size: 13px;
+  padding: 0 16px;
+}
+
+/* ── Tray ── */
+
+.tray {
+  padding: 0 4px;
+}
+
+/* ── Pills ── */
+
+.pill {
+  background-color: $eww-surface-container;
+  border-radius: 14px;
+  padding: 2px 8px;
+  min-height: 24px;
+  transition: background-color 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.pill:hover {
+  background-color: $eww-surface-container-high;
+}
+
+.pill .icon {
+  color: $eww-accent;
+  font-size: 18px;
+  padding: 0;
+  border-radius: 8px;
+  transition: background-color 150ms ease;
+}
+
+.pill label {
+  color: $eww-on-surface;
+  font-size: 13px;
+}
+
+/* ── Circular progress ── */
+
+.pill progress {
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  background-color: $eww-surface-container-high;
+  padding: 3px;
+}
+
+.pill progress indicator {
+  background-color: $eww-accent;
+  border-radius: 50%;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+/* ── Volume ── */
+
+.volume-pill .icon-btn {
+  color: $eww-accent;
+  font-size: 20px;
+  padding: 0;
+  border-radius: 8px;
+  transition: background-color 150ms ease;
+}
+
+.volume-pill .icon-btn:hover {
+  background-color: $eww-surface-container-high;
+}
+
+/* ── Clock ── */
+
+.clock-pill .icon {
+  color: $eww-tertiary;
+}

@@ -1,6 +1,3 @@
-[submodule "configs/split/vscodium"]
-	path = configs/split/vscodium
-	url = https://github.com/aKqir24/zen-vscodium.git
 [submodule "resources/matugen-themes"]
 	path = resources/matugen-themes
 	url = https://github.com/aKqir24/matugen-themes.git

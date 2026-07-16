@@ -1,0 +1,508 @@
+// Eww Colors - Generated with Matugen
+
+// Base
+$eww-bg: #1f0f0e;
+$eww-fg: #fcdbd9;
+$eww-on-surface: #fcdbd9;
+$eww-accent: #ffb3b0;
+$eww-accent-fg: #680010;
+$eww-secondary: #ffb3b0;
+$eww-secondary-fg: #680010;
+$eww-tertiary: #6ed7d6;
+$eww-tertiary-fg: #003737;
+
+// Surfaces
+$eww-surface: #1f0f0e;
+$eww-surface-dim: #1f0f0e;
+$eww-surface-container-low: #291716;
+$eww-surface-container: #2d1b1a;
+$eww-surface-container-high: #382524;
+$eww-surface-container-highest: #44302f;
+$eww-surface-variant: #5d3f3e;
+$eww-on-surface-variant: #e6bdbb;
+
+// Outline
+$eww-outline: #ad8886;
+$eww-outline-variant: #5d3f3e;
+
+// Containers
+$eww-primary-container: #ff5359;
+$eww-on-primary-container: #000000;
+$eww-secondary-container: #8d1d25;
+$eww-on-secondary-container: #ffdcda;
+$eww-tertiary-container: #2ca0a0;
+$eww-on-tertiary-container: #000000;
+
+// Error
+$eww-error: #ffb4ab;
+$eww-on-error: #690005;
+$eww-error-container: #93000a;
+$eww-on-error-container: #ffdad6;
+
+// Fixed
+$eww-primary-fixed: #ffdad8;
+$eww-primary-fixed-dim: #ffb3b0;
+$eww-secondary-fixed: #ffdad8;
+$eww-secondary-fixed-dim: #ffb3b0;
+$eww-tertiary-fixed: #8bf3f3;
+$eww-tertiary-fixed-dim: #6ed7d6;
+
+// Inverse
+$eww-inverse-surface: #fcdbd9;
+$eww-inverse-on-surface: #3f2b2a;
+$eww-inverse-primary: #bf0026;
+
+// Shadow & Scrim
+$eww-shadow: #000000;
+$eww-scrim: #000000;
+
+/* -- Global Reset -- */
+
+* {
+  all: unset;
+  font-family: "Hurmit Nerd Font", monospace;
+  font-size: 14px;
+}
+
+/* -- Bar -- */
+
+.bar {
+  background-color: $eww-surface-container-low;
+  padding: 1px 20px 0px 20px;
+  border-radius: 14px;
+  margin: 0 12px;
+}
+
+/* -- Containers -- */
+
+.container {
+  padding: 0;
+}
+
+/* -- Workspaces -- */
+
+.workspaces {
+  padding: 0 2px;
+}
+
+/* -- MD3 Nav Bar Indicator States -- */
+
+/* Empty -- no windows, no indicator */
+button.ws {
+  min-width: 28px;
+  min-height: 22px;
+  border-radius: 10px;
+  color: $eww-outline;
+  padding: 0;
+  font-size: 13px;
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Occupied -- has windows, subtle surface tint */
+button.ws.occupied {
+  color: $eww-on-surface-variant;
+}
+
+button.ws.occupied:hover {
+  color: $eww-on-surface;
+  background-color: $eww-surface-container-high;
+}
+
+/* Active -- focused, filled indicator pill */
+button.ws.active {
+  color: $eww-on-primary-container;
+  background-color: $eww-primary-container;
+  font-weight: bold;
+}
+
+button.ws.active:hover {
+  background-color: $eww-inverse-primary;
+  color: $eww-inverse-surface;
+}
+
+/* -- Music -- */
+
+.music {
+  color: $eww-on-primary-container;
+  font-size: 13px;
+  padding: 0 16px;
+}
+
+/* -- Tray -- */
+
+.tray {
+  padding: 0 4px;
+}
+
+/* -- Pills -- */
+
+.pill {
+  background-color: $eww-surface-container;
+  border-radius: 14px;
+  padding: 2px 8px;
+  min-height: 24px;
+  transition: background-color 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.pill:hover {
+  background-color: $eww-surface-container-high;
+}
+
+.pill .icon {
+  color: $eww-accent;
+  font-size: 18px;
+  padding: 0;
+  border-radius: 8px;
+  transition: background-color 150ms ease;
+}
+
+.pill label {
+  color: $eww-on-surface;
+  font-size: 13px;
+}
+
+/* -- Circular progress -- */
+
+.pill progress {
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  background-color: $eww-surface-container-high;
+  padding: 3px;
+}
+
+.pill progress indicator {
+  background-color: $eww-accent;
+  border-radius: 50%;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+/* -- Volume -- */
+
+.volume-pill .icon-btn {
+  color: $eww-accent;
+  font-size: 20px;
+  padding: 0;
+  border-radius: 8px;
+  transition: background-color 150ms ease;
+}
+
+.volume-pill .icon-btn:hover {
+  background-color: $eww-surface-container-high;
+}
+
+/* -- Clock -- */
+
+.clock-pill .icon {
+  color: $eww-tertiary;
+}
+
+/* -- Calendar -- */
+
+.calendar-overlay {
+}
+
+.calendar-backdrop {
+}
+
+.calendar-card {
+  background-color: $eww-surface-container-high;
+  border-radius: 24px;
+  padding: 16px;
+  margin: 44px 16px 0 16px;
+  min-width: 280px;
+}
+
+.calendar-header {
+  padding: 0 4px 4px;
+}
+
+.calendar-nav {
+  color: $eww-on-surface-variant;
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  transition: all 150ms ease;
+}
+
+.calendar-nav:hover {
+  background-color: $eww-surface-container;
+  color: $eww-on-surface;
+}
+
+.calendar-close {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  color: $eww-on-surface-variant;
+  font-size: 20px;
+  padding: 0;
+  transition: background-color 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.calendar-close:hover {
+  background-color: $eww-surface-container-highest;
+  color: $eww-on-surface;
+}
+
+.calendar-title {
+  color: $eww-on-surface;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 0;
+}
+
+.calendar-weekdays label {
+  color: $eww-outline;
+  font-size: 10px;
+  padding: 4px 0;
+}
+
+.calendar-day {
+  color: $eww-on-surface-variant;
+  font-size: 11px;
+  min-width: 26px;
+  min-height: 26px;
+  padding: 2px;
+}
+
+.calendar-day:hover {
+  color: $eww-on-surface;
+  background-color: $eww-surface-container;
+  border-radius: 50%;
+}
+
+.calendar-day.today {
+  color: $eww-on-primary-container;
+  background-color: $eww-primary-container;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* -- Emoji Picker (MD3) -- */
+
+.emoji-overlay {
+}
+
+.emoji-backdrop {
+}
+
+.emoji-card {
+  background-color: $eww-surface-container-high;
+  border-radius: 28px;
+  padding: 4px 0;
+  margin: 80px 16px 0 16px;
+  min-width: 380px;
+}
+
+.emoji-search {
+  background-color: $eww-surface-container-highest;
+  border-radius: 28px;
+  padding: 12px 20px;
+  min-height: 44px;
+  margin: 8px 8px 4px 8px;
+}
+
+.emoji-search-icon {
+  color: $eww-on-surface-variant;
+  font-size: 20px;
+  font-family: "Noto Color Emoji", "fonts-noto-color-emoji";
+}
+
+.emoji-search-text {
+  color: $eww-on-surface;
+  font-size: 15px;
+}
+
+.emoji-separator {
+  min-height: 1px;
+  background-color: $eww-outline-variant;
+  margin: 4px 16px;
+}
+
+.emoji-list {
+  padding: 4px 8px 8px 8px;
+}
+
+.emoji-grid {
+  padding: 0;
+}
+
+.emoji-item {
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 0;
+  min-width: 44px;
+  min-height: 44px;
+  transition: background-color 120ms ease;
+}
+
+.emoji-item:hover {
+  background-color: $eww-surface-container-highest;
+}
+
+.emoji-char {
+  color: $eww-on-surface;
+  font-size: 24px;
+  font-family: "Noto Color Emoji", "fonts-noto-color-emoji";
+}
+
+/* -- App Launcher (rofi drun MD3) -- */
+
+.launcher-overlay {
+}
+
+.launcher-backdrop {
+}
+
+.launcher-card {
+  background-color: $eww-surface-container-high;
+  border-radius: 28px;
+  padding: 4px 0;
+  margin: 80px 16px 0 16px;
+  min-width: 480px;
+}
+
+.launcher-search {
+  background-color: $eww-surface-container-highest;
+  border-radius: 28px;
+  padding: 12px 20px;
+  min-height: 44px;
+  margin: 8px 8px 4px 8px;
+}
+
+.launcher-search-icon {
+  color: $eww-on-surface-variant;
+  font-size: 20px;
+}
+
+.launcher-search-input {
+  color: $eww-on-surface;
+  font-size: 15px;
+}
+
+.launcher-separator {
+  min-height: 1px;
+  background-color: $eww-outline-variant;
+  margin: 4px 16px;
+}
+
+.launcher-list {
+  padding: 4px 8px 8px 8px;
+}
+
+.app-list {
+  padding: 0;
+}
+
+.app-item {
+  background-color: transparent;
+  border-radius: 28px;
+  padding: 0;
+  min-height: 48px;
+  transition: background-color 120ms ease;
+}
+
+.app-item:hover {
+  background-color: $eww-surface-container-highest;
+}
+
+.app-item image {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.app-letter {
+  color: $eww-on-surface;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.app-name {
+  color: $eww-on-surface;
+  font-size: 14px;
+}
+
+/* -- Power Menu -- */
+
+.powermenu-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.powermenu-backdrop {
+}
+
+.powermenu-card {
+  background-color: $eww-surface-container-high;
+  border-radius: 24px;
+  padding: 24px;
+  margin: 60px 16px 0 16px;
+  min-width: 320px;
+}
+
+.powermenu-title {
+  color: $eww-on-surface;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.powermenu-actions {
+  padding: 4px 0;
+}
+
+.powermenu-btn {
+  background-color: $eww-surface-container;
+  border-radius: 20px;
+  padding: 0;
+  transition: all 150ms ease;
+}
+
+.powermenu-btn:hover {
+  background-color: $eww-primary-container;
+}
+
+.powermenu-btn-inner {
+  padding: 16px 20px;
+  min-width: 72px;
+}
+
+.powermenu-btn-icon {
+  color: $eww-accent;
+  font-size: 24px;
+  padding: 0;
+}
+
+.powermenu-btn:hover .powermenu-btn-icon {
+  color: $eww-on-primary-container;
+}
+
+.powermenu-btn-label {
+  color: $eww-on-surface-variant;
+  font-size: 11px;
+  padding: 0;
+}
+
+.powermenu-btn:hover .powermenu-btn-label {
+  color: $eww-on-primary-container;
+}
+
+.powermenu-cancel {
+  background-color: $eww-surface-container;
+  border-radius: 20px;
+  padding: 8px 24px;
+  transition: all 150ms ease;
+}
+
+.powermenu-cancel:hover {
+  background-color: $eww-surface-container-highest;
+}
+
+.powermenu-cancel label {
+  color: $eww-on-surface-variant;
+  font-size: 13px;
+}
+

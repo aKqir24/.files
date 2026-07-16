@@ -1,0 +1,139 @@
+;; ==========================================
+;;  Eww Configuration - Main
+;;  Variables, Polls, and Window Definitions
+;; ==========================================
+
+;; ── Variables ──
+(deflisten current_ws :initial "1"
+  "scripts/getcurrentws")
+(defvar show_date false)
+(defvar powermenu_open false)
+(defvar launcher_offset 0)
+(defvar search_query "")
+(defvar emoji_query "")
+(defvar app_count 0)
+
+;; Calendar
+(defvar cal_month_name "July")
+(defvar cal_year "2026")
+(defvar cal_today "0")
+(defvar cal_month_num "7")
+(defvar cal_d0 "") (defvar cal_d1 "") (defvar cal_d2 "") (defvar cal_d3 "")
+(defvar cal_d4 "") (defvar cal_d5 "") (defvar cal_d6 "") (defvar cal_d7 "")
+(defvar cal_d8 "") (defvar cal_d9 "") (defvar cal_d10 "") (defvar cal_d11 "")
+(defvar cal_d12 "") (defvar cal_d13 "") (defvar cal_d14 "") (defvar cal_d15 "")
+(defvar cal_d16 "") (defvar cal_d17 "") (defvar cal_d18 "") (defvar cal_d19 "")
+(defvar cal_d20 "") (defvar cal_d21 "") (defvar cal_d22 "") (defvar cal_d23 "")
+(defvar cal_d24 "") (defvar cal_d25 "") (defvar cal_d26 "") (defvar cal_d27 "")
+(defvar cal_d28 "") (defvar cal_d29 "") (defvar cal_d30 "") (defvar cal_d31 "")
+(defvar cal_d32 "") (defvar cal_d33 "") (defvar cal_d34 "") (defvar cal_d35 "")
+(defvar cal_d36 "") (defvar cal_d37 "") (defvar cal_d38 "") (defvar cal_d39 "")
+(defvar cal_d40 "") (defvar cal_d41 "")
+(defvar cal_d0_cls "calendar-day") (defvar cal_d1_cls "calendar-day") (defvar cal_d2_cls "calendar-day") (defvar cal_d3_cls "calendar-day")
+(defvar cal_d4_cls "calendar-day") (defvar cal_d5_cls "calendar-day") (defvar cal_d6_cls "calendar-day") (defvar cal_d7_cls "calendar-day")
+(defvar cal_d8_cls "calendar-day") (defvar cal_d9_cls "calendar-day") (defvar cal_d10_cls "calendar-day") (defvar cal_d11_cls "calendar-day")
+(defvar cal_d12_cls "calendar-day") (defvar cal_d13_cls "calendar-day") (defvar cal_d14_cls "calendar-day") (defvar cal_d15_cls "calendar-day")
+(defvar cal_d16_cls "calendar-day") (defvar cal_d17_cls "calendar-day") (defvar cal_d18_cls "calendar-day") (defvar cal_d19_cls "calendar-day")
+(defvar cal_d20_cls "calendar-day") (defvar cal_d21_cls "calendar-day") (defvar cal_d22_cls "calendar-day") (defvar cal_d23_cls "calendar-day")
+(defvar cal_d24_cls "calendar-day") (defvar cal_d25_cls "calendar-day") (defvar cal_d26_cls "calendar-day") (defvar cal_d27_cls "calendar-day")
+(defvar cal_d28_cls "calendar-day") (defvar cal_d29_cls "calendar-day") (defvar cal_d30_cls "calendar-day") (defvar cal_d31_cls "calendar-day")
+(defvar cal_d32_cls "calendar-day") (defvar cal_d33_cls "calendar-day") (defvar cal_d34_cls "calendar-day") (defvar cal_d35_cls "calendar-day")
+(defvar cal_d36_cls "calendar-day") (defvar cal_d37_cls "calendar-day") (defvar cal_d38_cls "calendar-day") (defvar cal_d39_cls "calendar-day")
+(defvar cal_d40_cls "calendar-day") (defvar cal_d41_cls "calendar-day")
+
+;; App launcher
+(defpoll search_listen :interval "1s"
+  "cat ~/.config/eww/scripts/search_items.txt 2>/dev/null || echo '(box)'" )
+
+;; Emoji picker
+(defpoll emoji_listen :interval "1s"
+  "cat ~/.config/eww/scripts/emoji_items.txt 2>/dev/null || echo '(box)'" )
+
+;; ── Polls ──
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' 2>/dev/null || echo ''")
+
+(defpoll volume :interval "1s"
+  "scripts/getvol")
+
+(defpoll cpu :interval "2s"
+  "scripts/getcpu")
+
+(defpoll occupied_ws :interval "3s"
+  "scripts/getoccupied")
+
+(defpoll time :interval "1s"
+  "date '+%I:%M %p'")
+
+(defpoll date :interval "1s"
+  "LC_ALL=C date '+%b %-d, %Y'")
+
+(defpoll cal_init :interval "86400s" "scripts/calendar && echo ok")
+(defpoll app_cache_init :interval "86400s" "scripts/cache-apps && echo ok")
+
+;; ── Windows ──
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore false
+  :geometry (geometry :x "0%"
+                      :y "4px"
+                      :width "100%"
+                      :height "26px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "36px")
+  (bar))
+
+(defwindow powermenu
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (powermenu-content))
+
+(defwindow calendar
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (calendar-content))
+
+(defwindow launcher
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :focusable true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (launcher-content))
+
+(defwindow emoji
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :reserve (struts :distance "0px" :side "top")
+  (emoji-content))

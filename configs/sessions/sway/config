@@ -42,8 +42,8 @@ bindsym $mod+e exec pcmanfm
 #bindsym $mod+tab exec rofi -show window
 bindsym Control+Shift+i exec sh $ROFI_SHOW_SCRP wifi
 bindsym Control+Shift+b exec sh $ROFI_SHOW_SCRP bluetooth
-bindsym $mod+period exec sh $ROFI_SHOW_SCRP emoji
-bindsym $mod+r exec sh $ROFI_SHOW_SCRP launcher
+bindsym $mod+period exec ~/.config/eww/scripts/toggle-emoji
+bindsym $mod+r exec ~/.config/eww/scripts/toggle-launcher
 bindsym $mod+Shift+e exec sh $ROFI_SHOW_SCRP powermenu
 
 # Screenshoot
@@ -61,8 +61,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # To manage the window									#
 # ------------------------------------------------------#
 
-# kill focused window
-bindsym Mod1+F4 kill
+# kill focused window / power menu
+bindsym Mod1+F4 exec ~/.config/eww/scripts/toggle-powermenu
+bindsym Escape exec ~/.config/eww/scripts/escape-handler
 
 # change focus
 bindsym $mod+Left focus left

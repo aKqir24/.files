@@ -25,7 +25,6 @@ echo -e "${YELLOW}Setup: Please be aware that this install script"
 echo -e "is made for Debian-based machines and may not work on other distros!${RESET}"
 sleep 2
 
-
 # ===========================
 # 1 Install Base Packages
 # ===========================
@@ -37,12 +36,12 @@ pipewire pipewire-pulse libssl-dev wireplumber mpv automake sudo alacritty \
 viewnior libtoo imagemagick xsettingsd nwg-look stow btop starship pcmanfm clang\
 preload git ark gettext power-profiles-daemon fonts-noto-color-emoji \
 libpulse-dev libsensors-dev libpipewire-0.3-dev libtool-bin autoconf \
-libnotmuch-dev yq python3-gi python3-setuptools obexftp obexpushd \
+libnotmuch-dev python3-gi python3-setuptools obexftp obexpushd \
 default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
 gstreamer1.0-plugins-bad gstreamer1.0-libav v4l2loopback-dkms \
 xdg-desktop-portal vainfo libxapp-gtk3-module
 sudo apt purge intel-media-va-driver
-
+# TODO: Fetch `PhotoGimp` & `zen-vscodium` to ~/.local and stow them
 # ===========================
 # 2 Setup dotfiles
 # ===========================
@@ -52,7 +51,6 @@ echo -e "${GREEN}Cloning dotfiles repository...${RESET}"
 git clone --recurse-submodules https://github.com/aKqir24/.files.git && cd ".files"
 echo -e "${GREEN}Linking base configs...${RESET}"
 stow -d configs/ -t "${HOME}"/.config/ --adopt others
-stow -d configs/split/ -t "${HOME}" --adopt vscodium
 echo -e "${GREEN}Linking wm configs...${RESET}"
 echo -e "${GREEN}Please choose a WM!\n  [1] awesomewm  \n[2] sway  \n[3] i3\n\n${RESET}"
 read -p "-> " USER_WM_CH

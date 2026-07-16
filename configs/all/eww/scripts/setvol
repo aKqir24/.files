@@ -1,0 +1,18 @@
+#!/bin/bash
+case "$1" in
+    up)
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+        ;;
+    down)
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+        ;;
+    mute)
+        wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+        ;;
+    set)
+        val=$(( ($2 + 2) / 5 * 5 ))
+        if [ "$val" -gt 100 ]; then val=100; fi
+        if [ "$val" -lt 0 ]; then val=0; fi
+        wpctl set-volume @DEFAULT_AUDIO_SINK@ "$(echo "scale=2; $val / 100" | bc)"
+        ;;
+esac

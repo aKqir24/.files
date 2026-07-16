@@ -33,7 +33,7 @@ for app in "${programs[@]}"; do
 
 	# If the process is NOT running, launch it completely in the background
 	if ! pidof "$app_name" >/dev/null 2>&1; then 
-		nohup $app >/dev/null 2>&1 &
+		sleep 0.221 && nohup $app >/dev/null 2>&1 &
 	fi
 done
 

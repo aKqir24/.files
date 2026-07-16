@@ -1,0 +1,18 @@
+#!/bin/bash
+# Usage: launch-app <exec-line>
+# Find the matching .desktop file and launch it
+QUERY="$1"
+for dir in /usr/share/applications /usr/local/share/applications "$HOME/.local/share/applications"; do
+    [ -d "$dir" ] || continue
+    for f in "$dir"/*.desktop; do
+        [ -f "$f" ] || continue
+        exec_line=$(grep -m1 '^Exec=' "$f" | cut -d= -f2- | awk '{print $1}')
+        if [ "$exec_line" = "$QUERY" ]; then
+            full_exec=$(grep -m1 '^Exec=' "$f" | cut -d= -f2-)
+            eval "$full_exec" &
+            exit 0
+        fi
+    done
+done
+# Fallback: try running it directly
+"$QUERY" &

@@ -1,0 +1,7 @@
+#!/bin/bash
+if eww active-windows 2>/dev/null | grep -q calendar; then
+    eww close calendar
+else
+    scripts/calendar
+    eww open calendar
+fi

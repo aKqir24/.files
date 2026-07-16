@@ -1,0 +1,7 @@
+#!/bin/bash
+# Closes active eww overlays
+ACTIVE=$(eww active-windows 2>/dev/null)
+echo "$ACTIVE" | grep -q powermenu && eww close powermenu
+echo "$ACTIVE" | grep -q calendar && eww close calendar
+echo "$ACTIVE" | grep -q launcher && eww close launcher
+echo "$ACTIVE" | grep -q emoji && eww close emoji
