@@ -22,6 +22,8 @@ programs=(
 	'alacritty --daemon'
 	'starship init "bash"'
 	'picom --daemon'
+	"eww daemon"
+	"eww open bar"
 ) 
 
 for app in "${programs[@]}"; do

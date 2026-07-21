@@ -17,5 +17,7 @@ progHook =
     , appName =? "gscreenshot" --> doFloat
     , appName =? "pcmanfm" --> doRectFloat (W.RationalRect 0.18 0.20 0.65 0.55)
     , className =? "Pinentry-gtk-2" --> doFloat
+	, className =? "Eww" --> doIgnore 
+	, className =? "eww" --> doIgnore
     , isDialog --> doFloat
     ]

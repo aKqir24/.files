@@ -30,8 +30,8 @@ keyBinds =
     ("M-e", spawn "pcmanfm")
   , ("M-<Return>", spawn "alacritty")
   , ("M-<Print>", spawn "gscreenshot")
-  , ("M1-<F4>", spawn "~/.config/eww/scripts/toggle-powermenu")
-  , ("M-r", spawn "~/.config/eww/scripts/toggle-launcher")
-  , ("M-.", spawn "~/.config/eww/scripts/toggle-emoji")
+  , ("M1-<F4>", spawn "bash ~/.config/eww/toggle.sh powermenu")
+  , ("M-r", spawn "~/.config/eww/toggle.sh launcher")
+  , ("M-.", spawn "~/.config/eww/toggle.sh emoji")
   , ("<Escape>", spawn "~/.config/eww/scripts/escape-handler")
   ]

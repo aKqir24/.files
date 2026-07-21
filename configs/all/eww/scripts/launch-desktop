@@ -1,7 +1,0 @@
-#!/bin/bash
-# Usage: launch-desktop <exec-line>
-EXEC="$1"
-[ -z "$EXEC" ] && exit 1
-EXEC=$(echo "$EXEC" | sed 's/%[fFuUdDn]//g')
-eval "$EXEC" &
-disown

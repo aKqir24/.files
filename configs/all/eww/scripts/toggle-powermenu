@@ -1,6 +1,0 @@
-#!/bin/bash
-if eww active-windows 2>/dev/null | grep -q powermenu; then
-    eww close powermenu
-else
-    eww open powermenu
-fi

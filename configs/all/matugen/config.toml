@@ -39,4 +39,3 @@ post_hook = '~/.files/resources/matugen-themes/post-hook-scripts/gtk-themes-relo
 [templates.eww]
 input_path = '~/.files/resources/matugen-themes/templates/eww.scss'
 output_path = '~/.cache/matugen/eww-colors.scss'
-post_hook = '~/.config/eww/scripts/preprocess-eww-scss && eww reload'

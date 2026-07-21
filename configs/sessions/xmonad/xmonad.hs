@@ -41,6 +41,5 @@ main =
       , layoutHook = avoidStruts myLayouts
       , manageHook = manageDocks <+> progHook <+> manageHook def
       , logHook = ewwLogHook
-      , startupHook = spawn "eww kill 2>/dev/null; eww daemon && sleep 0.3 && eww open bar"
       }
     `additionalKeysP` keyBinds

@@ -1,3 +1,6 @@
 [submodule "resources/matugen-themes"]
 	path = resources/matugen-themes
 	url = https://github.com/aKqir24/matugen-themes.git
+[submodule "configs/all/eww"]
+	path = configs/all/eww
+	url = https://github.com/aKqir24/eww-md-widgets.git

@@ -34,6 +34,7 @@ text/plain=org.neovim.nvim.desktop;nvim.desktop;
 application/vnd.oasis.opendocument.presentation=libreoffice.desktop;
 application/x-msi=engrampa.desktop;
 application/vnd.ms-cab-compressed=engrampa.desktop;
+application/x-shellscript=org.neovim.nvim.desktop;
 
 [Default Applications]
 image/jpeg=viewnior.desktop
