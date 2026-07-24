@@ -1,5 +1,5 @@
 # ================================================= #
-#				 Autostart Programs 				#
+#				Autostart Programs 				    #
 # ================================================= #
 
 programs=(
@@ -12,30 +12,22 @@ programs=(
 	"/usr/libexec/gvfsd" 
 	"/usr/libexec/gvfs-mtp-volume-monitor" 
 	"/usr/libexec/gvfs-udisks2-volume-monitor"
-
-	# Dialog portals
-	#"/usr/libexec/xdg-desktop-portal" 
-	#"/usr/libexec/xdg-desktop-portal-gtk"
 	
 	# Applications
-	'dbus-run-session pcmanfm --daemon-mode'
+	"dbus-run-session /usr/libexec/power-profiles-daemon"
+	'dbus-run-session pcmanfm --daemon-mode'	
 	'alacritty --daemon'
-	'starship init "bash"'
 	'picom --daemon'
-	"eww daemon"
-	"eww open bar"
+	"eww daemon open bar"
 ) 
 
 for app in "${programs[@]}"; do
-	# Extract just the binary name for the pidof check
 	app_name=$(echo "$app" | awk '{print $1}' | xargs basename)
-	if [ "$app_name" = "dbus-run-session" ]; then
-		app_name=$(echo "$app" | awk '{print $2}' | xargs basename)
-	fi
-
-	# If the process is NOT running, launch it completely in the background
+	[ "$app_name" = "dbus-run-session" ] && app_name=$(echo "$app" | awk '{print $2}' | xargs basename)
+	
+	# TODO: Make a eww loading widget that will close if every thing started
 	if ! pidof "$app_name" >/dev/null 2>&1; then 
-		sleep 0.221 && nohup $app >/dev/null 2>&1 &
+		sleep 0.4 ; nohup $app >/dev/null 2>&1 &
 	fi
 done
 

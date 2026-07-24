@@ -41,7 +41,7 @@ default-jre gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
 gstreamer1.0-plugins-bad gstreamer1.0-libav v4l2loopback-dkms \
 xdg-desktop-portal vainfo libxapp-gtk3-module
 sudo apt purge intel-media-va-driver
-# TODO: Fetch `PhotoGimp` & `zen-vscodium` to ~/.local and stow them
+# TODO: Fetch `PhotoGimp` release.tar.gz & `zen-vscodium`.git to ~/.local/share and stow them in $HOME
 # ===========================
 # 2 Setup dotfiles
 # ===========================

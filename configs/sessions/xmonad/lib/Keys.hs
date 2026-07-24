@@ -33,5 +33,4 @@ keyBinds =
   , ("M1-<F4>", spawn "bash ~/.config/eww/toggle.sh powermenu")
   , ("M-r", spawn "~/.config/eww/toggle.sh launcher")
   , ("M-.", spawn "~/.config/eww/toggle.sh emoji")
-  , ("<Escape>", spawn "~/.config/eww/scripts/escape-handler")
   ]
