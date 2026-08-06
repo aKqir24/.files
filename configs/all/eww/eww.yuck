@@ -1,0 +1,5 @@
+;; Root config
+(include "variables.yuck")
+(include "widgets/bar/eww.yuck")
+(include "widgets/calendar/eww.yuck")
+(include "widgets/powermenu/eww.yuck")

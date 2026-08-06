@@ -1,0 +1,39 @@
+(defwidget net-tt []
+  (box :onhoverlost "eww close net-tooltip" :class "st" :orientation "v" :halign "fill"
+    (box :class "st-b" :orientation "v" :space-evenly false :spacing 2
+      (label :halign "start" :text {net_tooltip}))))
+
+(defwidget network-module []
+  (eventbox :onhover "eww close net-tooltip 2>/dev/null || true"
+    (box :class "pill nt" :orientation "h" :space-evenly false :spacing 6
+      (eventbox :onhover "$HOME/.files/configs/all/eww/widgets/bar/scripts/wifi-info.sh tooltip-update && eww open net-tooltip"
+				:onhoverlost "eww close net-tooltip 2>/dev/null || true"
+        (box :class "nt-i" :orientation "h" :space-evenly false :spacing 0
+          (button :class "nt-w ${wifi_status}"
+                  :onclick "$HOME/.files/configs/all/eww/widgets/bar/scripts/toggle-wifi.sh"
+            (label :text "${wifi_status == 'connected' ? '󱚽 ' : '󱛅 '}"))))
+      (eventbox :onhover "$HOME/.files/configs/all/eww/widgets/bar/scripts/getnetwork.sh tooltip-update && eww open net-tooltip"
+				:onhoverlost "eww close net-tooltip 2>/dev/null || true"
+        (box :class "nt-i" :orientation "h" :space-evenly false :spacing 0
+          (label :class "nt-e ${ethernet_status == 'connected' || tether_status == 'connected' ? 'active' : 'inactive'}"
+                 :text "󰈀 ")))
+      (eventbox :onhover "$HOME/.files/configs/all/eww/widgets/bar/scripts/get-bt-info.sh tooltip-update && eww open net-tooltip"
+				:onhoverlost "eww close net-tooltip 2>/dev/null || true"
+        (box :class "nt-i" :orientation "h" :space-evenly false :spacing 0
+          (button :class "nt-bt ${bluetooth_status != 'Status: Disabled' ? 'active' : 'inactive'}"
+                  :onclick "$HOME/.files/configs/all/eww/widgets/bar/scripts/toggle-bluetooth.sh"
+            (label :text {bt_icon})))))))
+
+(defwindow net-tooltip
+  :monitor 0
+  :windowtype "utility"
+  :stacking "fg"
+  :wm-ignore true
+  :focusable false
+  :exclusivity "ignore"
+  :geometry (geometry :x "70%"
+                      :y "5.2%"
+                      :width "4%"
+                      :height "2%"
+                      :anchor "top left")
+  (net-tt))

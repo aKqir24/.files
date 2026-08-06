@@ -1,0 +1,53 @@
+/* Global reset */
+.bar, .bar *,
+.r-mod, .r-mod *,
+.l-mod, .l-mod *,
+.mod, .mod *,
+.mod2, .mod2 *,
+.cpu, .cpu *,
+.mem, .mem *,
+.scr, .scr *,
+.pill, .pill *,
+.st, .st * {
+  all: unset;
+  font-family: "Hurmit Nerd Font", monospace;
+  font-size: 18px;
+}
+
+/* Bar shell */
+.bar {
+  background-color: transparent;
+  border-radius: 16px;
+  padding: 0px;
+  margin: 0 3px;
+}
+
+.bar-bg {
+  background-color: $eww-surface-container-low;
+  border-radius: 18px;
+  padding: 1px 6px;
+  margin: 0px 4px;
+}
+
+/* Pill (reusable card) */
+.pill {
+  background-color: $eww-surface-container-high;
+  border-radius: 18px;
+  padding: 0 12px;
+  margin: 4px 4px;
+}
+
+/* Module shells */
+.mod,
+.mod2 {
+  margin: 0;
+  border-radius: 12px;
+}
+
+/* Seperator */
+.sep {
+  color: $eww-outline-variant;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 4px;
+}

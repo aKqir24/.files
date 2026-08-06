@@ -1,0 +1,35 @@
+#!/bin/bash
+# Outputs space-padded list of occupied workspace numbers (1-indexed): " 1 2 3 "
+
+# Fetches all windows in 1 single process call
+if command -v wmctrl >/dev/null 2>&1; then
+    wmctrl -l | awk '$2 >= 0 { occupied[$2 + 1] = 1 } END { for (i=1; i<=30; i++) if (i in occupied) printf " %s ", i }'
+    exit 0
+fi
+
+# Fallback Path
+if command -v xprop >/dev/null 2>&1; then
+    clients=$(xprop -root _NET_CLIENT_LIST 2>/dev/null)
+    [[ -z "$clients" ]] && exit 0
+
+    ids=$(grep -oP '0x[0-9a-fA-F]+' <<< "$clients")
+    [[ -z "$ids" ]] && exit 0
+
+    declare -a occupied
+    for wid in $ids; do
+        raw=$(xprop -id "$wid" _NET_WM_DESKTOP 2>/dev/null)
+        d="${raw##*= }"
+        
+        # Filter non-negative workspace numbers
+        if [[ "$d" =~ ^[0-9]+$ ]]; then
+            occupied[$((d + 1))]=1
+        fi
+    done
+
+    # Bash indexed array keys are automatically sorted numerically
+    out=""
+    for ws in "${!occupied[@]}"; do
+        out="${out} ${ws} "
+    done
+    echo "$out"
+fi

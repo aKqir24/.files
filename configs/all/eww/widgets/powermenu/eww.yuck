@@ -1,0 +1,50 @@
+;; -- Power Menu Widget --
+
+(defwidget action-btn [icon action]
+  (button :class "pm-action" :onclick "${action}; $HOME/.files/configs/all/eww/widgets/powermenu/launch.sh"
+    (label :class "pm-action-icon" :text "${icon}")))
+
+(defwidget profile-button [prof icon lbl]
+  (button :class 'pm-chip ${current_profile == prof ? (prof == "power-saver" ? "active active-power-saver" : prof == "balanced" ? "active active-balanced" : "active active-performance") : ""}'
+          :onclick "powerprofilesctl set ${prof}; eww update current_profile=${prof}"
+    (box :orientation "h" :space-evenly false :spacing 6 :valign "center" :halign "center"
+      (label :class "pm-chip-icon" :text "${icon}")
+      (label :class "pm-chip-label" :text "${lbl}"))))
+
+(defwidget powermenu-content []
+  (box :class "powermenu-card" :orientation "v" :space-evenly false :spacing 12 :halign "center"
+    (label :class "pm-title" :text "Power Menu" :halign "center")
+    (box :class "pm-sep")
+    
+    ;; All 4 action buttons inside the horizontal box
+    (box :class "pm-actions" :orientation "h" :space-evenly false :spacing 10 :halign "center"
+      (action-btn :icon "" :action "loginctl poweroff")
+      (action-btn :icon "" :action "loginctl reboot")
+      (action-btn :icon "" :action "loginctl suspend")
+      (action-btn :icon "" :action "$HOME/.files/configs/all/eww/widgets/powermenu/scripts/logout-session"))
+      
+    (box :class "pm-sep")
+    
+    (label :class "pm-section-label" :text "Power Profile" :halign "start")
+      
+    (box :class "pm-chips" :orientation "h" :space-evenly true :spacing 8 :halign "fill" :hexpand true
+      (profile-button :prof "power-saver" :icon "" :lbl "Minimal")
+      (profile-button :prof "balanced" :icon "" :lbl "Balanced")
+      (profile-button :prof "performance" :icon "" :lbl "Ultimate"))
+      
+    (button :class "pm-cancel" :halign "center" :onclick "$HOME/.files/configs/all/eww/widgets/powermenu/launch.sh"
+      (label :text "Cancel"))))
+
+;; -- Window --
+(defwindow powermenu
+  :monitor 0
+  :windowtype "dialog"
+  :stacking "overlay"
+  :wm-ignore true
+  :focusable true
+  :geometry (geometry :x "0%"
+                      :y "30%"
+                      :width "100px"
+                      :anchor "top center")
+  :reserve (struts :distance "0px" :side "top")
+  (powermenu-content))

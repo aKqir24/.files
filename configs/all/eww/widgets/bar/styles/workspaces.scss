@@ -1,0 +1,38 @@
+.ws_module {
+  padding:  4px 0px;
+}
+.ws-mod {
+  padding: 4px 4px;
+}
+
+button.ws {
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 10px;
+  color: $eww-outline-variant;
+  font-size: 16px;
+  padding: 0;
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+button.ws.idle {
+  color: $eww-secondary;
+}
+
+button.ws.occupied {
+  color: $eww-outline;
+}
+
+button.ws.occupied:hover {
+  color: $eww-on-surface-variant;
+  background-color: $eww-surface-container-high;
+}
+
+button.ws.active {
+  color: $eww-primary-container;
+  font-size: 18px;
+}
+
+button.ws.active:hover {
+  color: $eww-inverse-primary;
+}

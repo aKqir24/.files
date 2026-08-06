@@ -1,0 +1,7 @@
+(defwidget win-btn []
+  (button :class "pill win" :onclick "$HOME/.files/configs/all/rofi/launch.sh window"
+    (label :class "win" :text "󰕣")))
+
+(defwidget power-btn []
+  (button :class "pill pwr" :onclick "$HOME/.files/configs/all/eww/toggle.sh powermenu"
+    (label :class "pwr" :text "⏻")))

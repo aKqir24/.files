@@ -1,0 +1,13 @@
+#!/bin/bash
+read -r cpu1 user1 nice1 system1 idle1 iowait1 irq1 softirq1 _ < /proc/stat
+sleep 0.5
+read -r cpu2 user2 nice2 system2 idle2 iowait2 irq2 softirq2 _ < /proc/stat
+
+total=$((user2 + nice2 + system2 + idle2 + iowait2 + irq2 + softirq2 - user1 - nice1 - system1 - idle1 - iowait1 - irq1 - softirq1))
+idle=$((idle2 - idle1))
+
+if [ "$total" -eq 0 ]; then
+    echo "0"
+else
+    echo $(( (total - idle) * 100 / total ))
+fi

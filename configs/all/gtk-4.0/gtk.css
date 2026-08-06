@@ -1,0 +1,13 @@
+@import url("colors.css");
+
+/* Adds 12px inner padding inside all GTK window content containers */
+window {
+    padding: 6px;
+}
+
+/* Optional: Target main application views specifically if global window breaks header bars */
+window > grid,
+window > box,
+window > overlay {
+    margin: 0px;
+}

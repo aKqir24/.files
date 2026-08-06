@@ -1,0 +1,44 @@
+#!/bin/bash
+case "$1" in
+    up|right)
+        cur=$(xset q 2>/dev/null | awk '/timeout:/{print $2}')
+        nxt=$(( cur + 300 ))
+        [ "$nxt" -gt 1800 ] && nxt=1800
+        [ "$nxt" -eq 0 ] && nxt=300
+        xset s "$nxt" +dpms dpms "$nxt" "$nxt" "$nxt"
+        eww update screen_timeout=$(( nxt / 60 ))
+        ;;
+    down|left)
+        cur=$(xset q 2>/dev/null | awk '/timeout:/{print $2}')
+        nxt=$(( cur - 300 ))
+        [ "$nxt" -lt 0 ] && nxt=0
+        if [ "$nxt" -eq 0 ]; then
+            xset s off -dpms s noblank
+        else
+            xset s "$nxt" +dpms dpms "$nxt" "$nxt" "$nxt"
+        fi
+        eww update screen_timeout=$(( nxt / 60 ))
+        ;;
+    set)
+        min=$(( ${2:-10} ))
+        [ "$min" -le 0 ] && min=0
+        if [ "$min" -eq 0 ]; then
+            xset s off -dpms s noblank
+        else
+            sec=$(( min * 60 ))
+            [ "$sec" -gt 1800 ] && sec=1800
+            xset s "$sec" +dpms dpms "$sec" "$sec" "$sec"
+        fi
+        eww update screen_timeout="$min"
+        ;;
+    toggle)
+        val=$(xset q 2>/dev/null | awk '/timeout:/{print $2}')
+        if [ "$val" = "0" ]; then
+            xset s 600 +dpms dpms 600 600 600
+            eww update screen_timeout=10
+        else
+            xset s off -dpms s noblank
+            eww update screen_timeout=0
+        fi
+        ;;
+esac

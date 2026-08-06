@@ -1,0 +1,25 @@
+#!/bin/bash
+# Outputs workspace button yuck widgets
+current_ws="${1:-1}"
+occupied_ws="${2:-}"
+
+# Pad occupied_ws with spaces to ensure accurate substring matching
+padded_occupied=" $occupied_ws "
+
+out=""
+for i in {1..6}; do
+    if [[ "$i" -eq "$current_ws" ]]; then
+        icon="󰪥"
+        cls="ws active"
+    elif [[ "$padded_occupied" == *" $i "* ]]; then
+        icon="󰄰"
+        cls="ws idle"
+    else
+        icon="󰄰"
+        cls="ws"
+    fi
+
+    out+="(button :class \"$cls\" :onclick \"xdotool key super+$i\" :valign \"center\" \"$icon\") "
+done
+
+echo "$out"

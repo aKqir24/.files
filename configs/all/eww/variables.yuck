@@ -1,0 +1,80 @@
+;; -- Bar --
+(defvar show_date false)
+
+(deflisten ws_yuck :initial "(box)"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/wslistener")
+
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' 2>/dev/null || echo ''")
+
+(defpoll volume :initial "0" :interval "1s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/getvol")
+
+(defpoll cpu :initial "0" :interval "2s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/getcpu")
+
+(defpoll memory :initial "0" :interval "3s"
+  "free -m | awk '/Mem:/{printf \"%d\", \$3/\$2*100}'")
+
+(defpoll occupied_ws :initial "" :interval "3s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/getoccupied")
+
+(defpoll time :interval "1s"
+  "date '+%I:%M %p'")
+
+(defpoll date :interval "1s"
+  "LC_ALL=C date '+%b %-d, %Y'")
+
+(defvar vol_reveal false)
+
+(defpoll screen_timeout :initial "10" :interval "3s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/gettimeout")
+
+(defvar scr_reveal false)
+
+;; -- System Tray --
+
+;; -- Calendar --
+(defvar cal_month_num 7)
+(defvar cal_day 22)
+(defvar cal_year 2026)
+(defvar calendar_open false)
+
+;; -- Powermenu --
+(defvar powermenu_open false)
+
+;; -- Power Profile --
+(defpoll current_profile :initial "balanced" :interval "5s"
+  "powerprofilesctl get 2>/dev/null || echo balanced")
+
+(defvar pm_profile_open false)
+
+;; -- System Stats Tooltip --
+(defvar sys_reveal false)
+(defvar cpu_detail "0")
+(defvar ram_detail "0")
+(defvar storage_detail "0")
+(defvar temp_detail "0")
+
+;; -- Network Status --
+(defvar net_tooltip "")
+
+(defvar wifi_reveal false)
+(defvar eth_reveal false)
+(defvar bt_reveal false)
+(defvar tether_reveal false)
+
+(defpoll wifi_status :initial "disconnected" :interval "3s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/wifi-info.sh status")
+
+(defpoll bluetooth_status :initial "off" :interval "3s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/get-bt-info.sh STATUS")
+
+(defpoll bt_icon :initial "󰂯" :interval "3s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/get-bt-info.sh ICON")
+
+(defpoll ethernet_status :initial "disconnected" :interval "5s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/getnetwork.sh ethernet_status")
+
+(defpoll tether_status :initial "disconnected" :interval "5s"
+  "$HOME/.files/configs/all/eww/widgets/bar/scripts/getnetwork.sh tether_status")

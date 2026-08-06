@@ -1,0 +1,21 @@
+;; -- Modular Bar Config --
+(include "widgets/bar/modules/clock.yuck")
+(include "widgets/bar/modules/screentimeout.yuck")
+(include "widgets/bar/modules/volume.yuck")
+(include "widgets/bar/modules/network.yuck")
+(include "widgets/bar/modules/sys-stats.yuck")
+(include "widgets/bar/modules/buttons.yuck")
+(include "widgets/bar/modules/bar.yuck")
+
+(defwidget right []
+  (box :class "r-mod" :orientation "h" :space-evenly false :halign "start" :spacing 8
+    (win-btn)
+    (literal :content ws_yuck)))
+
+(defwidget left []
+  (box :class "l-mod" :orientation "h" :space-evenly false :halign "end" :spacing 8
+    (screentimeout)
+    (volume)
+    (network-module)
+    (sys_stats)
+    (power-btn)))

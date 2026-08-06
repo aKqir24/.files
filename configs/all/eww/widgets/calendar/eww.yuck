@@ -1,0 +1,22 @@
+;; -- Widget --
+(defwidget calendar-popup []
+  (box :class "calendar-card" :orientation "v"
+    (calendar :class "cal"
+              :show-heading true
+              :day cal_day
+              :month cal_month_num
+              :year cal_year)))
+
+;; -- Window --
+(defwindow calendar
+  :monitor 0
+  :windowtype "normal"
+  :stacking "overlay"
+  :wm-ignore true
+  :geometry (geometry :x "-35%"
+                      :y "44px"
+                      :width "336px"
+                      :anchor "top right")
+  :reserve (struts :distance "0px" :side "top")
+  :focusable false
+  (calendar-popup))

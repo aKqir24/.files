@@ -1,0 +1,19 @@
+(defwidget bar []
+  (box :class "bar-bg" :orientation "h"
+    (box :class "bar" :orientation "h"
+      (right)
+      (center)
+      (left))))
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore false
+  :geometry (geometry :x "0%"
+                      :y "-0.14%"
+                      :width "99.4%"
+                      :height "32px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "38px")
+  (bar))

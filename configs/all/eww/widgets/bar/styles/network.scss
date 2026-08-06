@@ -1,0 +1,61 @@
+.nt {
+  padding: 0 12px;
+  margin-right: 0px;
+}
+
+.nt-i label {
+  font-size: 15px;
+}
+
+.nt-w,
+.nt-e,
+.nt-bt,
+.nt-th {
+  font-size: 16px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0 4px;
+  margin: 0 2px;
+}
+
+.nt-w button,
+.nt-bt button {
+  all: unset;
+  font-size: 14px;
+}
+
+button.nt-w,
+button.nt-bt {
+  all: unset;
+  font-size: 16px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+.nt-w.connected,
+button.nt-w.connected,
+.nt-w.active,
+.nt-e.active,
+.nt-bt.active,
+.nt-th.active,
+button.nt-w.active,
+button.nt-bt.active {
+  color: $eww-accent;
+}
+
+.nt-w.disconnected,
+button.nt-w.disconnected {
+  color: $eww-on-surface-variant;
+}
+
+.nt-w.disabled,
+button.nt-w.disabled,
+.nt-w.inactive,
+.nt-e.inactive,
+.nt-bt.inactive,
+.nt-th.inactive,
+button.nt-w.inactive,
+button.nt-bt.inactive {
+  color: $eww-outline;
+}

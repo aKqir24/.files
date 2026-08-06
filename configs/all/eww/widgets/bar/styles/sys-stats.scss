@@ -1,0 +1,25 @@
+.sys-i {
+  color: $eww-secondary;
+}
+
+.cpu { margin: 0; }
+
+.cpu-p {
+  color: $eww-on-surface-variant;
+  background-color: $eww-surface-variant;
+  border-radius: 14px;
+}
+
+.mem { margin: 0; }
+
+.mem-p {
+  color: $eww-tertiary-container;
+  background-color: $eww-surface-container-high;
+}
+
+.dot {
+  font-size: 24px;
+  color: $eww-surface-container-highest;
+  margin: 0;
+  padding: 0;
+}

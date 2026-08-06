@@ -1,0 +1,31 @@
+#!/bin/bash
+# Event-driven workspace widget emitter for eww
+SCRIPT_DIR="$HOME/.files/configs/all/eww/widgets/bar/scripts"
+
+emit() {
+    # Extract desktop number
+    local raw val current occupied buttons
+    raw=$(xprop -root _NET_CURRENT_DESKTOP 2>/dev/null)
+    val="${raw##*= }"
+
+    if [[ "$val" =~ ^[0-9]+$ ]]; then
+        current=$((val + 1))
+    else
+        current=1
+    fi
+
+    occupied=$("$SCRIPT_DIR/getoccupied" 2>/dev/null)
+    buttons=$("$SCRIPT_DIR/getws" "$current" "$occupied")
+    
+    # Replace newlines with spaces natively in Bash (no tr spawn)
+    buttons="${buttons//$'\n'/ }"
+
+    echo "(box :class \"ws_module\" :orientation \"h\" :space-evenly false :halign \"start\" :valign \"center\" $buttons)"
+}
+
+emit # Output initial state immediately
+
+# Event-driven loop
+xprop -spy -root _NET_CURRENT_DESKTOP _NET_CLIENT_LIST 2>/dev/null | while read -r _; do
+    emit
+done

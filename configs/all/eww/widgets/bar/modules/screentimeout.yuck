@@ -1,0 +1,13 @@
+(defwidget screentimeout []
+  (eventbox :onhover "$HOME/.files/configs/all/eww/widgets/bar/scripts/eww-update scr_reveal true"
+            :onhoverlost "$HOME/.files/configs/all/eww/widgets/bar/scripts/eww-update scr_reveal false"
+            :onscroll "$HOME/.files/configs/all/eww/widgets/bar/scripts/settimeout {}"
+    (box :class "mod2 scr" :orientation "h" :space-evenly false :spacing 8 :valign "center"
+      (button :class "scr-i" :onclick "$HOME/.files/configs/all/eww/widgets/bar/scripts/settimeout toggle"
+        {screen_timeout == 0 ? "󰈉" : "󰈈"})
+      (revealer :transition "slideleft"
+               :reveal scr_reveal
+               :duration "350ms"
+        (scale :class "scr-p"
+               :min 1 :max 30 :active false :value screen_timeout
+               :onchange "$HOME/.files/configs/all/eww/widgets/bar/scripts/settimeout set {}")))))

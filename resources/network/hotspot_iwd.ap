@@ -1,0 +1,9 @@
+[Security]
+PreSharedKey=something11
+
+[Settings]
+Hidden=false
+
+[Network]
+Name=aKqir24
+Type=ap

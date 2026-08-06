@@ -1,0 +1,16 @@
+name: xmonad-config
+version: 0.1.0.0
+dependencies:
+  - base >= 4.7 && < 5
+  - xmonad
+  - xmonad-contrib
+  - xmonad-extras
+library:
+  source-dirs: lib
+executables:
+  xmonad:
+    main: xmonad.hs
+    dependencies:
+      - xmonad-config
+    ghc-options:
+      - -threaded

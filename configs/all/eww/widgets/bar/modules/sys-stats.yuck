@@ -1,0 +1,31 @@
+(defwidget sys-tt []
+  (box :class "st" :orientation "v" :halign "fill"
+    (box :class "st-b" :orientation "v" :space-evenly false :spacing 2
+      (label :halign "start" :text "󰘚 CPU    ${cpu_detail}%    󰈐 TEMP   ${temp_detail}°C")
+      (label :halign "start" :text "󰏓 RAM    ${ram_detail}%    󰋊 DISK   ${storage_detail}%"))))
+
+(defwidget sys_stats []
+  (eventbox :onhover "~/.files/configs/all/eww/widgets/bar/scripts/sys-stats-hover.sh"
+            :onhoverlost "~/.files/configs/all/eww/widgets/bar/scripts/sys-stats-unhover.sh"
+    (box :class "pill" :orientation "h" :space-evenly false :spacing 8
+      (label :class "sys-i" :text "󰭄" :style "margin-right: 6px;")
+      (box :class "cpu" :orientation "h" :space-evenly false
+        (circular-progress :value cpu :class "cpu-p" :thickness 4
+          (label :text "󰧟" :class "dot")))
+      (box :class "mem" :orientation "h" :space-evenly false
+        (circular-progress :value memory :class "mem-p" :thickness 4
+          (label :text "󰧟" :class "dot"))))))
+
+(defwindow sys-tooltip
+  :monitor 0
+  :windowtype "utility"
+  :stacking "fg"
+  :wm-ignore true
+  :focusable false
+  :exclusivity "ignore"
+  :geometry (geometry :x "68%"
+                      :y "5.2%"
+                      :width "4%"
+                      :height "2%"
+                      :anchor "top left")
+  (sys-tt))

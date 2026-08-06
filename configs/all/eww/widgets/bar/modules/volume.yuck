@@ -1,0 +1,13 @@
+(defwidget volume []
+  (eventbox :onhover "$HOME/.files/configs/all/eww/widgets/bar/scripts/eww-update vol_reveal true"
+            :onhoverlost "$HOME/.files/configs/all/eww/widgets/bar/scripts/eww-update vol_reveal false"
+            :onscroll "$HOME/.files/configs/all/eww/widgets/bar/scripts/setvol {}"
+    (box :class "mod2" :orientation "h" :space-evenly false :spacing 4 :valign "center"
+      (button :class "vol-i" :onclick "$HOME/.files/configs/all/eww/widgets/bar/scripts/setvol mute"
+        {volume == 0 ? "󰝟" : "󰕾"})
+      (revealer :transition "slideleft"
+               :reveal vol_reveal
+               :duration "350ms"
+        (scale :class "vol-p"
+               :min 0 :max 100 :active false :value volume
+               :onchange "$HOME/.files/configs/all/eww/widgets/bar/scripts/setvol set {}")))))

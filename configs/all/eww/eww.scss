@@ -1,0 +1,18 @@
+@import "eww-colors.scss";
+@import "widgets/bar/eww.scss";
+@import "widgets/calendar/eww.scss";
+@import "widgets/powermenu/eww.scss";
+
+window {
+  background-color: transparent;
+}
+
+window > grid,
+window > box,
+window > overlay {
+    margin: 6px;
+}
+
+* {
+  font-family: "Material", "Hurmit Nerd Font", monospace;
+}

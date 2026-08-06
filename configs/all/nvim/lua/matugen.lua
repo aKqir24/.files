@@ -1,0 +1,1 @@
+/home/aKqir24/.files/resources/matugen-themes/templates/neovim/init.lua

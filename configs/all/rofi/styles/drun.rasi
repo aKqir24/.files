@@ -1,0 +1,109 @@
+/**
+ * MD3 Rofi Launcher Theme
+ * Colors from Matugen
+ **/
+
+@import "/home/aKqir24/.cache/matugen/rofi-colors.rasi"
+
+* {
+    bg-card:                     var(surface-container-high);
+    bg-surface:                  var(surface-container);
+    bg-hover:                    var(surface-container-highest);
+    fg:                          var(on-surface);
+    fg-dim:                      var(on-surface-variant);
+    accent:                      var(primary);
+    border:                      var(outline-variant);
+
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+window {
+    background-color:            @bg-card;
+    border:                      1px solid;
+    border-color:                @border;
+    border-radius:               28px;
+    padding:                     12px;
+    width:                       460px;
+    location:                    north;
+    anchor:                      north;
+    y-offset:                    220px;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:                     8px;
+    padding:                     12px 16px;
+    border-radius:               16px;
+    background-color:            @bg-surface;
+	border:						 2px 2px 6px 2px;
+	border-color:				 @outline-variant;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color:                  @accent;
+	font:			"Material Icons 20";
+	padding:			0px 2px 0px 0px;
+}
+
+entry {
+    text-color:                  @fg;
+    placeholder:                 "Search apps...";
+    placeholder-color:           @fg-dim;
+    font-size:                   14px;
+
+}
+
+listview {
+    lines:                       6;
+    fixed-height:                true;
+    spacing:                     4px;
+    padding:                     8px;
+    margin:                      8px 0 0 0;
+    border-radius:               16px;
+    background-color:            var(surface-container-low);
+}
+
+element {
+    spacing:                     10px;
+    padding:                     6px 10px;
+    border-radius:               12px;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element selected.normal {
+    background-color:            @bg-hover;
+    text-color:                  @accent;
+}
+
+element-icon {
+    size:                         32px;
+	padding:					   4px;
+    background-color:            @inverse-on-surface;
+	border-radius:				 14px;
+}
+
+element-text {
+    expand:                      true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    font:						"Hurmit Nerd Font 12";
+	highlight:					 none;
+	padding:					 10px 0px 0px 4px;
+}

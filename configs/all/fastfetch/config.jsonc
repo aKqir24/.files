@@ -1,0 +1,112 @@
+{
+	"logo": {
+		"width": 50,
+		"height": 10,
+		"source": "~/.config/fastfetch/logo.txt",
+		"type": "file",
+		"position": "left",
+		"color": {"1": "green", "2": "yellow"},
+		"padding": {
+			"top": 2,
+			"right": 2,
+			"left": 2
+		}
+    },
+    "display": {
+        "separator": " ",
+        "color": {
+			"separator": "blue",
+            "keys": "green",
+			"width": 0
+        },
+		"key": {
+            "width": 18,
+			"paddingLeft": 1
+        },
+        "size": {
+            "ndigits": 0,
+            "maxPrefix": "GB"
+        },
+        "percent": {
+            "type": 1
+        }
+    },
+    "modules": [
+		"break",
+		{
+            "key": "╭─{#32}{#42}{#30} {#}{#7}{#92} USER  {#}{#40}{#92}{#90}  {#}{#keys} ",
+            "type": "title",
+            "format": "{#7}  {user-name}  {#}"
+		},
+		{
+			"key": "├─────────────╮",
+			"type": "custom"
+		},
+		{
+		    "key": "│ {#32}󰇅  {#92}HNAME    {#keys}│",
+            "type": "title",
+            "format": "{host-name}"
+        },
+        {
+			"type": "kernel",
+			"key": "│ {#32}  {#92}KERNEL   {#keys}│"
+        },
+		{
+			"type": "os",
+			"key": "│ {#32}  {#92}DISTRO   {#keys}│"
+		},
+		{
+			"type": "cpu",
+			"showPeCoreCount": true,
+			"key": "│ {#32}  {#92}CPU      {#keys}│"
+		},
+		{
+			"type": "disk",
+			"key": "│ {#32}  {#92}DISK     {#keys}│"
+		},
+		{
+			"type": "display",
+			"key": "│ {#32}  {#92}DISPLAY  {#keys}│"
+		},
+		{
+			"type": "uptime",
+			"key": "│ {#32}  {#92}UPTIME   {#keys}│"
+		},
+		{
+			"type": "packages",
+			"key": "│ {#32}  {#92}PACKS    {#keys}│"
+		},
+		{
+			"type": "terminal",
+			"key": "│ {#32}  {#92}TERM     {#keys}│"
+		},
+		{
+            "key": "╰─────────────╯",
+            "type": "custom"
+        },
+		{
+			"key": "             ╭───{#32}{#42}{#30} {#}{#7}{#92} COLORS {#}{#40}{#92}{#}{#keys}",
+			"type": "custom"
+		},
+		{
+			"key": "             ├──────────────────╮",
+			"type": "custom"
+		},
+		{
+            "type": "custom",
+			"key": "             │                  │",
+			"format": "{#red} {#green} {#yellow} {#blue} {#magenta} {#cyan} {#white} "
+		},
+		{
+            "type": "custom",
+			"key": "             │                  │",	
+			"format": "{#92} {#92} {#93} {#94} {#95} {#96} {#97}   {#32}│"
+        },
+		{
+			"type": "custom",
+			"key": " ",
+			"format": "              {#32}╰──────────────────╯{#keys}"
+		},
+		"break"
+    ]
+}

@@ -1,0 +1,84 @@
+/**
+ * MD3 Rofi Window Switcher - Compact Alt-Tab Style
+ * Colors from Matugen
+ **/
+
+@import "/home/aKqir24/.cache/matugen/rofi-colors.rasi"
+
+* {
+    bg-card:                     var(surface-container-high);
+    bg-surface:                  var(surface-container);
+    bg-hover:                    var(surface-container-highest);
+    fg:                          var(on-surface);
+    fg-dim:                      var(on-surface-variant);
+    accent:                      var(primary);
+    border:                      var(outline-variant);
+
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+window {
+    background-color:            @bg-card;
+    border:                      1px solid;
+    border-color:                @border;
+    border-radius:               16px;
+    padding:                     12px;
+    width:                       320px;
+    location:                    north west;
+    anchor:                      north west;
+    x-offset:                    8px;
+    y-offset:                    44px;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+listview {
+    lines:                       5;
+    columns:                     1;
+    fixed-height:                true;
+    spacing:                     2px;
+    padding:                     4px;
+    background-color:            transparent;
+}
+
+element {
+    spacing:                     8px;
+    padding:                     6px 8px;
+    border-radius:               8px;
+    background-color:            @bg-surface;
+    text-color:                  @fg;
+}
+
+element normal.normal {
+    background-color:            @bg-surface;
+    text-color:                  @fg;
+}
+
+element alternate.normal {
+    background-color:            @bg-surface;
+    text-color:                  @fg;
+}
+
+element selected.normal {
+    background-color:            @bg-hover;
+    text-color:                  @accent;
+}
+
+element-icon {
+    size:                        24px;
+    background-color:            transparent;
+    border-radius:               4px;
+}
+
+element-text {
+    expand:                      true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    font:						"Hurmit Nerd Font 12";
+    highlight:                   none;
+    vertical-align:              0.5;
+}

@@ -1,0 +1,14 @@
+(defwidget center []
+  (eventbox :onclick "$HOME/.files/configs/all/eww/widgets/calendar/launch.sh"
+            :halign "center"
+            :hexpand false
+    (box :class "pill"
+         :orientation "h"
+         :space-evenly false
+         :spacing 6
+         :halign "center"
+         :hexpand false
+      (label :class "clk-i" :text "󰥔")
+      (label :class "clk-t" :text time)
+      (label :class "clk-s" :text "|")
+      (label :class "clk-d" :text date))))

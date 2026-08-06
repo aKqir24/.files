@@ -1,0 +1,8 @@
+#!/bin/bash
+# Get current screen timeout in minutes (0 = disabled)
+sec=$(xset q 2>/dev/null | awk '/timeout:/{print $2}')
+if [ "$sec" -eq 0 ] 2>/dev/null; then
+    echo "0"
+else
+    echo $(( sec / 60 ))
+fi
