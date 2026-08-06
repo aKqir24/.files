@@ -3,6 +3,15 @@
 /* Adds 12px inner padding inside all GTK window content containers, excluding eww windows */
 window {
     padding: 6px;
+    border-radius: 12px;
+}
+
+window,
+dialog,
+.dialog,
+window.dialog,
+decoration {
+    border-radius: 12px;
 }
 
 /* Optional: Target main application views specifically if global window breaks header bars */

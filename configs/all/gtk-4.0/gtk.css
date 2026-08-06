@@ -3,6 +3,15 @@
 /* Adds 12px inner padding inside all GTK window content containers */
 window {
     padding: 6px;
+    border-radius: 12px;
+}
+
+window,
+dialog,
+.dialog,
+window.dialog,
+decoration {
+    border-radius: 12px;
 }
 
 /* Optional: Target main application views specifically if global window breaks header bars */
@@ -10,4 +19,11 @@ window > grid,
 window > box,
 window > overlay {
     margin: 0px;
+}
+
+/* Apply padding to the inner content box where text and buttons live */
+messagedialog > box,
+window.messagedialog > box,
+.message-dialog > box {
+  padding: 12px; /* Adjust this to change the inner spacing */
 }
