@@ -83,3 +83,18 @@ colors_to_compare = [
 compare_to = "{{ colors.primary.default.hex }}"
 post_hook = 'nohup sudo -n papirus-folders -C {{ closest_color }} -u > /dev/null 2>&1 &'
 index = 1
+
+[templates.pywalfox]
+input_path = '~/.files/resources/matugen-themes/templates/pywalfox-colors.json'
+output_path = "~/.cache/matugen/pywalfox-colors.json"
+post_hook   = '''
+bash -c '
+{
+  if command -v pywalfox >/dev/null 2>&1; then
+    [ -d "$HOME/.cache/wal" ] || mkdir -p "$HOME/.cache/wal"
+    ln -nfs "$HOME/.cache/matugen/pywalfox-colors.json" "$HOME/.cache/wal/colors.json"
+    pywalfox update
+  fi
+} >/dev/null 2>&1 </dev/null & disown
+'
+'''

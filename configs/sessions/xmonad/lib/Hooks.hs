@@ -4,8 +4,8 @@ import XMonad
 import XMonad.Hooks.ManageHelpers (doRectFloat, isDialog)
 import qualified XMonad.StackSet as W
 
-progHook :: ManageHook
-progHook =
+progHook :: String -> ManageHook
+progHook userName =
   composeAll
     [ title =? "eww-bar" --> doShift "1"
     , className =? "Gimp" --> doFloat
@@ -15,9 +15,9 @@ progHook =
     , title =? "Searching..." --> doRectFloat (W.RationalRect 0.40 0.45 0.24 0.15)
     , title =? "Wallet" --> doFloat
     , appName =? "gscreenshot" --> doFloat
-    , appName =? "pcmanfm" --> doRectFloat (W.RationalRect 0.18 0.20 0.65 0.55)
+    , title =? userName --> doRectFloat (W.RationalRect 0.18 0.20 0.65 0.55)
     , className =? "Pinentry-gtk-2" --> doFloat
-	, className =? "Eww" --> doIgnore 
-	, className =? "eww" --> doIgnore
+    , className =? "Eww" --> doIgnore 
+    , className =? "eww" --> doIgnore
     , isDialog --> doFloat
     ]

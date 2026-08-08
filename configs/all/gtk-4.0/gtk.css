@@ -25,5 +25,16 @@ window > overlay {
 messagedialog > box,
 window.messagedialog > box,
 .message-dialog > box {
-  padding: 12px; /* Adjust this to change the inner spacing */
+  padding: 8px; /* Adjust this to change the inner spacing */
+}
+
+window.dialog,
+window.dialog.message,
+window.messagedialog,
+dialog,
+.dialog {
+    border-radius: 12px;
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }

@@ -30,7 +30,7 @@ sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
 
 # 3. Installing Packages
 header "3. Installing Packages"
-sudo apt update && sudo apt install -y $(<"$HOME/.files/apt-packages.txt")
+sudo apt update && sudo apt install --no-install-recommends -y $(<"$HOME/.files/apt-packages.txt")
 while read -r pkg; do
     [[ -z "$pkg" || "$pkg" =~ ^# ]] && continue
     pacstall -I "$pkg" || true
@@ -108,6 +108,8 @@ fi
 echo "bfq" | sudo tee /sys/block/sda/queue/scheduler || true
 echo "$USER ALL=(ALL) NOPASSWD: $(which papirus-folders)" | sudo tee /etc/sudoers.d/papirus-folders
 sudo chmod 440 /etc/sudoers.d/papirus-folders
+git clone https://github.com/Nokikuj/PywalZen "/tmp/PywalZen"
+cd /tmp/PywalZen && bash install.sh && cd ~/.files
 
 # 6. Finalizing
 header "6. Finalizing"

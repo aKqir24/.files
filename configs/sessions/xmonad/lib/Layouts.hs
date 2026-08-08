@@ -6,9 +6,9 @@ import XMonad.Layout.Renamed (Rename (..), renamed)
 import XMonad.Layout.Spacing (Border (..), spacingRaw)
 import XMonad.Layout.ToggleLayouts (toggleLayouts)
 
-myLayouts = theGaps 4 $ toggleLayouts fullLayout (tallLayout ||| verticalLayout)
+myLayouts = toggleLayouts fullLayout (theGaps 4 (tallLayout ||| verticalLayout))
   where
-    fullLayout     = renamed [Replace "Full"] Full
-    tallLayout     = renamed [Replace "Tall"] (Tall 1 (3 / 100) (1 / 2))
-    verticalLayout = renamed [Replace "Vertical"] (Mirror (Tall 1 (3 / 100) (1 / 2)))
+    fullLayout     = renamed [Replace "Full"] (Full :: Full Window)
+    tallLayout     = renamed [Replace "Tall"] (Tall 1 (3 / 100) (1 / 2) :: Tall Window)
+    verticalLayout = renamed [Replace "Vertical"] (Mirror (Tall 1 (3 / 100) (1 / 2)) :: Mirror Tall Window)
     theGaps i = spacingRaw False (Border i i i i) True (Border i i i i) True

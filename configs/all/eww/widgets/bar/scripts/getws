@@ -7,7 +7,7 @@ occupied_ws="${2:-}"
 padded_occupied=" $occupied_ws "
 
 out=""
-for i in {1..6}; do
+for i in {1..8}; do
     if [[ "$i" -eq "$current_ws" ]]; then
         icon="󰪥"
         cls="ws active"
@@ -19,7 +19,7 @@ for i in {1..6}; do
         cls="ws"
     fi
 
-    out+="(button :class \"$cls\" :onclick \"xdotool key super+$i\" :valign \"center\" \"$icon\") "
+	out+="(button :class \"$cls\" :onclick \"wmctrl -s $(($i - 1)) \" :valign \"center\" \"$icon\")"
 done
 
 echo "$out"

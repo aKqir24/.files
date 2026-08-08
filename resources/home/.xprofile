@@ -15,8 +15,8 @@ programs=(
 	
 	# Applications
 	"dbus-run-session /usr/libexec/power-profiles-daemon"
+	"eww daemon && sleep 0.85 && eww open bar"
   	"dbus-run-session pcmanfm --daemon-mode"
-	"eww daemon && eww open bar"
   	"alacritty --daemon"
   	"picom --daemon"
 ) 	
