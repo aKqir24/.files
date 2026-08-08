@@ -4,10 +4,9 @@ import XMonad hiding ((|||))
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.Renamed (Rename (..), renamed)
 import XMonad.Layout.Spacing (Border (..), spacingRaw)
-import XMonad.Layout.ToggleLayouts (toggleLayouts)
 import XMonad.Layout.Tabbed (tabbed, shrinkText)
 
-myLayouts theme = theGaps 4 (toggleLayouts fullLayout (tallLayout ||| verticalLayout ||| tabbed shrinkText theme))
+myLayouts theme = theGaps 4 (fullLayout ||| tallLayout ||| verticalLayout ||| tabbed shrinkText theme)
   where
     fullLayout     = renamed [Replace "Full"] (Full :: Full Window)
     tallLayout     = renamed [Replace "Tall"] (Tall 1 (3 / 100) (1 / 2) :: Tall Window)
