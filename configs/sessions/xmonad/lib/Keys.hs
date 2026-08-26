@@ -30,12 +30,12 @@ keyBinds :: [(String, X ())]
 keyBinds =
   let myLeft = withWindowSet $ \ws -> do
         let lDesc = description . W.layout . W.workspace . W.current $ ws
-        if "Full" `isInfixOf` lDesc || "Tabbed" `isInfixOf` lDesc || "Tabs" `isInfixOf` lDesc
+        if "Full" `isInfixOf` lDesc
           then windows W.focusUp
           else windowGo L False
       myRight = withWindowSet $ \ws -> do
         let lDesc = description . W.layout . W.workspace . W.current $ ws
-        if "Full" `isInfixOf` lDesc || "Tabbed" `isInfixOf` lDesc || "Tabs" `isInfixOf` lDesc
+        if "Full" `isInfixOf` lDesc
           then windows W.focusDown
           else windowGo R False
   in
@@ -49,10 +49,9 @@ keyBinds =
   , ("M-<Up>", windowGo U False)
   , ("M-<Down>", windowGo D False)
   , -- Resize Mode (i3 style)
-    ("M-r", submap resizeMap)
+    ("M-z", submap resizeMap)
   , -- Layout switches
     ("M-S-f", sendMessage (JumpToLayout "Full"))
-  , ("M-S-t", sendMessage (JumpToLayout "Tabbed"))
   , ("M-S-w", sendMessage (JumpToLayout "Tall"))
   , ("M-S-v", sendMessage (JumpToLayout "Vertical"))
   , -- i3-style swap + layout switch
@@ -60,11 +59,11 @@ keyBinds =
   , ("M-S-<Right>", windowSwap R False >> sendMessage (JumpToLayout "Tall"))
   , ("M-S-<Up>", windows W.swapUp >> sendMessage (JumpToLayout "Vertical"))
   , ("M-S-<Down>", windows W.swapDown >> sendMessage (JumpToLayout "Vertical"))
-  , ("M-S-<Space>", sendMessage ToggleLayout >> sinkAll)
+  , ("M-S-<Space>", sendMessage NextLayout >> sinkAll)
   , ("M-<Space>", windows W.focusDown)
   , -- Run Programs
     ("M-e", spawn "pcmanfm")
-  , ("M-d", spawn "~/.config/rofi/launch.sh drun")
+  , ("M-r", spawn "~/.config/rofi/launch.sh drun")
   , ("M-<Return>", spawn "alacritty")
   , ("M-<Print>", spawn "gscreenshot")
   , ("M1-<F4>", spawn "bash ~/.config/eww/toggle.sh powermenu")

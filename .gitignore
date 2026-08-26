@@ -1,3 +1,5 @@
 .config/rofi/colors.rasi
 .config/dunst/dunstrc
 assets/.fonts/Pack
+assets/.fonts/*.otf
+assets/.fonts/*.ttf

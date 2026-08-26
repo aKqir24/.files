@@ -114,6 +114,7 @@ cd /tmp/PywalZen && bash install.sh && cd ~/.files
 # 6. Finalizing
 header "6. Finalizing"
 source ~/.xprofile
+sudo tailscale set --operator=$USER
 bash "$HOME/.files/resources/scripts/walset/walset.sh" --load --verbose || true
 [ -f "$HOME/.cache/wal/colors-tty.sh" ] && source "$HOME/.cache/wal/colors-tty.sh"
 

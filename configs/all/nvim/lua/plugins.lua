@@ -87,5 +87,12 @@ return {
     "catgoose/nvim-colorizer.lua",
 	event = "BufReadPre",
 	priority = 50,
+  },
+  {
+    "azorng/goose.nvim",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"MeanderingProgrammer/render-markdown.nvim",
+	},	
   }
 }
