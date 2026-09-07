@@ -1,0 +1,1 @@
+../../../resources/matugen/templates/neovim/init.lua

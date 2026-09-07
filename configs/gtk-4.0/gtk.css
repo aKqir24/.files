@@ -1,0 +1,40 @@
+@import url("colors.css");
+
+/* Adds 12px inner padding inside all GTK window content containers */
+window {
+    padding: 6px;
+    border-radius: 0px;
+}
+
+window,
+dialog,
+.dialog,
+window.dialog,
+decoration {
+    border-radius: 0px;
+}
+
+/* Optional: Target main application views specifically if global window breaks header bars */
+window > grid,
+window > box,
+window > overlay {
+    margin: 0px;
+}
+
+/* Apply padding to the inner content box where text and buttons live */
+messagedialog > box,
+window.messagedialog > box,
+.message-dialog > box {
+  padding: 8px; /* Adjust this to change the inner spacing */
+}
+
+window.dialog,
+window.dialog.message,
+window.messagedialog,
+dialog,
+.dialog {
+    border-radius: 0px;
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

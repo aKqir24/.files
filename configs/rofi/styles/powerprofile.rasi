@@ -1,0 +1,63 @@
+/**
+ * MD3 Rofi Power Profile Theme (Horizontal Bar)
+ * Colors from Matugen
+ **/
+
+@import "theme.rasi"
+
+window {
+    background-color:            @bg-card;
+    border:                      1px solid;
+    border-color:                @border;
+    border-radius:               0px;
+    padding:                     12px;
+    width:                       280px;
+    location:                    center;
+    anchor:                      center;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+listview {
+    lines:                       4;
+    columns:                     1;
+    fixed-columns:               true;
+    fixed-height:                true;
+    spacing:                     6px;
+    padding:                     4px;
+    border-radius:               4px;
+    background-color:            @bg;
+}
+
+element {
+    orientation:                 horizontal;
+    spacing:                     4px;
+    margin:                      2px;
+    padding:                     12px 6px;
+    border-radius:               4px;
+    background-color:            @bg-surface;
+    text-color:                  @fg;
+    children:                    [ element-text ];
+}
+
+element selected.normal {
+    background-color:            @bg-hover;
+    text-color:                  @accent;
+    border-color:                @accent;
+    border:                      0px 0px 4px 0px;
+    border-radius:               4px 4px 0px 0px;
+}
+
+element-text {
+    expand:                      true;
+    horizontal-align:            0.0;
+    vertical-align:              0.5;
+    background-color:            transparent;
+    text-color:                  inherit;
+    padding:                     2px;
+    font:                        @font-default;
+    highlight:                   none;
+}

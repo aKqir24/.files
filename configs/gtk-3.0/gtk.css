@@ -1,0 +1,39 @@
+@import url("colors.css");
+
+/* Adds 12px inner padding inside all GTK window content containers, excluding eww windows */
+window {
+    padding: 6px;
+    border-radius: 0px;
+}
+
+window,
+dialog,
+.dialog,
+window.dialog,
+decoration {
+    border-radius: 0px;
+}
+
+/* Optional: Target main application views specifically if global window breaks header bars */
+window > grid,
+window > box,
+window > overlay {
+    margin: 6px;
+}
+
+menu,
+.menu,
+.context-menu,
+popover,
+.popover,
+popover.menu {
+  border-radius: 0px;
+  background-color: transparent
+}
+
+/* Apply padding to the inner content box where text and buttons live */
+messagedialog > box,
+window.messagedialog > box,
+.message-dialog > box {
+  padding: 12px; /* Adjust this to change the inner spacing */
+}

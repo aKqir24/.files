@@ -1,0 +1,7 @@
+.icons/pywal
+.themes/pywal
+.config/mpv
+.config/dunst/dunstrc
+.config/rofi/colors.rasi
+.config/alacritty.toml
+.config/i3/status/config.toml
