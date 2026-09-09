@@ -1,6 +1,45 @@
 local status = os.getenv("HOME") .. "/.config/oxwm/status.sh"
 
 local blocks = {
+	oxwm.bar.block.static({
+		text = "▌",
+		interval = 999999999,
+		color = colors.light_blue,
+		underline = false,
+	}),
+    -- bluetooth
+    oxwm.bar.block.shell({
+		format="{} ",
+        command = status .. " bt",
+        interval = 15,
+        color = colors.cyan,
+        underline = false,
+        click = status .. " toggle_widget bluetooth",
+    }),
+    -- wifi
+    oxwm.bar.block.shell({
+		format="{} ",
+		command = status .. " wifi",
+        interval = 10,
+        color = colors.green,
+        underline = false,
+		click = status .. " toggle_widget wifi",
+    }),
+    -- net ip
+    oxwm.bar.block.shell({
+		format="{} ",
+        command = status .. " net",
+        interval = 10,
+        color = colors.cyan,
+        underline = false,
+    }),
+	oxwm.bar.block.static({
+		text = "▌",
+		interval = 999999999,
+		color = colors.light_blue,
+		underline = false,
+	}),
+
     -- leftmost: cpu
     oxwm.bar.block.shell({
 		format=" {} ",
@@ -17,32 +56,6 @@ local blocks = {
         color = colors.red,
         underline = true,
     }),
-    -- bluetooth
-    oxwm.bar.block.shell({
-		format=" {} ",
-        command = status .. " bt",
-        interval = 15,
-        color = colors.cyan,
-        underline = true,
-        click = status .. " toggle_widget bluetooth",
-    }),
-    -- wifi
-    oxwm.bar.block.shell({
-		format=" {} ",
-		command = status .. " wifi",
-        interval = 10,
-        color = colors.green,
-        underline = true,
-		click = status .. " toggle_widget wifi",
-    }),
-    -- net ip
-    oxwm.bar.block.shell({
-		format=" {} ",
-        command = status .. " net",
-        interval = 10,
-        color = colors.yellow,
-        underline = true,
-    }),
     -- sound volume
     oxwm.bar.block.shell({
 		format=" {} ",
@@ -53,14 +66,14 @@ local blocks = {
         click = status .. " volume_step",
     }),
     -- datetime
-    oxwm.bar.block.shell({
-		format=" {} ",
-        command = status .. " datetime",
-        interval = 30,
+		oxwm.bar.block.datetime({
+	    format = " 󰥔 {} ",
+	    date_format = "%I:%M %p",  -- strftime format
+		interval = 40,
         color = colors.red,
-        underline = true,
-        click = status .. " toggle_widget calendar",
-    }),
+	    underline = true,
+		click = status .. " toggle_widget calendar",
+	}),
     -- monitor
     oxwm.bar.block.shell({
 		format=" {} ",

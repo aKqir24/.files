@@ -55,13 +55,20 @@ bt() {
 }
 
 wifi() {
-	local svc string name strength icon
-	svc=$(connmanctl services 2>/dev/null | awk '
-		$1 ~ /[OR]/ && $NF ~ /(wifi|wlan)/ { print $NF; exit }')
+	local svc string name strength icon powered
+	powered=$(connmanctl technologies | grep -A 5 "/net/connman/technology/wifi" | grep "Powered" | awk '{print $NF}')
+	svc=$(connmanctl services 2>/dev/null | awk '$1 ~ /[OR]/ && $NF ~ /(wifi|wlan)/ { print $NF; exit }')
 
-	if [ -z "$svc" ]; then
+	state=$(printf '%s\n' "$(connmanctl state)" | awk -F'= ' '/^  State =/{print $2; exit}')
+	if [ "$powered" != "True" ]; then
+		printf '\U000f05a9'
 		return
 	fi
+	if [ "$state" = "idle" ]; then
+		printf '\U000f092d'
+		return
+	fi
+
 	string=$(connmanctl services "$svc" 2>/dev/null)
 	name=$(printf '%s\n' "$string" | awk -F'= ' '/^  Name =/{print $2; exit}')
 	strength=$(printf '%s\n' "$string" | awk -F'= ' '/^  Strength =/{print $2; exit}')
@@ -105,10 +112,6 @@ sound() {
 	printf '%s  %d%%' "$icon" "$v"
 }
 
-datetime() {
-	printf '\U000f0954  %s' "$(date +'%I:%M %p')"
-}
-
 toggle_widget() {
 	bash "$HOME/.files/configs/rofi/launch.sh" "${1}"
 }
@@ -141,17 +144,4 @@ volume_step() {
 	fi
 }
 
-case "$1" in
-	cpu) cpu ;;
-	mem) mem ;;
-	bt) bt ;;
-	wifi) wifi ;;
-	net) net ;;
-	sound) sound ;;
-	datetime) datetime ;;
-	toggle_widget) toggle_widget $2;;
-	monitor) monitor ;;
-	toggle_monitor) toggle_monitor ;;
-	volume_step) volume_step ;;
-	*) printf '  ' ;;
-esac
+${1} ${2}

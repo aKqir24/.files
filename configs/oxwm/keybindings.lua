@@ -30,7 +30,6 @@ oxwm.key.bind({ modkey }, "B", oxwm.toggle_bar())
 oxwm.key.bind({ modkey, "Shift" }, "C", oxwm.restart())
 oxwm.key.bind({ modkey, "Shift" }, "R", oxwm.restart())
 oxwm.key.bind({ "Control" }, "Q", oxwm.client.kill())
-oxwm.key.bind({ modkey, "Shift" }, "E", oxwm.quit())
 
 -- Focus movement
 oxwm.key.bind({ modkey }, "Up", oxwm.client.focus_stack(-1))
