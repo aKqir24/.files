@@ -1,65 +1,83 @@
 #!/usr/bin/env bash
 
 # ================================================= #
-#				 Display Resolution 				#
+#				 Progress Dialog 					#
 # ================================================= #
 
-RESOLUTION_REFRESH="1152x864_60.00"
-CURRENT_DISPLAY="$(xrandr --query | grep "connected primary" | cut -d " " -f1)"
-if [ -n "$CURRENT_DISPLAY" ]; then
-	( xrandr --newmode "${RESOLUTION_REFRESH}"   81.75  1152 1216 1336 1520  864 867 871 897 -hsync +vsync 2>/dev/null || true
-	xrandr --addmode ${CURRENT_DISPLAY} "${RESOLUTION_REFRESH}" 2>/dev/null || true
-	xrandr --output ${CURRENT_DISPLAY} --mode "${RESOLUTION_REFRESH}" 2>/dev/null || true ) &
-fi
-xsetroot -cursor_name left_ptr
+(
+	echo "10"; echo "# Initializing X session..."
+	sleep 0.2
 
-
-# ================================================= #
-#				 Wallpapers & Colors 				#
-# ================================================= #
-
-WALLPAPER="$(find "$HOME/Pictures/Wallpapers/new" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) 2>/dev/null | shuf -n 1)"
-if [ -n "$WALLPAPER" ]; then
-	matugen --continue-on-error image "$WALLPAPER" --source-color-index 1
-	xwallpaper --zoom "$WALLPAPER" &
-	fetch_logo_file="$HOME/.cache/fetch_logo.txt"
-	[[ -f "${fetch_logo_file}" ]] || touch "${fetch_logo_file}"
-	
-	$(which chafa) --view-size=56x14 --stretch --symbols block --dither ordered "${WALLPAPER}" > "$fetch_logo_file" || (echo "error" ; exit 1)
-	normal_colors_format="\e[1;31m \e[1;32m \e[1;33m \e[1;34m \e[1;35m \e[1;36m \e[1;37m\e[0m"
-	light_colors_format="\e[1;91m \e[1;92m \e[1;93m \e[1;94m \e[1;95m \e[1;96m \e[1;97m\e[1;34m\e[0m"
-	
-	echo -e "\n   \e[42m\e[30m NORMAL \e[0m ${normal_colors_format}      \e[42m\e[30m LIGHT \e[0m ${light_colors_format}\e[0m" >> "${fetch_logo_file}"
-fi
-
-# ================================================= #
-#				Autostart Programs 				    #
-# ================================================= #
-
-programs=(
-	# Audio and Mic
-    "/usr/bin/pipewire"
-	"/usr/bin/wireplumber"
-    "/usr/bin/pipewire-pulse"
-
-	# Transfer Devices And Partitions
-	"/usr/libexec/gvfsd"
-	"/usr/libexec/gvfs-mtp-volume-monitor"
-	"/usr/libexec/gvfs-udisks2-volume-monitor"
-	
-	# Applications
-	"dbus-run-session /usr/libexec/power-profiles-daemon"
-  	"dbus-run-session pcmanfm --daemon-mode"
-	"eww daemon && eww open bar"
-	"syncthing --no-browser"
-  	"alacritty --daemon"
-) 	
-
-for app in "${programs[@]}"; do
-	app_name=$(echo "$app" | awk '{print $1}' | xargs basename)
-	[ "$app_name" = "dbus-run-session" ] && app_name=$(echo "$app" | awk '{print $2}' | xargs basename)
-	
-	if ! pidof "$app_name" >/dev/null 2>&1; then 
-		(nohup sh -c "$app" >/dev/null 2>&1 || sh -c "$app" >/dev/null) &
+	# ================================================= #
+	#				 Display Resolution 				#
+	# ================================================= #
+	echo "30"; echo "# Setting display resolution & cursor..."
+	RESOLUTION_REFRESH="1152x864_60.00"
+	CURRENT_DISPLAY="$(xrandr --query | grep "connected primary" | cut -d " " -f1)"
+	if [ -n "$CURRENT_DISPLAY" ]; then
+		( xrandr --newmode "${RESOLUTION_REFRESH}"   81.75  1152 1216 1336 1520  864 867 871 897 -hsync +vsync 2>/dev/null || true
+		xrandr --addmode ${CURRENT_DISPLAY} "${RESOLUTION_REFRESH}" 2>/dev/null || true
+		xrandr --output ${CURRENT_DISPLAY} --mode "${RESOLUTION_REFRESH}" 2>/dev/null || true ) & 
 	fi
-done
+	xsetroot -cursor_name left_ptr
+
+	# ================================================= #
+	#				 Wallpapers & Colors 				#
+	# ================================================= #
+	echo "60"; echo "# Generating wallpapers & color themes..."
+	WALLPAPER="$(find "$HOME/Pictures/Wallpapers/new" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) 2>/dev/null | shuf -n 1)"
+	if [ -n "$WALLPAPER" ]; then
+		matugen --continue-on-error image "$WALLPAPER" --source-color-index 1
+		xwallpaper --zoom "$WALLPAPER" &
+		fetch_logo_file="$HOME/.cache/fetch_logo.txt"
+		[[ -f "${fetch_logo_file}" ]] || touch "${fetch_logo_file}"
+		
+		$(which chafa) --view-size=56x14 --stretch --symbols block --dither ordered "${WALLPAPER}" > "$fetch_logo_file" || (echo "error" ; exit 1)
+		normal_colors_format="\e[1;31m \e[1;32m \e[1;33m \e[1;34m \e[1;35m \e[1;36m \e[1;37m\e[0m"
+		light_colors_format="\e[1;91m \e[1;92m \e[1;93m \e[1;94m \e[1;95m \e[1;96m \e[1;97m\e[1;34m\e[0m"
+		
+		echo -e "\n   \e[42m\e[30m NORMAL \e[0m ${normal_colors_format}      \e[42m\e[30m LIGHT \e[0m ${light_colors_format}\e[0m" >> "${fetch_logo_file}"
+	fi
+
+	# ================================================= #
+	#				Autostart Programs 				    #
+	# ================================================= #
+	echo "85"; echo "# Launching autostart programs..."
+	programs=(
+		# Audio and Mic
+	    "/usr/bin/pipewire"
+		"/usr/bin/wireplumber"
+	    "/usr/bin/pipewire-pulse"
+
+		# Transfer Devices And Partitions
+		"/usr/libexec/gvfsd"
+		"/usr/libexec/gvfs-mtp-volume-monitor"
+		"/usr/libexec/gvfs-udisks2-volume-monitor"
+		
+		# Applications
+		"dbus-run-session /usr/libexec/power-profiles-daemon"
+	  	"dbus-run-session pcmanfm --daemon-mode"
+		"eww daemon && eww open bar"
+		"syncthing --no-browser"
+	  	"alacritty --daemon"
+	) 	
+
+	for app in "${programs[@]}"; do
+		app_name=$(echo "$app" | awk '{print $1}' | xargs basename)
+		[ "$app_name" = "dbus-run-session" ] && app_name=$(echo "$app" | awk '{print $2}' | xargs basename)
+		
+		if ! pidof "$app_name" >/dev/null 2>&1; then 
+			(nohup sh -c "$app" >/dev/null 2>&1 || sh -c "$app" >/dev/null) &
+		fi
+	done
+
+	echo "100"; echo "# Setup complete!"
+	sleep 0.3
+) | zenity --progress \
+    --title="Starting X Session" \
+    --text="Initializing..." \
+    --percentage=0 \
+    --auto-close \
+    --no-cancel \
+    --modal \
+    --width=350 2>/dev/null || true
