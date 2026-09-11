@@ -1,5 +1,10 @@
 @import url("colors.css");
 
+* {
+	 font-family: "Outfit";
+     font-size: 12pt;
+}
+
 /* Adds 12px inner padding inside all GTK window content containers */
 window {
     padding: 6px;
