@@ -32,11 +32,10 @@
 		fetch_logo_file="$HOME/.cache/fetch_logo.txt"
 		[[ -f "${fetch_logo_file}" ]] || touch "${fetch_logo_file}"
 		
-		$(which chafa) --view-size=56x14 --stretch --symbols block --dither ordered "${WALLPAPER}" > "$fetch_logo_file" || (echo "error" ; exit 1)
-		normal_colors_format="\e[1;31m \e[1;32m \e[1;33m \e[1;34m \e[1;35m \e[1;36m \e[1;37m\e[0m"
-		light_colors_format="\e[1;91m \e[1;92m \e[1;93m \e[1;94m \e[1;95m \e[1;96m \e[1;97m\e[1;34m\e[0m"
-		
-		echo -e "\n   \e[42m\e[30m NORMAL \e[0m ${normal_colors_format}      \e[42m\e[30m LIGHT \e[0m ${light_colors_format}\e[0m" >> "${fetch_logo_file}"
+		NORMAL_COLORS="\n   \e[42m\e[30m NORMAL \e[0m \e[1;31m \e[1;32m \e[1;33m \e[1;34m \e[1;35m \e[1;36m \e[1;37m\e[0m"
+		LIGHT_COLORS="      \e[42m\e[30m LIGHT \e[0m \e[1;91m \e[1;92m \e[1;93m \e[1;94m \e[1;95m \e[1;96m \e[1;97m\e[1;34m\e[0m"
+		FETCH_LOGO="$($(which chafa) --view-size=56x14 --symbols sextant+half+vhalf+block+space+border --dither=diffusion --invert "${WALLPAPER}")"
+		echo -e "${FETCH_LOGO}${NORMAL_COLORS}${LIGHT_COLORS}\e[0m" > "${fetch_logo_file}"
 	fi
 
 	# ================================================= #
@@ -57,9 +56,9 @@
 		# Applications
 		"dbus-run-session /usr/libexec/power-profiles-daemon"
 	  	"dbus-run-session pcmanfm --daemon-mode"
-		"eww daemon && eww open bar"
 		"syncthing --no-browser"
 	  	"alacritty --daemon"
+		"lxpolkit"
 	) 	
 
 	for app in "${programs[@]}"; do

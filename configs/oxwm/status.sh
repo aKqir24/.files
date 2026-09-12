@@ -44,9 +44,9 @@ bt() {
 	ic=$(bluetoothctl info 2>/dev/null | awk -F': ' '/Icon:/{print $2; exit}')
 	if [ -n "$name" ]; then
 		case "$ic" in
-			audio-headphones) printf '  \U000f02cb  \U000f00af  %s  ' "$name" ;;
-			audio-headset)    printf '  \U000f02ce  \U000f00af  %s  ' "$name" ;;
-			phone)            printf '  \U000f011c  \U000f00af  %s  ' "$name" ;;
+			audio-headphones) printf '  \U000f02cb \U000f00af  %s  ' "$name" ;;
+			audio-headset)    printf '  \U000f02ce \U000f00af  %s  ' "$name" ;;
+			phone)            printf '  \U000f011c \U000f00af  %s  ' "$name" ;;
 			*)                printf '  \U000f00af  %s  ' "$name" ;;
 		esac
 	else
