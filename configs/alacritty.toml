@@ -22,5 +22,12 @@ bold_italic = {
 	style = "bold italic"
 }
 
+[env]
+WINIT_UNIX_BACKEND = "x11"
+
+[scrolling]
+history = 1000 # Default is often 10,000 or higher
+multiplier = 3
+
 [general]
 import = ["~/.cache/matugen/alacritty-colors.toml"]

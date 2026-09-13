@@ -5,7 +5,7 @@
 # ================================================= #
 
 (
-	echo "10"; echo "# Initializing X session..."
+	echo "5"; echo "# Initializing X session..."
 	sleep 0.2
 
 	# ================================================= #
@@ -63,7 +63,8 @@
 			(nohup sh -c "$app" >/dev/null 2>&1 || sh -c "$app" >/dev/null) &
 		fi
 	done
-
+	echo "90"; echo "# Giving time for the wm to load..."
+	sleep 5
 	echo "100"; echo "# Setup complete!"
 	sleep 0.3
 ) | zenity --progress \
