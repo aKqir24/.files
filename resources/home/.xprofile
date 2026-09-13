@@ -31,7 +31,7 @@
 		xwallpaper --zoom "$WALLPAPER" &
 		fetch_logo_file="$HOME/.cache/fetch_logo.txt"
 		[[ -f "${fetch_logo_file}" ]] || touch "${fetch_logo_file}"
-		$(which chafa) --view-size=56x14 --symbols sextant+half+vhalf+block+space+border --dither=diffusion "${WALLPAPER}" > "${fetch_logo_file}"
+		chafa --view-size=56x14 --size=56x14 --symbols sextant+half+vhalf+block+space+border --dither=diffusion "${WALLPAPER}" > "${fetch_logo_file}"
 	fi
 
 	# ================================================= #
@@ -52,8 +52,8 @@
 		# Applications
 		"dbus-run-session /usr/libexec/power-profiles-daemon"
 	  	"dbus-run-session pcmanfm --daemon-mode"
+		"dbus-run-session alacritty --daemon"
 		"syncthing --no-browser"
-	  	"alacritty --daemon"
 		"lxpolkit"
 	) 	
 
