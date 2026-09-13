@@ -1,0 +1,11 @@
+/**
+ * Rofi Font Configuration
+ * Used across all styles in the styles directory
+ **/
+
+* {
+    font-default:    "Hurmit Nerd Font 12";
+    font-small:      "Hurmit Nerd Font 10";
+    font-large:      "Hurmit Nerd Font 14";
+    font-icon:       "Material Icons 20";
+}

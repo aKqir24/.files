@@ -1,0 +1,35 @@
+/**
+ * Rofi Common Theme Variables & Defaults
+ **/
+
+@import "font.rasi"
+@import "colors.rasi"
+
+* {
+    bg-card:                     var(surface-container-high);
+    bg-surface:                  var(surface-container);
+    bg-hover:                    var(surface-container-highest);
+    fg:                          var(on-surface);
+	bg:							 var(surface-container-low);
+    fg-dim:                      var(on-surface-variant);
+    accent:                      var(primary);
+    border:                      var(outline-variant);
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+prompt {
+    text-color:                  @accent;
+	font:						 @font-icon;
+	margin:						 -4px 1px -4px 0px;
+}

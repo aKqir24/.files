@@ -1,0 +1,67 @@
+/**
+ * MD3 Rofi Window Switcher - Compact Alt-Tab Style
+ * Colors from Matugen
+ **/
+
+@import "theme.rasi"
+
+window {
+    background-color:            @bg-card;
+    border:                      1px solid;
+    border-color:                @border;
+    border-radius:               0px;
+    padding:                     12px;
+    width:                       460px;
+    location:                    north;
+    anchor:                      north;
+    y-offset:                    340px;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+listview {
+    lines:                       1;
+    columns:                     5;
+    fixed-columns:               false;
+    fixed-height:                false;
+	fixed-width:				 false;
+	spacing:                     2px;
+    padding:                     4px;
+	border-radius:               4px;
+    background-color:            @bg;
+}
+
+element {
+    orientation:                 vertical;
+    spacing:                     8px;
+	margin:						 4px;
+    padding:                     24px 0px;
+    border-radius:               0px;
+    background-color:            @bg-surface;
+    text-color:                  @fg;
+}
+
+element selected.normal {
+    background-color:            @bg-hover;
+    text-color:                  @accent;
+	border-color:				 @accent;
+	border:						 0px 0px 4px 0px;
+    border-radius:				 4px 4px 0px 0px;
+}
+
+element-icon {
+    size:                        38px;
+    horizontal-align:            0.5;
+    background-color:            transparent;
+    border-radius:               0px;
+}
+
+element-text {
+    expand:                      true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    font:						 @font-small;
+}

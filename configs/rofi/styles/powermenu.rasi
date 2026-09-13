@@ -1,0 +1,63 @@
+/**
+ * MD3 Rofi Powermenu Theme (Icon Bar)
+ * Colors from Matugen
+ **/
+
+@import "theme.rasi"
+
+window {
+    background-color:            @bg-card;
+    border:                      1px solid;
+    border-color:                @border;
+    border-radius:               0px;
+    padding:                     12px;
+    width:                       440px;
+    location:                    center;
+    anchor:                      center;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+listview {
+    lines:                       1;
+    columns:                     5;
+    fixed-columns:               true;
+    fixed-height:                true;
+    spacing:                     4px;
+    padding:                     4px 4px 0px 4px;
+	border-radius:               4px;
+    background-color:            @bg;
+}
+
+element {
+    orientation:                 vertical;
+    spacing:                     0px;
+    margin:                      2px;
+    padding:                     14px 0px;
+    border-radius:               4px;
+    background-color:            @bg-surface;
+    text-color:                  @fg;
+    children:                    [ element-text ];
+}
+
+element selected.normal {
+    background-color:            @bg-hover;
+    text-color:                  @accent;
+    border-color:                @accent;
+    border:                      0px 0px 4px 0px;
+    border-radius:               4px 4px 0px 0px;
+}
+
+element-text {
+    expand:                      true;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    background-color:            transparent;
+    text-color:                  inherit;
+	padding:					 2px;
+    font:                        "Hurmit Nerd Font 24";
+    highlight:                   none;
+}

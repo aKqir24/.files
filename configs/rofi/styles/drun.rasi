@@ -1,0 +1,84 @@
+/**
+ * MD3 Rofi Launcher Theme
+ * Colors from Matugen
+ **/
+
+@import "colors.rasi"
+@import "font.rasi"
+@import "theme.rasi"
+
+window {
+    background-color:            @bg-card;
+    border:                      1px solid;
+    border-color:                @border;
+    border-radius:               0px;
+    padding:                     12px;
+    width:                       460px;
+    location:                    north;
+    anchor:                      north;
+    y-offset:                    288px;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    spacing:                     8px;
+    padding:                     12px 16px;
+    border-radius:               4px;
+    background-color:            @bg-surface;
+	border:						 2px 2px 6px 2px;
+	border-color:				 @outline-variant;
+    children:                    [ "prompt", "entry" ];
+}
+
+entry {
+    text-color:                  @fg;
+    placeholder:                 "Search apps...";
+    placeholder-color:           @fg-dim;
+    font-size:                   12px;
+}
+
+listview {
+    lines:                       4;
+    fixed-height:                false;
+    spacing:                     4px;
+    padding:                     8px 8px 8px 0px;
+    margin:                      8px 0 0 0;
+    border-radius:               4px;
+    background-color:            @bg;
+}
+
+element {
+    spacing:                     10px;
+    padding:                     6px 10px;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element selected.normal {
+    background-color:            @bg-hover;
+    text-color:                  @accent;
+	border-color:				 @accent;
+	border:						 0px 0px 0px 4px;
+    border-radius:				 0px 4px 4px 0px;
+}
+
+element-icon {
+    size:                        32px;
+	padding:					 4px;
+	margin:						 0px 0px 0px 6px;
+    background-color:            @inverse-on-surface;
+	border-radius:				 4px;
+}
+
+element-text {
+    expand:                      true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    font:						@font-default;
+	highlight:					 none;
+	padding:					 10px 0px 0px 4px;
+}
