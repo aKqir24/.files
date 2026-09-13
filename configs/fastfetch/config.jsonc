@@ -1,7 +1,7 @@
 {
 	"logo": {
-		"width": 50,
-		"height": 10,
+		"width": 56,
+		"height": 14,
 		"source": "~/.cache/fetch_logo.txt",
 		"type": "file",
 		"position": "top",
