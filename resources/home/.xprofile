@@ -59,8 +59,8 @@
 		app_name=$(echo "$app" | awk '{print $1}' | xargs basename)
 		[ "$app_name" = "dbus-run-session" ] && app_name=$(echo "$app" | awk '{print $2}' | xargs basename)
 		
-		if ! pidof "$app_name" >/dev/null 2>&1; then 
-			(nohup sh -c "$app" >/dev/null 2>&1 || sh -c "$app" >/dev/null) &
+		if ! pidof "$app_name" >/dev/null 2>&1; then
+			(nohup sh -c "$app" >/dev/null 2>&1 || sh -c "$app" >/dev/null || sleep 3 ; sh -c "$app") &
 		fi
 	done
 	echo "90"; echo "# Giving time for the wm to load..."
