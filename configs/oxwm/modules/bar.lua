@@ -16,15 +16,6 @@ local blocks = {
         underline = false,
         click = status .. " toggle_widget bluetooth",
     }),
-    -- wifi
-    oxwm.bar.block.shell({
-		format="{} ",
-		command = status .. " wifi",
-        interval = 10,
-        color = colors.green,
-        underline = false,
-		click = status .. " toggle_widget wifi",
-    }),
     -- net ip
     oxwm.bar.block.shell({
 		format="{} ",
@@ -32,6 +23,15 @@ local blocks = {
         interval = 10,
         color = colors.cyan,
         underline = false,
+    }),
+	-- wifi
+    oxwm.bar.block.shell({
+		format="{} ",
+		command = status .. " wifi",
+        interval = 10,
+        color = colors.green,
+        underline = false,
+		click = status .. " toggle_widget wifi",
     }),
 	oxwm.bar.block.static({
 		text = "▌",
