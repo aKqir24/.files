@@ -2,6 +2,10 @@
 # Plain-text status segments for the oxwm bar (no Pango markup).
 # Emits comma-free plain text; colors handled by oxwm block settings.
 
+get_net_status() {
+	echo "$(connmanctl technologies | grep -A 5 "/net/connman/technology/${1}" | grep "${2}" | awk '{print $NF}')"
+}
+
 cpu() {
 	local cache="/tmp/oxwm_cpu_stat"
 	local cpu u n s i io ir si st total idle
@@ -34,9 +38,8 @@ mem() {
 }
 
 bt() {
-	local powered ic name
-	powered=$(bluetoothctl show 2>/dev/null | awk -F': ' '/Powered:/{print $2; exit}')
-	if [ "$powered" != "yes" ]; then
+	local ic name
+	if [ "$(get_net_status "bluetooth" "Powered")" = "False" ]; then
 		printf '\U000f00b2'
 		return
 	fi
@@ -44,10 +47,10 @@ bt() {
 	ic=$(bluetoothctl info 2>/dev/null | awk -F': ' '/Icon:/{print $2; exit}')
 	if [ -n "$name" ]; then
 		case "$ic" in
-			audio-headphones) printf '  \U000f02cb \U000f00af  %s  ' "$name" ;;
-			audio-headset)    printf '  \U000f02ce \U000f00af  %s  ' "$name" ;;
-			phone)            printf '  \U000f011c \U000f00af  %s  ' "$name" ;;
-			*)                printf '  \U000f00af  %s  ' "$name" ;;
+			audio-headphones) printf '  \U000f02cb \U000f00af  %s' "$name" ;;
+			audio-headset)    printf '  \U000f02ce \U000f00af  %s' "$name" ;;
+			phone)            printf '  \U000f011c \U000f00af  %s' "$name" ;;
+			*)                printf '  \U000f00af  %s' "$name" ;;
 		esac
 	else
 		printf '\U000f00af'
@@ -56,15 +59,15 @@ bt() {
 
 wifi() {
 	local svc string name strength icon powered
-	powered=$(connmanctl technologies | grep -A 5 "/net/connman/technology/wifi" | grep "Powered" | awk '{print $NF}')
+	powered=$(get_net_status "wifi" "Powered")
+	connected=$(get_net_status "wifi" "Connected")
 	svc=$(connmanctl services 2>/dev/null | awk '$1 ~ /[OR]/ && $NF ~ /(wifi|wlan)/ { print $NF; exit }')
-
-	state=$(printf '%s\n' "$(connmanctl state)" | awk -F'= ' '/^  State =/{print $2; exit}')
+	
 	if [ "$powered" != "True" ]; then
 		printf '\U000f05a9'
 		return
 	fi
-	if [ "$state" = "idle" ]; then
+	if [ "$connected" = "False" ]; then
 		printf '\U000f092d'
 		return
 	fi
@@ -82,17 +85,12 @@ wifi() {
 
 net() {
 	local ip
-	# Hide the LAN IP while on wifi; the wifi block shows SSID instead
-	if connmanctl services 2>/dev/null | awk '$1 ~ /[OR]/ && $NF ~ /(wifi|wlan)/ {found=1; exit} END{exit !found}'; then
+	if [ $(get_net_status "ethernet" "Connected") = "False" ] ; then
 		echo '󰅛'
 		return
 	fi
 	ip=$(ip -4 -o addr show up 2>/dev/null | awk '$2 != "lo" && $2 !~ /^wl/ {print $4; exit}' | cut -d/ -f1)
-	if [ -n "$ip" ]; then
-		printf '\U000f0c53  %s' "$ip"
-	else
-		printf '\U000f0c53'
-	fi
+	[ -n "$ip" ] && printf '\U000f0c53  %s' "$ip" || printf '\U000f0c53'
 }
 
 sound() {
