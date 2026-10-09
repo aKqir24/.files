@@ -46,7 +46,7 @@ check_status() {
 }
 
 check_state() {
-    local state=$(connmanctl state | awk '{print $3}')
+    local state=$(connmanctl state | awk 'NR==1 {print $3}')
     if [[ "$state" == "online" || "$state" == "ready" ]]; then
         echo "connected"
     else
@@ -67,8 +67,13 @@ connect_with_password() {
     fi
 
     if [[ -n "$password" ]]; then
-        connmanctl config "$service" --set-property Passphrase "$password"
-        connection_output=$(timeout 5 connmanctl connect "$service" 2>&1)
+		{ 
+			echo "agent on"
+			echo "connect $service"
+			sleep 1
+			echo "$password"
+		} | connmanctl 
+		connection_output=$(timeout 5 connmanctl connect "$service" 2>&1)
     fi
 }
 
@@ -200,6 +205,8 @@ connect_to_network() {
     local actions=""
     if [[ "$service_state" == "online" || "$service_state" == "ready" ]]; then
         actions="󰤭  Disconnect\n󰆴  Forget\n$autoconnect_opt\n󰋽  Show Details"
+	elif [[ "$service_state" == "idle" ]]; then
+		actions="󱚷  Return\n󰤨  Connect\n󰋽  Show Details"
     else
         actions="󰤨  Connect\n󰆴  Forget\n$autoconnect_opt\n󰋽  Show Details"
     fi
@@ -209,7 +216,7 @@ connect_to_network() {
     if [[ "$action" =~ "Disconnect" ]]; then
         connmanctl disconnect "$service" && notify "Network Disconnected!!" "Disconnected from $selected_ssid"
     elif [[ "$action" =~ "Forget" ]]; then
-        connmanctl remove "$service" && notify "Forgotten!!" "$selected_ssid forgotten"
+        connmanctl config "$service" --remove && notify "Forgotten!!" "$selected_ssid forgotten"
     elif [[ "$action" =~ "Enable auto-connect" ]]; then
         connmanctl config "$service" --set-property AutoConnect True && notify "Auto-connection enabled"
     elif [[ "$action" =~ "Disable auto-connect" ]]; then
@@ -221,9 +228,9 @@ connect_to_network() {
 
         if [[ "$service" == *_none* ]]; then
             connection_output=$(connmanctl connect "$service" 2>&1)
-            notify_connection
-        else
-            connect_with_password "$service"
+            notify_connection	
+        else	
+            connmanctl connect "$service" 2>&1 | grep -i "Not Registered" && connect_with_password "$service"
             notify_connection
         fi
     fi

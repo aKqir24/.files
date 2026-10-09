@@ -28,7 +28,6 @@ popover,
 .popover,
 popover.menu {
   border-radius: 0px;
-  background-color: transparent
 }
 
 /* Apply padding to the inner content box where text and buttons live */
