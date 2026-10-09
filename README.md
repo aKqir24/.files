@@ -1,6 +1,6 @@
 
-<div align="center"> 
-  
+<div align="center">
+
 # aKqir's .files
 ![GitHub repo size](https://img.shields.io/github/repo-size/aKqir24/.files?style=for-the-badge&logo=files&logoColor=white&label=%20&labelColor=%23b7b52a&color=gray)
 ![Devuan](https://img.shields.io/badge/Devuan-gray?style=for-the-badge&logo=devuan&labelColor=%232ab5b7)
@@ -13,6 +13,17 @@ Finally I am satisfied, the story of this rice is when I got tired of trying so 
 ## Preview
 <img width="1152" height="864" alt="gscreenshot_2026-09-13-203834" src="https://github.com/user-attachments/assets/1b4932e2-24b0-411d-a855-f62f9165a24d" />
 
+## Prerequisites
+- **wm**: oxwm
+- **connection manager**: connman
+- **terminal**: alacritty
+- **fetch**: fastfetch
+- **fastfetch logo**: chafa
+- **colors**: matugen
+- **notification**: dunst
+- **rofi**: menu
+- **editor**: neovim
+- **IDE**: VSCodium
 
 ## Installation
 
