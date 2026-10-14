@@ -1,0 +1,6 @@
+{
+  "$schema": "https://raw.githubusercontent.com/versenilvis/IRIS/main/spec/schema.json",
+  "name": "cd",
+  "description": "Change directory",
+  "generator": "dir"
+}

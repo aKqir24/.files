@@ -85,3 +85,9 @@ output_path = '~/.cache/matugen/zen-userContent.css'
  [templates.firefox-website-colors]
  input_path = "~/.files/resources/matugen/templates/firefox-colors.css"
  output_path = "~/.cache/matugen/firefox-colors.css"
+
+[templates.iris]
+input_path = '~/.files/resources/matugen/templates/iris-theme.toml'
+output_path = '~/.cache/matugen/iris-theme.toml'
+post_hook = 'ln -sf ~/.cache/matugen/iris-theme.toml ~/.config/iris/theme.toml'
+

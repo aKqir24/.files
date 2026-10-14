@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/versenilvis/IRIS/main/spec/schema.json",
+  "specs": [
+    {
+      "name": "ls",
+      "description": "List directory contents",
+      "generator": "file"
+    },
+    {
+      "name": "cat",
+      "description": "Concatenate and display files",
+      "generator": "file"
+    },
+    {
+      "name": "rm",
+      "description": "Remove files or directories",
+      "generator": "file"
+    },
+    {
+      "name": "cp",
+      "description": "Copy files and directories",
+      "generator": "file"
+    },
+    {
+      "name": "mv",
+      "description": "Move or rename files",
+      "generator": "file"
+    },
+    {
+      "name": "mkdir",
+      "description": "Create directories",
+      "generator": "dir"
+    },
+    {
+      "name": "rmdir",
+      "description": "Remove empty directories",
+      "generator": "dir"
+    }
+  ]
+}

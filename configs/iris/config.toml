@@ -1,0 +1,43 @@
+# ~/.config/iris/config.toml
+# iris configuration file
+
+[core]
+version = 1
+shell = ""
+shell-login = false
+mode = "last"
+debug = false
+expand-alias = true
+auto-execute = false
+navigate-closed = "history"
+cobra-probe-enabled = true
+
+[ui]
+style = "modern"
+nerd-fonts = true
+hidden-files = false
+ghost-text = 1
+max-suggestions = 200
+max-height = 10
+max-width = 0
+
+[git]
+filter-active-branch = true
+deduplicate-branches = true
+
+[updater]
+check-on-startup = true
+channel = "stable"
+check-interval = "24h"
+auto-update = 0
+
+[zoxide]
+extend-cd = true
+
+[keybindings]
+toggle-mode = "ctrl+r"
+toggle-menu = "shift+tab"
+select = "tab"
+navigate-up = "up"
+navigate-down = "down"
+navigate-right = "right"

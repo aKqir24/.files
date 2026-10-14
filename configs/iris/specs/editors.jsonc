@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/versenilvis/IRIS/main/spec/schema.json",
+  "specs": [
+    {
+      "name": "vi",
+      "description": "Visual text editor",
+      "generator": "file"
+    },
+    {
+      "name": "vim",
+      "description": "Vi IMproved text editor",
+      "generator": "file"
+    },
+    {
+      "name": "nvim",
+      "description": "Neovim text editor",
+      "generator": "file"
+    },
+    {
+      "name": "nano",
+      "description": "Nano text editor",
+      "generator": "file"
+    }
+  ]
+}
